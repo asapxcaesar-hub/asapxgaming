@@ -1,0 +1,5 @@
+kind: wasmer.io/App.v0
+name: asaspxgaming
+package: .
+description: ASAPxGaming static website
+debug: false

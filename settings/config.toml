@@ -1,0 +1,7 @@
+[general]
+host = "0.0.0.0"
+port = 80
+root = "/public"
+page-fallback = "/public/index.html"
+cache-control-headers = true
+compression = true
