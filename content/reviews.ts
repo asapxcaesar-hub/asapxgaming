@@ -2,333 +2,11 @@ import type { GameReview } from '@/types/content'
 
 export const reviews: GameReview[] = [
   {
-    slug: 'clair-obscur-expedition-33',
-    gameSlug: 'clair-obscur-expedition-33',
-    title: 'Expedition 33 is schitterend — en te afhankelijk van één knop',
-    excerpt:
-      'Sandfall levert een Franse sterfte-RPG die eruitziet als een salon en vecht als een timingtest. Must-play, met een kanttekening bij akt 3.',
-    author: 'Kay van Elsen',
-    publishedAt: '2025-05-02',
-    platforms: ['PC', 'PS5', 'Xbox'],
-    genre: 'RPG',
-    score: 9.0,
-    verdict: 'Must-play',
-    coverLabel: 'EXP33',
-    plus: [
-      'Kunstrichting die je nergens anders koopt',
-      'Party en wereldtoon die blijven hangen',
-      'Beurten die wél voelen, niet alleen tellen',
-    ],
-    minus: [
-      'Parry eet te veel van de build-diepte op',
-      'Akt 3 opent de kaart en verliest de teugel',
-    ],
-    scores: { gameplay: 8.6, story: 9.1, graphics: 9.4, audio: 9.2, performance: 8.7 },
-    related: [
-      { collection: 'news', slug: 'steam-nazomer-sale-picks' },
-      { collection: 'news', slug: 'turn-based-is-niet-dood' },
-    ],
-    seo: {
-      title: 'Review: Clair Obscur Expedition 33 — 9.0 Must-play',
-      description:
-        'ASAPxGaming over Expedition 33: Gommage, parry-gevechten, akt 3 en een 9.0 van deze desk.',
-    },
-    oordeel: [
-      'Lumière telt af naar de Gommage: wie de leeftijd haalt die de Paintress op de horizon heeft gezet, verdwijnt. Expedition 33 is de volgende lichting die vertrekt om dat schilderij te stoppen. Dat is geen “red de wereld”-poster, dat is een begrafenis met een zwaard.',
-      'Toon, muziek en hoe fysiek een beurt voelt: daar wint Expedition 33. Alsof de gevechtslus tot het einde even scherp blijft: daar verliest hij. Must-play, ja. Meesterwerk zonder voetnoot, nee.',
-    ],
-    gameplay: [
-      'Je plant skills, je wisselt Pictos, je bouwt een party. En toch wint de parry bijna altijd het gesprek. Een volle string afweren is spectaculair; een mislukte string in akt 2 voelt als huiswerk. Wie van spreadsheets houdt, merkt dat de echte damage-curve in je vingers zit, niet in je tree.',
-      'Vroege bazen vragen lezen. Late optionele gevechten vragen herhaling. Dat is een bewuste keuze, geen bug. Ik speelde door. Ik was in akt 3 ook een uur lang vooral aan het bijtanken.',
-    ],
-    verhaal: [
-      'De expeditie is een wanhoopsdaad met stijl, geen heldenmars. Personages mogen zwijgen, mopperen, en fouten maken zonder dat een questlog het gladstrijkt. Spoiler-arm: de derde akt herschikt wat je dacht dat de Paintress was. Dat werkt. De lore-dump erna werkt minder.',
-      'Wat blijft: een Europese JRPG-achtige structuur die geen Tokio-cosplay is. Dat is zeldzaam genoeg om het cijfer omhoog te trekken, ook als de laatste uren rommeliger zijn dan de eerste.',
-    ],
-    graphics: [
-      'Dit is geen raytracing-flex, dit is een schilderij dat beweegt. Silhouetten, stof, het contrast tussen salon en wrak: je herkent een screenshot in een milliseconde. Verkennen zonder minimap is charmant tot je dezelfde rotspassage voor de derde keer mist.',
-    ],
-    audio: [
-      'Orkest tegen elektronica, alsof de wereld zelf niet kan kiezen tussen rouwen en doorvechten. Combat-stings liggen strak op de parry-window; als de mix zwijgt, is dat ook een zin.',
-    ],
-    performance: [
-      'Op pc hield framepacing stand in spektakelscènes. De dip die ik noteerde zat in lange akt-3- treks, niet in crashes. Console-versies die we zagen, gedragen zich als een nette 2025-release, geen tech-demo.',
-    ],
-    conclusie: [
-      '9.0 van deze desk, geen fanbrief. Koop hem als je combat-feel en toon boven open-wereld-kilometers zet. Sla de optionele grind over als akt 3 je de teugel uit handen neemt — het verhaal laat zich alsnog afronden.',
-    ],
-  },
-  {
-    slug: 'hollow-knight-silksong',
-    gameSlug: 'hollow-knight-silksong',
-    title: 'Silksong is groter, scherper en soms onnodig gemeen',
-    excerpt:
-      'Hornet in Pharloom is geen Hallownest-DLC. Movement is verslavend, de kaart is rijker, en de runbacks blijven een gesprek dat Team Cherry niet wint.',
-    author: 'Kay van Elsen',
-    publishedAt: '2025-09-11',
-    platforms: ['PC', 'Switch', 'PS5', 'Xbox'],
-    genre: 'Metroidvania',
-    score: 8.9,
-    verdict: 'Must-play',
-    coverLabel: 'SILK',
-    plus: [
-      'Naald-movement dat je spieren herschrijft',
-      'Biome’s die Hallownest in de schaduw zetten',
-      'Bazen met een eigen houding, geen hp-sponzen alleen',
-    ],
-    minus: [
-      'Straf die soms de les in de weg zit',
-      'Resource- en kaartkeuzes die vroeg irriteren',
-    ],
-    scores: { gameplay: 9.2, story: 8.4, graphics: 9.1, audio: 9.2, performance: 8.8 },
-    related: [{ collection: 'news', slug: 'steam-nazomer-sale-picks' }],
-    seo: {
-      title: 'Review: Hollow Knight Silksong — 8.9 Must-play',
-      description:
-        'ASAPxGaming over Silksong: Hornet, Pharloom, moeilijkheid en een 8.9 van deze desk.',
-    },
-    oordeel: [
-      'Na jaren wachten is Silksong geen souvenirwinkel. Hornet beweegt als een naald, Pharloom is een koninkrijk dat je laat betalen voor nieuwsgierigheid, en de eerste uren voelen expres als een heropvoeding. Wie Hollow Knight als knusse metroidvania herinnert, krijgt hier een hardere les.',
-      'De moeilijkheid is niet alleen streng — ze is soms lui: extra soldaten voor een baas, een pad terug dat de les herhaalt in plaats van aanscherpt.',
-    ],
-    gameplay: [
-      'Pogo, zijwaartse lucht, tools: de kit is rijker dan het nagel-en-spreid van deel één. Shortcuts die je zelf verdient, blijven het hoogtepunt. Crests en gadgets vervangen Charms; ik miste de oude build-vrijheid in de midden-game, tot de kit eindelijk klikte.',
-      'De kaart is groter en voller. Dat is een compliment tot je merkt dat “voller” ook betekent: meer kamers waar de vijand-design het tempo gijzelt. Wie van Team Cherry’s poëzie houdt, slik je dat. Wie een avond wilt “even een zone”, plant buffers.',
-    ],
-    verhaal: [
-      'Nog steeds ruimtes en NPC-flarden, geen cutscene-RPG. Hornet is geen stille protagonist; ze heeft een opdracht en een houding. Dat is genoeg. Wie een complete mythologie-wiki eist, blijft ontevreden — en dat is een feature van deze studio.',
-    ],
-    graphics: [
-      'Paletten en silhouetten doen meer werk dan partikels. Leesbaarheid in chaos is het échte flex: je sterft omdat je te gretig was, zelden omdat je een spike niet zag. Op handheld blijft dat overeind, zolang je helderheid niet op batterij-spaarstand zet.',
-    ],
-    audio: [
-      'De score tilt elke arena. Je hoort wanneer een regio “klaar” is, nog voor de map dat zegt. Dat is dezelfde truc als in Hallownest, hier groter en soms te trots op zichzelf.',
-    ],
-    performance: [
-      'Stabiel op de pc- en console-builds die we draaiden. De pijn komt van design-spikes, niet van framedrops. Switch-handheld vraagt de gebruikelijke helderheid-compromis, geen crash-loterij.',
-    ],
-    conclusie: [
-      '8.9: must-play als je de eerste nog in je vingers hebt en tegen een muur mag lopen. Team Cherry mag gemeen zijn; ze hoeven de terugweg naar de baas niet tot extra content te promoveren.',
-    ],
-  },
-  {
-    slug: 'death-stranding-2',
-    gameSlug: 'death-stranding-2',
-    title: 'Death Stranding 2 verbindt beter — en praat nog steeds te lang',
-    excerpt:
-      'Kojima maakt van lopen minder een belediging en van setpieces meer een film. De cutscene-lawine groeit mee.',
-    author: 'Kay van Elsen',
-    publishedAt: '2025-07-03',
-    platforms: ['PS5', 'PC'],
-    genre: 'Action',
-    score: 8.7,
-    verdict: 'Koop hem',
-    coverLabel: 'DS2',
-    plus: [
-      'Traversal die eindelijk als gereedschap voelt',
-      'Landschappen die de camera verdienen',
-      'Setpieces met gewicht, geen bijzaak-schietkuil',
-    ],
-    minus: [
-      'Uitleg en cameo’s die het tempo gijzelen',
-      'Menu’s en inventaris blijven labyrint',
-    ],
-    scores: { gameplay: 8.6, story: 8.3, graphics: 9.1, audio: 8.8, performance: 8.4 },
-    related: [{ collection: 'news', slug: 'playstation-plus-extra-september' }],
-    seo: {
-      title: 'Review: Death Stranding 2 — 8.7 Koop hem',
-      description:
-        'ASAPxGaming over Death Stranding 2: connecting, gevechten, bloat en een 8.7 van deze desk.',
-    },
-    oordeel: [
-      'Deel één was polariserend omdat lopen de game wás. Deel twee, On the Beach, maakt voertuigen, wegen en gevechten minder optioneel. Wie DS1 haatte als “loopsimulator”, krijgt hier meer knallen — en nog steeds kilometers modder. Wie de connecting-fantasy voelde, groeit het netwerk écht als een beschaving.',
-      'De pieken liggen hoger dan in 2019. De Kojima-tax — namen, flashbacks, koffiepauzes — groeit mee. Dat is geen hate. Dat is de runtime. 8.7.',
-    ],
-    gameplay: [
-      'Cargo, balans, weer: de lus is rijper. Voertuigen maken de kaart minder tot een straf, wat de zen-loop van deel één deels inruilt voor tempo. Combat is zichtbaarder. Plus voor spektakel, min voor wie hier kwam om alleen te bezorgen.',
-      'Inventaris en menu’s blijven een labyrint. Na tien uur weet je waar de knop zit; na dertig uur erger je je er nog aan. Dat had een sequel mogen gladstrijken.',
-    ],
-    verhaal: [
-      'Mexico, Australië, Bridges, Drawbridge: de geopolitiek is groter, de thema’s (verbinding, rouw, wie het netwerk bezit) blijven Kojima. Cameo’s en lange scènes eisen geduld. Wie deel één niet speelde, mist lijm; wie dat wél deed, krijgt payoff die de extra uren deels terugbetaalt.',
-    ],
-    graphics: [
-      'Regen, modder, licht: traversal als cinematografie. Dit is nog steeds de reden om een 4K-scherm aan te laten. Personages in close-up houden stand; de ster is het landschap.',
-    ],
-    audio: [
-      'Needle drops en wind. De stilte tussen tracks blijft het beste argument. Als de mix een popnummer drop, is dat een statement, geen Spotify-random.',
-    ],
-    performance: [
-      'Zwaar in de drukste setpieces, speelbaar op de PS5-build waarop we hem klaarden. Menu-lag is irritant, niet breaking. Pc vraagt de gebruikelijke “ mooi versus stil” -schuif.',
-    ],
-    conclusie: [
-      '8.7: koop hem als je connecting wílt, niet als je een shooter eist. Mijn geduld met de cutscene-lawine zit een tik lager dan mijn geduld met de wegen.'
-    ],
-  },
-  {
-    slug: 'split-fiction',
-    gameSlug: 'split-fiction',
-    title: 'Split Fiction eist twee controllers — en verdient ze',
-    excerpt:
-      'Hazelight splitst fantasy en sci-fi over twee spelers. Inventief, grappig, en nog steeds geen solo-avond. Dat is de pitch, geen voetnoot.',
-    author: 'Kay van Elsen',
-    publishedAt: '2025-03-12',
-    platforms: ['PC', 'PS5', 'Xbox'],
-    genre: 'Co-op avontuur',
-    score: 8.8,
-    verdict: 'Koop hem',
-    coverLabel: 'SPLIT',
-    plus: [
-      'Levelgags die twee breinen verplichten',
-      'Toon die zelden in cringe kantelt',
-      'Online dat couch bijna bijhoudt',
-    ],
-    minus: [
-      'Zonder duo is het een etalage',
-      'Sommige chapters pieken te vroeg en herhalen de truc',
-    ],
-    scores: { gameplay: 9.0, story: 8.1, graphics: 8.7, audio: 8.5, performance: 8.6 },
-    related: [{ collection: 'news', slug: 'steam-nazomer-sale-picks' }],
-    seo: {
-      title: 'Review: Split Fiction — 8.8 Koop hem',
-      description:
-        'ASAPxGaming over Split Fiction: Mio en Zoe, co-op-design, en waarom solo hem niet redt.',
-    },
-    oordeel: [
-      'Mio schrijft sci-fi, Zoe schrijft fantasy, en Hazelight gooit hun hoofden in één level. It Takes Two was de doorbraak; Split Fiction is dezelfde studio die het genre-wisseltrucje tot structuur maakt. De beste momenten zijn stille afspraken: jij de platform, ik de schakelaar, geen voice-chat nodig.',
-      'Niet elk chapter is even scherp. “Je hebt een vriend nodig” is geen voetnoot, het is de hele koop. 8.8 van deze desk.',
-    ],
-    gameplay: [
-      'Camera’s liegen zelden. Fails zijn grappig in plaats van giftig. Leesbaarheid is beter dan bij menig live-service shooter die co-op op een scorebord plakt. De variatie (voertuig, stealth-gag, split-screen-setpiece) is het product.',
-      'Halverwege herken je de cadans: nieuwe kit, twee minuten wow, checkpoint, mop. Dat is geen belediging. De laatste akt mag gerust een idee minder, een adem meer.',
-    ],
-    verhaal: [
-      'Schrijversblokkade als metafoor is licht, en dat mag. Personages tillen de gags. Wie een literaire plot eist, krijgt een nette B-film met een hart. Wie een avond met iemand wilt, krijgt de betere deal.',
-    ],
-    graphics: [
-      'Fantasy versus sci-fi leest in een milliseconde. Dat is ontwerp, geen skin. Enkele overvolle setpieces vragen een seconde om te parsen; de meerderheid is schoon.',
-    ],
-    audio: [
-      'Banter zit goed in de mix. Muziek onderstreept de splits zonder te schreeuwen. Op couch wint de kamer-luidheid; op headset blijft de mop verstaanbaar.',
-    ],
-    performance: [
-      'Couch en online werkten in onze runs. Couch wint op timing-gags. Netcode was netjes, niet magisch: een drop midden in een tandem-jump is zeldzaam en dan wél giftig.',
-    ],
-    conclusie: [
-      '8.8: koop hem met een vaste duo, punt. Hazelight blijft de standaard voor “twee mensen, één grap”. Alleen kopen is een etalagekaart. Dat mag de store-page harder zeggen.',
-    ],
-  },
-  {
-    slug: 'mario-kart-world',
-    gameSlug: 'mario-kart-world',
-    title: 'Mario Kart World wint de woonkamer, niet de open wereld',
-    excerpt:
-      'Switch 2-launchkart met 24 rijders en Knockout Tour. Free Roam is het uithangbord dat het minst waarmaakt.',
-    author: 'Kay van Elsen',
-    publishedAt: '2025-06-12',
-    platforms: ['Switch'],
-    genre: 'Racing',
-    score: 8.4,
-    verdict: 'Hit',
-    coverLabel: 'MKW',
-    plus: [
-      'Knockout Tour als échte nieuwe spanning',
-      '24-spelerchaos die de serie groter maakt',
-      'Feestelijke mix en leesbare circuits',
-    ],
-    minus: [
-      'Free Roam met te weinig om te doen',
-      'Grand Prix-wegen die soms als snelweg voelen',
-    ],
-    scores: { gameplay: 8.5, story: 5.5, graphics: 8.6, audio: 8.7, performance: 8.2 },
-    related: [{ collection: 'news', slug: 'mario-kart-world-online-seizoen' }],
-    seo: {
-      title: 'Review: Mario Kart World — 8.4 Hit',
-      description:
-        'ASAPxGaming over Mario Kart World op Switch 2: Knockout Tour, Free Roam en een 8.4 van deze desk.',
-    },
-    oordeel: [
-      'Mario Kart World is de launch-titel van Switch 2 (5 juni 2025): één kaart, cups, online, en een Free Roam dat Nintendo in de marketing als continent verkocht. In de praktijk is de woonkamer nog steeds de baas. Knockout Tour — checkpoint, afvaller, door — is de mode die de nieuwe hardware écht gebruikt.',
-      'Rubberbanding en item-chaos zijn identiteit, geen bug. Free Roam voelt wél onafgebakken: P-switch-klusjes, stickers, weinig reden om terug te komen als de cups klaar zijn.',
-    ],
-    gameplay: [
-      'Vierentwintig rijders maakt elke bocht voller. Dat is feest in de bank, tilt in ranked-achtige lobbies. Items blijven Nintendo-rechtvaardigheid: de blue shell is nog steeds een conversatie-ender, geen balansexperiment.',
-      'Verbindingswegen tussen circuits zijn soms geniaal (je ziet de wereld) en soms loading with scenery. Klassieke lap-races redden de formule. Wie Mario Kart 8 Deluxe als tight referentie houdt, merkt dat World losser is. Dat is een ruil, geen upgrade over de hele linie.',
-    ],
-    verhaal: [
-      'Er is geen verhaal dat ertoe doet. De “wereld” is een structuur. Dat is fine. Verkoop hem niet als avontuur met voortgang; verkoop hem als feest met een kaart eromheen.',
-    ],
-    graphics: [
-      'Helder, leesbaar, feestelijk. Switch 2 tilt resolutie en effecten zonder een technical showcase te worden. Handheld blijft de screenshot die je naar de groepsapp stuurt.',
-    ],
-    audio: [
-      'Arrangementen doen wat Mario Kart altijd doet: je fluit mee terwijl je tilt. Remixes zijn de stille ster van de launch.',
-    ],
-    performance: [
-      'Stabiel genoeg voor party. Dips merkte ik in de drukste 24-speler-setpieces en sommige Free Roam-hoeken, niet in een standaard cup. Online-gimmicks vragen geduld van de host, niet van de chip alleen.',
-    ],
-    conclusie: [
-      '8.4: hit voor de bank, geen sim, geen openwereld-meesterwerk. Koop hem voor Knockout Tour en de cups. Geloof de Free Roam-pitch alleen als je van rondrijden houdt zonder checklist.',
-    ],
-  },
-  {
-    slug: 'pragmata',
-    gameSlug: 'pragmata',
-    title: 'Pragmata is slim schieten — tot de gangen te smal worden',
-    excerpt:
-      'Capcoms maan-IP (17 april 2026) koppelt vuur aan live hacken. Hugh en Diana tillen de toon. De late akt gijzelt het tempo.',
-    author: 'Kay van Elsen',
-    publishedAt: '2026-04-24',
-    platforms: ['PC', 'PS5', 'Xbox', 'Switch'],
-    genre: 'Action',
-    score: 8.5,
-    verdict: 'Koop hem',
-    coverLabel: 'PRAG',
-    plus: [
-      'Vuur en hack in één adem, geen menu-pauze',
-      'Diana als partner, geen mascotte-lawaai',
-      'RE Engine die de maan laat glanzen',
-    ],
-    minus: [
-      'Tweede helft die je in arena’s opsluit',
-      'Verhaal dat de actie volgt, niet leidt',
-    ],
-    scores: { gameplay: 8.6, story: 8.0, graphics: 8.8, audio: 8.3, performance: 8.4 },
-    related: [{ collection: 'news', slug: 'handheld-pc-koorts' }],
-    seo: {
-      title: 'Review: Pragmata — 8.5 Koop hem',
-      description:
-        'ASAPxGaming over Pragmata: Hugh, Diana, hack-schieten en een 8.5 van deze desk.',
-    },
-    oordeel: [
-      'Hugh Williams en de android Diana willen van een vijandige maanbasis af, weg van de AI IDUS. Dat is de pitch die jaren schoof (eerst 2022, toen stilte, toen 17 april 2026). Capcom heeft een nieuwe IP die voelt als een 360-era third-person met een extra laag: je schiet én je hackt in realtime, zonder de gevechtslus te pauzeren tot een puzzelmenu.',
-      'De relatie Hugh/Diana draagt de toon, de kit klikt — en de late uren zijn te vaak een gang waar je mag blijven staan tot de golf klaar is.',
-    ],
-    gameplay: [
-      'De truc is splitsing van aandacht: vijand in beeld, hack-laag tegelijk. Dat is spannend als de ruimte ademt. Het is huiswerk als de leveldesigner de deuren op slot gooit. Vroege zones winnen. De tweede helft herhaalt de truc tot je de maan zat bent.',
-      'Wie Dead Space-achtige spanning zoekt, krijgt die in de goede kamers. Wie een open maanbasis verwacht, krijgt een corridor-show. Dat mag. Zeg het op de doos.',
-    ],
-    verhaal: [
-      'Diana is het hart: nieuwsgierig, nuttig, zelden een piep-mascotte. Hugh is de volwassene die minder groeit dan de actie om hem heen. De AI-thema’s zijn actueel zonder een TED-talk te worden. De plot tilt niet; de twee personages wel.',
-    ],
-    graphics: [
-      'RE Engine op de maan: stof, metaal, aarde als stip. Dat is de reden om hem op een groot scherm te zetten. Switch 2 houdt stand als handheld-compromis, geen 4K-flex.',
-    ],
-    audio: [
-      'De score durft stil te zijn. Stemwerk in EN/JP/NL-subs hangt van je taalkeuze af; de mix laat Diana verstaanbaar in het vuur. Dat is het minimum, hier gehaald.',
-    ],
-    performance: [
-      'PS5-build waarop we klaarden: speelbaar, zwaar in de drukste hack-arena’s. Pc schuift “mooi versus stil” zoals Capcom-pc dat doet. Geen crash-loterij in onze run.',
-    ],
-    conclusie: [
-      '8.5: koop hem voor de kit en het duo, niet voor een meestervertelling. Capcom mag nieuwe IP; ze mogen de tweede helft ook laten ademen.',
-    ],
-  },
-  {
     slug: 'wolverine-marvel',
     gameSlug: 'wolverine-marvel',
-    title: 'Wolverine snijdt hard — en loopt te vaak in een rechte lijn',
+    title: 'Wolverine snijdt hard en loopt te vaak rechtuit',
     excerpt:
-      'Insomniac’s Logan is vanaf 15 september 2026 op PS5. Combat en stemwerk tillen. Vijandenvariatie en verhaal zakken onder de Spider-Man-lat. 7.7.',
+      'Insomniac’s Logan is vanaf 15 september 2026 op PS5. Combat en stemwerk tillen. Vijandenvariatie en verhaal zakken onder de Spider Man lat. 7.7.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-15',
     platforms: ['PS5'],
@@ -337,9 +15,9 @@ export const reviews: GameReview[] = [
     verdict: 'Hit',
     coverLabel: 'WOLV',
     plus: [
-      'Klauw-gevechten die vies mogen zijn',
-      'Logan die als Logan klinkt, geen merch-grijns',
-      'Focus op één mutant, geen open-wereld-checklist',
+      'Klauwgevechten die vies mogen zijn',
+      'Logan die als Logan klinkt, geen merch grijns',
+      'Focus op één mutant, geen open wereld checklist',
     ],
     minus: [
       'Lineair tot het een gang wordt',
@@ -347,36 +25,316 @@ export const reviews: GameReview[] = [
     ],
     scores: { gameplay: 8.0, story: 7.2, graphics: 8.3, audio: 8.1, performance: 7.8 },
     related: [
-      { collection: 'news', slug: 'wolverine-ps5-launch' },
-      { collection: 'news', slug: 'hype-zonder-build' },
+      { collection: 'news', slug: 'wolverine-is-uit' },
+      { collection: 'news', slug: 'gta-vi-blijft-19-november' },
     ],
     seo: {
-      title: 'Review: Marvel’s Wolverine — 7.7 Hit',
+      title: 'Wolverine snijdt hard en loopt te vaak rechtuit',
       description:
         'ASAPxGaming over Marvel’s Wolverine (PS5, 15 sept 2026): klauwen, lineariteit en een 7.7 van deze desk.',
     },
     oordeel: [
-      'Marvel’s Wolverine is vandaag, 15 september 2026, uit op PlayStation 5. Insomniac, bekend van de Spider-Man-games, levert een M-rated klauwverhaal: regeneratie, woede, een zoektocht naar wie Logan was. Dat is publiek, uit de State of Play-trailers en de store-pagina. Geen lek-JPG nodig.',
-      'De gevechten zijn het product. De wereld is een gang met cutscenes. Dat is een bewuste focus: één mutant, geen sandbox-checklist. Het is ook waarom de avond eerder ophoudt dan Insomniacs web-swing-games.',
+      'Marvel’s Wolverine is vandaag, 15 september 2026, uit op PlayStation 5. Insomniac, bekend van de Spider Man games, levert een M rated klauwverhaal: regeneratie, woede, een zoektocht naar wie Logan was. Dat is publiek, uit de State of Play trailers en de store pagina. Geen lek JPG nodig.',
+      'De gevechten zijn het product. De wereld is een gang met cutscenes. Dat is een bewuste focus: één mutant, geen sandbox checklist. Het is ook waarom de avond eerder ophoudt dan Insomniacs webswing games.',
     ],
     gameplay: [
-      'Klauwen, rage, healing: de lus is bevredigend als de camera het bijhoudt. Je voelt gewicht. Je voelt ook herhaling: dezelfde soldaat-types, dezelfde “snij de zaal leeg”-cadans. Open-wereld-Insomniac dit is niet. Dat scheelt checklist-bloat. Het scheelt ook adem.',
-      'Bazen en named mutants tillen. Trash-mobs zakken. Wie hier een Spider-Man-2-sandbox verwacht, krijgt een corridor-brawler in een duurdere jas.',
+      'Klauwen, rage, healing: de lus is bevredigend als de camera het bijhoudt. Je voelt gewicht. Je voelt ook herhaling: dezelfde soldaat types, dezelfde “snij de zaal leeg” cadans. Open wereld Insomniac dit is niet. Dat scheelt checklist bloat. Het scheelt ook adem.',
+      'Bazen en named mutants tillen. Trash mobs zakken. Wie hier een Spider Man 2 sandbox verwacht, krijgt een corridor brawler in een duurdere jas.',
     ],
     verhaal: [
-      'Liam McIntyre als Logan is de stem die de merch-grijns weghoudt. Jean Grey in de marketing is een belofte; de plot undersellt zijn eigen premisse als hij te lang uitlegt wat de trailer al zei. Spoiler-arm: het is een origin-achtige zoektocht, geen ensemble-Avengers-tour. Dat mag strakker.',
+      'Liam McIntyre als Logan is de stem die de merch grijns weghoudt. Jean Grey in de marketing is een belofte. De plot undersellt zijn eigen premisse als hij te lang uitlegt wat de trailer al zei. Spoiler arm: het is een origin achtige zoektocht, geen ensemble Avengers tour. Dat mag strakker.',
     ],
     graphics: [
-      'PS5 haalt het Insomniac-glansje: poriën, regen, bloed dat mag. Het is geen technische revolutie na Spider-Man 2. Het is wel een Logan die eruitziet als een R-rated poster, geen Saturday-morning.',
+      'PS5 haalt het Insomniac glansje: poriën, regen, bloed dat mag. Het is geen technische revolutie na Spider Man 2. Het is wel een Logan die eruitziet als een R rated poster, geen Saturday morning.',
     ],
     audio: [
-      'Snikt, impact, een score die durft te brommen. Stemcast houdt stand. De mix laat rage-audio niet de dialoog wegdrukken — meestal.',
+      'Snikt, impact, een score die durft te brommen. Stemcast houdt stand. De mix laat rage audio niet de dialoog wegdrukken. Meestal.',
     ],
     performance: [
-      'Op de PS5-build van launchweek: speelbaar, een dip in de drukste slachtpartijen. Geen crash in onze run. Pro-mode is een schuif, geen redding van de lineariteit.',
+      'Op de PS5 build van launchweek: speelbaar, een dip in de drukste slachtpartijen. Geen crash in onze run. Pro mode is een schuif, geen redding van de lineariteit.',
     ],
     conclusie: [
-      '7.7: hit als je Logan wilt slachten, geen must-play naast GTA VI in november. Insomniac mag vies zijn; ze mogen ook een tweede vijand-kit ontwerpen.'
+      '7.7: hit als je Logan wilt slachten, geen must play naast GTA VI in november. Insomniac mag vies zijn. Ze mogen ook een tweede vijand kit ontwerpen.',
+    ],
+  },
+  {
+    slug: 'moonlighter-2',
+    gameSlug: 'moonlighter-2',
+    title: 'Moonlighter 2 verkoopt loot beter dan drama',
+    excerpt:
+      'Digital Sun levert op 2 september 2026 weer een winkel met een dungeon eronder. De shop klikt. De late loop vraagt geduld. 8.2.',
+    author: 'Kay van Elsen',
+    publishedAt: '2026-09-04',
+    platforms: ['PC', 'PS5', 'Xbox', 'Switch 2'],
+    genre: 'Indie',
+    score: 8.2,
+    verdict: 'Hit',
+    coverLabel: 'MOON',
+    plus: [
+      'Winkelbeheer dat verslavend blijft',
+      'Dungeons met een eigen grap, geen kopieerwerk',
+      'UI die prijzen laat voelen, niet alleen tellen',
+    ],
+    minus: [
+      'Late grind die de grap herhaalt',
+      'Verhaal dat de kassa volgt, niet leidt',
+    ],
+    scores: { gameplay: 8.5, story: 7.4, graphics: 8.1, audio: 8.0, performance: 8.3 },
+    related: [
+      { collection: 'news', slug: 'moonlighter-2-is-uit' },
+      { collection: 'news', slug: 'steam-september-picks' },
+    ],
+    seo: {
+      title: 'Moonlighter 2 verkoopt loot beter dan drama',
+      description:
+        'ASAPxGaming over Moonlighter 2: shop, dungeons en een 8.2 van deze desk.',
+    },
+    oordeel: [
+      'Moonlighter 2 is de sequel die de lus niet verraadt. Overdag sta je achter de toonbank. s Nachts daal je af, kom je terug met spul, en bepaal je of de stad te duur of te goedkoop koopt. Digital Sun schaalt dat op zonder de winkel tot idle klikker te maken.',
+      'Het is trending omdat hij uit is en speelbaar blijft, niet omdat een keynote hem “het indie moment” noemde. 8.2: ja, met een voetnoot bij de laatste uren.',
+    ],
+    gameplay: [
+      'De shop is het gevecht dat blijft hangen: voorraad, etalage, of je een zeldzaam zwaard durft te laten liggen tot de juiste klant. In de dungeon is het een actie RPG met room reads, geen Soulslike straf. Vroeg voelt elke run als winst voor de kassa.',
+      'Laat wordt het een productieketen. Nieuwe biomen tillen. De economy vraagt herhaling die de grap uitrekt. Wie stopt als de stad draait, houdt de beste versie over.',
+    ],
+    verhaal: [
+      'Er is een plot over gildes, nacht en wat de stad verdient. Het is aardig. Het is niet waarom je een derde run start. Personages mogen mopperen achter de balie. Dat is genoeg toon, te weinig inzet.',
+    ],
+    graphics: [
+      'Kleur, icoontjes, een stad die groeit als je winst maakt. Dat is de screenshot. Geen raytracing flex, wel leesbare loot in een volle zak.',
+    ],
+    audio: [
+      'Een loop die de winkel rustig houdt en de dungeon een tik harder zet. Effecten op verkoop zijn verslavender dan de muziek zelf. Dat mag, het is een kassaspel.',
+    ],
+    performance: [
+      'Op pc en Switch 2 in onze run: stabiel in de shop, een hiccup in de drukste nacht floors, geen save loterij. Dat is het minimum voor een run die je tussendoor start.',
+    ],
+    conclusie: [
+      '8.2: koop hem als de eerste Moonlighter klikte, of als je een indie wilt die deze week écht uit is. Skip de late grind. De winkel is het product.',
+    ],
+  },
+  {
+    slug: '007-first-light',
+    gameSlug: '007-first-light',
+    title: 'Deze Bond sluipen wint tot de plot gaat uitleggen',
+    excerpt:
+      'IO Interactive’s origin van 27 mei 2026. Stealth en Patrick Gibson tillen. De derde akt praat te veel. Switch 2 is nu 2027. 8.6.',
+    author: 'Kay van Elsen',
+    publishedAt: '2026-06-03',
+    platforms: ['PC', 'PS5', 'Xbox'],
+    genre: 'Action',
+    score: 8.6,
+    verdict: 'Koop hem',
+    coverLabel: '007',
+    plus: [
+      'Stealth die als Hitman voelt, met een gezicht',
+      'Patrick Gibson als jonge Bond, geen merch grijns',
+      'Levels die een plan belonen, geen checklist',
+    ],
+    minus: [
+      'Derde akt die de premisse naschrijft',
+      'Switch 2 die je nog een jaar laat wachten',
+    ],
+    scores: { gameplay: 8.8, story: 8.2, graphics: 8.5, audio: 8.6, performance: 8.4 },
+    related: [
+      { collection: 'news', slug: 'bond-switch-verschuift' },
+      { collection: 'reviews', slug: 'pragmata' },
+    ],
+    seo: {
+      title: 'Deze Bond sluipen wint tot de plot gaat uitleggen',
+      description:
+        'ASAPxGaming over 007 First Light: stealth, origin en een 8.6 van deze desk.',
+    },
+    oordeel: [
+      '007 First Light is sinds 27 mei 2026 uit op PlayStation 5, Xbox Series en pc. IO Interactive, het huis achter Hitman, maakt een jonge James Bond die zijn 00 status nog moet verdienen in een MI6 programma. Amazon MGM zit op de licentie. De game is van IOI. Dat onderscheid houdt de toon volwassen.',
+      'De infiltratie wint. De origin praat in de laatste uren te graag na wat de briefing al zei. Switch 2 zou later in 2026 volgen. Op 15 september 2026 schuift IOI die port naar maart 2027. Onze score gaat over de mei platforms, niet over een belofte.',
+    ],
+    gameplay: [
+      'Disguise, routes, een pistool als laatste zin: de lus is Hitman met een gezicht dat mag praten. Social stealth in training en in het veld klikt. Combat kan, maar wint zelden van een plan. Dat is de juiste hiërarchie voor Bond.',
+      'Setpieces tillen als de ruimte ademt. Ze zakken als de camera een cutscene van je afpakt. De beste avonden zijn de avonden waarop je zelf een raam kiest.',
+    ],
+    verhaal: [
+      'Een heruitgevonden origin, geen filmrecap. Bond mag fouten maken zonder dat de merch afdeling het gladstrijkt. Patrick Gibson draagt de stiltes. De derde akt legt uit wat je al speelde. Spoiler arm: hij verdient de status, en de tekst zegt het te vaak hardop.',
+    ],
+    graphics: [
+      'Glacier in smoking: materialen, regen, een Londen en veld die leesbaar blijven in stealth. Geen raytracing flex als verkoopargument. Wel een gezicht dat close ups overleeft.',
+    ],
+    audio: [
+      'The Flight op de score, wapens die droog klinken, een mix die fluisteren in een gang laat werken. Stemwerk houdt stand in EN met NL ondertiteling.',
+    ],
+    performance: [
+      'PS5 en pc in onze run: speelbaar, een dip in de drukste crowd scènes. Geen crash loterij. Dat is het niveau dat Switch 2 nog moet halen voordat maart 2027 een feest is.',
+    ],
+    conclusie: [
+      '8.6: koop hem op een platform dat uit is. Wacht niet op Nintendo als stealth je deze zomer nog iets zegt. IOI mag Bond. Ze mogen de laatste akt ook laten zwijgen.',
+    ],
+  },
+  {
+    slug: 'forza-horizon-6',
+    gameSlug: 'forza-horizon-6',
+    title: 'Forza 6 maakt van Japan een festival, geen brochure',
+    excerpt:
+      'Playground, 19 mei 2026 op Xbox en pc. Wegen en radio tillen. De PS5 dag ontbreekt nog. 8.9.',
+    author: 'Kay van Elsen',
+    publishedAt: '2026-05-26',
+    platforms: ['PC', 'Xbox'],
+    genre: 'Racing',
+    score: 8.9,
+    verdict: 'Must play',
+    coverLabel: 'FH6',
+    plus: [
+      'Japan dat als route voelt, niet als ansichtkaart',
+      'Festivalritme dat je in de auto houdt',
+      'Game Pass dat de drempel serieus verlaagt',
+    ],
+    minus: [
+      'Online dat nog steeds een lobby is, geen magie',
+      'PS5 zonder dag, alleen het jaartal 2026',
+    ],
+    scores: { gameplay: 9.0, story: 7.8, graphics: 9.1, audio: 8.8, performance: 8.6 },
+    related: [
+      { collection: 'news', slug: 'forza-ps5-blijft-2026' },
+      { collection: 'reviews', slug: '007-first-light' },
+    ],
+    seo: {
+      title: 'Forza 6 maakt van Japan een festival, geen brochure',
+      description:
+        'ASAPxGaming over Forza Horizon 6: Japan, festivalritme en een 8.9 van deze desk.',
+    },
+    oordeel: [
+      'Forza Horizon 6 is sinds 19 mei 2026 uit op Xbox Series en pc. Premium was vier dagen eerder binnen. Playground Games zet het festival in een gestileerd Japan, met Tokyo als zwaartepunt. Game Pass Ultimate en PC Game Pass zetten de standaardeditie in het abonnement. Dat is distributie, geen cijfer.',
+      'De wegen winnen. De brochure momenten (Fuji in een trailer, een neon steeg) zijn het dessert, niet het menu. Must play als je Horizon als rit wilt, niet als fotomodus met een stuur.',
+    ],
+    gameplay: [
+      'Horizon blijft: zie een weg, neem de weg, verdien de volgende auto zonder dat een skill tree je gijzelt. Drift, straat, vuil: de disciplines ademen. Japan is smaller dan Mexico in Horizon 5, en dat is een plus. Je leest bochten in plaats van een woestijn te overleven.',
+      'Het festival vraagt te vaak een event pin. Dat is de oude zonde. Skip de pin, rijd de kust, de game blijft aardig. Online is een lobby met ghosts, geen tweede product.',
+    ],
+    verhaal: [
+      'Er is een festivalplot die je mag negeren. Presentatoren doen hun best. Japan zit in de radio en de borden, niet in een cutscene over “cultuur”. Dat is de juiste volgorde.',
+    ],
+    graphics: [
+      'ForzaTech in regen, in tunnel, in een stad die leesbaar blijft bij 200 plus. Dat is waarom je een groot scherm pakt. Geen screenshot wedstrijd, wel een horizon die klopt.',
+    ],
+    audio: [
+      'Motoren eerst, licensed radio als tweede huid. De mix laat een station zwijgen als een canyon dat vraagt. Dat is zeldzaam in een festivalgame.',
+    ],
+    performance: [
+      'Series X en pc in onze run: feest in de open, een dip in de drukste Tokyo crowd. Cloud via Game Pass is noodverband, geen recensie platform. PS5 is aangekondigd voor later in 2026, zonder dag. Die build beoordelen we als hij er is.',
+    ],
+    conclusie: [
+      '8.9: must play op Xbox of pc. Koop geen gerucht over PlayStation. Koop de rit die uit is.',
+    ],
+  },
+  {
+    slug: 'pragmata',
+    gameSlug: 'pragmata',
+    title: 'Pragmata is slim schieten tot de gangen te smal worden',
+    excerpt:
+      'Capcoms maan IP (17 april 2026) koppelt vuur aan live hacken. Hugh en Diana tillen de toon. De late akt gijzelt het tempo.',
+    author: 'Kay van Elsen',
+    publishedAt: '2026-04-24',
+    platforms: ['PC', 'PS5', 'Xbox', 'Switch'],
+    genre: 'Action',
+    score: 8.5,
+    verdict: 'Koop hem',
+    coverLabel: 'PRAG',
+    plus: [
+      'Vuur en hack in één adem, geen menupauze',
+      'Diana als partner, geen mascotte lawaai',
+      'RE Engine die de maan laat glanzen',
+    ],
+    minus: [
+      'Tweede helft die je in arena’s opsluit',
+      'Verhaal dat de actie volgt, niet leidt',
+    ],
+    scores: { gameplay: 8.6, story: 8.0, graphics: 8.8, audio: 8.3, performance: 8.4 },
+    related: [
+      { collection: 'news', slug: 'steam-september-picks' },
+      { collection: 'reviews', slug: 'resident-evil-requiem' },
+    ],
+    seo: {
+      title: 'Pragmata is slim schieten tot de gangen te smal worden',
+      description:
+        'ASAPxGaming over Pragmata: Hugh, Diana, hack schieten en een 8.5 van deze desk.',
+    },
+    oordeel: [
+      'Hugh Williams en de android Diana willen van een vijandige maanbasis af, weg van de AI IDUS. Dat is de pitch die jaren schoof (eerst 2022, toen stilte, toen 17 april 2026). Capcom heeft een nieuwe IP die voelt als een third person shooter met een extra laag: je schiet én je hackt in realtime, zonder de gevechtslus te pauzeren tot een puzzelmenu.',
+      'De relatie Hugh en Diana draagt de toon, de kit klikt, en de late uren zijn te vaak een gang waar je mag blijven staan tot de golf klaar is.',
+    ],
+    gameplay: [
+      'De truc is splitsing van aandacht: vijand in beeld, hacklaag tegelijk. Dat is spannend als de ruimte ademt. Het is huiswerk als de leveldesigner de deuren op slot gooit. Vroege zones winnen. De tweede helft herhaalt de truc tot je de maan zat bent.',
+      'Wie Dead Space achtige spanning zoekt, krijgt die in de goede kamers. Wie een open maanbasis verwacht, krijgt een corridorshow. Dat mag. Zeg het op de doos.',
+    ],
+    verhaal: [
+      'Diana is het hart: nieuwsgierig, nuttig, zelden een piepmascotte. Hugh is de volwassene die minder groeit dan de actie om hem heen. De AI thema’s zijn actueel zonder een TED talk te worden. De plot tilt niet. De twee personages wel.',
+    ],
+    graphics: [
+      'RE Engine op de maan: stof, metaal, aarde als stip. Dat is de reden om hem op een groot scherm te zetten. Switch houdt stand als handheld compromis, geen 4K flex.',
+    ],
+    audio: [
+      'De score durft stil te zijn. Stemwerk in EN en JP met NL subs hangt van je taalkeuze af. De mix laat Diana verstaanbaar in het vuur. Dat is het minimum, hier gehaald.',
+    ],
+    performance: [
+      'PS5 build waarop we klaarden: speelbaar, zwaar in de drukste hackarena’s. Pc schuift mooi versus stil zoals Capcom pc dat doet. Geen crash loterij in onze run.',
+    ],
+    conclusie: [
+      '8.5: koop hem voor de kit en het duo, niet voor een meestervertelling. Capcom mag nieuwe IP. Ze mogen de tweede helft ook laten ademen.',
+    ],
+  },
+  {
+    slug: 'resident-evil-requiem',
+    gameSlug: 'resident-evil-requiem',
+    title: 'Requiem laat Raccoon weer bijten, tot de actie te hard duwt',
+    excerpt:
+      'Capcom, 27 februari 2026. Grace Ashcroft en Leon S. Kennedy, eerste en derde persoon wisselbaar. Sfeer tillen. De late actie zakken. 8.7.',
+    author: 'Kay van Elsen',
+    publishedAt: '2026-03-06',
+    platforms: ['PC', 'PS5', 'Xbox', 'Switch 2'],
+    genre: 'Horror',
+    score: 8.7,
+    verdict: 'Must play',
+    coverLabel: 'REQ',
+    plus: [
+      'Sfeer die Village in de schaduw zet',
+      'Grace die geen bijfiguur blijft',
+      'Camera wissel die je zelf kiest, geen gimmick',
+    ],
+    minus: [
+      'Tweede helft die te graag een shooter wordt',
+      'Leon die soms de show terugeist',
+    ],
+    scores: { gameplay: 8.6, story: 8.8, graphics: 9.0, audio: 8.9, performance: 8.5 },
+    related: [
+      { collection: 'reviews', slug: 'pragmata' },
+      { collection: 'news', slug: 'steam-september-picks' },
+    ],
+    seo: {
+      title: 'Requiem laat Raccoon weer bijten, tot de actie te hard duwt',
+      description:
+        'ASAPxGaming over Resident Evil Requiem: Grace, Leon, Raccoon City en een 8.7 van deze desk.',
+    },
+    oordeel: [
+      'Resident Evil Requiem is sinds 27 februari 2026 uit op PlayStation 5, Xbox Series, Switch 2 en pc. Dertig jaar na het incident in Raccoon City onderzoekt FBI analist Grace Ashcroft sterfgevallen rond de plek waar haar moeder stierf. Leon S. Kennedy wordt naar hetzelfde hotel gestuurd. Je wisselt vrij tussen eerste persoon en derde persoon. Dat is Capcom op de doos, geen lek.',
+      'De eerste uren zijn het beste survival horror dat dit huis in jaren durfde. Daarna duwt de actie te hard. 8.7: must play, met een voetnoot bij de laatste akt.',
+    ],
+    gameplay: [
+      'Resources tellen weer. Een klik in een gang is een zin. De camera wissel is geen menu truc: eerste persoon voor de kamer, derde persoon als je moet rennen. Dat werkt tot de game je een arsenaal in de hand duwt en de spanning inschikt.',
+      'Puzzels zijn eerlijk als de ruimte ze uitlegt. Ze zijn huiswerk als een document de code voorleest. Bazen tillen als je ammo hebt geteld. Ze zakken als het een arena met golven wordt.',
+    ],
+    verhaal: [
+      'Grace is de vondst: analytisch, bang, geen quip machine. Leon mag geschiedenis meedragen zonder een cameo parade. Spoiler arm: het hotel en de stad eromheen herschikken wat je dacht dat Raccoon nog was. De late dump van lore is de oude RE zonde.',
+    ],
+    graphics: [
+      'RE Engine in stof, neon en een politiebureau dat je herkent zonder een museumtour. Switch 2 is het handheld compromis. PS5 is het scherm dat je wilt.',
+    ],
+    audio: [
+      'Voetstappen, adem, een score die durft te zwijgen. Stemwerk houdt Grace verstaanbaar als het misgaat. Dat is de helft van horror, hier gehaald.',
+    ],
+    performance: [
+      'PS5 en pc in onze run: speelbaar, een dip in de drukste crowd, geen crash. Switch 2 houdt 30 ish in de zware kamers. Speelbaar, geen showcase.',
+    ],
+    conclusie: [
+      '8.7: must play als je Village te veel actie vond. Stop eerder als de shooter de sfeer opeet. Het hotel is het product, niet de slotvuurzee.',
     ],
   },
 ]

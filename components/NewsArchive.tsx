@@ -40,7 +40,7 @@ export function NewsArchive() {
       {shown.length === 0 ? (
         <EmptyState
           title="Geen berichten"
-          detail="Deze filter heeft geen demo-stukken. Kies Alles of een andere rubriek."
+          detail="Deze filter heeft geen stukken. Kies Alles of een andere rubriek."
           action={{
             label: 'Toon alles',
             onClick: () => {

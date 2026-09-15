@@ -4,7 +4,7 @@ import { buildMetadata } from '@/lib/seo'
 
 export const metadata = buildMetadata({
   title: 'Zoeken',
-  description: 'Doorzoek nieuws, reviews, features, hardware en games op ASAPxGaming.',
+  description: 'Doorzoek nieuws, reviews en de releasekalender op ASAPxGaming.',
   path: '/zoeken/',
 })
 

@@ -1,47 +1,19 @@
-import { features } from '@/content/features'
 import { games } from '@/content/games'
-import { hardware } from '@/content/hardware'
 import { news } from '@/content/news'
 import { reviews } from '@/content/reviews'
-import type { NewsArticle, NewsFilter, RelatedRef } from '@/types/content'
-
-const foldedNews: NewsArticle[] = [
-  ...features.map((item) => ({
-    slug: item.slug,
-    title: item.title,
-    excerpt: item.excerpt,
-    body: item.body,
-    author: item.author,
-    publishedAt: item.publishedAt,
-    category: 'Industry' as const,
-    tags: item.tags,
-    coverLabel: item.coverLabel,
-    gameSlug:
-      item.slug === 'turn-based-is-niet-dood'
-        ? 'clair-obscur-expedition-33'
-        : item.slug === 'hype-zonder-build'
-          ? 'wolverine-marvel'
-          : undefined,
-    related: item.related,
-    seo: item.seo,
-  })),
-  ...hardware.map((item) => ({
-    slug: item.slug,
-    title: item.title,
-    excerpt: item.excerpt,
-    body: item.body,
-    author: item.author,
-    publishedAt: item.publishedAt,
-    category: 'PC' as const,
-    tags: ['Hardware'],
-    coverLabel: item.coverLabel,
-    related: item.related,
-    seo: item.seo,
-  })),
-]
+import { SITE_MONTH } from '@/data/site'
+import type { NewsFilter, RelatedRef } from '@/types/content'
 
 export function allNews() {
-  return byDate([...news, ...foldedNews])
+  return byDate([...news])
+}
+
+export function isOpenCalendarMonth(isoMonth: string) {
+  return isoMonth >= SITE_MONTH
+}
+
+export function calendarGames() {
+  return games.filter((game) => isOpenCalendarMonth(game.releaseDate.slice(0, 7)))
 }
 
 export function byDate<T extends { publishedAt: string }>(items: T[]) {
@@ -157,13 +129,13 @@ export function resolveRelated(refs: RelatedRef[]) {
 }
 
 export function upcomingGames() {
-  return [...games]
+  return calendarGames()
     .filter((game) => game.status === 'upcoming')
     .sort((a, b) => a.releaseDate.localeCompare(b.releaseDate))
 }
 
 export function filterGames(opts: { platform?: string; genre?: string; month?: string }) {
-  return games.filter((game) => {
+  return calendarGames().filter((game) => {
     const platformOk =
       !opts.platform || opts.platform === 'Alle' || game.platforms.includes(opts.platform)
     const genreOk = !opts.genre || opts.genre === 'Alle' || game.genre === opts.genre

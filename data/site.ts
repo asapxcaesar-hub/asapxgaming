@@ -1,3 +1,7 @@
+/** Editorial "today" for the static site: current month of the release list. */
+export const SITE_TODAY = '2026-09-15'
+export const SITE_MONTH = SITE_TODAY.slice(0, 7)
+
 export const site = {
   name: 'ASAPxGaming',
   tagline: 'Onafhankelijk gamingplatform. Persoonlijk oordeel.',

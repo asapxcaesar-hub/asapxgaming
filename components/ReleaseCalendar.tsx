@@ -4,14 +4,17 @@ import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import { CoverImage } from '@/components/CoverImage'
 import { EmptyState } from '@/components/EmptyState'
-import { games } from '@/content/games'
 import { reviews } from '@/content/reviews'
-import { filterGames } from '@/lib/content'
+import { calendarGames, filterGames } from '@/lib/content'
 import { formatDate, formatMonth } from '@/lib/utils'
 
-const platforms = ['Alle', ...Array.from(new Set(games.flatMap((game) => game.platforms)))]
-const genres = ['Alle', ...Array.from(new Set(games.map((game) => game.genre)))]
-const months = ['Alle', ...Array.from(new Set(games.map((game) => game.releaseDate.slice(0, 7)))).sort()]
+const catalog = calendarGames()
+const platforms = ['Alle', ...Array.from(new Set(catalog.flatMap((game) => game.platforms)))]
+const genres = ['Alle', ...Array.from(new Set(catalog.map((game) => game.genre)))]
+const months = [
+  'Alle',
+  ...Array.from(new Set(catalog.map((game) => game.releaseDate.slice(0, 7)))).sort(),
+]
 
 export function ReleaseCalendar() {
   const [platform, setPlatform] = useState('Alle')
@@ -29,6 +32,8 @@ export function ReleaseCalendar() {
     acc[key].push(game)
     return acc
   }, {})
+
+  const monthKeys = Object.keys(grouped).sort()
 
   return (
     <div className="grid gap-6">
@@ -75,7 +80,7 @@ export function ReleaseCalendar() {
       {filtered.length === 0 ? (
         <EmptyState
           title="Geen releases"
-          detail="Deze combo van platform, genre en maand is leeg in de demo-kalender."
+          detail="Deze combo van platform, genre en maand is leeg in de open maanden."
           action={{
             label: 'Reset filters',
             onClick: () => {
@@ -86,48 +91,51 @@ export function ReleaseCalendar() {
           }}
         />
       ) : (
-        Object.entries(grouped).map(([key, list]) => (
-          <section key={key}>
-            <h2 className="font-display text-3xl capitalize">{formatMonth(key)}</h2>
-            <ul className="mt-3 divide-y divide-line border border-line">
-              {list.map((game) => {
-                const review = reviews.find((item) => item.gameSlug === game.slug)
-                return (
-                <li key={game.slug} className="grid gap-1 bg-elevated p-4 md:grid-cols-[8rem_1fr_auto]">
-                  <p className="text-sm text-accent">{formatDate(game.releaseDate)}</p>
-                  <div className="flex gap-3">
-                    <CoverImage
-                      src={game.coverImage}
-                      alt={game.title}
-                      label={game.coverLabel}
-                      className="hidden size-16 min-h-16 sm:block"
-                    />
-                    <div>
+        monthKeys.map((key) => {
+          const list = grouped[key]
+          return (
+            <section key={key}>
+              <h2 className="font-display text-3xl capitalize">{formatMonth(key)}</h2>
+              <ul className="mt-3 divide-y divide-line border border-line">
+                {list.map((game) => {
+                  const review = reviews.find((item) => item.gameSlug === game.slug)
+                  return (
+                    <li key={game.slug} className="grid gap-1 bg-elevated p-4 md:grid-cols-[8rem_1fr_auto]">
+                      <p className="text-sm text-accent">{formatDate(game.releaseDate)}</p>
+                      <div className="flex gap-3">
+                        <CoverImage
+                          src={game.coverImage}
+                          alt={game.title}
+                          label={game.coverLabel}
+                          className="hidden size-16 min-h-16 sm:block"
+                        />
+                        <div>
+                          {review ? (
+                            <Link href={`/reviews/${review.slug}/`} className="font-semibold hover:text-accent">
+                              {game.title}
+                            </Link>
+                          ) : (
+                            <p className="font-semibold">{game.title}</p>
+                          )}
+                          <p className="text-sm text-muted">
+                            {game.genre} · {game.platforms.join(', ')} · {game.status === 'upcoming' ? 'Verwacht' : 'Uit'}
+                          </p>
+                        </div>
+                      </div>
                       {review ? (
-                        <Link href={`/reviews/${review.slug}/`} className="font-semibold hover:text-accent">
-                          {game.title}
+                        <Link href={`/reviews/${review.slug}/`} className="text-sm text-accent">
+                          Review
                         </Link>
                       ) : (
-                        <p className="font-semibold">{game.title}</p>
+                        <span className="text-sm text-muted">Op de kalender</span>
                       )}
-                      <p className="text-sm text-muted">
-                        {game.genre} · {game.platforms.join(', ')} · {game.status === 'upcoming' ? 'Verwacht' : 'Uit'}
-                      </p>
-                    </div>
-                  </div>
-                  {review ? (
-                    <Link href={`/reviews/${review.slug}/`} className="text-sm text-accent">
-                      Review
-                    </Link>
-                  ) : (
-                    <span className="text-sm text-muted">Op de kalender</span>
-                  )}
-                </li>
-                )
-              })}
-            </ul>
-          </section>
-        ))
+                    </li>
+                  )
+                })}
+              </ul>
+            </section>
+          )
+        })
       )}
     </div>
   )

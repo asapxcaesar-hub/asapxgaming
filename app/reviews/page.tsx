@@ -15,7 +15,7 @@ export default function ReviewsPage() {
         <p className="text-xs uppercase tracking-[0.2em] text-accent">Reviews</p>
         <h1 className="mt-2 font-display text-5xl">Het oordeel</h1>
         <p className="mt-3 max-w-2xl text-muted">
-          Cijfers tot 10. Must-play betekent: plan je week eromheen. Hit is feest, geen bijbel.
+          Cijfers tot 10. Must play betekent: plan je week eromheen. Hit is feest, geen bijbel.
         </p>
       </header>
       <div className="grid gap-3">

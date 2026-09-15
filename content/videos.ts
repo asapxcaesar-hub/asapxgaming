@@ -4,21 +4,21 @@ import { site } from '@/data/site'
 export const videos: VideoClip[] = [
   {
     id: 'yt-wolverine-launch',
-    title: 'Desk: Wolverine launch, eerste uur zonder hype-voice',
+    title: 'Desk: Wolverine launch, eerste uur zonder hype voice',
     platform: 'YouTube',
     href: site.socials.youtube,
     coverLabel: 'YT',
   },
   {
-    id: 'tw-silksong',
-    title: 'VOD: Silksong tot de eerste echte muur',
+    id: 'tw-moonlighter',
+    title: 'VOD: Moonlighter 2 tot de winkel draait',
     platform: 'Twitch',
     href: site.socials.twitch,
     coverLabel: 'LIVE',
   },
   {
-    id: 'tt-kart',
-    title: 'TikTok: Knockout Tour, geen Free Roam-praatje',
+    id: 'tt-gta-wachtkamer',
+    title: 'TikTok: 19 november, geen lek JPG',
     platform: 'TikTok',
     href: site.socials.tiktok,
     coverLabel: 'TT',

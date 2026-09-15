@@ -31,9 +31,9 @@ De eerste slice was Vite SPA. Deze build migreert naar **Next.js `output: 'expor
 | `data/site.ts` | Merk, tagline, creator, **alle social-URL’s**, navigatie |
 | `content/news.ts` | Kort nieuws |
 | `content/reviews.ts` | Game reviews (scores + secties) |
-| `content/features.ts` | Longreads; verschijnen in `/nieuws/` |
-| `content/hardware.ts` | Hardware-stukken; verschijnen in `/nieuws/` |
-| `content/games.ts` | Releasekalender + coverpaden |
+| `content/features.ts` | Oude longreads; alleen via doorverwijzende hubs |
+| `content/hardware.ts` | Oude hardwarestukken; alleen via doorverwijzende hubs |
+| `content/games.ts` | Releases (gedateerd, vanaf de huidige maand) + coverpaden |
 | `content/videos.ts` | Watch/Follow-kaarten (linken naar socials) |
 | `types/content.ts` | Vormen |
 | `lib/content.ts` | Lookups, filters, zoeken |
@@ -44,7 +44,15 @@ Voeg een object toe, hergebruik `slug` in `related`. Geen copy-paste in componen
 
 ## Beelden
 
-Gamecovers, heroes en kaarten gebruiken stills uit een `{game name} ign`-zoekopdracht, lokaal in `public/covers/`. Polder Ghost Line heeft geen IGN-pagina; die titel houdt een label-placeholder.
+Gamecovers, heroes en kaarten gebruiken stills uit een `{game name} ign` zoekopdracht, lokaal in `public/covers/`. Titels zonder still houden een label placeholder.
+
+**Kalender.** Site “vandaag” is 15 september 2026. De lijst start bij september 2026 en scrollt alleen vooruit. Gesloten maanden verdwijnen. Filters werken op die restset. Bron: GameSpot 2026 upcoming schedule, alleen regels met een dag. Undated negeren we.
+
+**Nieuws.** Alleen september 2026, grootste games of indie die ertoe doet. Features en hardware zitten niet in de feed.
+
+**Reviews.** 2026 titels die ertoe doen, geen 2025 staart.
+
+**Copy.** In nieuws en reviews (titel, excerpt, body, kaarten, SEO titel) geen koppelteken, geen en dash, geen em dash. Titels zijn puntig en kloppen met het stuk.
 
 ## Branding
 
