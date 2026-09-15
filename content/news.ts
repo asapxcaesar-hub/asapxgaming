@@ -3,9 +3,9 @@ import type { NewsArticle } from '@/types/content'
 export const news: NewsArticle[] = [
   {
     slug: 'wolverine-ps5-launch',
-    title: 'Wolverine is uit op PS5 — wij geven 7.7, geen 9',
+    title: 'Wolverine is uit op PS5 — 7.7 van deze desk',
     excerpt:
-      '15 september 2026, Insomniac, alleen PlayStation 5. Combat tillen, lineariteit zakken. Dat is onze launch-review, geen rondje aggregaat-kopiëren.',
+      '15 september 2026, Insomniac, alleen PlayStation 5. Combat tillen, lineariteit zakken.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-15',
     category: 'PlayStation',
@@ -16,11 +16,11 @@ export const news: NewsArticle[] = [
     seo: {
       title: 'Marvel’s Wolverine is uit: ASAPxGaming 7.7',
       description:
-        'Launch 15 september 2026 op PS5. Officiële datum, eigen review 7.7 bij de publieke consensus.',
+        'Launch 15 september 2026 op PS5. Officiële datum, review 7.7 van deze desk.',
     },
     body: [
       'Marvel’s Wolverine van Insomniac is vanaf vandaag speelbaar op PlayStation 5. Prijs in de EU-store: in de buurt van €80 voor de standaardeditie, zoals Sony in juni bij de pre-order zette. Geen pc, geen Xbox, geen early-access-weekend. Dat zijn feiten van de uitgever, geen forum-dump.',
-      'De embargo-golf van vorige week landde bij aggregaten rond de 7.7–7.9. Spelers op de PlayStation Store mogen harder juichen; dat is hun stoel. Onze stoel: 7.7 Hit. Klauwen en stemwerk tillen. Vijandenvariatie en een plot die zijn eigen premisse undersellt, zakken. De volledige uitsplitsing staat in de review.',
+      'Klauwen en stemwerk tillen. Vijandenvariatie en een plot die zijn eigen premisse undersellt, zakken. De volledige uitsplitsing staat in de review. 7.7, Hit.',
       'Volgende grote datum op deze kalender: Grand Theft Auto VI op 19 november, PS5 en Xbox Series, volgens Rockstar en Take-Two. Tot die tijd speel je iets dat uit is — of je slacht Logan, met de kanttekeningen erbij.',
     ],
   },

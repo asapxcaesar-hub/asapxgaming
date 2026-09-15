@@ -18,7 +18,7 @@ export const features: LongformArticle[] = [
     },
     body: [
       'Jarenlang was “turn-based” een waarschuwing onder een trailer, alsof nadenken een bug was. Ondertussen groeide een stille catalogus: indie-tactics, SRPG-revivals, roguelites die ronden verstopten achter neon. Dat was geen dood genre. Dat was een genre dat de keynote niet haalde.',
-      'Clair Obscur: Expedition 33 (24 april 2025, Sandfall) maakt de ronde weer fysiek. De parry is geen actie-emulatie; het is de belofte dat jouw aandacht telt. Onze review: 9.0, met de kanttekening dat diezelfde parry in akt 3 te veel van de build-diepte opeet. Consensus zat nét hoger. Dat mag.',
+      'Clair Obscur: Expedition 33 (24 april 2025, Sandfall) maakt de ronde weer fysiek. De parry is geen actie-emulatie; het is de belofte dat jouw aandacht telt. 9.0 van deze desk, met de kanttekening dat diezelfde parry in akt 3 te veel van de build-diepte opeet.',
       'De les voor live-service-huizen is ongemakkelijk. Je kunt een parry-window niet A/B-testen in een seizoenspas. Je moet hem ontwerpen. Als je combat-feel wilt, hoeft de camera niet altijd achter je rug. Soms wint de beurt.',
     ],
   },
@@ -39,7 +39,7 @@ export const features: LongformArticle[] = [
     },
     body: [
       'Een persoonlijk platform heeft geen newsroom van dertig mensen. Dat is geen excuus om garbage te shovelen. Het is een filter: als ik een lek niet kan verifiëren, is het geen nieuws. Het is traffic. X beloont het tweede. Wij kiezen het eerste.',
-      'Grand Theft Auto VI heeft een datum van Take-Two en Rockstar: 19 november 2026, PS5 en Xbox Series. Dat mag op de kalender. Fan-renders, dashboard-crops en “inside source”-stills mogen de prullenbak in. Marvel’s Wolverine daarentegen is 15 september 2026 uit — embargo, store, disc. Daar hoort een eigen cijfer bij (7.7), geen rondje andermans alinea’s overtypen.',
+      'Grand Theft Auto VI heeft een datum van Take-Two en Rockstar: 19 november 2026, PS5 en Xbox Series. Dat mag op de kalender. Fan-renders, dashboard-crops en “inside source”-stills mogen de prullenbak in. Marvel’s Wolverine daarentegen is 15 september 2026 uit — store, disc, speelbaar. Daar hoort een eigen oordeel bij: 7.7.',
       'Wat wél mag zonder build: de machine benoemen. Wie verdient aan de wachtkamer? Welke catalogus (GTA Online) blijft printen terwijl jij wacht? Dat is industry-verslag. Dat is geen rumor-mill.',
     ],
   },
@@ -82,7 +82,7 @@ export const features: LongformArticle[] = [
       description: 'Kay van Elsen over LAN’s versus Twitch-only esports, september 2026.',
     },
     body: [
-      'Online brackets zijn schoon. Offline brackets liegen minder over netcode, tilt, en of iemand écht durft te dashen. De Benelux-herfst zet weer zalen open: mixcups, Smash, fighters, een enkele conventie-hal. Geen namenlijst van een andere site — kijk naar de TO die je kent.',
+      'Online brackets zijn schoon. Offline brackets liegen minder over netcode, tilt, en of iemand écht durft te dashen. De Benelux-herfst zet weer zalen open: mixcups, Smash, fighters, een enkele conventie-hal. Kijk naar de TO die je kent, niet naar een LED-wand.',
       'Ik mis de gang. Niet de LED-wand. De gang, waar je een set naspeelt met iemand die je vijf minuten geleden nog haatte.',
       'Ga deze herfst naar één LAN. Eén. Daarna mag je weer chatten in 1080p.',
     ],

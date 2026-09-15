@@ -6,7 +6,7 @@ export const reviews: GameReview[] = [
     gameSlug: 'clair-obscur-expedition-33',
     title: 'Expedition 33 is schitterend — en te afhankelijk van één knop',
     excerpt:
-      'Sandfall levert een Franse sterfte-RPG die eruitziet als een salon en vecht als een timingtest. Het aggregaat zit rond de 9. Wij ook, met een kanttekening bij akt 3.',
+      'Sandfall levert een Franse sterfte-RPG die eruitziet als een salon en vecht als een timingtest. Must-play, met een kanttekening bij akt 3.',
     author: 'Kay van Elsen',
     publishedAt: '2025-05-02',
     platforms: ['PC', 'PS5', 'Xbox'],
@@ -31,15 +31,15 @@ export const reviews: GameReview[] = [
     seo: {
       title: 'Review: Clair Obscur Expedition 33 — 9.0 Must-play',
       description:
-        'ASAPxGaming over Expedition 33: Gommage, parry-gevechten, akt 3 en waarom 9.0 dichter bij consensus ligt dan een 10.',
+        'ASAPxGaming over Expedition 33: Gommage, parry-gevechten, akt 3 en een 9.0 van deze desk.',
     },
     oordeel: [
       'Lumière telt af naar de Gommage: wie de leeftijd haalt die de Paintress op de horizon heeft gezet, verdwijnt. Expedition 33 is de volgende lichting die vertrekt om dat schilderij te stoppen. Dat is geen “red de wereld”-poster, dat is een begrafenis met een zwaard.',
-      'Critici landden grofweg tussen de 9 en 9.2. Dat is terecht voor toon, muziek en hoe fysiek een beurt hier voelt. Het is ook te hoog als je doet alsof de gevechtslus tot het einde toe even scherp blijft. Must-play, ja. Meesterwerk zonder voetnoot, nee.',
+      'Toon, muziek en hoe fysiek een beurt voelt: daar wint Expedition 33. Alsof de gevechtslus tot het einde even scherp blijft: daar verliest hij. Must-play, ja. Meesterwerk zonder voetnoot, nee.',
     ],
     gameplay: [
       'Je plant skills, je wisselt Pictos, je bouwt een party. En toch wint de parry bijna altijd het gesprek. Een volle string afweren is spectaculair; een mislukte string in akt 2 voelt als huiswerk. Wie van spreadsheets houdt, merkt dat de echte damage-curve in je vingers zit, niet in je tree.',
-      'Vroege bazen vragen lezen. Late optionele gevechten vragen herhaling. Dat is een bewuste keuze, geen bug — en het is de reden dat PC Gamer-achtige tegengeluiden bestaan. Ik speelde door. Ik was in akt 3 ook een uur lang vooral aan het bijtanken.',
+      'Vroege bazen vragen lezen. Late optionele gevechten vragen herhaling. Dat is een bewuste keuze, geen bug. Ik speelde door. Ik was in akt 3 ook een uur lang vooral aan het bijtanken.',
     ],
     verhaal: [
       'De expeditie is een wanhoopsdaad met stijl, geen heldenmars. Personages mogen zwijgen, mopperen, en fouten maken zonder dat een questlog het gladstrijkt. Spoiler-arm: de derde akt herschikt wat je dacht dat de Paintress was. Dat werkt. De lore-dump erna werkt minder.',
@@ -55,7 +55,7 @@ export const reviews: GameReview[] = [
       'Op pc hield framepacing stand in spektakelscènes. De dip die ik noteerde zat in lange akt-3- treks, niet in crashes. Console-versies die we zagen, gedragen zich als een nette 2025-release, geen tech-demo.',
     ],
     conclusie: [
-      '9.0: consensus-buurt, geen fanbrief. Koop hem als je combat-feel en toon boven open-wereld-kilometers zet. Sla de optionele grind over als akt 3 je de teugel uit handen neemt — het verhaal laat zich alsnog afronden.',
+      '9.0 van deze desk, geen fanbrief. Koop hem als je combat-feel en toon boven open-wereld-kilometers zet. Sla de optionele grind over als akt 3 je de teugel uit handen neemt — het verhaal laat zich alsnog afronden.',
     ],
   },
   {
@@ -85,11 +85,11 @@ export const reviews: GameReview[] = [
     seo: {
       title: 'Review: Hollow Knight Silksong — 8.9 Must-play',
       description:
-        'ASAPxGaming over Silksong: Hornet, Pharloom, moeilijkheid en waarom 8.9 dichter bij de aggregaten ligt dan een 10.',
+        'ASAPxGaming over Silksong: Hornet, Pharloom, moeilijkheid en een 8.9 van deze desk.',
     },
     oordeel: [
       'Na jaren wachten is Silksong geen souvenirwinkel. Hornet beweegt als een naald, Pharloom is een koninkrijk dat je laat betalen voor nieuwsgierigheid, en de eerste uren voelen expres als een heropvoeding. Wie Hollow Knight als knusse metroidvania herinnert, krijgt hier een hardere les.',
-      'Aggregaten landen rond de 9.0–9.1. Dat is de juiste buurt. Ik zit er nét onder omdat de moeilijkheid niet alleen “streng” is — ze is soms lui: extra soldaten voor een baas, een pad terug dat de les herhaalt in plaats van aanscherpt.',
+      'De moeilijkheid is niet alleen streng — ze is soms lui: extra soldaten voor een baas, een pad terug dat de les herhaalt in plaats van aanscherpt.',
     ],
     gameplay: [
       'Pogo, zijwaartse lucht, tools: de kit is rijker dan het nagel-en-spreid van deel één. Shortcuts die je zelf verdient, blijven het hoogtepunt. Crests en gadgets vervangen Charms; ik miste de oude build-vrijheid in de midden-game, tot de kit eindelijk klikte.',
@@ -108,7 +108,7 @@ export const reviews: GameReview[] = [
       'Stabiel op de pc- en console-builds die we draaiden. De pijn komt van design-spikes, niet van framedrops. Switch-handheld vraagt de gebruikelijke helderheid-compromis, geen crash-loterij.',
     ],
     conclusie: [
-      '8.9: must-play als je de eerste nog in je vingers hebt en tegen een muur mag lopen. Geen 9.4-souvenir. Team Cherry mag gemeen zijn; ze hoeven de terugweg naar de baas niet tot extra content te promoveren.',
+      '8.9: must-play als je de eerste nog in je vingers hebt en tegen een muur mag lopen. Team Cherry mag gemeen zijn; ze hoeven de terugweg naar de baas niet tot extra content te promoveren.',
     ],
   },
   {
@@ -116,7 +116,7 @@ export const reviews: GameReview[] = [
     gameSlug: 'death-stranding-2',
     title: 'Death Stranding 2 verbindt beter — en praat nog steeds te lang',
     excerpt:
-      'Kojima maakt van lopen minder een belediging en van setpieces meer een film. Het aggregaat zit hoog. De cutscene-lawine ook.',
+      'Kojima maakt van lopen minder een belediging en van setpieces meer een film. De cutscene-lawine groeit mee.',
     author: 'Kay van Elsen',
     publishedAt: '2025-07-03',
     platforms: ['PS5', 'PC'],
@@ -138,11 +138,11 @@ export const reviews: GameReview[] = [
     seo: {
       title: 'Review: Death Stranding 2 — 8.7 Koop hem',
       description:
-        'ASAPxGaming over Death Stranding 2: connecting, gevechten, bloat en een cijfer onder de 9-consensus.',
+        'ASAPxGaming over Death Stranding 2: connecting, gevechten, bloat en een 8.7 van deze desk.',
     },
     oordeel: [
       'Deel één was polariserend omdat lopen de game wás. Deel twee, On the Beach, maakt voertuigen, wegen en gevechten minder optioneel. Wie DS1 haatte als “loopsimulator”, krijgt hier meer knallen — en nog steeds kilometers modder. Wie de connecting-fantasy voelde, groeit het netwerk écht als een beschaving.',
-      'Metacritic/OpenCritic landen rond de 8.9–9.0. Ik zit op 8.7 omdat de pieken hoger zijn dan in 2019, en de Kojima-tax (namen, flashbacks, koffiepauzes) meegroeit. Dat is geen hate. Dat is de runtime.',
+      'De pieken liggen hoger dan in 2019. De Kojima-tax — namen, flashbacks, koffiepauzes — groeit mee. Dat is geen hate. Dat is de runtime. 8.7.',
     ],
     gameplay: [
       'Cargo, balans, weer: de lus is rijper. Voertuigen maken de kaart minder tot een straf, wat de zen-loop van deel één deels inruilt voor tempo. Combat is zichtbaarder. Plus voor spektakel, min voor wie hier kwam om alleen te bezorgen.',
@@ -161,7 +161,7 @@ export const reviews: GameReview[] = [
       'Zwaar in de drukste setpieces, speelbaar op de PS5-build waarop we hem klaarden. Menu-lag is irritant, niet breaking. Pc vraagt de gebruikelijke “ mooi versus stil” -schuif.',
     ],
     conclusie: [
-      '8.7: koop hem als je connecting wílt, niet als je een shooter eist. De consensus mag een tik hoger zitten; mijn geduld met de cutscene-lawine zit een tik lager. Beide mogen naast elkaar bestaan.',
+      '8.7: koop hem als je connecting wílt, niet als je een shooter eist. Mijn geduld met de cutscene-lawine zit een tik lager dan mijn geduld met de wegen.'
     ],
   },
   {
@@ -191,15 +191,15 @@ export const reviews: GameReview[] = [
     seo: {
       title: 'Review: Split Fiction — 8.8 Koop hem',
       description:
-        'ASAPxGaming over Split Fiction: Mio en Zoe, co-op-design en waarom het cijfer bij OpenCritic blijft, niet bij een 10.',
+        'ASAPxGaming over Split Fiction: Mio en Zoe, co-op-design, en waarom solo hem niet redt.',
     },
     oordeel: [
       'Mio schrijft sci-fi, Zoe schrijft fantasy, en Hazelight gooit hun hoofden in één level. It Takes Two was de doorbraak; Split Fiction is dezelfde studio die het genre-wisseltrucje tot structuur maakt. De beste momenten zijn stille afspraken: jij de platform, ik de schakelaar, geen voice-chat nodig.',
-      'OpenCritic landt rond de 9.1, Metacritic nog hoger. Ik blijf op 8.8. Niet omdat het faalt — omdat een 9.6-taal alsof elk chapter even scherp is, en alsof “je hebt een vriend nodig” een detail is. Het is de hele koop.',
+      'Niet elk chapter is even scherp. “Je hebt een vriend nodig” is geen voetnoot, het is de hele koop. 8.8 van deze desk.',
     ],
     gameplay: [
       'Camera’s liegen zelden. Fails zijn grappig in plaats van giftig. Leesbaarheid is beter dan bij menig live-service shooter die co-op op een scorebord plakt. De variatie (voertuig, stealth-gag, split-screen-setpiece) is het product.',
-      'Halverwege herken je de cadans: nieuwe kit, twee minuten wow, checkpoint, mop. Dat is geen belediging. Het is wel de reden dat ik geen 9.3 geef. De laatste akt mag gerust een idee minder, een adem meer.',
+      'Halverwege herken je de cadans: nieuwe kit, twee minuten wow, checkpoint, mop. Dat is geen belediging. De laatste akt mag gerust een idee minder, een adem meer.',
     ],
     verhaal: [
       'Schrijversblokkade als metafoor is licht, en dat mag. Personages tillen de gags. Wie een literaire plot eist, krijgt een nette B-film met een hart. Wie een avond met iemand wilt, krijgt de betere deal.',
@@ -222,7 +222,7 @@ export const reviews: GameReview[] = [
     gameSlug: 'mario-kart-world',
     title: 'Mario Kart World wint de woonkamer, niet de open wereld',
     excerpt:
-      'Switch 2-launchkart met 24 rijders en Knockout Tour. Free Roam is het uithangbord dat het minst waarmaakt. 8.4, geen 9.',
+      'Switch 2-launchkart met 24 rijders en Knockout Tour. Free Roam is het uithangbord dat het minst waarmaakt.',
     author: 'Kay van Elsen',
     publishedAt: '2025-06-12',
     platforms: ['Switch'],
@@ -244,11 +244,11 @@ export const reviews: GameReview[] = [
     seo: {
       title: 'Review: Mario Kart World — 8.4 Hit',
       description:
-        'ASAPxGaming over Mario Kart World op Switch 2: Knockout Tour, Free Roam en een cijfer onder de 8.6-consensus.',
+        'ASAPxGaming over Mario Kart World op Switch 2: Knockout Tour, Free Roam en een 8.4 van deze desk.',
     },
     oordeel: [
       'Mario Kart World is de launch-titel van Switch 2 (5 juni 2025): één kaart, cups, online, en een Free Roam dat Nintendo in de marketing als continent verkocht. In de praktijk is de woonkamer nog steeds de baas. Knockout Tour — checkpoint, afvaller, door — is de mode die de nieuwe hardware écht gebruikt.',
-      'Aggregaten zitten rond de 8.6–8.7. Ik zit op 8.4 omdat rubberbanding en item-chaos identiteit zijn (dat reken ik niet als bug), maar Free Roam wél als onafgebakken feature voelt: P-switch-klusjes, stickers, weinig reden om terug te komen als de cups klaar zijn.',
+      'Rubberbanding en item-chaos zijn identiteit, geen bug. Free Roam voelt wél onafgebakken: P-switch-klusjes, stickers, weinig reden om terug te komen als de cups klaar zijn.',
     ],
     gameplay: [
       'Vierentwintig rijders maakt elke bocht voller. Dat is feest in de bank, tilt in ranked-achtige lobbies. Items blijven Nintendo-rechtvaardigheid: de blue shell is nog steeds een conversatie-ender, geen balansexperiment.',
@@ -275,7 +275,7 @@ export const reviews: GameReview[] = [
     gameSlug: 'pragmata',
     title: 'Pragmata is slim schieten — tot de gangen te smal worden',
     excerpt:
-      'Capcoms maan-IP (17 april 2026) koppelt vuur aan live hacken. Hugh en Diana tillen de toon. De late akt gijzelt het tempo. 8.5, geen 9.',
+      'Capcoms maan-IP (17 april 2026) koppelt vuur aan live hacken. Hugh en Diana tillen de toon. De late akt gijzelt het tempo.',
     author: 'Kay van Elsen',
     publishedAt: '2026-04-24',
     platforms: ['PC', 'PS5', 'Xbox', 'Switch'],
@@ -297,11 +297,11 @@ export const reviews: GameReview[] = [
     seo: {
       title: 'Review: Pragmata — 8.5 Koop hem',
       description:
-        'ASAPxGaming over Pragmata: Hugh, Diana, hack-schieten en een cijfer bij de 8.5–8.6-consensus.',
+        'ASAPxGaming over Pragmata: Hugh, Diana, hack-schieten en een 8.5 van deze desk.',
     },
     oordeel: [
       'Hugh Williams en de android Diana willen van een vijandige maanbasis af, weg van de AI IDUS. Dat is de pitch die jaren schoof (eerst 2022, toen stilte, toen 17 april 2026). Capcom heeft een nieuwe IP die voelt als een 360-era third-person met een extra laag: je schiet én je hackt in realtime, zonder de gevechtslus te pauzeren tot een puzzelmenu.',
-      'Aggregaten landen rond de 8.5–8.6. Dat is de juiste buurt. Ik geef 8.5 omdat de relatie Hugh/Diana de toon draagt en de kit klikt — en omdat de late uren te vaak een gang zijn waar je mag blijven staan tot de golf klaar is.',
+      'De relatie Hugh/Diana draagt de toon, de kit klikt — en de late uren zijn te vaak een gang waar je mag blijven staan tot de golf klaar is.',
     ],
     gameplay: [
       'De truc is splitsing van aandacht: vijand in beeld, hack-laag tegelijk. Dat is spannend als de ruimte ademt. Het is huiswerk als de leveldesigner de deuren op slot gooit. Vroege zones winnen. De tweede helft herhaalt de truc tot je de maan zat bent.',
@@ -353,11 +353,11 @@ export const reviews: GameReview[] = [
     seo: {
       title: 'Review: Marvel’s Wolverine — 7.7 Hit',
       description:
-        'ASAPxGaming over Marvel’s Wolverine (PS5, 15 sept 2026): combat, lineariteit en een cijfer bij de 7.7–7.9-consensus.',
+        'ASAPxGaming over Marvel’s Wolverine (PS5, 15 sept 2026): klauwen, lineariteit en een 7.7 van deze desk.',
     },
     oordeel: [
       'Marvel’s Wolverine is vandaag, 15 september 2026, uit op PlayStation 5. Insomniac, bekend van de Spider-Man-games, levert een M-rated klauwverhaal: regeneratie, woede, een zoektocht naar wie Logan was. Dat is publiek, uit de State of Play-trailers en de store-pagina. Geen lek-JPG nodig.',
-      'Critici landen grofweg tussen de 7.7 en 7.9 — onder Spider-Man (2018 ~8.7), Miles (~8.5) en Spider-Man 2 (~9.0). Ik zit op 7.7. De gevechten zijn het product. De wereld is een gang met cutscenes. Dat is een bewuste focus, en het is ook waarom dit geen 8.5 wordt.',
+      'De gevechten zijn het product. De wereld is een gang met cutscenes. Dat is een bewuste focus: één mutant, geen sandbox-checklist. Het is ook waarom de avond eerder ophoudt dan Insomniacs web-swing-games.',
     ],
     gameplay: [
       'Klauwen, rage, healing: de lus is bevredigend als de camera het bijhoudt. Je voelt gewicht. Je voelt ook herhaling: dezelfde soldaat-types, dezelfde “snij de zaal leeg”-cadans. Open-wereld-Insomniac dit is niet. Dat scheelt checklist-bloat. Het scheelt ook adem.',
@@ -376,7 +376,7 @@ export const reviews: GameReview[] = [
       'Op de PS5-build van launchweek: speelbaar, een dip in de drukste slachtpartijen. Geen crash in onze run. Pro-mode is een schuif, geen redding van de lineariteit.',
     ],
     conclusie: [
-      '7.7: hit als je Logan wilt slachten, geen must-play naast GTA VI in november. Insomniac mag vies zijn; ze mogen ook een tweede vijand-kit ontwerpen. Spelers op de store mogen harder juichen — dat cijfer is hun zaak. Dit is de onze.',
+      '7.7: hit als je Logan wilt slachten, geen must-play naast GTA VI in november. Insomniac mag vies zijn; ze mogen ook een tweede vijand-kit ontwerpen.'
     ],
   },
 ]

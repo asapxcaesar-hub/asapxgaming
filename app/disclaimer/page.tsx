@@ -13,7 +13,7 @@ export default function DisclaimerPage() {
       <h1 className="font-display text-5xl">Disclaimer</h1>
       <p>
         Reviews en nieuws op ASAPxGaming zijn redactionele oordelen van {site.creator.name}, geen koopadvies
-        met garantie. Scores zijn van deze desk, geen aggregaat.
+        met garantie. Scores zijn het oordeel van deze desk.
       </p>
       <p>
         Game- en merknamen blijven van hun rechthebbenden. Coverage betekent geen partnership, tenzij
