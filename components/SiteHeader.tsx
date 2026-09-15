@@ -23,8 +23,12 @@ export function SiteHeader() {
   function onSearch(event: FormEvent) {
     event.preventDefault()
     const q = query.trim()
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('asap-search', q)
+      window.dispatchEvent(new Event('asap-search'))
+    }
     setOpen(false)
-    router.push(q ? `/zoeken/?q=${encodeURIComponent(q)}` : '/zoeken/')
+    router.push('/zoeken/')
   }
 
   return (
@@ -96,7 +100,10 @@ export function SiteHeader() {
       </div>
 
       {open ? (
-        <div id="mobile-nav" className="border-t border-line bg-elevated px-4 py-4 lg:hidden">
+        <div
+          id="mobile-nav"
+          className="border-t border-accent/40 bg-panel px-4 py-4 lg:hidden"
+        >
           <form onSubmit={onSearch} className="mb-3 md:hidden" role="search">
             <label className="sr-only" htmlFor="mob-search">
               Zoeken

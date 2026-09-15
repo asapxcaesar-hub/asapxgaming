@@ -1,21 +1,49 @@
 'use client'
 
-import { useMemo, useState, type FormEvent } from 'react'
+import { useMemo, useState, useSyncExternalStore, type FormEvent } from 'react'
 import Link from 'next/link'
-import { useRouter, useSearchParams } from 'next/navigation'
 import { EmptyState } from '@/components/EmptyState'
 import { searchAll } from '@/lib/content'
 
+const STORAGE_KEY = 'asap-search'
+const listeners = new Set<() => void>()
+
+function emit() {
+  listeners.forEach((listener) => listener())
+}
+
+function readStoredQuery() {
+  if (typeof window === 'undefined') return ''
+  const fromUrl = new URLSearchParams(window.location.search).get('q')
+  return fromUrl?.trim() || sessionStorage.getItem(STORAGE_KEY) || ''
+}
+
+function subscribe(listener: () => void) {
+  listeners.add(listener)
+  window.addEventListener('storage', listener)
+  window.addEventListener('asap-search', listener)
+  return () => {
+    listeners.delete(listener)
+    window.removeEventListener('storage', listener)
+    window.removeEventListener('asap-search', listener)
+  }
+}
+
 export function SearchPanel() {
-  const router = useRouter()
-  const params = useSearchParams()
-  const [query, setQuery] = useState(params.get('q') ?? '')
+  const stored = useSyncExternalStore(subscribe, readStoredQuery, () => '')
+  const [draft, setDraft] = useState<string | null>(null)
+  const query = draft ?? stored
   const hits = useMemo(() => searchAll(query), [query])
+
+  function persist(value: string) {
+    setDraft(value)
+    sessionStorage.setItem(STORAGE_KEY, value)
+    emit()
+  }
 
   function onSubmit(event: FormEvent) {
     event.preventDefault()
-    const q = query.trim()
-    router.replace(q ? `/zoeken/?q=${encodeURIComponent(q)}` : '/zoeken/')
+    persist(query)
   }
 
   return (
@@ -27,7 +55,7 @@ export function SearchPanel() {
         <input
           id="search-q"
           value={query}
-          onChange={(event) => setQuery(event.target.value)}
+          onChange={(event) => persist(event.target.value)}
           placeholder="Zoek nieuws, reviews, games, hardware…"
           className="h-12 flex-1 border border-line bg-elevated px-3"
         />
