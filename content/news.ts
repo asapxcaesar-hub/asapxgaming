@@ -2,35 +2,56 @@ import type { NewsArticle } from '@/types/content'
 
 export const news: NewsArticle[] = [
   {
-    slug: 'steam-nazomer-sale-picks',
-    title: 'Steam-nazomer: vijf drops die wél de moeite zijn',
+    slug: 'wolverine-ps5-launch',
+    title: 'Wolverine is uit op PS5 — wij geven 7.7, geen 9',
     excerpt:
-      'Niet de wishlist-dump, wel de titels die Sem zelf in de bibliotheek duwde. Inclusief wat je kunt overslaan.',
+      '15 september 2026, Insomniac, alleen PlayStation 5. Combat tillen, lineariteit zakken. Dat is onze launch-review, geen rondje aggregaat-kopiëren.',
+    author: 'Sem Harms',
+    publishedAt: '2026-09-15',
+    category: 'PlayStation',
+    tags: ['PlayStation', 'Marvel', 'Release'],
+    coverLabel: 'WOLV',
+    gameSlug: 'wolverine-marvel',
+    related: [{ collection: 'reviews', slug: 'wolverine-marvel' }],
+    seo: {
+      title: 'Marvel’s Wolverine is uit: ASAPxGaming 7.7',
+      description:
+        'Launch 15 september 2026 op PS5. Officiële datum, eigen review 7.7 bij de publieke consensus.',
+    },
+    body: [
+      'Marvel’s Wolverine van Insomniac is vanaf vandaag speelbaar op PlayStation 5. Prijs in de EU-store: in de buurt van €80 voor de standaardeditie, zoals Sony in juni bij de pre-order zette. Geen pc, geen Xbox, geen early-access-weekend. Dat zijn feiten van de uitgever, geen forum-dump.',
+      'De embargo-golf van vorige week landde bij aggregaten rond de 7.7–7.9. Spelers op de PlayStation Store mogen harder juichen; dat is hun stoel. Onze stoel: 7.7 Hit. Klauwen en stemwerk tillen. Vijandenvariatie en een plot die zijn eigen premisse undersellt, zakken. De volledige uitsplitsing staat in de review.',
+      'Volgende grote datum op deze kalender: Grand Theft Auto VI op 19 november, PS5 en Xbox Series, volgens Rockstar en Take-Two. Tot die tijd speel je iets dat uit is — of je slacht Logan, met de kanttekeningen erbij.',
+    ],
+  },
+  {
+    slug: 'steam-nazomer-sale-picks',
+    title: 'Steam in september: drie koopjes, twee harde nee’s',
+    excerpt:
+      'Geen wishlist-dump. Wel wat Sem deze week in de bibliotheek duwde — en welke bak je laat staan, ook met −75%.',
     author: 'Sem Harms',
     publishedAt: '2026-09-11',
     category: 'PC',
     tags: ['PC', 'Deals', 'Steam'],
     coverLabel: 'SALE',
     gameSlug: 'clair-obscur-expedition-33',
-    related: [
-      { collection: 'reviews', slug: 'clair-obscur-expedition-33' },
-    ],
+    related: [{ collection: 'reviews', slug: 'clair-obscur-expedition-33' }],
     seo: {
-      title: 'Steam-nazomer sale: vijf drops die wél de moeite zijn',
+      title: 'Steam september: drie koopjes, twee harde nee’s',
       description:
-        'ASAPxGaming filtert de Steam-nazomer-sale: wat je nu start, wat je laat liggen, en waar je op let op handheld.',
+        'ASAPxGaming-koopadvies voor de Steam-kortingen: Expedition 33, Silksong, Split Fiction, handheld-checks.',
     },
     body: [
-      'De nazomer-sale op Steam is weer een vuurwerkshow van −75% op dingen die je vorig jaar al had. ASAPxGaming filtert op titels die je nu nog kunt starten zonder een wiki-tab te openen.',
-      'Shortlist van deze desk: Expedition 33 als je turn-based durft, Silksong als je straf wilt eten, Split Fiction als je een duo hebt. De “open world survival craft”-bak laten we links liggen — tenzij je écht nog één tree-chopper nodig hebt.',
-      'Tip: check Deck-verificatie voordat je een handheld-koop doet. Te veel 2024-ports gedragen zich in 2026 nog steeds als thermische grap. Dat is geen hate, dat is een ventilator in een stille coupé.',
+      'Steam heeft altijd wel ergens een “seasonal”. Deze week is het weer een etalage van min-symbolen op titels die je vorig jaar al had. Deze desk filtert op wat je nú kunt starten zonder een wiki-tab, en op wat een handheld-port nog steeds als thermische grap behandelt.',
+      'Drie ja’s, kort: Expedition 33 (9.0) als je turn-based met parry aandurft. Silksong (8.9) als je een avond mag verliezen. Pragmata (8.5, uit april) als je Capcoms maan-IP nog niet speelde. Split Fiction alleen mét een duo. Geen pre-order-geloof, geen lek-JPG.',
+      'Twee nee’s: de zoveelste open-world survival-craft in de aanbieding, en AAA-ports die op Deck/Ally “playable” staan zolang je medium, 30 fps en een ventilator accepteert. Check de verified-lijst. Koop geen korting die je in de trein niet kunt uitspelen.',
     ],
   },
   {
     slug: 'benelux-esports-herfst',
-    title: 'Benelux-herfst: LAN’s die ertoe doen',
+    title: 'Herfst in de Benelux: één LAN is meer waard dan tien VODs',
     excerpt:
-      'Van Valorant tot Rocket League: waar je naartoe moet als je de scene live wilt ruiken, niet alleen op Twitch.',
+      'De living-room-scene is niet dood. Ze zat achter latency. Waar je naartoe kunt zonder een festival-LED als bewijs.',
     author: 'Sem Harms',
     publishedAt: '2026-09-05',
     category: 'Industry',
@@ -38,43 +59,44 @@ export const news: NewsArticle[] = [
     coverLabel: 'LAN',
     related: [{ collection: 'news', slug: 'waarom-ik-offline-brackets-mis' }],
     seo: {
-      title: 'Benelux esports-herfst: LAN’s die ertoe doen',
+      title: 'Benelux-herfst: LAN’s boven Twitch-only esports',
       description:
-        'Welke LAN’s in de Benelux deze herfst de moeite waard zijn — en welke mix-cups je kunt laten.',
+        'ASAPxGaming over offline brackets in Nederland en België deze herfst — Smash, fighters, lokale cups.',
     },
     body: [
-      'De Nederlandse living-room-scene is nooit verdwenen, ze zat alleen achter een latency-smokescreen. Deze herfst staan er weer LANs op de kalender waar je de casters kunt aankijken.',
-      'Kijk verder dan alleen de “grote” titels. De lokale Smash- en fighting-brackets zijn vaak beter georganiseerd dan de mix-cups die een sponsorlogo op een LED-wand plakken en het een festival noemen.',
-      'Kaarten: koop ze vroeg. De laatste twee edities waren uitverkocht terwijl Discord nog “wie gaat er?” zat te spammen.',
+      'Online brackets zijn schoon. Offline brackets liegen minder over netcode, tilt, en of iemand écht durft te dashen. In de Benelux is de herfst traditioneel het seizoen waarin sporthallen, campus-zalen en een enkele conventie weer een setup-rij durven neerzetten — van Valorant-mixcups tot Smash- en fighting-brackets die geen persbericht nodig hebben.',
+      'Mijn filter is saai en bruikbaar: kijk of er een TO is die je kent, of de setup-tijd realistisch is, en of de buy-in naar de spelers gaat in plaats van naar een LED-wand. DreamHack-achtige hallen zijn prima als je de crowd wilt. De betere set speel je vaak in een zaal waar de caster naast de setup staat.',
+      'Kaarten: vroeg. De laatste edities die ik bijhield, waren vol terwijl Discord nog “wie gaat er?” zat te spammen. Eén weekend is genoeg. Daarna mag je weer 1080p chatten.',
     ],
   },
   {
     slug: 'gta-vi-wachtkamer',
-    title: 'GTA VI: de wachtkamer is het product',
+    title: 'GTA VI staat op 19 november — de wachtkamer blijft het product',
     excerpt:
-      'Elke lek is content, elke delay is een seizoen. Wij kijken naar wat Rockstar wél controleert: de hype-cyclus.',
+      'Take-Two en Rockstar zetten de datum op 19 november 2026, PS5 en Xbox Series. Lek-JPG’s behandelen we nog steeds niet als nieuws.',
     author: 'Sem Harms',
     publishedAt: '2026-08-20',
     category: 'Industry',
     tags: ['Industry', 'GTA', 'PlayStation'],
     coverLabel: 'GTA',
+    gameSlug: 'grand-theft-auto-vi',
     related: [{ collection: 'news', slug: 'hype-zonder-build' }],
     seo: {
-      title: 'GTA VI: de wachtkamer is het product',
+      title: 'GTA VI: 19 november 2026, geen lek-screenshots',
       description:
-        'Waarom ASAPxGaming geen lek-screenshots als nieuws behandelt, en wat de GTA Online-machine zegt over de wachtkamer.',
+        'Officiële GTA VI-datum (PS5, Xbox Series) en waarom ASAPxGaming de wachtkamer niet vult met leaks.',
     },
     body: [
-      'GTA VI is geen game meer in het publieke gesprek, het is een kalender. ASAPxGaming weigert screenshots van twijfelachtige leaks als nieuws te behandelen. Wat wél telt: hoe publishers de aandacht vasthouden zonder te shippen.',
-      'Voor spelers is het advies saai en correct: speel iets dat uit is. De wachtkamer verdient geen pre-order-religie. Als de eerste gameplay-drop van Rockstar zelf komt, zijn we er — niet eerder met fan-renders.',
-      'Ondertussen blijft GTA Online geld printen. Dat is de échte context van elke “wanneer”-vraag.',
+      'Grand Theft Auto VI heeft een datum die van Rockstar en Take-Two zelf komt: 19 november 2026, PlayStation 5 en Xbox Series. Dat is nieuws. Fan-renders, “inside source”-screenshots en een Discord-crop van een dashboard zijn dat niet. Deze desk publiceert het eerste. Het tweede is traffic.',
+      'De wachtkamer is inmiddels een seizoen. GTA Online blijft draaien terwijl de kalender tikt; dat is de context van elke “wanneer”-vraag, niet een lek. Pre-orders en prijs volgen wanneer de uitgever ze zelf neerzet. Tot die tijd is het advies saai: speel iets dat uit is.',
+      'Als Rockstar zelf gameplay drop — officieel, met hun logo erop — zijn we er. Niet eerder, en niet met iemands JPG uit een forum-dump.',
     ],
   },
   {
     slug: 'handheld-pc-koorts',
-    title: 'Handheld-koorts: meer schermen, dezelfde bottlenecks',
+    title: 'Handhelds in 2026: de catalogus groeit, de TDP liegt nog',
     excerpt:
-      'Elke maker belooft 120 Hz in je broekzak. Wij keken naar thermals, drivers en of je écht AAA in de trein wilt.',
+      'Deck OLED, Windows-pockets, ROG Xbox Ally. Meer schermen. Dezelfde keuze: indies of een ventilator in de coupé.',
     author: 'Sem Harms',
     publishedAt: '2026-07-30',
     category: 'PC',
@@ -85,21 +107,21 @@ export const news: NewsArticle[] = [
       { collection: 'news', slug: 'handheld-koorts-essay' },
     ],
     seo: {
-      title: 'Handheld-pc’s in 2026: meer schermen, dezelfde bottlenecks',
+      title: 'Handheld-pc’s 2026: Deck, Ally, Xbox — dezelfde bottlenecks',
       description:
-        'Wat nieuwe handhelds beloven, wat drivers slopen, en wanneer AAA in je broekzak een slecht idee is.',
+        'ASAPxGaming over Steam Deck OLED, Windows-handhelds en de ROG Xbox Ally: thermals, drivers, verified-lijsten.',
     },
     body: [
-      'De handheld-pc is volwassen en tegelijkertijd een circus. Nieuwe chassis, oude GPU-architecturen, en een driver-update die je vacation-save sloopt.',
-      'Als je een Steam Deck-opvolger of Windows-handheld overweegt: reken op verified-lijsten, niet op trailers. AAA in 2026 op 7 inch is vaak medium, 30–40 fps, en een ventilator die de coupérust gijzelt.',
-      'Onze regel: koop hem voor indies, emulation en “even een run”. Niet als vervanging van je desktop, tenzij je van compromissen houdt — en dat mag.',
+      'De pocket-pc is geen experiment meer. Valve’s Deck OLED is de Linux-referentie, Windows-handhelds van ASUS en Lenovo vullen de schappen, en de ROG Xbox Ally (oktober 2025) plakte er een Xbox-schil en Game Pass-praatje op. De chip-generaties schuiven. De natuurkunde niet: 7 inch, TDP, en een ventilator die de coupérust gijzelt.',
+      'Koopargumenten die ik wél accepteer: Steam-verified indies, emulatie, korte runs, cloud als noodverband. Koopargumenten die ik niet accepteer: een trailer op 120 Hz. AAA in 2026 op handheld is vaak medium, 30–40 fps, en een driver-update die een save in de tas sloopt.',
+      'Onze regel blijft: kies de winkel waar je al woont (SteamOS versus Microsoft-store), lees de compatibility-lijst, en behandel de pocket niet als desktopvervanger tenzij je van compromissen houdt. Dat mag. Zeg het dan wel hardop.',
     ],
   },
   {
     slug: 'nederlandse-indies-spotlight',
-    title: 'Nederlandse indies die harder hitsen dan hun budget',
+    title: 'NL-indies: speel de demo, skip de subsidie-pitch',
     excerpt:
-      'Drie studio’s, geen subsidie-praatje: wat er écht speelt in Utrecht, Rotterdam en een zolder in Groningen.',
+      'Van Rotterdamse VR-huizen tot zolder-builds. Drie types producties die een store-page verdienen zonder patriotisme-korting.',
     author: 'Sem Harms',
     publishedAt: '2026-06-18',
     category: 'Indie',
@@ -108,46 +130,44 @@ export const news: NewsArticle[] = [
     gameSlug: 'polder-ghost-line',
     related: [{ collection: 'news', slug: 'handheld-pc-koorts' }],
     seo: {
-      title: 'Nederlandse indie-games 2026: harder dan hun budget',
+      title: 'Nederlandse indie-games: demo’s boven patriotisme',
       description:
-        'Drie NL-producties die een store-page verdienden zonder influencer-regen — zonder patriotisme-korting.',
+        'ASAPxGaming over NL- en Benelux-indies: Vertigo, kleine pc-builds, en de Polder Ghost Line-demo.',
     },
     body: [
-      'De NL-indiehoek wordt vaak als “schattig” weggezet. Fout. Er zitten designers bij die combat-feel beter snappen dan menig live-service-team met honderd man.',
-      'We lichten drie producties uit die dit jaar een store-page verdienden zonder influencer-regen: een tactische roguelite, een fiets-horror door de polder, en een co-op puzzler die Split Fiction niet kopieert maar wél hetzelfde respect voor twee spelers heeft.',
-      'Steam-tags liegen. Speel de demo’s. De beste Nederlandse games van 2026 vragen geen patriotisme, alleen aandacht.',
+      'Nederlandse games worden in praatjes óf “schattig” óf “Horizon-buren”. Beide zijn lui. Guerrilla en Nixxes zijn AAA-adressen. Vertigo Games (Rotterdam) bewees dat VR-horror hier commercieel kan. Daaronder zit een laag pc- en Switch-builds die geen influencer-regen krijgt en wél een Demo-knop op Steam heeft. Die laag is het gesprek.',
+      'Drie types die ik deze zomer aanzette: een tactische run die geen live-service-pas nodig heeft, co-op puzzels die twee spelers respecteren zonder Hazelight te kopiëren, en fiets-horror door de mist — Polder Ghost Line van Fietslamp Studio, een Rotterdamse demo die ik tot de polder-dijk speelde. Full release staat bij ons op de kalender rond Halloween 2026. Geen review tot de build af is.',
+      'Steam-tags liegen. Subsidie-copy ook. Speel de demo. Als de feel klopt, wishlist. Als de feel een PowerPoint is, geen patriotisme-korting.',
     ],
   },
   {
     slug: 'mario-kart-world-online-seizoen',
-    title: 'Mario Kart World: het online-seizoen is de échte cup',
+    title: 'Mario Kart World: een jaar later wint de lobby, niet Free Roam',
     excerpt:
-      'De singleplayer droogt uit. De lobby’s niet. Wat Nintendo deze herfst met ranked-achtige rotaties doet.',
+      'Cups zijn uitgespeeld. Knockout Tour en 24-speleronline houden het feest gaande. De open wereld blijft een omweg.',
     author: 'Sem Harms',
     publishedAt: '2026-09-02',
     category: 'Nintendo',
     tags: ['Nintendo', 'Mario Kart'],
     coverLabel: 'MKW',
     gameSlug: 'mario-kart-world',
-    related: [
-      { collection: 'reviews', slug: 'mario-kart-world' },
-    ],
+    related: [{ collection: 'reviews', slug: 'mario-kart-world' }],
     seo: {
-      title: 'Mario Kart World online-seizoen: de échte cup',
+      title: 'Mario Kart World online: Knockout Tour boven Free Roam',
       description:
-        'Hoe Mario Kart World na de cups overleeft: rotaties, tilt, en waarom de bank nog steeds wint.',
+        'ASAPxGaming, najaar 2026: hoe Mario Kart World op Switch 2 overleeft na de cups.',
     },
     body: [
-      'World beloofde een continent. Na de cups blijft een speeltuin over die vooral online leeft. Nieuwe rotaties houden de lobby voller dan de Grand Prix-menu’s.',
-      'Rubberbanding is nog steeds de baas. Dat is geen nieuws, dat is de identiteit. Wie tight racing wil, blijft iets anders spelen — en dat mogen we hardop zeggen.',
-      'Voor de woonkamer blijft het de sterkste Switch-drop van het jaar. Voor ranked-fantasieën: verwacht chaos, geen sim.',
+      'Mario Kart World is sinds 5 juni 2025 de Switch 2-kart. De singleplayer-cups droogden uit zoals elke Kart. Wat overblijft: 24-spelerlobbies, Knockout Tour, en een Free Roam die Nintendo als continent verkocht en die de meeste avonden als omweg eindigt.',
+      'Nintendo blijft seizoenen en rotaties duwen. Dat houdt de lobby voller dan het Grand Prix-menu. Rubberbanding is nog steeds de baas — identiteit, geen nieuws. Wie tight racing wil, speelt iets anders. Wie de bank wilt laten winnen, blijft hier.',
+      'Onze review (8.4) is niet verouderd: Knockout Tour was toen al de mode die de hardware gebruikt. Een jaar later is dat alleen duidelijker. Koop hem voor de lobby, niet voor stickers in het gras.',
     ],
   },
   {
     slug: 'xbox-id-handheld-vragen',
-    title: 'Xbox-handheld: de vragen die Microsoft niet beantwoordt',
+    title: 'ROG Xbox Ally: de schil is Xbox, de bottleneck is Windows',
     excerpt:
-      'Game Pass in je tas klinkt als een win. Drivers, exclusives en thermals klinken als huiswerk.',
+      'Sinds oktober 2025 kun je Game Pass in je tas stoppen. Thermals, compatibility-labels en de store op 7 inch zijn het huiswerk dat overblijft.',
     author: 'Sem Harms',
     publishedAt: '2026-08-08',
     category: 'Xbox',
@@ -155,21 +175,21 @@ export const news: NewsArticle[] = [
     coverLabel: 'XBX',
     related: [{ collection: 'news', slug: 'handheld-pc-koorts' }],
     seo: {
-      title: 'Xbox-handheld: vragen die Microsoft open laat',
+      title: 'ROG Xbox Ally in 2026: Game Pass in je tas, Windows-tax in je palm',
       description:
-        'Wat een Xbox-handheld moet bewijzen voordat Game Pass in je tas een koopargument is.',
+        'ASAPxGaming over de ROG Xbox Ally na launch: compatibility-programma, TDP, wanneer de Deck wint.',
     },
     body: [
-      'Een Xbox-handheld is logisch op papier: catalogus, cloud, controller-dna. In de praktijk is het dezelfde bottleneck als elke Windows-pocket: thermals en een store die niet voor 7 inch is gebouwd.',
-      'ASAPxGaming koopt geen vapor. We willen een verified-lijst, een eerlijke TDP-story en of Game Pass-titels écht speelbaar zijn zonder docking-station.',
-      'Tot die drop: de Deck blijft de referentie, niet de trailer.',
+      'ASUS en Xbox shippingen de ROG Xbox Ally en Ally X op 16 oktober 2025: Windows, een Xbox-fullscreen-schil, Play Anywhere, cloud, en in veel regio’s drie maanden Game Pass aan de doos. Op papier is dat de logische pocket: catalogus plus controller-dna. In de palm is het nog steeds een Windows-handheld met TDP-keuzes.',
+      'Microsoft’s Handheld Compatibility-programma is het enige verkoopargument dat ik serieus neem — labels slaan op “werkt dit op 7 inch”, niet op een keynote. Wat ik na maanden gebruik nog steeds wil zien: eerlijke frametimes op AAA uit Game Pass, slaap/resume dat een treinrit overleeft, en een store die niet voelt als een desktop-ui in je duim.',
+      'Tot die lijst jouw bibliotheek dekt: de Deck OLED blijft de referentie als je in Steam woont. De Ally is de referentie als je al in Game Pass en Windows woont. Koop geen vapor, koop de winkel.',
     ],
   },
   {
     slug: 'playstation-plus-extra-september',
-    title: 'PlayStation Plus Extra: september is geen cadeau-maand',
+    title: 'PS Plus Extra in september: catalogus is geen cadeau',
     excerpt:
-      'De lineup is “prima voor wie het al speelde”. Voor wie de catalogus bijhoudt: skippen mag.',
+      'Extra is nuttig als je de backlog snoeit. Deze maand voelt als magazijn. Death Stranding 2 blijft een slimmere avond.',
     author: 'Sem Harms',
     publishedAt: '2026-09-01',
     category: 'PlayStation',
@@ -178,14 +198,14 @@ export const news: NewsArticle[] = [
     gameSlug: 'death-stranding-2',
     related: [{ collection: 'reviews', slug: 'death-stranding-2' }],
     seo: {
-      title: 'PlayStation Plus Extra september: geen cadeau-maand',
+      title: 'PlayStation Plus Extra september: skippen mag',
       description:
-        'Korte lezing van de september-drop op PS Plus Extra — wat je pakt, wat je laat.',
+        'ASAPxGaming over PS Plus Extra: wanneer de maandelijkse drop de moeite is — en wanneer DS2 wint.',
     },
     body: [
-      'Plus Extra is nuttig als je de backlog durft te snoeien. Deze maand voelt als een Magazijn-opruiming: bekende namen, weinig urgentie.',
-      'Pak hem als je de titels nog niet hebt uitgespeeld. Koop hem niet “omdat het Plus is”. Dat is hoe catalogs je schijfruimte gijzelen.',
-      'Death Stranding 2 blijft relevanter dan deze lineup. Speel dat eerst.',
+      'PlayStation Plus Extra is een catalogus, geen verjaardag. Sony wisselt maandelijks namen in en uit; de waarde zit in wat je nog niet hebt uitgespeeld, niet in het persbericht. September 2026 voelt als een opruiming: bekende covers, weinig urgentie voor wie de store al een jaar volgt.',
+      'Pak de drop als er een titel in zit die je bewust hebt laten liggen. Neem geen extra terabyte “omdat het Plus is”. Dat is hoe catalogi schijfruimte gijzelen.',
+      'Op deze desk wint Death Stranding 2 (onze 8.7) het van een middelmatige Extra-maand: één game uitspelen is een beter seizoen dan drie covers downloaden die je in de map Games laat staan.',
     ],
   },
 ]

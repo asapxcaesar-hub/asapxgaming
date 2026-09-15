@@ -3,8 +3,8 @@ import { site } from '@/data/site'
 
 export const videos: VideoClip[] = [
   {
-    id: 'yt-desk-33',
-    title: 'Desk-run: Expedition 33 parry-window',
+    id: 'yt-wolverine-launch',
+    title: 'Desk: Wolverine launch, eerste uur zonder hype-voice',
     platform: 'YouTube',
     href: site.socials.youtube,
     coverLabel: 'YT',
@@ -18,7 +18,7 @@ export const videos: VideoClip[] = [
   },
   {
     id: 'tt-kart',
-    title: 'TikTok: 20 seconden Mario Kart-tilt',
+    title: 'TikTok: Knockout Tour, geen Free Roam-praatje',
     platform: 'TikTok',
     href: site.socials.tiktok,
     coverLabel: 'TT',

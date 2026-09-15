@@ -40,6 +40,8 @@ De eerste slice was Vite SPA. Deze build migreert naar **Next.js `output: 'expor
 
 Voeg een object toe, hergebruik `slug` in `related`. Geen copy-paste in components.
 
+**Geen scrape-pipeline.** Nieuws en reviews zijn originele Nederlandse stukken in deze modules, gebaseerd op publieke feiten (data, platforms, aggregaat-cijfers als getal). We vertalen, herschrijven of herpubliceren geen artikelen van andere outlets.
+
 ## Beelden
 
 Gamecovers, heroes en kaarten gebruiken stills uit een `{game name} ign`-zoekopdracht, lokaal in `public/covers/`. Polder Ghost Line heeft geen IGN-pagina; die titel houdt een label-placeholder.
