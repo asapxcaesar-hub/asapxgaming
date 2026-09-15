@@ -10,8 +10,11 @@ export function SiteFooter() {
             ASAP<span className="text-accent">x</span>Gaming
           </p>
           <p className="mt-2 max-w-sm text-sm text-muted">{site.tagline}</p>
-          <p className="mt-3 text-sm text-muted">
-            {site.creator.name} · {site.creator.city}
+          <p className="mt-3 text-sm text-muted">{site.creator.name}</p>
+          <p className="mt-1 text-sm">
+            <a className="text-accent hover:underline" href={`mailto:${site.creator.email}`}>
+              {site.creator.email}
+            </a>
           </p>
           <p className="mt-2 max-w-sm text-xs text-muted">{site.creator.bio}</p>
         </div>

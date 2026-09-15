@@ -11,7 +11,6 @@ const socials = [
   { href: site.socials.youtube, label: 'YouTube' },
   { href: site.socials.twitch, label: 'Twitch' },
   { href: site.socials.tiktok, label: 'TikTok' },
-  { href: site.socials.x, label: 'X' },
 ]
 
 export function SiteHeader() {

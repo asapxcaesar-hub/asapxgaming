@@ -1,3 +1,4 @@
+import { site } from '@/data/site'
 import { buildMetadata } from '@/lib/seo'
 
 export const metadata = buildMetadata({
@@ -11,7 +12,7 @@ export default function DisclaimerPage() {
     <div className="mx-auto grid max-w-3xl gap-4">
       <h1 className="font-display text-5xl">Disclaimer</h1>
       <p>
-        Reviews en nieuws op ASAPxGaming zijn redactionele oordelen van Sem Harms, geen koopadvies
+        Reviews en nieuws op ASAPxGaming zijn redactionele oordelen van {site.creator.name}, geen koopadvies
         met garantie. Scores zijn van deze desk, geen aggregaat.
       </p>
       <p>

@@ -7,7 +7,7 @@ export const hardware: HardwareReview[] = [
     title: 'Steam Deck OLED in 2026: nog steeds de eerlijke pocket',
     excerpt:
       'Zelfde APU-familie als de LCD, beter scherm, langere batterij. Referentie als je in Steam woont. AAA in de trein blijft een compromis.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2026-07-18',
     score: 8.6,
     verdict: 'Referentie',
@@ -35,7 +35,7 @@ export const hardware: HardwareReview[] = [
     title: 'DualSense Edge: precisie voor een lade vol sticks',
     excerpt:
       'Verwisselbare modules, paddles, profielen. Duur. Voor Wolverine-avonden en shooters, niet voor Mario Kart-feestjes.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2026-05-09',
     score: 8.0,
     verdict: 'Niche-koop',
@@ -58,7 +58,7 @@ export const hardware: HardwareReview[] = [
     title: 'Xbox Wireless Headset: lobby-mic, nette prijs',
     excerpt:
       'Licht, paar-en-klaar met Xbox en pc-dongle. Voor party chat. Niet voor een collab-opname.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2026-04-12',
     score: 7.4,
     verdict: 'Oké instap',

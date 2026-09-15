@@ -1,6 +1,6 @@
 # ASAPxGaming
 
-Onafhankelijk Nederlands gamingplatform (nieuws, reviews, releases) van Sem “ASAP” Harms. Next.js 16 App Router, TypeScript, Tailwind, **static export** — hostbaar op de gratis tier van [Wasmer Edge](https://wasmer.io) vanaf GitHub.
+Onafhankelijk Nederlands gamingplatform (nieuws, reviews, releases) van Kay van Elsen (@asapxcaesar). Next.js 16 App Router, TypeScript, Tailwind, **static export** — hostbaar op de gratis tier van [Wasmer Edge](https://wasmer.io) vanaf GitHub.
 
 Geen accounts, geen database, geen CMS-server. Content ligt in TypeScript-modules (CMS-klaar: zelfde velden, andere loader later).
 
@@ -52,7 +52,7 @@ Donker palet (CSS variables in `styles/theme.css`): `#08090C`, `#111318`, `#181B
 
 ## Socials
 
-Gecentraliseerd in `data/site.ts` → `site.socials` (YouTube, Twitch, TikTok, X, Instagram, Discord). Header, footer en Watch/Follow lezen alleen daaruit.
+Gecentraliseerd in `data/site.ts` → `site.socials` (YouTube, Twitch, TikTok: @asapxcaesar). Contact: `asapxcaesar@gmail.com`. Header, footer en Watch/Follow lezen alleen daaruit.
 
 ## SEO
 

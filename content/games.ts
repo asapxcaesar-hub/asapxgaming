@@ -145,7 +145,7 @@ export const games: GameEntry[] = [
     genre: 'Horror',
     releaseDate: '2026-10-31',
     status: 'upcoming',
-    summary: 'Rotterdamse fiets-horror. Demo speelbaar; full release rond Halloween 2026. Geen review tot de build af is.',
+    summary: 'Nederlandse fiets-horror. Demo speelbaar; full release rond Halloween 2026. Geen review tot de build af is.',
     coverLabel: 'PGL',
     related: [{ collection: 'news', slug: 'nederlandse-indies-spotlight' }],
     seo: {

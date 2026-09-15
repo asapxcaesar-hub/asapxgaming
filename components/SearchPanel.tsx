@@ -66,7 +66,7 @@ export function SearchPanel() {
       {!query.trim() ? (
         <EmptyState
           title="Typ een term"
-          detail="Bijvoorbeeld Silksong, handheld, Rotterdam of PlayStation."
+          detail="Bijvoorbeeld Silksong, handheld, Wolverine of PlayStation."
         />
       ) : hits.length === 0 ? (
         <EmptyState

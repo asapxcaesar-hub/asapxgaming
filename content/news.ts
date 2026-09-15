@@ -6,7 +6,7 @@ export const news: NewsArticle[] = [
     title: 'Wolverine is uit op PS5 — wij geven 7.7, geen 9',
     excerpt:
       '15 september 2026, Insomniac, alleen PlayStation 5. Combat tillen, lineariteit zakken. Dat is onze launch-review, geen rondje aggregaat-kopiëren.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2026-09-15',
     category: 'PlayStation',
     tags: ['PlayStation', 'Marvel', 'Release'],
@@ -28,8 +28,8 @@ export const news: NewsArticle[] = [
     slug: 'steam-nazomer-sale-picks',
     title: 'Steam in september: drie koopjes, twee harde nee’s',
     excerpt:
-      'Geen wishlist-dump. Wel wat Sem deze week in de bibliotheek duwde — en welke bak je laat staan, ook met −75%.',
-    author: 'Sem Harms',
+      'Geen wishlist-dump. Wel wat Kay deze week in de bibliotheek duwde — en welke bak je laat staan, ook met −75%.',
+    author: 'Kay van Elsen',
     publishedAt: '2026-09-11',
     category: 'PC',
     tags: ['PC', 'Deals', 'Steam'],
@@ -52,7 +52,7 @@ export const news: NewsArticle[] = [
     title: 'Herfst in de Benelux: één LAN is meer waard dan tien VODs',
     excerpt:
       'De living-room-scene is niet dood. Ze zat achter latency. Waar je naartoe kunt zonder een festival-LED als bewijs.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2026-09-05',
     category: 'Industry',
     tags: ['Esports', 'NL', 'Industry'],
@@ -74,7 +74,7 @@ export const news: NewsArticle[] = [
     title: 'GTA VI staat op 19 november — de wachtkamer blijft het product',
     excerpt:
       'Take-Two en Rockstar zetten de datum op 19 november 2026, PS5 en Xbox Series. Lek-JPG’s behandelen we nog steeds niet als nieuws.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2026-08-20',
     category: 'Industry',
     tags: ['Industry', 'GTA', 'PlayStation'],
@@ -97,7 +97,7 @@ export const news: NewsArticle[] = [
     title: 'Handhelds in 2026: de catalogus groeit, de TDP liegt nog',
     excerpt:
       'Deck OLED, Windows-pockets, ROG Xbox Ally. Meer schermen. Dezelfde keuze: indies of een ventilator in de coupé.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2026-07-30',
     category: 'PC',
     tags: ['Hardware', 'PC'],
@@ -121,8 +121,8 @@ export const news: NewsArticle[] = [
     slug: 'nederlandse-indies-spotlight',
     title: 'NL-indies: speel de demo, skip de subsidie-pitch',
     excerpt:
-      'Van Rotterdamse VR-huizen tot zolder-builds. Drie types producties die een store-page verdienen zonder patriotisme-korting.',
-    author: 'Sem Harms',
+      'Van NL-VR-huizen tot zolder-builds. Drie types producties die een store-page verdienen zonder patriotisme-korting.',
+    author: 'Kay van Elsen',
     publishedAt: '2026-06-18',
     category: 'Indie',
     tags: ['Indie', 'NL'],
@@ -135,8 +135,8 @@ export const news: NewsArticle[] = [
         'ASAPxGaming over NL- en Benelux-indies: Vertigo, kleine pc-builds, en de Polder Ghost Line-demo.',
     },
     body: [
-      'Nederlandse games worden in praatjes óf “schattig” óf “Horizon-buren”. Beide zijn lui. Guerrilla en Nixxes zijn AAA-adressen. Vertigo Games (Rotterdam) bewees dat VR-horror hier commercieel kan. Daaronder zit een laag pc- en Switch-builds die geen influencer-regen krijgt en wél een Demo-knop op Steam heeft. Die laag is het gesprek.',
-      'Drie types die ik deze zomer aanzette: een tactische run die geen live-service-pas nodig heeft, co-op puzzels die twee spelers respecteren zonder Hazelight te kopiëren, en fiets-horror door de mist — Polder Ghost Line van Fietslamp Studio, een Rotterdamse demo die ik tot de polder-dijk speelde. Full release staat bij ons op de kalender rond Halloween 2026. Geen review tot de build af is.',
+      'Nederlandse games worden in praatjes óf “schattig” óf “Horizon-buren”. Beide zijn lui. Guerrilla en Nixxes zijn AAA-adressen. Vertigo Games bewees dat VR-horror hier commercieel kan. Daaronder zit een laag pc- en Switch-builds die geen influencer-regen krijgt en wél een Demo-knop op Steam heeft. Die laag is het gesprek.',
+      'Drie types die ik deze zomer aanzette: een tactische run die geen live-service-pas nodig heeft, co-op puzzels die twee spelers respecteren zonder Hazelight te kopiëren, en fiets-horror door de mist — Polder Ghost Line van Fietslamp Studio, een demo die ik tot de polder-dijk speelde. Full release staat bij ons op de kalender rond Halloween 2026. Geen review tot de build af is.',
       'Steam-tags liegen. Subsidie-copy ook. Speel de demo. Als de feel klopt, wishlist. Als de feel een PowerPoint is, geen patriotisme-korting.',
     ],
   },
@@ -145,7 +145,7 @@ export const news: NewsArticle[] = [
     title: 'Mario Kart World: een jaar later wint de lobby, niet Free Roam',
     excerpt:
       'Cups zijn uitgespeeld. Knockout Tour en 24-speleronline houden het feest gaande. De open wereld blijft een omweg.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2026-09-02',
     category: 'Nintendo',
     tags: ['Nintendo', 'Mario Kart'],
@@ -168,7 +168,7 @@ export const news: NewsArticle[] = [
     title: 'ROG Xbox Ally: de schil is Xbox, de bottleneck is Windows',
     excerpt:
       'Sinds oktober 2025 kun je Game Pass in je tas stoppen. Thermals, compatibility-labels en de store op 7 inch zijn het huiswerk dat overblijft.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2026-08-08',
     category: 'Xbox',
     tags: ['Xbox', 'Hardware', 'Industry'],
@@ -190,7 +190,7 @@ export const news: NewsArticle[] = [
     title: 'PS Plus Extra in september: catalogus is geen cadeau',
     excerpt:
       'Extra is nuttig als je de backlog snoeit. Deze maand voelt als magazijn. Death Stranding 2 blijft een slimmere avond.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2026-09-01',
     category: 'PlayStation',
     tags: ['PlayStation', 'Plus'],

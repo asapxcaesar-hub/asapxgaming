@@ -16,7 +16,11 @@ export default function ContactPage() {
         <h1 className="mt-2 font-display text-5xl">Schrijf de desk</h1>
         <p className="mt-3 text-muted">
           Review keys, samenwerkingen of een gewone vraag. Dit formulier is een layout: in de
-          statische demo gaat er geen backend-mail. Voor productie mail je {site.creator.email}.
+          statische demo gaat er geen backend-mail. Mail{' '}
+          <a className="text-accent hover:underline" href={`mailto:${site.creator.email}`}>
+            {site.creator.email}
+          </a>
+          .
         </p>
         <ul className="mt-4 grid gap-2 text-sm text-muted">
           <li>PR / review keys — build + embargo, geen hypedeck zonder code.</li>

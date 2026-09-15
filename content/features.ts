@@ -6,7 +6,7 @@ export const features: LongformArticle[] = [
     title: 'Turn-based was nooit weg. Het durfde alleen geen parry',
     excerpt:
       'Expedition 33 (9.0 bij ons) maakt de beurt weer zichtbaar. Dat is geen revival-hype, dat is ontwerp dat je niet in een battle-pass A/B-test.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2026-08-30',
     tags: ['RPG', 'Design', 'Opinion'],
     coverLabel: 'TURN',
@@ -27,7 +27,7 @@ export const features: LongformArticle[] = [
     title: 'Hype zonder build is geen journalistiek — ook niet in GTA-maand',
     excerpt:
       '19 november staat GTA VI op de kalender van Rockstar zelf. Tot die tijd geen lek-screenshots op deze desk. Wolverine mocht wél: die is uit.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2026-08-21',
     tags: ['Industry', 'Opinion'],
     coverLabel: 'HYPE',
@@ -48,7 +48,7 @@ export const features: LongformArticle[] = [
     title: 'De trein is geen gaming-pc — ook niet met een Xbox-schil',
     excerpt:
       'Deck OLED blijft de Steam-referentie. ROG Xbox Ally (oktober 2025) is Windows in je palm. Koop de winkel, niet de 120 Hz-slide.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2026-08-01',
     tags: ['Hardware', 'PC', 'Opinion'],
     coverLabel: 'TREIN',
@@ -72,14 +72,14 @@ export const features: LongformArticle[] = [
     title: 'Waarom ik offline brackets mis — herfst 2026',
     excerpt:
       'Twitch is handig. Een zaal met freeze-frames liegt minder over netcode. Eén LAN deze herfst is genoeg.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2026-09-06',
     tags: ['Esports', 'NL', 'Opinion'],
     coverLabel: 'LAN',
     related: [{ collection: 'news', slug: 'benelux-esports-herfst' }],
     seo: {
       title: 'Column: offline brackets in de Benelux-herfst',
-      description: 'Sem Harms over LAN’s versus Twitch-only esports, september 2026.',
+      description: 'Kay van Elsen over LAN’s versus Twitch-only esports, september 2026.',
     },
     body: [
       'Online brackets zijn schoon. Offline brackets liegen minder over netcode, tilt, en of iemand écht durft te dashen. De Benelux-herfst zet weer zalen open: mixcups, Smash, fighters, een enkele conventie-hal. Geen namenlijst van een andere site — kijk naar de TO die je kent.',

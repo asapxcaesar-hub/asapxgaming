@@ -7,7 +7,7 @@ export const reviews: GameReview[] = [
     title: 'Expedition 33 is schitterend — en te afhankelijk van één knop',
     excerpt:
       'Sandfall levert een Franse sterfte-RPG die eruitziet als een salon en vecht als een timingtest. Het aggregaat zit rond de 9. Wij ook, met een kanttekening bij akt 3.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2025-05-02',
     platforms: ['PC', 'PS5', 'Xbox'],
     genre: 'RPG',
@@ -64,7 +64,7 @@ export const reviews: GameReview[] = [
     title: 'Silksong is groter, scherper en soms onnodig gemeen',
     excerpt:
       'Hornet in Pharloom is geen Hallownest-DLC. Movement is verslavend, de kaart is rijker, en de runbacks blijven een gesprek dat Team Cherry niet wint.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2025-09-11',
     platforms: ['PC', 'Switch', 'PS5', 'Xbox'],
     genre: 'Metroidvania',
@@ -117,7 +117,7 @@ export const reviews: GameReview[] = [
     title: 'Death Stranding 2 verbindt beter — en praat nog steeds te lang',
     excerpt:
       'Kojima maakt van lopen minder een belediging en van setpieces meer een film. Het aggregaat zit hoog. De cutscene-lawine ook.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2025-07-03',
     platforms: ['PS5', 'PC'],
     genre: 'Action',
@@ -170,7 +170,7 @@ export const reviews: GameReview[] = [
     title: 'Split Fiction eist twee controllers — en verdient ze',
     excerpt:
       'Hazelight splitst fantasy en sci-fi over twee spelers. Inventief, grappig, en nog steeds geen solo-avond. Dat is de pitch, geen voetnoot.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2025-03-12',
     platforms: ['PC', 'PS5', 'Xbox'],
     genre: 'Co-op avontuur',
@@ -223,7 +223,7 @@ export const reviews: GameReview[] = [
     title: 'Mario Kart World wint de woonkamer, niet de open wereld',
     excerpt:
       'Switch 2-launchkart met 24 rijders en Knockout Tour. Free Roam is het uithangbord dat het minst waarmaakt. 8.4, geen 9.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2025-06-12',
     platforms: ['Switch'],
     genre: 'Racing',
@@ -276,7 +276,7 @@ export const reviews: GameReview[] = [
     title: 'Pragmata is slim schieten — tot de gangen te smal worden',
     excerpt:
       'Capcoms maan-IP (17 april 2026) koppelt vuur aan live hacken. Hugh en Diana tillen de toon. De late akt gijzelt het tempo. 8.5, geen 9.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2026-04-24',
     platforms: ['PC', 'PS5', 'Xbox', 'Switch'],
     genre: 'Action',
@@ -329,7 +329,7 @@ export const reviews: GameReview[] = [
     title: 'Wolverine snijdt hard — en loopt te vaak in een rechte lijn',
     excerpt:
       'Insomniac’s Logan is vanaf 15 september 2026 op PS5. Combat en stemwerk tillen. Vijandenvariatie en verhaal zakken onder de Spider-Man-lat. 7.7.',
-    author: 'Sem Harms',
+    author: 'Kay van Elsen',
     publishedAt: '2026-09-15',
     platforms: ['PS5'],
     genre: 'Action',

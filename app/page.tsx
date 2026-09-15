@@ -133,6 +133,11 @@ export default function HomePage() {
               Twitch
             </a>
           </Button>
+          <Button asChild variant="outline">
+            <a href={site.socials.tiktok} target="_blank" rel="noreferrer">
+              TikTok
+            </a>
+          </Button>
         </div>
       </section>
     </div>
