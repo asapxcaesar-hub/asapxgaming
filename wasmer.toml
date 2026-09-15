@@ -1,13 +1,13 @@
 [package]
 name = "asaspxgaming/asaspxgaming"
-version = "0.1.0"
-description = "ASAPxGaming — Nederlandse game reviews en nieuws (Vite static site)"
+version = "0.2.0"
+description = "ASAPxGaming — Nederlands gamingplatform (Next.js static export)"
 
 [dependencies]
 "wasmer/static-web-server" = "^1"
 
 [fs]
-"/public" = "dist"
+"/public" = "out"
 "/settings" = "settings"
 
 [[command]]

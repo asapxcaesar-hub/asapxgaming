@@ -1,73 +1,79 @@
 # ASAPxGaming
 
-Nederlandse website voor **game reviews** en **nieuws**. Statische Vite + React + TypeScript + Tailwind-site, klaar om gratis op [Wasmer Edge](https://wasmer.io) te hosten vanaf GitHub.
+Onafhankelijk Nederlands gamingplatform (nieuws, reviews, releases, features, hardware) van Sem “ASAP” Harms. Next.js 16 App Router, TypeScript, Tailwind, **static export** — hostbaar op de gratis tier van [Wasmer Edge](https://wasmer.io) vanaf GitHub.
 
-Geen accounts, geen database, geen CMS. Reviews en artikelen staan in `src/data/`.
+Geen accounts, geen database, geen CMS-server. Content ligt in TypeScript-modules (CMS-klaar: zelfde velden, andere loader later).
 
-## Lokaal draaien
+## Starten
 
-Vereisten: Node.js 22+.
+Node 22+.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Dev-server: [http://127.0.0.1:4629](http://127.0.0.1:4629) (poort 4629, niet 5173).
-
-Productiebuild:
+Dev-server: [http://127.0.0.1:4629](http://127.0.0.1:4629)
 
 ```bash
-npm run build
-npm run preview
+npm run build   # schrijft naar out/
+npm run lint
 ```
 
-`npm run build` schrijft naar `dist/`. Die map serveert Wasmer.
+## Stackkeuze
 
-## Routes
+De eerste slice was Vite SPA. Deze build migreert naar **Next.js `output: 'export'`** omdat de spec per pagina SEO eist (canonical, Open Graph, Twitter, Article/Review JSON-LD, sitemap, robots) en HTML per route. Wasmer blijft een static file server (`out/` i.p.v. `dist/`).
 
-| Pad | Inhoud |
+## Content beheren
+
+| Map | Wat |
 | --- | --- |
-| `/` | Home |
-| `/nieuws` | Nieuwsoverzicht (zoek + tags, inclusief lege staat) |
-| `/nieuws/:slug` | Artikel |
-| `/reviews` | Reviewlijst |
-| `/reviews/:slug` | Review |
-| `/over` | Redactie / over de site |
+| `data/site.ts` | Merk, tagline, creator, **alle social-URL’s**, navigatie |
+| `content/news.ts` | Kort nieuws |
+| `content/reviews.ts` | Game reviews (scores + secties) |
+| `content/features.ts` | Longreads / columns |
+| `content/hardware.ts` | Hardware reviews |
+| `content/games.ts` | Game-database + release-datums |
+| `content/videos.ts` | Watch/Follow-kaarten (linken naar socials) |
+| `types/content.ts` | Vormen |
+| `lib/content.ts` | Lookups, filters, zoeken |
 
-Onbekende slugs en routes tonen een fout- of 404-staat.
+Voeg een object toe, hergebruik `slug` in `related`. Geen copy-paste in components.
 
-## Gratis hosten: GitHub → Wasmer.io
+## Beelden
 
-Wasmer Edge heeft een gratis tier voor apps. Git-deploys werken met GitHub.
+Geen stockfoto’s of nagemaakte nieuwsfoto’s. Covers zijn CSS-placeholders (`CoverPlaceholder`) met een label. Vervang later door echte screenshots in `public/` en een `coverSrc`-veld.
 
-1. Zet deze repo op GitHub (leeg of bestaande remote).
-2. Maak een account op [wasmer.io](https://wasmer.io) (GitHub-login mag).
-3. Ga naar [een nieuwe app](https://wasmer.io/apps/create?template=static-website) of **New App** in het dashboard.
-4. Kies **GitHub** als bron, autoriseer Wasmer, selecteer deze repository.
-5. Zet de production branch op `main` (of de branch die je wilt releasen).
-6. Als Wasmer om een build vraagt: install `npm ci`, build `npm run build`, output `dist`.
-7. Sla op en deploy. Pushes naar die branch kunnen daarna automatisch uitrollen.
+## Branding
 
-Config in deze repo (niet weggooien):
+Donker palet (CSS variables in `styles/theme.css`): `#08090C`, `#111318`, `#181B22`, `#FFFFFF`, `#9CA3AF`, één accent `#2EE6A6`. Geen tweede merkkleur, geen PU.nl-layout of logo.
 
-- `wasmer.toml` — package + `wasmer/static-web-server`, map `dist` → `/public`
-- `app.yaml` — Edge-app (`name: asaspxgaming`, `package: .`)
-- `Staticfile` — `root: dist` (Wasmer static-website template)
-- `settings/config.toml` — SPA-fallback naar `index.html` zodat `/reviews/...` werkt
+## Socials
 
-Eerste deploy via CLI (optioneel, na `wasmer login`):
+Gecentraliseerd in `data/site.ts` → `site.socials` (YouTube, Twitch, TikTok, X, Instagram, Discord). Header, footer en Watch/Follow lezen alleen daaruit.
+
+## SEO
+
+`lib/seo.ts` + `generateMetadata` per route. `app/sitemap.ts` en `app/robots.ts` gaan mee in de export. Zet `NEXT_PUBLIC_SITE_URL` vóór de build op je echte Wasmer-URL (default: `https://asaspxgaming.wasmer.app`).
+
+## Wasmer.io (gratis, vanaf GitHub)
+
+1. Push naar GitHub.
+2. Wasmer-account, app koppelen aan de repo, production branch `main`.
+3. Build indien gevraagd: `npm ci` + `npm run build`, publicatiemap **`out`**.
+4. Repo-config: `wasmer.toml` (mount `out` → `/public`), `app.yaml`, `Staticfile` (`root: out`), `settings/config.toml` (SPA-fallback voor onbekende paden).
+
+CLI:
 
 ```bash
 npm run build
-# Zet in app.yaml het veld owner: op jouw Wasmer-username als de CLI daarom vraagt
 wasmer deploy
 ```
 
-Na de eerste publicatie kun je `owner` in `app.yaml` vastzetten op jouw namespace. De packagenaam in `wasmer.toml` mag je wijzigen naar `<username>/asaspxgaming`.
+Zet `owner` in `app.yaml` op je Wasmer-namespace na de eerste login.
 
-Docs: [static site](https://docs.wasmer.io/edge/guides/static-site/), [React op Edge](https://docs.wasmer.io/edge/guides/react-static-site/), [GitHub-deploys](https://docs.wasmer.io/edge/git/).
+Docs: [static site](https://docs.wasmer.io/edge/guides/static-site/), [React/static](https://docs.wasmer.io/edge/guides/react-static-site/), [Git](https://docs.wasmer.io/edge/git/).
 
-## Stack
+## Routes
 
-Vite 8, React 19, TypeScript, Tailwind 4, React Router, shadcn-achtige primitives (Button, Badge, Input, Skeleton).
+`/`, `/nieuws`, `/nieuws/[slug]`, `/reviews`, `/reviews/[slug]`, `/games`, `/games/[slug]`, `/releases`, `/features`, `/features/[slug]`, `/hardware`, `/hardware/[slug]`, `/over-asapxgaming`, `/contact`, `/zoeken`, `/privacy`, `/disclaimer`, `/cookiebeleid`.
