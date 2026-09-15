@@ -14,8 +14,9 @@ export default function ReleasesPage() {
         <p className="text-xs uppercase tracking-[0.2em] text-accent">Releases</p>
         <h1 className="mt-2 font-display text-5xl">Kalender</h1>
         <p className="mt-3 max-w-2xl text-muted">
-          Start bij september 2026, alleen vooruit. Gesloten maanden blijven dicht. Filters werken op de
-          restset. Alleen gedateerde titels, geen undated.
+          Start bij september 2026 en alleen vooruit. Gesloten maanden blijven dicht. Filters werken op
+          de restset. Titel, dag en platforms van de gedateerde 2026 lijst. Undated titels staan er
+          niet op.
         </p>
       </header>
       <ReleaseCalendar />

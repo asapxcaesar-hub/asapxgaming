@@ -1,6 +1,158 @@
-import type { GameEntry } from '@/types/content'
+import type { DatedRelease } from '@/content/gamespotDated'
+import { gamespotDated2026 } from '@/content/gamespotDated'
+import { SITE_TODAY } from '@/data/site'
+import { formatDate } from '@/lib/utils'
+import type { GameEntry, RelatedRef } from '@/types/content'
 
-export const games: GameEntry[] = [
+const slugOverrides: Record<string, string> = {
+  'Marvel’s Wolverine': 'wolverine-marvel',
+  'Moonlighter 2': 'moonlighter-2',
+  'Fire Emblem: Fortune’s Weave': 'fire-emblem-fortunes-weave',
+  'Control Resonant': 'control-resonant',
+  'Silent Hill: Townfall': 'silent-hill-townfall',
+  'Minecraft Dungeons 2': 'minecraft-dungeons-2',
+  'Ace Combat 8: Wings of Theve': 'ace-combat-8',
+  'Gears of War: E-Day': 'gears-of-war-e-day',
+  'Final Fantasy Resonance': 'final-fantasy-resonance',
+  'Nintendo Switch Sports Resort': 'nintendo-switch-sports-resort',
+  'Call of Duty: Modern Warfare 4': 'call-of-duty-modern-warfare-4',
+  'Phantom Blade Zero': 'phantom-blade-zero',
+  'The Legend of Zelda: Ocarina of Time': 'zelda-ocarina-of-time-switch-2',
+  'Grand Theft Auto 6': 'grand-theft-auto-vi',
+  'Dragon Quest Monsters: The Withered World': 'dragon-quest-monsters-withered-world',
+  'Monster Hunter Wilds': 'monster-hunter-wilds-switch-2',
+  'Professor Layton and the New World of Steam': 'professor-layton-new-world-of-steam',
+  'Path of Exile 2': 'path-of-exile-2',
+}
+
+const coverBySlug: Record<string, string> = {
+  'wolverine-marvel': '/covers/wolverine-marvel.jpg',
+  'grand-theft-auto-vi': '/covers/grand-theft-auto-vi.jpg',
+  pragmata: '/covers/pragmata.jpg',
+}
+
+const relatedBySlug: Record<string, RelatedRef[]> = {
+  'wolverine-marvel': [
+    { collection: 'reviews', slug: 'wolverine-marvel' },
+    { collection: 'news', slug: 'wolverine-is-uit' },
+  ],
+  'moonlighter-2': [
+    { collection: 'reviews', slug: 'moonlighter-2' },
+    { collection: 'news', slug: 'moonlighter-2-is-uit' },
+  ],
+  'fire-emblem-fortunes-weave': [{ collection: 'news', slug: 'fire-emblem-overmorgen' }],
+  'control-resonant': [{ collection: 'news', slug: 'september-na-wolverine' }],
+  'silent-hill-townfall': [{ collection: 'news', slug: 'september-na-wolverine' }],
+  'minecraft-dungeons-2': [{ collection: 'news', slug: 'september-na-wolverine' }],
+  'ace-combat-8': [{ collection: 'news', slug: 'oktober-is-dichtbij' }],
+  'gears-of-war-e-day': [{ collection: 'news', slug: 'oktober-is-dichtbij' }],
+  'final-fantasy-resonance': [{ collection: 'news', slug: 'oktober-is-dichtbij' }],
+  'nintendo-switch-sports-resort': [{ collection: 'news', slug: 'oktober-is-dichtbij' }],
+  'call-of-duty-modern-warfare-4': [{ collection: 'news', slug: 'oktober-is-dichtbij' }],
+  'phantom-blade-zero': [{ collection: 'news', slug: 'oktober-is-dichtbij' }],
+  'zelda-ocarina-of-time-switch-2': [{ collection: 'news', slug: 'ocarina-krijgt-een-dag' }],
+  'grand-theft-auto-vi': [{ collection: 'news', slug: 'gta-vi-blijft-19-november' }],
+  pragmata: [{ collection: 'reviews', slug: 'pragmata' }],
+  'resident-evil-requiem': [{ collection: 'reviews', slug: 'resident-evil-requiem' }],
+  'forza-horizon-6': [
+    { collection: 'reviews', slug: 'forza-horizon-6' },
+    { collection: 'news', slug: 'forza-ps5-blijft-2026' },
+  ],
+  '007-first-light': [
+    { collection: 'reviews', slug: '007-first-light' },
+    { collection: 'news', slug: 'bond-switch-verschuift' },
+  ],
+}
+
+function slugify(title: string) {
+  if (slugOverrides[title]) return slugOverrides[title]
+  return title
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/['’]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+}
+
+function coverLabel(title: string) {
+  const compact = title.replace(/[^A-Za-z0-9]/g, '').toUpperCase()
+  return compact.slice(0, 4) || 'GAME'
+}
+
+function genreFor(title: string) {
+  const t = title.toLowerCase()
+  if (t.includes('silent hill') || t.includes('fleming')) return 'Horror'
+  if (t.includes('fire emblem') || t.includes('dawn of war') || t.includes('endless legend')) return 'Strategy'
+  if (
+    t.includes('final fantasy') ||
+    t.includes('trails') ||
+    t.includes('dragon quest') ||
+    t.includes('path of exile') ||
+    t.includes('witcher') ||
+    t.includes('tales of eternia')
+  ) {
+    return 'RPG'
+  }
+  if (t.includes('call of duty') || t.includes('gears of war') || t.includes('sniper dan')) return 'Shooter'
+  if (t.includes('switch sports') || t.includes('horse club')) return 'Sport'
+  if (t.includes('hot wheels') || t.includes('galactic racer') || t.includes('forza')) return 'Racing'
+  if (t.includes('layton')) return 'Puzzel'
+  if (t.includes('zelda') || t.includes('ocarina')) return 'Avontuur'
+  if (t.includes('moonlighter')) return 'Indie'
+  if (
+    t.includes('wolverine') ||
+    t.includes('control resonant') ||
+    t.includes('phantom blade') ||
+    t.includes('ace combat') ||
+    t.includes('onimusha') ||
+    t.includes('grand theft') ||
+    t.includes('minecraft dungeons') ||
+    t.includes('monster hunter')
+  ) {
+    return 'Action'
+  }
+  return 'Overig'
+}
+
+function dutchPlatforms(platforms: string[]) {
+  return platforms
+    .map((item) => {
+      if (item === 'Xbox') return 'Xbox Series'
+      if (item === 'PC') return 'pc'
+      return item
+    })
+    .join(', ')
+}
+
+function fromDated(row: DatedRelease): GameEntry {
+  const slug = slugify(row.title)
+  const early = Boolean(row.early)
+  const status = row.date <= SITE_TODAY ? 'released' : 'upcoming'
+  const summary = early
+    ? `${formatDate(row.date)}. ${dutchPlatforms(row.platforms)}. Early access, zoals op de gedateerde lijst.`
+    : `${formatDate(row.date)}. ${dutchPlatforms(row.platforms)}.`
+  return {
+    slug,
+    title: row.title === 'Grand Theft Auto 6' ? 'Grand Theft Auto VI' : row.title,
+    developer: '',
+    publisher: '',
+    platforms: row.platforms,
+    genre: genreFor(row.title),
+    releaseDate: row.date,
+    status,
+    summary,
+    coverLabel: coverLabel(row.title),
+    coverImage: coverBySlug[slug],
+    related: relatedBySlug[slug] ?? [],
+    seo: {
+      title: `${row.title === 'Grand Theft Auto 6' ? 'Grand Theft Auto VI' : row.title} kalender`,
+      description: summary,
+    },
+  }
+}
+
+const libraryGames: GameEntry[] = [
   {
     slug: 'resident-evil-requiem',
     title: 'Resident Evil Requiem',
@@ -10,9 +162,9 @@ export const games: GameEntry[] = [
     genre: 'Horror',
     releaseDate: '2026-02-27',
     status: 'released',
-    summary: 'Negende hoofdstuk, 27 februari 2026. Grace Ashcroft en Leon S. Kennedy. Review: 8.7.',
+    summary: '27 februari 2026. pc, PS5, Xbox Series, Switch 2. Review: 8.7.',
     coverLabel: 'REQ',
-    related: [{ collection: 'reviews', slug: 'resident-evil-requiem' }],
+    related: relatedBySlug['resident-evil-requiem'],
     seo: {
       title: 'Resident Evil Requiem coverage',
       description: 'Release 27 februari 2026 en ASAPxGaming review 8.7.',
@@ -27,13 +179,13 @@ export const games: GameEntry[] = [
     genre: 'Action',
     releaseDate: '2026-04-17',
     status: 'released',
-    summary: 'Hugh en Diana op de maan. Uit 17 april 2026. Review: 8.5.',
+    summary: '17 april 2026. pc, PS5, Xbox Series, Switch. Review: 8.5.',
     coverLabel: 'PRAG',
-    coverImage: '/covers/pragmata.jpg',
-    related: [{ collection: 'reviews', slug: 'pragmata' }],
+    coverImage: coverBySlug.pragmata,
+    related: relatedBySlug.pragmata,
     seo: {
       title: 'Pragmata coverage',
-      description: 'Capcom sci fi, release 17 april 2026, ASAPxGaming review 8.5.',
+      description: 'Release 17 april 2026 en ASAPxGaming review 8.5.',
     },
   },
   {
@@ -45,12 +197,9 @@ export const games: GameEntry[] = [
     genre: 'Racing',
     releaseDate: '2026-05-19',
     status: 'released',
-    summary: 'Japan festival, 19 mei 2026 op Xbox en pc. PS5 later in 2026. Review: 8.9.',
+    summary: '19 mei 2026. pc en Xbox Series. Review: 8.9.',
     coverLabel: 'FH6',
-    related: [
-      { collection: 'reviews', slug: 'forza-horizon-6' },
-      { collection: 'news', slug: 'forza-ps5-blijft-2026' },
-    ],
+    related: relatedBySlug['forza-horizon-6'],
     seo: {
       title: 'Forza Horizon 6 coverage',
       description: 'Release 19 mei 2026 Xbox en pc, ASAPxGaming review 8.9.',
@@ -65,329 +214,39 @@ export const games: GameEntry[] = [
     genre: 'Action',
     releaseDate: '2026-05-27',
     status: 'released',
-    summary: 'Jonge Bond, 27 mei 2026. Switch 2 verschoven naar maart 2027. Review: 8.6.',
+    summary: '27 mei 2026. pc, PS5, Xbox Series. Review: 8.6.',
     coverLabel: '007',
-    related: [
-      { collection: 'reviews', slug: '007-first-light' },
-      { collection: 'news', slug: 'bond-switch-verschuift' },
-    ],
+    related: relatedBySlug['007-first-light'],
     seo: {
       title: '007 First Light coverage',
       description: 'Release 27 mei 2026, ASAPxGaming review 8.6.',
     },
   },
-  {
-    slug: 'moonlighter-2',
-    title: 'Moonlighter 2',
-    developer: 'Digital Sun',
-    publisher: 'Digital Sun',
-    platforms: ['PC', 'PS5', 'Xbox', 'Switch 2'],
-    genre: 'Indie',
-    releaseDate: '2026-09-02',
-    status: 'released',
-    summary: 'Winkel overdag, dungeon s nachts. Uit 2 september 2026. Review: 8.2.',
-    coverLabel: 'MOON',
-    related: [
-      { collection: 'reviews', slug: 'moonlighter-2' },
-      { collection: 'news', slug: 'moonlighter-2-is-uit' },
-    ],
-    seo: {
-      title: 'Moonlighter 2 coverage',
-      description: 'Release 2 september 2026 en ASAPxGaming review 8.2.',
-    },
-  },
-  {
-    slug: 'wolverine-marvel',
-    title: 'Marvel’s Wolverine',
+]
+
+function mergeMoonlighterReview(game: GameEntry): GameEntry {
+  if (game.slug !== 'moonlighter-2' && game.slug !== 'wolverine-marvel') return game
+  if (game.slug === 'moonlighter-2') {
+    return {
+      ...game,
+      developer: 'Digital Sun',
+      publisher: 'Digital Sun',
+      summary: `${game.summary} Review: 8.2.`,
+    }
+  }
+  return {
+    ...game,
     developer: 'Insomniac',
     publisher: 'Sony',
-    platforms: ['PS5'],
-    genre: 'Action',
-    releaseDate: '2026-09-15',
-    status: 'released',
-    summary: 'Alleen PS5 vanaf 15 september 2026. Review: 7.7. Hit, geen must play.',
     coverLabel: 'WOLV',
-    coverImage: '/covers/wolverine-marvel.jpg',
-    related: [
-      { collection: 'reviews', slug: 'wolverine-marvel' },
-      { collection: 'news', slug: 'wolverine-is-uit' },
-    ],
-    seo: {
-      title: 'Marvel’s Wolverine coverage',
-      description: 'PS5 release 15 september 2026 en ASAPxGaming review 7.7.',
-    },
-  },
-  {
-    slug: 'fire-emblem-fortunes-weave',
-    title: 'Fire Emblem: Fortune’s Weave',
-    developer: 'Intelligent Systems',
-    publisher: 'Nintendo',
-    platforms: ['Switch 2'],
-    genre: 'Strategy',
-    releaseDate: '2026-09-17',
-    status: 'upcoming',
-    summary: 'Switch 2, 17 september 2026 volgens de gedateerde GameSpot lijst.',
-    coverLabel: 'FE',
-    related: [{ collection: 'news', slug: 'fire-emblem-overmorgen' }],
-    seo: {
-      title: 'Fire Emblem Fortune’s Weave kalender',
-      description: 'Gedateerde release 17 september 2026, Switch 2.',
-    },
-  },
-  {
-    slug: 'control-resonant',
-    title: 'Control Resonant',
-    developer: 'Remedy',
-    publisher: '505 Games',
-    platforms: ['PC', 'PS5', 'Xbox'],
-    genre: 'Action',
-    releaseDate: '2026-09-24',
-    status: 'upcoming',
-    summary: '24 september 2026 op PS5, Xbox Series en pc. Gedateerd, geen undated bak.',
-    coverLabel: 'CTRL',
-    related: [{ collection: 'news', slug: 'september-na-wolverine' }],
-    seo: {
-      title: 'Control Resonant kalender',
-      description: 'Gedateerde release 24 september 2026.',
-    },
-  },
-  {
-    slug: 'silent-hill-townfall',
-    title: 'Silent Hill: Townfall',
-    developer: 'No Code',
-    publisher: 'Konami',
-    platforms: ['PC', 'PS5'],
-    genre: 'Horror',
-    releaseDate: '2026-09-24',
-    status: 'upcoming',
-    summary: '24 september 2026, PS5 en pc, op de gedateerde lijst.',
-    coverLabel: 'TOWN',
-    related: [{ collection: 'news', slug: 'september-na-wolverine' }],
-    seo: {
-      title: 'Silent Hill Townfall kalender',
-      description: 'Gedateerde release 24 september 2026, PS5 en pc.',
-    },
-  },
-  {
-    slug: 'minecraft-dungeons-2',
-    title: 'Minecraft Dungeons 2',
-    developer: 'Mojang',
-    publisher: 'Xbox Game Studios',
-    platforms: ['PC', 'PS5', 'Xbox', 'Switch 2'],
-    genre: 'Action',
-    releaseDate: '2026-09-29',
-    status: 'upcoming',
-    summary: '29 september 2026. Gedateerd op de GameSpot lijst.',
-    coverLabel: 'DUN2',
-    related: [{ collection: 'news', slug: 'september-na-wolverine' }],
-    seo: {
-      title: 'Minecraft Dungeons 2 kalender',
-      description: 'Gedateerde release 29 september 2026.',
-    },
-  },
-  {
-    slug: 'ace-combat-8',
-    title: 'Ace Combat 8: Wings of Theve',
-    developer: 'Bandai Namco',
-    publisher: 'Bandai Namco',
-    platforms: ['PC', 'PS5', 'Xbox'],
-    genre: 'Action',
-    releaseDate: '2026-10-02',
-    status: 'upcoming',
-    summary: '2 oktober 2026. Wings of Theve, gedateerd.',
-    coverLabel: 'ACE8',
-    related: [{ collection: 'news', slug: 'oktober-is-dichtbij' }],
-    seo: {
-      title: 'Ace Combat 8 kalender',
-      description: 'Gedateerde release 2 oktober 2026.',
-    },
-  },
-  {
-    slug: 'gears-of-war-e-day',
-    title: 'Gears of War: E Day',
-    developer: 'The Coalition',
-    publisher: 'Xbox Game Studios',
-    platforms: ['PC', 'Xbox'],
-    genre: 'Shooter',
-    releaseDate: '2026-10-06',
-    status: 'upcoming',
-    summary: '6 oktober 2026 op Xbox Series en pc.',
-    coverLabel: 'GEARS',
-    related: [{ collection: 'news', slug: 'oktober-is-dichtbij' }],
-    seo: {
-      title: 'Gears of War E Day kalender',
-      description: 'Gedateerde release 6 oktober 2026.',
-    },
-  },
-  {
-    slug: 'final-fantasy-resonance',
-    title: 'Final Fantasy Resonance',
-    developer: 'Square Enix',
-    publisher: 'Square Enix',
-    platforms: ['PC', 'PS5', 'Xbox', 'Switch', 'Switch 2'],
-    genre: 'RPG',
-    releaseDate: '2026-10-22',
-    status: 'upcoming',
-    summary: '22 oktober 2026, breed op consoles en pc.',
-    coverLabel: 'FFR',
-    related: [{ collection: 'news', slug: 'oktober-is-dichtbij' }],
-    seo: {
-      title: 'Final Fantasy Resonance kalender',
-      description: 'Gedateerde release 22 oktober 2026.',
-    },
-  },
-  {
-    slug: 'nintendo-switch-sports-resort',
-    title: 'Nintendo Switch Sports Resort',
-    developer: 'Nintendo',
-    publisher: 'Nintendo',
-    platforms: ['Switch 2'],
-    genre: 'Sport',
-    releaseDate: '2026-10-22',
-    status: 'upcoming',
-    summary: '22 oktober 2026, alleen Switch 2.',
-    coverLabel: 'SPORT',
-    related: [{ collection: 'news', slug: 'oktober-is-dichtbij' }],
-    seo: {
-      title: 'Nintendo Switch Sports Resort kalender',
-      description: 'Gedateerde release 22 oktober 2026 op Switch 2.',
-    },
-  },
-  {
-    slug: 'call-of-duty-modern-warfare-4',
-    title: 'Call of Duty: Modern Warfare 4',
-    developer: 'Infinity Ward',
-    publisher: 'Activision',
-    platforms: ['PC', 'PS5', 'Xbox', 'Switch 2'],
-    genre: 'Shooter',
-    releaseDate: '2026-10-23',
-    status: 'upcoming',
-    summary: '23 oktober 2026. Gedateerd, geen undated rumor.',
-    coverLabel: 'MW4',
-    related: [{ collection: 'news', slug: 'oktober-is-dichtbij' }],
-    seo: {
-      title: 'Call of Duty Modern Warfare 4 kalender',
-      description: 'Gedateerde release 23 oktober 2026.',
-    },
-  },
-  {
-    slug: 'phantom-blade-zero',
-    title: 'Phantom Blade Zero',
-    developer: 'S-Game',
-    publisher: 'S-Game',
-    platforms: ['PC', 'PS5'],
-    genre: 'Action',
-    releaseDate: '2026-10-29',
-    status: 'upcoming',
-    summary: '29 oktober 2026 op PS5 en pc.',
-    coverLabel: 'PBZ',
-    related: [{ collection: 'news', slug: 'oktober-is-dichtbij' }],
-    seo: {
-      title: 'Phantom Blade Zero kalender',
-      description: 'Gedateerde release 29 oktober 2026.',
-    },
-  },
-  {
-    slug: 'zelda-ocarina-of-time-switch-2',
-    title: 'The Legend of Zelda: Ocarina of Time',
-    developer: 'Nintendo',
-    publisher: 'Nintendo',
-    platforms: ['Switch 2'],
-    genre: 'Avontuur',
-    releaseDate: '2026-11-05',
-    status: 'upcoming',
-    summary: 'Ocarina of Time op Switch 2, 5 november 2026.',
-    coverLabel: 'OOT',
-    related: [{ collection: 'news', slug: 'ocarina-krijgt-een-dag' }],
-    seo: {
-      title: 'Zelda Ocarina of Time Switch 2 kalender',
-      description: 'Gedateerde release 5 november 2026 op Switch 2.',
-    },
-  },
-  {
-    slug: 'grand-theft-auto-vi',
-    title: 'Grand Theft Auto VI',
-    developer: 'Rockstar Games',
-    publisher: 'Take Two',
-    platforms: ['PS5', 'Xbox'],
-    genre: 'Action',
-    releaseDate: '2026-11-19',
-    status: 'upcoming',
-    summary: 'Officieel 19 november 2026, PS5 en Xbox Series. Geen review tot de build er is.',
-    coverLabel: 'GTA',
-    coverImage: '/covers/grand-theft-auto-vi.jpg',
-    related: [{ collection: 'news', slug: 'gta-vi-blijft-19-november' }],
-    seo: {
-      title: 'GTA VI kalender',
-      description: 'Grand Theft Auto VI: 19 november 2026, PS5 en Xbox Series.',
-    },
-  },
-  {
-    slug: 'dragon-quest-monsters-withered-world',
-    title: 'Dragon Quest Monsters: The Withered World',
-    developer: 'Square Enix',
-    publisher: 'Square Enix',
-    platforms: ['PS5', 'Switch', 'Switch 2'],
-    genre: 'RPG',
-    releaseDate: '2026-12-03',
-    status: 'upcoming',
-    summary: '3 december 2026 op PS5 en Switch families.',
-    coverLabel: 'DQM',
-    related: [],
-    seo: {
-      title: 'Dragon Quest Monsters The Withered World kalender',
-      description: 'Gedateerde release 3 december 2026.',
-    },
-  },
-  {
-    slug: 'monster-hunter-wilds-switch-2',
-    title: 'Monster Hunter Wilds',
-    developer: 'Capcom',
-    publisher: 'Capcom',
-    platforms: ['Switch 2'],
-    genre: 'Action',
-    releaseDate: '2026-12-04',
-    status: 'upcoming',
-    summary: 'Switch 2 versie, 4 december 2026. Gedateerd.',
-    coverLabel: 'MHW',
-    related: [],
-    seo: {
-      title: 'Monster Hunter Wilds Switch 2 kalender',
-      description: 'Gedateerde Switch 2 release 4 december 2026.',
-    },
-  },
-  {
-    slug: 'professor-layton-new-world-of-steam',
-    title: 'Professor Layton and the New World of Steam',
-    developer: 'Level 5',
-    publisher: 'Level 5',
-    platforms: ['PC', 'PS5', 'Switch', 'Switch 2'],
-    genre: 'Puzzel',
-    releaseDate: '2026-12-10',
-    status: 'upcoming',
-    summary: '10 december 2026. Gedateerd op de lijst.',
-    coverLabel: 'LAY',
-    related: [],
-    seo: {
-      title: 'Professor Layton New World of Steam kalender',
-      description: 'Gedateerde release 10 december 2026.',
-    },
-  },
-  {
-    slug: 'path-of-exile-2',
-    title: 'Path of Exile 2',
-    developer: 'Grinding Gear Games',
-    publisher: 'Grinding Gear Games',
-    platforms: ['PC', 'PS5', 'Xbox'],
-    genre: 'RPG',
-    releaseDate: '2026-12-11',
-    status: 'upcoming',
-    summary: '11 december 2026 op PS5, Xbox Series en pc.',
-    coverLabel: 'POE2',
-    related: [],
-    seo: {
-      title: 'Path of Exile 2 kalender',
-      description: 'Gedateerde release 11 december 2026.',
-    },
-  },
+    summary: `${game.summary} Review: 7.7.`,
+  }
+}
+
+const datedGames = gamespotDated2026.map(fromDated).map(mergeMoonlighterReview)
+const datedSlugs = new Set(datedGames.map((game) => game.slug))
+
+export const games: GameEntry[] = [
+  ...libraryGames.filter((game) => !datedSlugs.has(game.slug)),
+  ...datedGames,
 ]
