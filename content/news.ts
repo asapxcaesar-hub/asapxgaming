@@ -11,9 +11,9 @@ export const news: NewsArticle[] = [
     category: 'PC',
     tags: ['PC', 'Deals', 'Steam'],
     coverLabel: 'SALE',
+    gameSlug: 'clair-obscur-expedition-33',
     related: [
       { collection: 'reviews', slug: 'clair-obscur-expedition-33' },
-      { collection: 'games', slug: 'clair-obscur-expedition-33' },
     ],
     seo: {
       title: 'Steam-nazomer sale: vijf drops die wél de moeite zijn',
@@ -36,7 +36,7 @@ export const news: NewsArticle[] = [
     category: 'Industry',
     tags: ['Esports', 'NL', 'Industry'],
     coverLabel: 'LAN',
-    related: [{ collection: 'features', slug: 'waarom-ik-offline-brackets-mis' }],
+    related: [{ collection: 'news', slug: 'waarom-ik-offline-brackets-mis' }],
     seo: {
       title: 'Benelux esports-herfst: LAN’s die ertoe doen',
       description:
@@ -58,7 +58,7 @@ export const news: NewsArticle[] = [
     category: 'Industry',
     tags: ['Industry', 'GTA', 'PlayStation'],
     coverLabel: 'GTA',
-    related: [{ collection: 'features', slug: 'hype-zonder-build' }],
+    related: [{ collection: 'news', slug: 'hype-zonder-build' }],
     seo: {
       title: 'GTA VI: de wachtkamer is het product',
       description:
@@ -81,8 +81,8 @@ export const news: NewsArticle[] = [
     tags: ['Hardware', 'PC'],
     coverLabel: 'HAND',
     related: [
-      { collection: 'hardware', slug: 'steam-deck-oled-dagelijks' },
-      { collection: 'features', slug: 'handheld-koorts-essay' },
+      { collection: 'news', slug: 'steam-deck-oled-dagelijks' },
+      { collection: 'news', slug: 'handheld-koorts-essay' },
     ],
     seo: {
       title: 'Handheld-pc’s in 2026: meer schermen, dezelfde bottlenecks',
@@ -105,7 +105,8 @@ export const news: NewsArticle[] = [
     category: 'Indie',
     tags: ['Indie', 'NL'],
     coverLabel: 'NL',
-    related: [{ collection: 'games', slug: 'polder-ghost-line' }],
+    gameSlug: 'polder-ghost-line',
+    related: [{ collection: 'news', slug: 'handheld-pc-koorts' }],
     seo: {
       title: 'Nederlandse indie-games 2026: harder dan hun budget',
       description:
@@ -127,9 +128,9 @@ export const news: NewsArticle[] = [
     category: 'Nintendo',
     tags: ['Nintendo', 'Mario Kart'],
     coverLabel: 'MKW',
+    gameSlug: 'mario-kart-world',
     related: [
       { collection: 'reviews', slug: 'mario-kart-world' },
-      { collection: 'games', slug: 'mario-kart-world' },
     ],
     seo: {
       title: 'Mario Kart World online-seizoen: de échte cup',
@@ -152,7 +153,7 @@ export const news: NewsArticle[] = [
     category: 'Xbox',
     tags: ['Xbox', 'Hardware', 'Industry'],
     coverLabel: 'XBX',
-    related: [{ collection: 'hardware', slug: 'xbox-wireless-headset' }],
+    related: [{ collection: 'news', slug: 'handheld-pc-koorts' }],
     seo: {
       title: 'Xbox-handheld: vragen die Microsoft open laat',
       description:
@@ -174,6 +175,7 @@ export const news: NewsArticle[] = [
     category: 'PlayStation',
     tags: ['PlayStation', 'Plus'],
     coverLabel: 'PS+',
+    gameSlug: 'death-stranding-2',
     related: [{ collection: 'reviews', slug: 'death-stranding-2' }],
     seo: {
       title: 'PlayStation Plus Extra september: geen cadeau-maand',

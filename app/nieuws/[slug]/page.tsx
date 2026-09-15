@@ -1,12 +1,11 @@
 import { notFound } from 'next/navigation'
 import { ArticleLayout } from '@/components/ArticleLayout'
 import { JsonLd } from '@/components/JsonLd'
-import { news } from '@/content/news'
-import { getNews, resolveRelated } from '@/lib/content'
+import { allNews, coverForGame, getNews, resolveRelated } from '@/lib/content'
 import { articleJsonLd, buildMetadata } from '@/lib/seo'
 
 export function generateStaticParams() {
-  return news.map((item) => ({ slug: item.slug }))
+  return allNews().map((item) => ({ slug: item.slug }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -52,6 +51,7 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ sl
         author={item.author}
         date={item.publishedAt}
         coverLabel={item.coverLabel}
+        coverSrc={coverForGame(item.gameSlug)}
         path={`/nieuws/${item.slug}/`}
         related={resolveRelated(item.related)}
       >

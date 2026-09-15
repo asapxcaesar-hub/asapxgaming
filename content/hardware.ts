@@ -16,7 +16,7 @@ export const hardware: HardwareReview[] = [
     minus: ['AAA blijft een compromis', 'Sleep-resume is niet heilig'],
     related: [
       { collection: 'news', slug: 'handheld-pc-koorts' },
-      { collection: 'features', slug: 'handheld-koorts-essay' },
+      { collection: 'news', slug: 'handheld-koorts-essay' },
     ],
     seo: {
       title: 'Hardware: Steam Deck OLED — 8.7 Referentie',

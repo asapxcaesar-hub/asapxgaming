@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { CoverPlaceholder } from '@/components/CoverPlaceholder'
+import { CoverImage } from '@/components/CoverImage'
 import { formatDate } from '@/lib/utils'
 
 export function ArticleCard({
@@ -9,6 +9,7 @@ export function ArticleCard({
   excerpt,
   date,
   coverLabel,
+  coverSrc,
   featured = false,
 }: {
   href: string
@@ -17,12 +18,13 @@ export function ArticleCard({
   excerpt: string
   date: string
   coverLabel: string
+  coverSrc?: string
   featured?: boolean
 }) {
   return (
     <article className={featured ? 'grid gap-4 md:grid-cols-2 md:gap-8' : 'grid gap-3'}>
       <Link href={href} className="block overflow-hidden rounded-sm border border-line">
-        <CoverPlaceholder label={coverLabel} large={featured} />
+        <CoverImage src={coverSrc} alt={title} label={coverLabel} large={featured} />
       </Link>
       <div className="flex flex-col gap-2">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">{kicker}</p>

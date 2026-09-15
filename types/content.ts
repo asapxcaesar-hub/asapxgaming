@@ -13,7 +13,7 @@ export type SeoFields = {
 }
 
 export type RelatedRef = {
-  collection: 'news' | 'reviews' | 'features' | 'hardware' | 'games'
+  collection: 'news' | 'reviews'
   slug: string
 }
 
@@ -28,6 +28,7 @@ export type NewsArticle = {
   category: Exclude<NewsFilter, 'Alles'>
   tags: string[]
   coverLabel: string
+  gameSlug?: string
   related: RelatedRef[]
   seo: SeoFields
 }
@@ -107,6 +108,7 @@ export type GameEntry = {
   status: 'released' | 'upcoming'
   summary: string
   coverLabel: string
+  coverImage?: string
   related: RelatedRef[]
   seo: SeoFields
 }

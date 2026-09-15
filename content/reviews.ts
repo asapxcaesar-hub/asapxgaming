@@ -18,9 +18,8 @@ export const reviews: GameReview[] = [
     minus: ['Laat-game grind piekt', 'Sommige sidequests voelen als extra canvas'],
     scores: { gameplay: 9.4, story: 9.0, graphics: 9.3, audio: 9.1, performance: 8.8 },
     related: [
-      { collection: 'games', slug: 'clair-obscur-expedition-33' },
       { collection: 'news', slug: 'steam-nazomer-sale-picks' },
-      { collection: 'features', slug: 'turn-based-is-niet-dood' },
+      { collection: 'news', slug: 'turn-based-is-niet-dood' },
     ],
     seo: {
       title: 'Review: Clair Obscur Expedition 33 — 9.2 Must-play',
@@ -65,7 +64,7 @@ export const reviews: GameReview[] = [
     plus: ['Movement als verslaving', 'Bossfights met karakter', 'Kaart die blijft verrassen'],
     minus: ['Difficulty-spikes zonder waarschuwing', 'Sommige runs voelen onnodig lang'],
     scores: { gameplay: 9.6, story: 8.7, graphics: 9.2, audio: 9.3, performance: 9.0 },
-    related: [{ collection: 'games', slug: 'hollow-knight-silksong' }],
+    related: [],
     seo: {
       title: 'Review: Hollow Knight Silksong — 9.4 Must-play',
       description: 'Silksong-review van ASAPxGaming: Hornet, Pharloom, straf en waarom de wait het waard was.',
@@ -108,7 +107,7 @@ export const reviews: GameReview[] = [
     plus: ['Setpieces met gewicht', 'Traversal voelt rijper', 'Ghosts die ertoe doen'],
     minus: ['Uitleg-lawine in akt 1', 'Menu’s blijven een labyrint'],
     scores: { gameplay: 8.5, story: 8.4, graphics: 9.0, audio: 8.8, performance: 8.3 },
-    related: [{ collection: 'games', slug: 'death-stranding-2' }],
+    related: [{ collection: 'news', slug: 'playstation-plus-extra-september' }],
     seo: {
       title: 'Review: Death Stranding 2 — 8.6 Koop hem',
       description: 'DS2-review: connecting, combat, bloat, en of deel twee de eenzaamheid verliest.',
@@ -151,7 +150,7 @@ export const reviews: GameReview[] = [
     plus: ['Leveldesign dat twee breinen eist', 'Toon die nooit cringe wordt', 'Replaywaarde in de gags'],
     minus: ['Solo-modus blijft een noodverband', 'Sommige chapters pieken te vroeg'],
     scores: { gameplay: 9.1, story: 8.2, graphics: 8.6, audio: 8.4, performance: 8.7 },
-    related: [{ collection: 'games', slug: 'split-fiction' }],
+    related: [],
     seo: {
       title: 'Review: Split Fiction — 8.8 Koop hem',
       description: 'Split Fiction-review: co-op-design, toon, en waarom solo hem niet redt.',
@@ -193,10 +192,7 @@ export const reviews: GameReview[] = [
     plus: ['Partysfeer onmiddellijk', 'Nieuwe track-taal', 'Online dat voller voelt'],
     minus: ['Rubberbanding blijft tilt-baas', 'Singleplayer droogt uit na de cups'],
     scores: { gameplay: 8.2, story: 6.0, graphics: 8.4, audio: 8.5, performance: 8.0 },
-    related: [
-      { collection: 'games', slug: 'mario-kart-world' },
-      { collection: 'news', slug: 'mario-kart-world-online-seizoen' },
-    ],
+    related: [{ collection: 'news', slug: 'mario-kart-world-online-seizoen' }],
     seo: {
       title: 'Review: Mario Kart World — 8.1 Hit',
       description: 'Mario Kart World-review: chaos, cups, online, en waarom het geen sim is.',

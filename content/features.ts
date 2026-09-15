@@ -12,7 +12,6 @@ export const features: LongformArticle[] = [
     coverLabel: 'TURN',
     related: [
       { collection: 'reviews', slug: 'clair-obscur-expedition-33' },
-      { collection: 'games', slug: 'clair-obscur-expedition-33' },
     ],
     seo: {
       title: 'Feature: turn-based is niet dood',
@@ -58,7 +57,7 @@ export const features: LongformArticle[] = [
     coverLabel: 'TREIN',
     related: [
       { collection: 'news', slug: 'handheld-pc-koorts' },
-      { collection: 'hardware', slug: 'steam-deck-oled-dagelijks' },
+      { collection: 'news', slug: 'steam-deck-oled-dagelijks' },
     ],
     seo: {
       title: 'Feature: de trein is geen gaming-pc',

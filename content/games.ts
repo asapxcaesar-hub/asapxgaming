@@ -13,9 +13,10 @@ export const games: GameEntry[] = [
     summary:
       'Turn-based RPG met parries, een stervende wereld en een expeditie die geen heldentocht is.',
     coverLabel: 'EXP33',
+    coverImage: '/covers/clair-obscur-expedition-33.jpg',
     related: [
       { collection: 'reviews', slug: 'clair-obscur-expedition-33' },
-      { collection: 'features', slug: 'turn-based-is-niet-dood' },
+      { collection: 'news', slug: 'turn-based-is-niet-dood' },
     ],
     seo: {
       title: 'Clair Obscur: Expedition 33 — gamepagina',
@@ -33,6 +34,7 @@ export const games: GameEntry[] = [
     status: 'released',
     summary: 'Hornet in Pharloom. Sneller, gemeener, geen Hallownest-kloon.',
     coverLabel: 'SILK',
+    coverImage: '/covers/hollow-knight-silksong.jpg',
     related: [{ collection: 'reviews', slug: 'hollow-knight-silksong' }],
     seo: {
       title: 'Hollow Knight: Silksong — gamepagina',
@@ -50,6 +52,7 @@ export const games: GameEntry[] = [
     status: 'released',
     summary: 'Meer wegen, meer setpieces, dezelfde connecting-fantasy.',
     coverLabel: 'DS2',
+    coverImage: '/covers/death-stranding-2.jpg',
     related: [{ collection: 'reviews', slug: 'death-stranding-2' }],
     seo: {
       title: 'Death Stranding 2 — gamepagina',
@@ -67,6 +70,7 @@ export const games: GameEntry[] = [
     status: 'released',
     summary: 'Twee spelers, twee genres, geen solo-excuse.',
     coverLabel: 'SPLIT',
+    coverImage: '/covers/split-fiction.jpg',
     related: [{ collection: 'reviews', slug: 'split-fiction' }],
     seo: {
       title: 'Split Fiction — gamepagina',
@@ -84,6 +88,7 @@ export const games: GameEntry[] = [
     status: 'released',
     summary: 'Open routes, oude tilt, woonkamer-chaos.',
     coverLabel: 'MKW',
+    coverImage: '/covers/mario-kart-world.jpg',
     related: [
       { collection: 'reviews', slug: 'mario-kart-world' },
       { collection: 'news', slug: 'mario-kart-world-online-seizoen' },
@@ -123,7 +128,8 @@ export const games: GameEntry[] = [
     summary:
       'Aangekondigde Insomniac-titel. ASAPxGaming reviewt hem als de reviewcode er is — niet op trailer-gevoel.',
     coverLabel: 'WOLV',
-    related: [{ collection: 'features', slug: 'hype-zonder-build' }],
+    coverImage: '/covers/wolverine-marvel.jpg',
+    related: [{ collection: 'news', slug: 'hype-zonder-build' }],
     seo: {
       title: 'Marvel’s Wolverine — gamepagina',
       description: 'Release-window en ASAPxGaming-beleid: geen review zonder build.',
@@ -140,6 +146,7 @@ export const games: GameEntry[] = [
     status: 'upcoming',
     summary: 'Capcom sci-fi. Datum onder voorbehoud; we houden de kalender bij, geen hype-recap.',
     coverLabel: 'PRAG',
+    coverImage: '/covers/pragmata.jpg',
     related: [],
     seo: {
       title: 'Pragmata — gamepagina',

@@ -3,26 +3,57 @@ import { games } from '@/content/games'
 import { hardware } from '@/content/hardware'
 import { news } from '@/content/news'
 import { reviews } from '@/content/reviews'
-import type { NewsFilter, RelatedRef } from '@/types/content'
+import type { NewsArticle, NewsFilter, RelatedRef } from '@/types/content'
+
+const foldedNews: NewsArticle[] = [
+  ...features.map((item) => ({
+    slug: item.slug,
+    title: item.title,
+    excerpt: item.excerpt,
+    body: item.body,
+    author: item.author,
+    publishedAt: item.publishedAt,
+    category: 'Industry' as const,
+    tags: item.tags,
+    coverLabel: item.coverLabel,
+    gameSlug:
+      item.slug === 'turn-based-is-niet-dood'
+        ? 'clair-obscur-expedition-33'
+        : item.slug === 'hype-zonder-build'
+          ? 'wolverine-marvel'
+          : undefined,
+    related: item.related,
+    seo: item.seo,
+  })),
+  ...hardware.map((item) => ({
+    slug: item.slug,
+    title: item.title,
+    excerpt: item.excerpt,
+    body: item.body,
+    author: item.author,
+    publishedAt: item.publishedAt,
+    category: 'PC' as const,
+    tags: ['Hardware'],
+    coverLabel: item.coverLabel,
+    related: item.related,
+    seo: item.seo,
+  })),
+]
+
+export function allNews() {
+  return byDate([...news, ...foldedNews])
+}
 
 export function byDate<T extends { publishedAt: string }>(items: T[]) {
   return [...items].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
 }
 
 export function getNews(slug: string) {
-  return news.find((item) => item.slug === slug)
+  return allNews().find((item) => item.slug === slug)
 }
 
 export function getReview(slug: string) {
   return reviews.find((item) => item.slug === slug)
-}
-
-export function getFeature(slug: string) {
-  return features.find((item) => item.slug === slug)
-}
-
-export function getHardware(slug: string) {
-  return hardware.find((item) => item.slug === slug)
 }
 
 export function getGame(slug: string) {
@@ -30,13 +61,18 @@ export function getGame(slug: string) {
 }
 
 export function filterNews(category: NewsFilter) {
-  const list = byDate(news)
+  const list = allNews()
   if (category === 'Alles') return list
   return list.filter((item) => item.category === category)
 }
 
 export function reviewsForGame(gameSlug: string) {
   return reviews.filter((item) => item.gameSlug === gameSlug)
+}
+
+export function coverForGame(slug?: string) {
+  if (!slug) return undefined
+  return getGame(slug)?.coverImage
 }
 
 export type SearchHit = {
@@ -52,7 +88,7 @@ export function searchAll(query: string): SearchHit[] {
 
   const hits: SearchHit[] = []
 
-  for (const item of news) {
+  for (const item of allNews()) {
     if (matches(needle, item.title, item.excerpt, item.tags.join(' '))) {
       hits.push({
         href: `/nieuws/${item.slug}/`,
@@ -72,32 +108,13 @@ export function searchAll(query: string): SearchHit[] {
       })
     }
   }
-  for (const item of features) {
-    if (matches(needle, item.title, item.excerpt, item.tags.join(' '))) {
-      hits.push({
-        href: `/features/${item.slug}/`,
-        title: item.title,
-        kind: 'Feature',
-        excerpt: item.excerpt,
-      })
-    }
-  }
-  for (const item of hardware) {
-    if (matches(needle, item.title, item.product, item.excerpt)) {
-      hits.push({
-        href: `/hardware/${item.slug}/`,
-        title: item.title,
-        kind: 'Hardware',
-        excerpt: item.excerpt,
-      })
-    }
-  }
   for (const item of games) {
     if (matches(needle, item.title, item.summary, item.genre, item.developer)) {
+      const review = reviewsForGame(item.slug)[0]
       hits.push({
-        href: `/games/${item.slug}/`,
+        href: review ? `/reviews/${review.slug}/` : '/releases/',
         title: item.title,
-        kind: 'Game',
+        kind: review ? 'Review' : 'Release',
         excerpt: item.summary,
       })
     }
@@ -116,30 +133,24 @@ export function resolveRelated(refs: RelatedRef[]) {
       if (ref.collection === 'news') {
         const item = getNews(ref.slug)
         return item
-          ? { href: `/nieuws/${item.slug}/`, title: item.title, kind: 'Nieuws', label: item.coverLabel }
+          ? {
+              href: `/nieuws/${item.slug}/`,
+              title: item.title,
+              kind: 'Nieuws',
+              label: item.coverLabel,
+              image: coverForGame(item.gameSlug),
+            }
           : null
       }
-      if (ref.collection === 'reviews') {
-        const item = getReview(ref.slug)
-        return item
-          ? { href: `/reviews/${item.slug}/`, title: item.title, kind: 'Review', label: item.coverLabel }
-          : null
-      }
-      if (ref.collection === 'features') {
-        const item = getFeature(ref.slug)
-        return item
-          ? { href: `/features/${item.slug}/`, title: item.title, kind: 'Feature', label: item.coverLabel }
-          : null
-      }
-      if (ref.collection === 'hardware') {
-        const item = getHardware(ref.slug)
-        return item
-          ? { href: `/hardware/${item.slug}/`, title: item.title, kind: 'Hardware', label: item.coverLabel }
-          : null
-      }
-      const item = getGame(ref.slug)
+      const item = getReview(ref.slug)
       return item
-        ? { href: `/games/${item.slug}/`, title: item.title, kind: 'Game', label: item.coverLabel }
+        ? {
+            href: `/reviews/${item.slug}/`,
+            title: item.title,
+            kind: 'Review',
+            label: item.coverLabel,
+            image: coverForGame(item.gameSlug),
+          }
         : null
     })
     .filter((item): item is NonNullable<typeof item> => item !== null)
@@ -162,4 +173,4 @@ export function filterGames(opts: { platform?: string; genre?: string; month?: s
   })
 }
 
-export { news, reviews, features, hardware, games }
+export { news, reviews, games }

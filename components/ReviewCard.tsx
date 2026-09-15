@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { CoverPlaceholder } from '@/components/CoverPlaceholder'
+import { CoverImage } from '@/components/CoverImage'
 import { formatDate } from '@/lib/utils'
 
 export function ScoreBadge({ score }: { score: number }) {
@@ -18,6 +18,7 @@ export function ReviewCard({
   verdict,
   date,
   coverLabel,
+  coverSrc,
 }: {
   href: string
   game: string
@@ -26,13 +27,19 @@ export function ReviewCard({
   verdict: string
   date: string
   coverLabel: string
+  coverSrc?: string
 }) {
   return (
     <Link
       href={href}
       className="grid grid-cols-[auto_1fr_auto] gap-4 rounded-sm border border-line bg-elevated p-4 hover:border-accent"
     >
-      <CoverPlaceholder label={coverLabel} className="hidden size-20 min-h-20 sm:flex" />
+      <CoverImage
+        src={coverSrc}
+        alt={game}
+        label={coverLabel}
+        className="hidden size-20 min-h-20 sm:block"
+      />
       <div>
         <p className="text-xs uppercase tracking-[0.16em] text-accent">{verdict}</p>
         <h3 className="mt-1 text-lg font-semibold">{game}</h3>

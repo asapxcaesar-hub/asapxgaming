@@ -1,5 +1,5 @@
 import { ReviewCard } from '@/components/ReviewCard'
-import { byDate, reviews } from '@/lib/content'
+import { byDate, coverForGame, reviews } from '@/lib/content'
 import { buildMetadata } from '@/lib/seo'
 
 export const metadata = buildMetadata({
@@ -29,6 +29,7 @@ export default function ReviewsPage() {
             verdict={item.verdict}
             date={item.publishedAt}
             coverLabel={item.coverLabel}
+            coverSrc={coverForGame(item.gameSlug)}
           />
         ))}
       </div>

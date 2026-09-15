@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
-import { CoverPlaceholder } from '@/components/CoverPlaceholder'
+import { CoverImage } from '@/components/CoverImage'
 import { RelatedGrid } from '@/components/RelatedGrid'
 import { ShareLinks } from '@/components/ShareLinks'
 import { formatDate } from '@/lib/utils'
@@ -13,6 +13,7 @@ export function ArticleLayout({
   author,
   date,
   coverLabel,
+  coverSrc,
   path,
   related,
   children,
@@ -24,8 +25,9 @@ export function ArticleLayout({
   author: string
   date: string
   coverLabel: string
+  coverSrc?: string
   path: string
-  related: { href: string; title: string; kind: string; label: string }[]
+  related: { href: string; title: string; kind: string; label: string; image?: string }[]
   children: ReactNode
 }) {
   return (
@@ -38,7 +40,7 @@ export function ArticleLayout({
         {author} · {formatDate(date)}
       </p>
       <div className="mt-6 overflow-hidden rounded-sm border border-line">
-        <CoverPlaceholder label={coverLabel} large />
+        <CoverImage src={coverSrc} alt={title} label={coverLabel} large />
       </div>
       <div className="mt-8 grid gap-4 text-base leading-relaxed text-ink/95">{children}</div>
       <div className="mt-10">

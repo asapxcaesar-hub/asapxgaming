@@ -2,7 +2,7 @@ export const site = {
   name: 'ASAPxGaming',
   tagline: 'Onafhankelijk gamingplatform. Persoonlijk oordeel.',
   description:
-    'ASAPxGaming is het Nederlandse creator-platform van Sem Harms: nieuws, reviews, releases, features en hardware — zonder redactiefabriek.',
+    'ASAPxGaming is het Nederlandse creator-platform van Sem Harms: nieuws, reviews en releases — zonder redactiefabriek.',
   locale: 'nl_NL',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://asaspxgaming.wasmer.app',
   creator: {
@@ -28,11 +28,7 @@ export const nav = [
   { href: '/', label: 'Home' },
   { href: '/nieuws/', label: 'Nieuws' },
   { href: '/reviews/', label: 'Reviews' },
-  { href: '/games/', label: 'Games' },
   { href: '/releases/', label: 'Releases' },
-  { href: '/features/', label: 'Features' },
-  { href: '/hardware/', label: 'Hardware' },
-  { href: '/over-asapxgaming/', label: 'Over' },
 ] as const
 
 export const footerNav = [

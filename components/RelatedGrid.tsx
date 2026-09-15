@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import { CoverPlaceholder } from '@/components/CoverPlaceholder'
+import { CoverImage } from '@/components/CoverImage'
 
 export function RelatedGrid({
   items,
 }: {
-  items: { href: string; title: string; kind: string; label: string }[]
+  items: { href: string; title: string; kind: string; label: string; image?: string }[]
 }) {
   if (items.length === 0) {
     return (
@@ -16,7 +16,7 @@ export function RelatedGrid({
       {items.map((item) => (
         <li key={item.href}>
           <Link href={item.href} className="grid gap-2 hover:text-accent">
-            <CoverPlaceholder label={item.label} className="min-h-24 text-2xl" />
+            <CoverImage src={item.image} alt={item.title} label={item.label} className="min-h-24" />
             <p className="text-xs uppercase tracking-[0.16em] text-accent">{item.kind}</p>
             <p className="font-semibold">{item.title}</p>
           </Link>

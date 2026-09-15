@@ -1,6 +1,6 @@
 # ASAPxGaming
 
-Onafhankelijk Nederlands gamingplatform (nieuws, reviews, releases, features, hardware) van Sem “ASAP” Harms. Next.js 16 App Router, TypeScript, Tailwind, **static export** — hostbaar op de gratis tier van [Wasmer Edge](https://wasmer.io) vanaf GitHub.
+Onafhankelijk Nederlands gamingplatform (nieuws, reviews, releases) van Sem “ASAP” Harms. Next.js 16 App Router, TypeScript, Tailwind, **static export** — hostbaar op de gratis tier van [Wasmer Edge](https://wasmer.io) vanaf GitHub.
 
 Geen accounts, geen database, geen CMS-server. Content ligt in TypeScript-modules (CMS-klaar: zelfde velden, andere loader later).
 
@@ -31,9 +31,9 @@ De eerste slice was Vite SPA. Deze build migreert naar **Next.js `output: 'expor
 | `data/site.ts` | Merk, tagline, creator, **alle social-URL’s**, navigatie |
 | `content/news.ts` | Kort nieuws |
 | `content/reviews.ts` | Game reviews (scores + secties) |
-| `content/features.ts` | Longreads / columns |
-| `content/hardware.ts` | Hardware reviews |
-| `content/games.ts` | Game-database + release-datums |
+| `content/features.ts` | Longreads; verschijnen in `/nieuws/` |
+| `content/hardware.ts` | Hardware-stukken; verschijnen in `/nieuws/` |
+| `content/games.ts` | Releasekalender + coverpaden |
 | `content/videos.ts` | Watch/Follow-kaarten (linken naar socials) |
 | `types/content.ts` | Vormen |
 | `lib/content.ts` | Lookups, filters, zoeken |
@@ -42,7 +42,7 @@ Voeg een object toe, hergebruik `slug` in `related`. Geen copy-paste in componen
 
 ## Beelden
 
-Geen stockfoto’s of nagemaakte nieuwsfoto’s. Covers zijn CSS-placeholders (`CoverPlaceholder`) met een label. Vervang later door echte screenshots in `public/` en een `coverSrc`-veld.
+Gamecovers, heroes en kaarten gebruiken stills uit een `{game name} ign`-zoekopdracht, lokaal in `public/covers/`. Polder Ghost Line heeft geen IGN-pagina; die titel houdt een label-placeholder.
 
 ## Branding
 
@@ -76,4 +76,6 @@ Docs: [static site](https://docs.wasmer.io/edge/guides/static-site/), [React/sta
 
 ## Routes
 
-`/`, `/nieuws`, `/nieuws/[slug]`, `/reviews`, `/reviews/[slug]`, `/games`, `/games/[slug]`, `/releases`, `/features`, `/features/[slug]`, `/hardware`, `/hardware/[slug]`, `/over-asapxgaming`, `/contact`, `/zoeken`, `/privacy`, `/disclaimer`, `/cookiebeleid`.
+Eerste-klas: `/`, `/nieuws`, `/nieuws/[slug]`, `/reviews`, `/reviews/[slug]`, `/releases`, `/contact`, `/zoeken`, `/privacy`, `/disclaimer`, `/cookiebeleid`.
+
+Oude hubs (`/games`, `/features`, `/hardware`, `/over-asapxgaming` en hun slugs) blijven bestaan als doorverwijzing naar nieuws, reviews of de kalender.

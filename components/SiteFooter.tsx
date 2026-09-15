@@ -13,6 +13,7 @@ export function SiteFooter() {
           <p className="mt-3 text-sm text-muted">
             {site.creator.name} · {site.creator.city}
           </p>
+          <p className="mt-2 max-w-sm text-xs text-muted">{site.creator.bio}</p>
         </div>
         <nav aria-label="Footer">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">Navigatie</p>

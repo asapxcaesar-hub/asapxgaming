@@ -3,7 +3,7 @@ import { ArticleLayout } from '@/components/ArticleLayout'
 import { JsonLd } from '@/components/JsonLd'
 import { ScoreBadge } from '@/components/ReviewCard'
 import { reviews } from '@/content/reviews'
-import { getReview, resolveRelated } from '@/lib/content'
+import { coverForGame, getReview, resolveRelated } from '@/lib/content'
 import { buildMetadata, reviewJsonLd } from '@/lib/seo'
 
 export function generateStaticParams() {
@@ -74,6 +74,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
         author={item.author}
         date={item.publishedAt}
         coverLabel={item.coverLabel}
+        coverSrc={coverForGame(item.gameSlug)}
         path={`/reviews/${item.slug}/`}
         related={resolveRelated(item.related)}
       >
