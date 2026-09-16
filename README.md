@@ -44,59 +44,121 @@ Add an object, reuse `slug` in `related`. No copy-paste in components.
 
 ## Automatic ingest from id.nl
 
-ASAPxGaming is a **static export**. A visitor cannot pull a new id.nl article at request time. Instant means: id.nl tells GitHub the moment you publish, GitHub translates and commits, Wasmer rebuilds from git.
+ASAPxGaming is a **static export**. The live site only serves files in `out/`. A visitor never talks to id.nl. A new Games article appears on ASAPxGaming only after this repo gets a commit and Wasmer rebuilds.
 
-### Instant (use this)
+**Instant** = id.nl tells GitHub when you hit Publish. GitHub translates, commits, Wasmer rebuilds. That is the path to use.
 
-id.nl already runs on DatoCMS. Add a webhook on **record publish** for Games articles only.
+**Backup** = the same GitHub Action also checks the RSS feed every 20 minutes, in case a webhook is missed.
 
-1. GitHub repo **Settings → Secrets and variables → Actions**
-   - `OPENAI_API_KEY`: required for a full English body to go live
-   - `INGEST_GITHUB_TOKEN`: a PAT with `contents:write` (needed if `GITHUB_TOKEN` cannot push, or if you ingest into a non-default branch)
-   - optional: `IDNL_COOKIE`, `IDNL_RSS_URL`, `OPENAI_MODEL`
-2. GitHub **Settings → Actions → General**: allow GitHub Actions to create and approve pull requests is not required; do allow Actions to push to the deploy branch.
-3. DatoCMS → **Settings → Webhooks** → new webhook on **record publish** (Games model):
-   - URL `https://api.github.com/repos/<owner>/<repo>/dispatches`
-   - Header `Authorization: Bearer <PAT with repo scope>`
-   - Header `Accept: application/vnd.github+json`
-   - Header `X-GitHub-Api-Version: 2022-11-28`
-   - JSON body (send the **full Dutch article**, not only the title):
+Giveaways (`we-geven-*`) and podcast landings are skipped. Without `OPENAI_API_KEY`, Dutch stubs land in `content/inbox/` and **do not go live**.
 
-```json
-{
-  "event_type": "idnl-publish",
-  "client_payload": {
-    "slug": "007-first-light-op-nintendo-switch-2-laat-nog-wat-langer-op-zich-wachten",
-    "url": "https://id.nl/huis-en-entertainment/computer-en-gaming/nintendo/007-first-light-op-nintendo-switch-2-laat-nog-wat-langer-op-zich-wachten",
-    "title": "Dutch title",
-    "summary": "Dutch lede",
-    "publishedAt": "2026-09-15",
-    "category": "Nintendo",
-    "branch": "main",
-    "body": ["Full Dutch paragraph 1", "paragraph 2"]
-  }
-}
+The Action file is `.github/workflows/ingest-idnl.yml`. It only runs on **GitHub**. Connect Wasmer to that same GitHub repo (not only Origin).
+
+### 0. What you need
+
+- The GitHub repo Wasmer deploys from (example: `asapxcaesar-hub/genesis`)
+- An OpenAI API key
+- A GitHub personal access token (classic `repo` scope, or fine-grained with Contents write on that repo)
+- DatoCMS admin on id.nl
+
+Replace `OWNER/REPO` below with your GitHub repo. Use `main` as `branch` once that is the Wasmer production branch.
+
+### 1. GitHub: secrets and Actions
+
+1. Open the GitHub repo → **Settings → Secrets and variables → Actions**.
+2. **New repository secret** `OPENAI_API_KEY` = your OpenAI key. Without this, nothing goes live.
+3. Optional secrets:
+   - `INGEST_GITHUB_TOKEN` = the same PAT, if the default `GITHUB_TOKEN` cannot push (protected branch, or a non-default branch)
+   - `IDNL_COOKIE` = a logged-in `Cookie` header from id.nl, only needed if RSS/page fetches hit the Vercel bot wall
+   - `IDNL_RSS_URL` = an internal RSS URL that is not behind that wall
+   - `OPENAI_MODEL` = override (default `gpt-4.1-mini`)
+4. **Settings → Actions → General**: Actions enabled. For “Workflow permissions” pick **Read and write**.
+
+Keep the PAT. You paste it into DatoCMS in the next step as well.
+
+### 2. Prove the Action works (do this before Dato)
+
+From a terminal, with the PAT in `GITHUB_TOKEN`:
+
+```bash
+curl -sS -X POST \
+  -H "Authorization: Bearer $GITHUB_TOKEN" \
+  -H "Accept: application/vnd.github+json" \
+  -H "X-GitHub-Api-Version: 2022-11-28" \
+  https://api.github.com/repos/OWNER/REPO/dispatches \
+  -d '{
+    "event_type": "idnl-publish",
+    "client_payload": {
+      "slug": "test-ingest-from-curl",
+      "url": "https://id.nl/huis-en-entertainment/computer-en-gaming/playstation/test-ingest-from-curl",
+      "title": "Testartikel voor ASAPxGaming ingest",
+      "summary": "Korte Nederlandse samenvatting.",
+      "publishedAt": "2026-09-16",
+      "category": "PlayStation",
+      "branch": "main",
+      "body": [
+        "Eerste volledige Nederlandse alinea.",
+        "Tweede volledige Nederlandse alinea."
+      ]
+    }
+  }'
 ```
 
-`branch` should be the branch Wasmer deploys (`main` once you merge, or the preview branch until then). Giveaways (`we-geven-*`) and podcast landings are skipped.
+A **204** response is success. Then GitHub → **Actions** → workflow **Ingest id.nl games**. It should run, commit English into `content/ingested.json`, and Wasmer should rebuild.
 
-That fires `.github/workflows/ingest-idnl.yml` (`repository_dispatch` / `idnl-publish`). The script fetches missing body text from the live URL when needed, writes English into `content/ingested.json`, and pushes. Wasmer then rebuilds from git. Point Wasmer at the same branch you ingest into.
+If the run writes `content/inbox/test-ingest-from-curl.json` instead, `OPENAI_API_KEY` is missing. If the workflow never starts, the PAT cannot create `repository_dispatch` on that repo.
 
-Without `OPENAI_API_KEY` the Dutch source is stored in `content/inbox/` and **does not go live**.
+Delete the test article from `content/ingested.json` after you are happy.
 
-### Polling (backup)
+### 3. DatoCMS: webhook on Publish
 
-The same workflow also runs every **20 minutes** against `https://id.nl/api/rss` (Games URLs only). Public fetches often hit the Vercel bot wall. If RSS fails, set secret `IDNL_COOKIE` to a logged-in browser cookie from id.nl, or set `IDNL_RSS_URL` to an internal feed that skips the wall.
+1. id.nl DatoCMS → **Project settings → Webhooks → Create a new webhook**.
+2. Name: `ASAPxGaming ingest`.
+3. URL (POST): `https://api.github.com/repos/OWNER/REPO/dispatches`
+4. Headers:
+   - `Authorization` = `Bearer PASTE_THE_PAT_HERE`
+   - `Accept` = `application/vnd.github+json`
+   - `X-GitHub-Api-Version` = `2022-11-28`
+   - `Content-Type` = `application/json`
+5. Trigger: **record published** (or “publish”). Restrict it to the Games article model only, so house/tech posts do not fire.
+6. Custom JSON body. GitHub does **not** accept Dato’s default payload. The body must look exactly like the curl example: top-level `event_type` plus `client_payload`. Map Dato fields onto these keys:
 
-Locally:
+| JSON key | What to send |
+| --- | --- |
+| `slug` | URL slug of the article |
+| `url` | Public https://id.nl/... URL |
+| `title` | Dutch title |
+| `summary` | Dutch lede |
+| `publishedAt` | `YYYY-MM-DD` |
+| `category` | `Nintendo`, `PlayStation`, `Xbox` or `PC` |
+| `branch` | Wasmer deploy branch (`main`) |
+| `body` | Array of **full** Dutch paragraphs, not only the lede |
+
+Dato field API names differ per project. In the webhook template, use your real field keys (often `{{title}}`, `{{slug}}`, `{{content}}`). If Dato stores body as HTML, that is fine: ingest strips tags. If you cannot send `body`, at least send `url`; ingest will try to fetch the live page.
+
+GitHub limits `client_payload` to **10 top-level keys**. Do not dump the whole Dato record into extra fields.
+
+7. Save. Publish a Games article on id.nl. Watch **Actions** on GitHub.
+
+### 4. Wasmer
+
+Wasmer must watch the **same GitHub repo and branch** the Action pushes to (`branch` in the payload, default repo default branch). After the ingest commit, Wasmer rebuilds `out/` and the English piece is on `/news/`.
+
+### 5. Backup poll and local run
+
+The workflow also runs every 20 minutes against `https://id.nl/api/rss` (Games URLs only). You can start it by hand: GitHub → Actions → **Ingest id.nl games** → **Run workflow**.
+
+On your machine:
 
 ```bash
 npm run ingest
 ```
 
-### Why this is not a live scrape on Wasmer
+Public RSS often returns a Vercel bot wall from GitHub’s network. Then either the Dato webhook (preferred) or secrets `IDNL_COOKIE` / `IDNL_RSS_URL` are required.
 
-Wasmer serves the `out/` folder. There is no Node server to poll id.nl on every visitor. The webhook is the “as soon as it is posted” path. Cron is only a safety net.
+### Why Wasmer cannot scrape id.nl itself
+
+Wasmer only serves the exported `out/` folder. There is no Node process on the edge that can poll id.nl when someone opens the site. The webhook is “as soon as it is posted”. Cron is only a safety net.
 
 ## Images
 
