@@ -1,0 +1,43 @@
+name: Ingest id.nl games
+
+on:
+  schedule:
+    - cron: '*/20 * * * *'
+  workflow_dispatch:
+  repository_dispatch:
+    types: [idnl-publish]
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Write webhook payload
+        if: github.event_name == 'repository_dispatch'
+        env:
+          IDNL_PAYLOAD: ${{ toJson(github.event.client_payload) }}
+        run: printf '%s' "$IDNL_PAYLOAD" > /tmp/idnl-payload.json
+      - name: Pull Games posts
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          IDNL_COOKIE: ${{ secrets.IDNL_COOKIE }}
+          IDNL_RSS_URL: ${{ secrets.IDNL_RSS_URL }}
+          IDNL_PAYLOAD_FILE: ${{ github.event_name == 'repository_dispatch' && '/tmp/idnl-payload.json' || '' }}
+        run: node scripts/ingest-idnl.mjs
+      - name: Commit new English pieces
+        run: |
+          git config user.name "asaspxgaming-ingest"
+          git config user.email "asapxcaesar@gmail.com"
+          git add content/ingested.json content/inbox || true
+          if git diff --cached --quiet; then
+            echo "No content changes"
+            exit 0
+          fi
+          git commit -m "Ingest new id.nl games coverage"
+          git push

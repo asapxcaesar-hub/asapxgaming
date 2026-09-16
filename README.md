@@ -40,7 +40,54 @@ The first slice was a Vite SPA. This build uses **Next.js `output: 'export'`** b
 
 Add an object, reuse `slug` in `related`. No copy-paste in components.
 
-**No scrape pipeline.** News and reviews are original English pieces in these modules, based on public facts (dates, platforms, what the game does). We do not translate or republish third-party articles.
+**News** is the English edition of KayvE’s Games desk on [id.nl/games](https://id.nl/games). Manual pieces live in `content/news/batch-a.ts`. New posts land in `content/ingested.json` via `npm run ingest`. Giveaways and podcast landing pages are skipped.
+
+## Automatic ingest from id.nl
+
+ASAPxGaming is a **static export**. A new id.nl article cannot appear on the live site until this repo gets a commit and Wasmer rebuilds. Instant means: id.nl tells GitHub the moment you publish, GitHub translates and commits, Wasmer rebuilds.
+
+### Instant (use this)
+
+id.nl already runs on DatoCMS. Add a webhook on **record publish** for Games:
+
+1. GitHub repo Settings → Secrets: `OPENAI_API_KEY` (full English body), plus a fine-grained PAT if the default `GITHUB_TOKEN` cannot push your default branch.
+2. DatoCMS → webhooks → URL `https://api.github.com/repos/<owner>/<repo>/dispatches`
+3. Header `Authorization: Bearer <PAT with contents:write>`
+4. Header `Accept: application/vnd.github+json`
+5. JSON body:
+
+```json
+{
+  "event_type": "idnl-publish",
+  "client_payload": {
+    "slug": "007-first-light-op-nintendo-switch-2-laat-nog-wat-langer-op-zich-wachten",
+    "url": "https://id.nl/huis-en-entertainment/computer-en-gaming/nintendo/007-first-light-op-nintendo-switch-2-laat-nog-wat-langer-op-zich-wachten",
+    "title": "Dutch title",
+    "summary": "Dutch lede",
+    "publishedAt": "2026-09-15",
+    "category": "Nintendo",
+    "body": ["Full Dutch paragraph 1", "paragraph 2"]
+  }
+}
+```
+
+That fires `.github/workflows/ingest-idnl.yml` (`repository_dispatch` / `idnl-publish`). The script writes English into `content/ingested.json` and pushes. Wasmer then rebuilds from git.
+
+Without `OPENAI_API_KEY` the Dutch source is stored in `content/inbox/` and **does not go live**.
+
+### Polling (backup)
+
+The same workflow also runs every 20 minutes against `https://id.nl/api/rss` (Games category only). Public fetches often hit the Vercel bot wall. If RSS fails, set secret `IDNL_COOKIE` to a browser cookie from id.nl, or set `IDNL_RSS_URL` to an internal feed that skips the wall.
+
+Locally:
+
+```bash
+npm run ingest
+```
+
+### Why this is not a live scrape on Wasmer
+
+Wasmer serves the `out/` folder. There is no Node server to poll id.nl on every visitor. The webhook is the “as soon as it is posted” path. Cron is only a safety net.
 
 ## Images
 
@@ -48,9 +95,7 @@ Game covers, heroes and cards use stills stored locally in `public/covers/`. Eve
 
 **Calendar.** Site “today” is 16 September 2026. The list starts there and only scrolls forward. Closed months disappear. Filters run on dated rows only. Tiny niche titles are out. Undated is ignored. Calendar stills match the public dated listing, cached in `public/covers/`.
 
-**News.** Topics follow what public Dutch games coverage is actually writing about that week. Sentences are original English, checked against publisher dates and platforms. We do not translate other outlets. Unclear facts are left out.
-
-**News.** September 2026 only, biggest games or indie that matters. Features and hardware are not in the feed.
+**News.** Full English translations of current id.nl Games articles. New posts should arrive through ingest, not by inventing copy.
 
 **Reviews.** 2026 titles that matter, no 2025 leftover.
 

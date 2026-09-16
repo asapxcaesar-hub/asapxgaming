@@ -18,32 +18,33 @@ const slugOverrides: Record<string, string> = {
 }
 
 const relatedBySlug: Record<string, RelatedRef[]> = {
-  'wolverine-marvel': [
-    { collection: 'reviews', slug: 'wolverine-marvel' },
-    { collection: 'news', slug: 'wolverine-is-uit' },
-  ],
+  'wolverine-marvel': [{ collection: 'reviews', slug: 'wolverine-marvel' }],
   'moonlighter-2': [{ collection: 'reviews', slug: 'moonlighter-2' }],
-  'fire-emblem-fortunes-weave': [],
-  'control-resonant': [{ collection: 'news', slug: 'control-resonant-24-september' }],
+  'fire-emblem-fortunes-weave': [
+    { collection: 'news', slug: 'review-fire-emblem-fortunes-weave-is-eindelijk-voor-iedereen' },
+  ],
+  'control-resonant': [],
   'silent-hill-townfall': [],
   'minecraft-dungeons-2': [],
-  'ace-combat-8': [{ collection: 'news', slug: 'ace-combat-8-2-oktober' }],
-  'gears-of-war-e-day': [{ collection: 'news', slug: 'gears-e-day-6-oktober' }],
+  'ace-combat-8': [],
+  'gears-of-war-e-day': [],
   'final-fantasy-resonance': [],
   'nintendo-switch-sports-resort': [],
   'call-of-duty-modern-warfare-4': [],
   'phantom-blade-zero': [],
-  'zelda-ocarina-of-time-switch-2': [{ collection: 'news', slug: 'ocarina-krijgt-een-dag' }],
-  'grand-theft-auto-vi': [{ collection: 'news', slug: 'gta-vi-blijft-19-november' }],
+  'zelda-ocarina-of-time-switch-2': [],
+  'grand-theft-auto-vi': [
+    { collection: 'news', slug: 'grote-artiesten-teasen-gta-6-soundtrack-alle-namen-op-een-rij' },
+    { collection: 'news', slug: 'de-eerste-gta-6-stemacteur-is-officieel-bekendgemaakt' },
+  ],
   pragmata: [{ collection: 'reviews', slug: 'pragmata' }],
   'resident-evil-requiem': [{ collection: 'reviews', slug: 'resident-evil-requiem' }],
   'forza-horizon-6': [
     { collection: 'reviews', slug: 'forza-horizon-6' },
-    { collection: 'news', slug: 'forza-ps5-blijft-2026' },
   ],
   '007-first-light': [
     { collection: 'reviews', slug: '007-first-light' },
-    { collection: 'news', slug: 'bond-switch-verschuift' },
+    { collection: 'news', slug: '007-first-light-op-nintendo-switch-2-laat-nog-wat-langer-op-zich-wachten' },
   ],
 }
 

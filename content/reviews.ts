@@ -26,8 +26,7 @@ export const reviews: GameReview[] = [
     ],
     scores: { gameplay: 8.0, story: 7.2, graphics: 8.3, audio: 8.1, performance: 7.8 },
     related: [
-      { collection: 'news', slug: 'wolverine-is-uit' },
-      { collection: 'news', slug: 'gta-vi-blijft-19-november' },
+      { collection: 'news', slug: 'grote-artiesten-teasen-gta-6-soundtrack-alle-namen-op-een-rij' },
     ],
     seo: {
       title: 'Wolverine cuts hard and walks straight too often',
@@ -156,7 +155,7 @@ export const reviews: GameReview[] = [
     ],
     scores: { gameplay: 8.8, story: 8.2, graphics: 8.5, audio: 8.6, performance: 8.4 },
     related: [
-      { collection: 'news', slug: 'bond-switch-verschuift' },
+      { collection: 'news', slug: '007-first-light-op-nintendo-switch-2-laat-nog-wat-langer-op-zich-wachten' },
       { collection: 'reviews', slug: 'pragmata' },
     ],
     seo: {
@@ -221,7 +220,6 @@ export const reviews: GameReview[] = [
     ],
     scores: { gameplay: 9.0, story: 7.8, graphics: 9.1, audio: 8.8, performance: 8.6 },
     related: [
-      { collection: 'news', slug: 'forza-ps5-blijft-2026' },
       { collection: 'reviews', slug: '007-first-light' },
     ],
     seo: {

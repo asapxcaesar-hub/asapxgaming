@@ -6,7 +6,8 @@
     "dev": "next dev --hostname 0.0.0.0 --port 4629",
     "build": "next build",
     "start": "next start --hostname 0.0.0.0 --port 4629",
-    "lint": "eslint"
+    "lint": "eslint",
+    "ingest": "node scripts/ingest-idnl.mjs"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

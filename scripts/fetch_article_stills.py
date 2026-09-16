@@ -63,6 +63,32 @@ PAGES: dict[str, list[str]] = {
     "zelda-ocarina-of-time-switch-2": [
         "https://www.ign.com/games/the-legend-of-zelda-ocarina-of-time",
     ],
+    "final-fantasy-resonance": [
+        "https://www.ign.com/games/final-fantasy-resonance",
+    ],
+    "final-fantasy-7-revelation": [
+        "https://www.ign.com/games/final-fantasy-7-remake-part-3",
+        "https://www.ign.com/games/final-fantasy-vii-remake",
+    ],
+    "mega-man-dual-override": [
+        "https://www.ign.com/games/mega-man-dual-override",
+        "https://www.ign.com/games/mega-man-11",
+    ],
+    "starcraft": [
+        "https://www.ign.com/games/starcraft-ii",
+        "https://www.ign.com/games/starcraft",
+    ],
+    "physint": [
+        "https://www.ign.com/articles/hideo-kojima-physint",
+        "https://www.ign.com/games/death-stranding-2-on-the-beach",
+    ],
+    "wardogs": [
+        "https://www.ign.com/games/wardogs",
+        "https://www.ign.com/articles/wardogs",
+    ],
+    "metroid-ravenous": [
+        "https://www.ign.com/games/metroid-dread",
+    ],
 }
 
 
