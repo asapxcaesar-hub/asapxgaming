@@ -5,12 +5,13 @@ export const news: NewsArticle[] = [
     slug: 'wolverine-is-uit',
     title: 'Wolverine is out and 7.7 is the ceiling',
     excerpt:
-      'Today 15 September 2026, PlayStation 5 only. Combat lifts. Linearity drops. That is the whole story.',
+      '15 September 2026, PlayStation 5 only. Combat lifts. Linearity drops. That is the whole story.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-15',
     category: 'PlayStation',
     tags: ['PlayStation', 'Marvel', 'Release'],
     coverLabel: 'WOLV',
+    coverImage: '/covers/articles/wolverine-marvel.jpg',
     gameSlug: 'wolverine-marvel',
     related: [{ collection: 'reviews', slug: 'wolverine-marvel' }],
     seo: {
@@ -18,9 +19,9 @@ export const news: NewsArticle[] = [
       description: 'Launch 15 September 2026 on PS5. Official date, review 7.7.',
     },
     body: [
-      'Marvel’s Wolverine from Insomniac is playable today on PlayStation 5. EU store price sits near eighty euro for the standard edition, the figure Sony posted with preorders in June. No PC. No Xbox. No early weekend. Those are publisher facts, not a forum dump.',
-      'Claws and voice work lift. Enemy variety and a plot that undersells its own premise drop. The full split lives in the review. 7.7, Hit.',
-      'Next big date on this calendar: Grand Theft Auto VI on 19 November, PS5 and Xbox Series, according to Rockstar. Until then you play something that shipped, or you carve Logan with the footnotes attached.',
+      'Marvel’s Wolverine from Insomniac is playable on PlayStation 5 as of 15 September 2026. The EU store price sits near eighty euro for the standard edition, the figure Sony posted with preorders in June. No PC. No Xbox. No early weekend. Those are publisher facts, not a forum dump.',
+      'Claws and voice work lift the night. Enemy variety and a plot that explains the trailer a second time drop it. The full split lives in the review. 7.7, Hit.',
+      'Next big dated row on this calendar: Grand Theft Auto VI on 19 November, PS5 and Xbox Series, according to Rockstar. Until then you play something that shipped, or you carve Logan with the footnotes attached.',
     ],
   },
   {
@@ -33,6 +34,7 @@ export const news: NewsArticle[] = [
     category: 'Nintendo',
     tags: ['Nintendo', 'Bond', 'Industry'],
     coverLabel: '007',
+    coverImage: '/covers/articles/007-first-light.jpg',
     gameSlug: '007-first-light',
     related: [{ collection: 'reviews', slug: '007-first-light' }],
     seo: {
@@ -41,7 +43,7 @@ export const news: NewsArticle[] = [
         'IO Interactive moves 007 First Light on Switch 2 to March 2027. The other platforms shipped 27 May.',
     },
     body: [
-      '007 First Light has been out since 27 May 2026 on PlayStation 5, Xbox Series and PC. The Switch 2 version was meant to follow this summer. Today IO Interactive says that port is March 2027, with an exact day later. Reason: performance they will not sell yet.',
+      '007 First Light has been out since 27 May 2026 on PlayStation 5, Xbox Series and PC. The Switch 2 version was meant to follow this summer. On 15 September 2026 IO Interactive says that port is March 2027, with an exact day later. Reason: performance they will not sell yet.',
       'That is dull news and therefore believable. A CEO promises polish, not magic. If you want Bond on a Nintendo couch, plan 2027. If you want him now, play the version that has been out for months.',
       'The review (8.6) covered the May build: stealth that clicks, a young Bond who does not grin like merch, and a third act that explains too much. That text does not change because a port slides.',
     ],
@@ -50,23 +52,24 @@ export const news: NewsArticle[] = [
     slug: 'oktober-is-dichtbij',
     title: 'October has dates, not an undated bin',
     excerpt:
-      'Ace Combat 8 on 2 October, Gears E Day on 6, Resonance and Sports Resort on 22, Modern Warfare 4 on 23, Phantom Blade Zero on 29.',
+      'Ace Combat 8 on 2 October, Gears E Day on 6, Resonance and Sports Resort on 22, Modern Warfare 4 on 23, Phantom Blade 0 on 29.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-14',
     category: 'Industry',
     tags: ['Industry', 'Calendar'],
     coverLabel: 'OKT',
+    coverImage: '/covers/articles/ace-combat-8.jpg',
     gameSlug: 'ace-combat-8',
     related: [{ collection: 'news', slug: 'gta-vi-blijft-19-november' }],
     seo: {
       title: 'October has dates, not an undated bin',
       description:
-        'Dated October 2026 releases: Ace Combat 8, Gears E Day, Final Fantasy Resonance, Switch Sports Resort, Modern Warfare 4, Phantom Blade Zero.',
+        'Dated October 2026 releases: Ace Combat 8, Gears E Day, Final Fantasy Resonance, Switch Sports Resort, Modern Warfare 4, Phantom Blade 0.',
     },
     body: [
-      'The release calendar on this site starts at September 2026 and only moves forward. October is the next wall, not a rumour folder. Ace Combat 8: Wings of Theve sits on 2 October (PS5, Xbox Series, PC). Gears of War: E Day on 6 October (Xbox Series, PC).',
-      'On 22 October Square Enix ships Final Fantasy Resonance wide, and Nintendo puts Switch Sports Resort on Switch 2. A day later Call of Duty: Modern Warfare 4, including Switch 2. Phantom Blade Zero closes the month on 29 October, PS5 and PC.',
-      'Undated titles stay where they belong: nowhere. Calendar filters run on this leftover set. Play what shipped, or set a reminder. No leak JPG as proof.',
+      'The release calendar on this site starts at 16 September 2026 and only moves forward. October is the next wall, not a rumour folder. Ace Combat 8: Wings of Theve sits on 2 October (PS5, Xbox Series, PC). Gears of War: E Day sits on 6 October (PS5, Xbox Series, PC), the same day as Star Wars: Galactic Racer.',
+      'On 22 October Square Enix ships Final Fantasy Resonance wide, and Nintendo puts Switch Sports Resort on Switch 2 only. A day later Call of Duty: Modern Warfare 4, including Switch 2. Phantom Blade 0 closes the month on 29 October, PS5 and PC.',
+      'Undated titles stay off the list. Play what shipped, or set a reminder. No leak JPG as proof.',
     ],
   },
   {
@@ -79,17 +82,17 @@ export const news: NewsArticle[] = [
     category: 'Nintendo',
     tags: ['Nintendo', 'Fire Emblem'],
     coverLabel: 'FE',
+    coverImage: '/covers/articles/fire-emblem-fortunes-weave.jpg',
     gameSlug: 'fire-emblem-fortunes-weave',
     related: [{ collection: 'news', slug: 'ocarina-krijgt-een-dag' }],
     seo: {
       title: 'Fire Emblem gets 17 September on Switch 2',
-      description:
-        'Fire Emblem Fortune’s Weave: dated release 17 September 2026 on Switch 2.',
+      description: 'Fire Emblem Fortune’s Weave: dated release 17 September 2026 on Switch 2.',
     },
     body: [
-      'Intelligent Systems and Nintendo put Fire Emblem: Fortune’s Weave on 17 September 2026, Switch 2 only. That is the date on the calendar. No undated. No “sometime this autumn”.',
+      'Intelligent Systems and Nintendo put Fire Emblem: Fortune’s Weave on 17 September 2026, Switch 2 only. That is the date on the calendar. No undated. No “sometime this autumn”. Trails in the Sky 2nd Chapter shares the same day on Switch 2, Switch, PS5 and PC.',
       'Fire Emblem lives on grid, class, and whether the writers dare to let a unit fall. Until a build exists, the news is the day. Hype without a save file is marketing.',
-      'Right after on the same calendar: Control Resonant and Silent Hill: Townfall on 24 September. September is full without dragging 2025 back.',
+      'Later in the same month: Silent Hill: Townfall and Control Resonant on 24 September, then Minecraft Dungeons II on 29 September. September is full without dragging 2025 back.',
     ],
   },
   {
@@ -102,6 +105,7 @@ export const news: NewsArticle[] = [
     category: 'PC',
     tags: ['PC', 'Review'],
     coverLabel: 'PC',
+    coverImage: '/covers/articles/pragmata.jpg',
     gameSlug: 'pragmata',
     related: [{ collection: 'reviews', slug: 'pragmata' }],
     seo: {
@@ -110,7 +114,7 @@ export const news: NewsArticle[] = [
         'ASAPxGaming: Resident Evil Requiem, Pragmata and 007 First Light are out on PC. Moonlighter 2 is the indie of September.',
     },
     body: [
-      'Wolverine tonight is a PS5 job. On PC sit the 2026 titles already played and scored here. Not a sale pitch. What you can start without waiting for November.',
+      'On PC sit the 2026 titles already played and scored here. Not a sale pitch. What you can start without waiting for November.',
       'Resident Evil Requiem (8.7, 27 February) if you want survival horror that breathes. Pragmata (8.5, 17 April) if Hugh and Diana on the moon have not had you yet. 007 First Light (8.6, 27 May) if stealth says more than a cover shooter. Moonlighter 2 (8.2, 2 September) is the trending indie, not a 2025 leftover.',
       'Handheld: check that your machine pulls the build. Do not buy a discount you cannot finish on a train. The reviews are open.',
     ],
@@ -125,16 +129,16 @@ export const news: NewsArticle[] = [
     category: 'Industry',
     tags: ['Industry', 'Horror'],
     coverLabel: 'SEP2',
+    coverImage: '/covers/articles/silent-hill-townfall.jpg',
     gameSlug: 'silent-hill-townfall',
     related: [{ collection: 'news', slug: 'wolverine-is-uit' }],
     seo: {
       title: 'Townfall and Resonant get 24 September',
-      description:
-        'Silent Hill Townfall and Control Resonant: dated release 24 September 2026.',
+      description: 'Silent Hill Townfall and Control Resonant: dated release 24 September 2026.',
     },
     body: [
-      'Wolverine is the cover of 15 September. The rest of the month is not a pause. On 24 September two big names get a day: Silent Hill: Townfall (PS5, PC) and Control Resonant (PS5, Xbox Series, PC).',
-      'That is the news. The day sits on the calendar. The undated column does not.',
+      'Wolverine was the cover of 15 September. The rest of the month is not a pause. On 24 September two big names get a day: Silent Hill: Townfall (PS5, PC) and Control Resonant (PS5, Xbox Series, PC).',
+      'That is the news. The day sits on the calendar. The undated column does not. Five days later Minecraft Dungeons II lands on Switch 2, Switch, PS5, Xbox Series and PC.',
       'Reviews land when they are finished, not when someone else’s embargo lifts. Until then: play Logan with 7.7 in the back of your head, or wait until 24 September without leak theatre.',
     ],
   },
@@ -148,6 +152,7 @@ export const news: NewsArticle[] = [
     category: 'Xbox',
     tags: ['Xbox', 'PlayStation', 'Racing'],
     coverLabel: 'FH6',
+    coverImage: '/covers/articles/forza-horizon-6.jpg',
     gameSlug: 'forza-horizon-6',
     related: [{ collection: 'reviews', slug: 'forza-horizon-6' }],
     seo: {
@@ -156,7 +161,7 @@ export const news: NewsArticle[] = [
         'Forza Horizon 6 is out on Xbox and PC. Playground Games keeps the PS5 version in 2026, without an exact day.',
     },
     body: [
-      'Forza Horizon 6 has been out since 19 May 2026 on Xbox Series and PC, with Game Pass attached if you already pay for it. Playground Games repeats in September that the PlayStation 5 version follows later in 2026. No day. The year, from their own mouth, not a Discord crop.',
+      'Forza Horizon 6 has been out since 19 May 2026 on Xbox Series and PC, with Game Pass attached if you already pay for it. Playground Games repeats in September that the PlayStation 5 version follows later in 2026. No day. The year comes from the studio, not a cropped screenshot of a chat.',
       'Guesses that it becomes 2027 are not news until the studio says so. A PlayStation Store wishlist is the only useful move if you do not own Xbox.',
       'The 8.9 covered the May build in Japan: festival rhythm, roads that read, online that is still a lobby. That text is not rewritten for a port that is not here.',
     ],
@@ -171,6 +176,7 @@ export const news: NewsArticle[] = [
     category: 'Industry',
     tags: ['Industry', 'GTA', 'PlayStation'],
     coverLabel: 'GTA',
+    coverImage: '/covers/articles/grand-theft-auto-vi.jpg',
     gameSlug: 'grand-theft-auto-vi',
     related: [{ collection: 'news', slug: 'wolverine-is-uit' }],
     seo: {
@@ -179,7 +185,7 @@ export const news: NewsArticle[] = [
         'Official GTA VI date on PS5 and Xbox Series, and why ASAPxGaming will not fill the waiting room with leaks.',
     },
     body: [
-      'Grand Theft Auto VI has a date that comes from Rockstar: 19 November 2026, PlayStation 5 and Xbox Series. That is news. Fan renders, inside source screenshots and a Discord crop of a dashboard are not. ASAPxGaming publishes the first. The second is traffic.',
+      'Grand Theft Auto VI has a date that comes from Rockstar: 19 November 2026, PlayStation 5 and Xbox Series. That is news. Fan renders, inside source screenshots and a cropped dashboard still are not. ASAPxGaming publishes the first. The second is traffic.',
       'The waiting room is a season now. GTA Online keeps running while the calendar ticks. That is the context of every when question, not a leak. Preorders and price land when the publisher puts them down. Until then the advice is dull: play something that shipped.',
       'If Rockstar drops gameplay itself, official, with their logo on it, that is the story. Not earlier, and not with somebody’s JPG from a forum dump.',
     ],
@@ -194,6 +200,7 @@ export const news: NewsArticle[] = [
     category: 'Indie',
     tags: ['Indie', 'PC'],
     coverLabel: 'MOON',
+    coverImage: '/covers/articles/moonlighter-2.jpg',
     gameSlug: 'moonlighter-2',
     related: [{ collection: 'reviews', slug: 'moonlighter-2' }],
     seo: {
@@ -216,17 +223,17 @@ export const news: NewsArticle[] = [
     category: 'Nintendo',
     tags: ['Nintendo', 'Zelda'],
     coverLabel: 'OOT',
+    coverImage: '/covers/articles/zelda-ocarina-of-time-switch-2.jpg',
     gameSlug: 'zelda-ocarina-of-time-switch-2',
     related: [{ collection: 'news', slug: 'fire-emblem-overmorgen' }],
     seo: {
       title: 'Ocarina of Time gets 5 November on Switch 2',
-      description:
-        'The Legend of Zelda Ocarina of Time is dated 5 November 2026 for Switch 2.',
+      description: 'The Legend of Zelda Ocarina of Time is dated 5 November 2026 for Switch 2.',
     },
     body: [
       'The Legend of Zelda: Ocarina of Time sits on 5 November 2026 for Switch 2 as a dated row, not as undated. Nintendo sells memory. The calendar puts the day.',
       'Port, cleanup, or a new store name: that is written when the store page says it. Until then 5 November is the news, not somebody’s emulation comparison.',
-      'Between now and November: Fire Emblem on 17 September, Sports Resort on 22 October, and GTA VI on 19 November. The calendar runs forward. Closed months stay closed.',
+      'Between now and November: Fire Emblem on 17 September, Sports Resort on 22 October on Switch 2, and GTA VI on 19 November. The calendar runs forward. Closed months stay closed.',
     ],
   },
 ]

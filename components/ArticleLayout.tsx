@@ -40,7 +40,7 @@ export function ArticleLayout({
         {author} · {formatDate(date)}
       </p>
       <div className="mt-6 overflow-hidden rounded-sm border border-line">
-        <CoverImage src={coverSrc} alt={title} label={coverLabel} large />
+        <CoverImage src={coverSrc} alt={title} label={coverLabel} />
       </div>
       <div className="mt-8 grid gap-4 text-base leading-relaxed text-ink/95">{children}</div>
       <div className="mt-10">

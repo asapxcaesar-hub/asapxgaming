@@ -1,19 +1,15 @@
 import { games } from '@/content/games'
 import { news } from '@/content/news'
 import { reviews } from '@/content/reviews'
-import { SITE_MONTH } from '@/data/site'
+import { SITE_TODAY } from '@/data/site'
 import type { NewsFilter, RelatedRef } from '@/types/content'
 
 export function allNews() {
   return byDate([...news])
 }
 
-export function isOpenCalendarMonth(isoMonth: string) {
-  return isoMonth >= SITE_MONTH
-}
-
 export function calendarGames() {
-  return games.filter((game) => isOpenCalendarMonth(game.releaseDate.slice(0, 7)))
+  return games.filter((game) => game.releaseDate >= SITE_TODAY)
 }
 
 export function byDate<T extends { publishedAt: string }>(items: T[]) {
@@ -45,6 +41,14 @@ export function reviewsForGame(gameSlug: string) {
 export function coverForGame(slug?: string) {
   if (!slug) return undefined
   return getGame(slug)?.coverImage ?? `/covers/${slug}.jpg`
+}
+
+export function coverForNews(slug: string) {
+  return getNews(slug)?.coverImage
+}
+
+export function coverForReview(slug: string) {
+  return getReview(slug)?.coverImage
 }
 
 export type SearchHit = {
@@ -110,7 +114,7 @@ export function resolveRelated(refs: RelatedRef[]) {
               title: item.title,
               kind: 'News',
               label: item.coverLabel,
-              image: coverForGame(item.gameSlug),
+              image: item.coverImage,
             }
           : null
       }
@@ -121,7 +125,7 @@ export function resolveRelated(refs: RelatedRef[]) {
             title: item.title,
             kind: 'Review',
             label: item.coverLabel,
-            image: coverForGame(item.gameSlug),
+            image: item.coverImage,
           }
         : null
     })

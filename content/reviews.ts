@@ -14,6 +14,7 @@ export const reviews: GameReview[] = [
     score: 7.7,
     verdict: 'Hit',
     coverLabel: 'WOLV',
+    coverImage: '/covers/articles/wolverine-marvel.jpg',
     plus: [
       'Claw fights that are allowed to be ugly',
       'Logan who sounds like Logan, not a merch grin',
@@ -79,6 +80,7 @@ export const reviews: GameReview[] = [
     score: 8.2,
     verdict: 'Hit',
     coverLabel: 'MOON',
+    coverImage: '/covers/articles/moonlighter-2.jpg',
     plus: [
       'Shop management that stays sticky',
       'Dungeons with their own gag, not copy work',
@@ -143,6 +145,7 @@ export const reviews: GameReview[] = [
     score: 8.6,
     verdict: 'Buy it',
     coverLabel: '007',
+    coverImage: '/covers/articles/007-first-light.jpg',
     plus: [
       'Stealth that feels like Hitman, with a face',
       'Patrick Gibson as young Bond, not a merch grin',
@@ -207,6 +210,7 @@ export const reviews: GameReview[] = [
     score: 8.9,
     verdict: 'Must play',
     coverLabel: 'FH6',
+    coverImage: '/covers/articles/forza-horizon-6.jpg',
     plus: [
       'Japan that feels like a route, not a postcard',
       'Festival rhythm that keeps you in the car',
@@ -270,6 +274,7 @@ export const reviews: GameReview[] = [
     score: 8.5,
     verdict: 'Buy it',
     coverLabel: 'PRAG',
+    coverImage: '/covers/articles/pragmata.jpg',
     plus: [
       'Fire and hack in one breath, no menu pause',
       'Diana as a partner, not mascot noise',
@@ -334,6 +339,7 @@ export const reviews: GameReview[] = [
     score: 8.7,
     verdict: 'Must play',
     coverLabel: 'REQ',
+    coverImage: '/covers/articles/resident-evil-requiem.jpg',
     plus: [
       'Mood that puts Village in the shade',
       'Grace who does not stay a side character',

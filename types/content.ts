@@ -28,6 +28,7 @@ export type NewsArticle = {
   category: Exclude<NewsFilter, 'All'>
   tags: string[]
   coverLabel: string
+  coverImage: string
   gameSlug?: string
   related: RelatedRef[]
   seo: SeoFields
@@ -53,6 +54,7 @@ export type GameReview = {
   score: number
   verdict: string
   coverLabel: string
+  coverImage: string
   plus: string[]
   minus: string[]
   scores: ReviewScores

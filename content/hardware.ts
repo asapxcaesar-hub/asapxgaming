@@ -68,10 +68,10 @@ export const hardware: HardwareReview[] = [
     related: [{ collection: 'news', slug: 'xbox-id-handheld-vragen' }],
     seo: {
       title: 'Hardware: Xbox Wireless Headset — 7.4 Oké instap',
-      description: 'Party chat en singleplayer. Geen desk-microfoon. Bundel-koop, geen endgame-audio.',
+      description: 'Party chat en singleplayer. Geen studio microfoon. Bundel-koop, geen endgame-audio.',
     },
     body: [
-      'Voor party chat en een Forza Horizon 6-festival in je eentje is dit headset in orde. Voor streams en “even een collab” pak ik iets anders. De microfoon klinkt als een lobby, niet als een desk. Pairing met Xbox is het verkoopargument; pc via dongle werkt; telefoon is een bijzaak.',
+      'Voor party chat en een Forza Horizon 6-festival in je eentje is dit headset in orde. Voor streams en “even een collab” pak ik iets anders. De microfoon klinkt als een lobby, niet als een studio. Pairing met Xbox is het verkoopargument; pc via dongle werkt; telefoon is een bijzaak.',
       '7.4: koop hem in de bundle, niet als endgame-audio. Spatial-audio-vinkjes in de Xbox-instellingen maken geen studio.',
     ],
   },

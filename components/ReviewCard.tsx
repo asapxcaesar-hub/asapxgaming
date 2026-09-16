@@ -32,14 +32,9 @@ export function ReviewCard({
   return (
     <Link
       href={href}
-      className="grid grid-cols-[auto_1fr_auto] gap-4 rounded-sm border border-line bg-elevated p-4 hover:border-accent"
+      className="grid grid-cols-[minmax(4.5rem,6.5rem)_1fr_auto] gap-4 rounded-sm border border-line bg-elevated p-4 hover:border-accent"
     >
-      <CoverImage
-        src={coverSrc}
-        alt={game}
-        label={coverLabel}
-        className="hidden size-20 min-h-20 sm:block"
-      />
+      <CoverImage src={coverSrc} alt={game} label={coverLabel} className="hidden w-full sm:block" />
       <div>
         <p className="text-xs uppercase tracking-[0.16em] text-accent">{verdict}</p>
         <h3 className="mt-1 text-lg font-semibold">{game}</h3>

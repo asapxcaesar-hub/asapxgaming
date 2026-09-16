@@ -105,7 +105,7 @@ export function ReleaseCalendar() {
                         src={game.coverImage}
                         alt={game.title}
                         label={game.coverLabel}
-                        className="size-20 min-h-20 w-20 shrink-0"
+                        className="w-16 shrink-0 md:w-20"
                       />
                       <div className="min-w-0 flex-1">
                         <p className="text-sm text-accent">{formatDate(game.releaseDate)}</p>

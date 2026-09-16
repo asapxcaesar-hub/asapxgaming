@@ -46,7 +46,9 @@ Add an object, reuse `slug` in `related`. No copy-paste in components.
 
 Game covers, heroes and cards use stills stored locally in `public/covers/`. Every news piece, review, and calendar row points at a still for that title.
 
-**Calendar.** Site “today” is 16 September 2026. The list starts at September 2026 and only scrolls forward. Closed months disappear. Filters run on that leftover set. Source: dated 2026 public schedule rows only. Undated is ignored.
+**Calendar.** Site “today” is 16 September 2026. The list starts there and only scrolls forward. Closed months disappear. Filters run on dated rows only. Tiny niche titles are out. Undated is ignored. Calendar stills match the public dated listing, cached in `public/covers/`.
+
+**News and reviews.** September 2026 news, 2026 reviews. Article stills are cached in `public/covers/articles/` (first image from a `{game} IGN` search). Calendar art is never swapped onto those cards.
 
 **News.** September 2026 only, biggest games or indie that matters. Features and hardware are not in the feed.
 
@@ -60,7 +62,7 @@ Dark palette (CSS variables in `styles/theme.css`): `#08090C`, `#111318`, `#181B
 
 ## Socials
 
-Centralised in `data/site.ts` → `site.socials` (YouTube, Twitch, TikTok: @asapxcaesar). Contact: `asapxcaesar@gmail.com`. Header, footer and Watch/Follow read only from there.
+Centralised in `data/site.ts` → `site.socials` (YouTube, Twitch, TikTok: @asapxcaesar). Contact: `asapxcaesar@gmail.com`. Header and footer read only from there.
 
 ## SEO
 

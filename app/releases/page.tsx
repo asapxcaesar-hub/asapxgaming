@@ -14,9 +14,9 @@ export default function ReleasesPage() {
         <p className="text-xs uppercase tracking-[0.2em] text-accent">Releases</p>
         <h1 className="mt-2 font-display text-5xl">Calendar</h1>
         <p className="mt-3 max-w-2xl text-muted">
-          Starts at September 2026 and only moves forward. Closed months stay shut. Filters run on
-          the leftover set. Title, day and platforms from the dated 2026 list. Undated titles are
-          not on it.
+          Starts at 16 September 2026 and only moves forward. Closed months stay shut. Title, day
+          and platforms come from the dated public calendar. Tiny niche titles are out. Undated
+          titles are not on it.
         </p>
       </header>
       <ReleaseCalendar />

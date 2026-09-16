@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { ArticleCard } from '@/components/ArticleCard'
 import { ReviewCard } from '@/components/ReviewCard'
 import { CoverImage } from '@/components/CoverImage'
-import { allNews, byDate, coverForGame, reviews, reviewsForGame, upcomingGames } from '@/lib/content'
+import { allNews, byDate, reviews, reviewsForGame, upcomingGames } from '@/lib/content'
 
 export default function HomePage() {
   const feed = allNews()
@@ -22,7 +22,7 @@ export default function HomePage() {
           excerpt={featured.excerpt}
           date={featured.publishedAt}
           coverLabel={featured.coverLabel}
-          coverSrc={coverForGame(featured.gameSlug)}
+          coverSrc={featured.coverImage}
           featured
         />
       </section>
@@ -44,7 +44,7 @@ export default function HomePage() {
               excerpt={item.excerpt}
               date={item.publishedAt}
               coverLabel={item.coverLabel}
-              coverSrc={coverForGame(item.gameSlug)}
+              coverSrc={item.coverImage}
             />
           ))}
         </div>
@@ -68,7 +68,7 @@ export default function HomePage() {
               verdict={item.verdict}
               date={item.publishedAt}
               coverLabel={item.coverLabel}
-              coverSrc={coverForGame(item.gameSlug)}
+              coverSrc={item.coverImage}
             />
           ))}
         </div>
@@ -86,7 +86,7 @@ export default function HomePage() {
             const review = reviewsForGame(game.slug)[0]
             return (
               <li key={game.slug} className="border border-line bg-elevated p-4">
-                <CoverImage src={game.coverImage} alt={game.title} label={game.coverLabel} className="mb-3 h-28 min-h-28" />
+                <CoverImage src={game.coverImage} alt={game.title} label={game.coverLabel} className="mb-3 w-full" />
                 <p className="text-xs text-accent">{game.releaseDate}</p>
                 {review ? (
                   <Link href={`/reviews/${review.slug}/`} className="mt-2 block font-semibold hover:text-accent">

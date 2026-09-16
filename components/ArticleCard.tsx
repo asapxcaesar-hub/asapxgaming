@@ -23,13 +23,15 @@ export function ArticleCard({
 }) {
   return (
     <article className="grid gap-3">
-      <Link href={href} className="block overflow-hidden rounded-sm border border-line">
-        <CoverImage
-          src={coverSrc}
-          alt={title}
-          label={coverLabel}
-          className={featured ? 'h-36 min-h-0 max-h-36 md:h-44 md:max-h-44' : 'h-32 min-h-32'}
-        />
+      <Link
+        href={href}
+        className={
+          featured
+            ? 'block max-w-xl overflow-hidden rounded-sm border border-line'
+            : 'block overflow-hidden rounded-sm border border-line'
+        }
+      >
+        <CoverImage src={coverSrc} alt={title} label={coverLabel} />
       </Link>
       <div className="flex flex-col gap-2">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">{kicker}</p>

@@ -3,7 +3,7 @@ import { ArticleLayout } from '@/components/ArticleLayout'
 import { JsonLd } from '@/components/JsonLd'
 import { ScoreBadge } from '@/components/ReviewCard'
 import { reviews } from '@/content/reviews'
-import { coverForGame, getReview, resolveRelated } from '@/lib/content'
+import { getReview, resolveRelated } from '@/lib/content'
 import { buildMetadata, reviewJsonLd } from '@/lib/seo'
 
 export function generateStaticParams() {
@@ -74,7 +74,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
         author={item.author}
         date={item.publishedAt}
         coverLabel={item.coverLabel}
-        coverSrc={coverForGame(item.gameSlug)}
+        coverSrc={item.coverImage}
         path={`/reviews/${item.slug}/`}
         related={resolveRelated(item.related)}
       >
@@ -112,7 +112,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
             <p className="text-xs uppercase tracking-wider text-muted">Min</p>
             <ul className="mt-2 grid gap-1 text-sm">
               {item.minus.map((entry) => (
-                <li key={entry}>− {entry}</li>
+                <li key={entry}>No: {entry}</li>
               ))}
             </ul>
           </div>

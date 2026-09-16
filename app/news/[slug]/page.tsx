@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { ArticleLayout } from '@/components/ArticleLayout'
 import { JsonLd } from '@/components/JsonLd'
-import { allNews, coverForGame, getNews, resolveRelated } from '@/lib/content'
+import { allNews, getNews, resolveRelated } from '@/lib/content'
 import { articleJsonLd, buildMetadata } from '@/lib/seo'
 
 export function generateStaticParams() {
@@ -51,7 +51,7 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ sl
         author={item.author}
         date={item.publishedAt}
         coverLabel={item.coverLabel}
-        coverSrc={coverForGame(item.gameSlug)}
+        coverSrc={item.coverImage}
         path={`/news/${item.slug}/`}
         related={resolveRelated(item.related)}
       >

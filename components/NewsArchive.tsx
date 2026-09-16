@@ -5,7 +5,7 @@ import { ArticleCard } from '@/components/ArticleCard'
 import { EmptyState } from '@/components/EmptyState'
 import { Button } from '@/components/ui/button'
 import { newsFilters } from '@/data/site'
-import { filterNews, coverForGame } from '@/lib/content'
+import { filterNews } from '@/lib/content'
 import type { NewsFilter } from '@/types/content'
 import { cn } from '@/lib/utils'
 
@@ -60,7 +60,7 @@ export function NewsArchive() {
               excerpt={item.excerpt}
               date={item.publishedAt}
               coverLabel={item.coverLabel}
-              coverSrc={coverForGame(item.gameSlug)}
+              coverSrc={item.coverImage}
               featured={index === 0 && filter === 'All'}
             />
           ))}

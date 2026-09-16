@@ -56,13 +56,13 @@ export function SiteHeader() {
         </nav>
 
         <form onSubmit={onSearch} className="ml-auto hidden items-center md:flex" role="search">
-          <label className="sr-only" htmlFor="desk-search">
+          <label className="sr-only" htmlFor="site-search">
             Search
           </label>
           <div className="flex items-center border border-line bg-elevated">
             <Search className="ml-2 size-4 text-muted" aria-hidden="true" />
             <input
-              id="desk-search"
+              id="site-search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Search"

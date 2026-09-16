@@ -18,7 +18,7 @@ export const features: LongformArticle[] = [
     },
     body: [
       'Jarenlang was “turn-based” een waarschuwing onder een trailer, alsof nadenken een bug was. Ondertussen groeide een stille catalogus: indie-tactics, SRPG-revivals, roguelites die ronden verstopten achter neon. Dat was geen dood genre. Dat was een genre dat de keynote niet haalde.',
-      'Clair Obscur: Expedition 33 (24 april 2025, Sandfall) maakt de ronde weer fysiek. De parry is geen actie-emulatie; het is de belofte dat jouw aandacht telt. 9.0 van deze desk, met de kanttekening dat diezelfde parry in akt 3 te veel van de build-diepte opeet.',
+      'Clair Obscur: Expedition 33 (24 april 2025, Sandfall) maakt de ronde weer fysiek. De parry is geen actie-emulatie; het is de belofte dat jouw aandacht telt. 9.0 van deze site, met de kanttekening dat diezelfde parry in akt 3 te veel van de build-diepte opeet.',
       'De les voor live-service-huizen is ongemakkelijk. Je kunt een parry-window niet A/B-testen in een seizoenspas. Je moet hem ontwerpen. Als je combat-feel wilt, hoeft de camera niet altijd achter je rug. Soms wint de beurt.',
     ],
   },
@@ -26,7 +26,7 @@ export const features: LongformArticle[] = [
     slug: 'hype-zonder-build',
     title: 'Hype zonder build is geen journalistiek — ook niet in GTA-maand',
     excerpt:
-      '19 november staat GTA VI op de kalender van Rockstar zelf. Tot die tijd geen lek-screenshots op deze desk. Wolverine mocht wél: die is uit.',
+      '19 november staat GTA VI op de kalender van Rockstar zelf. Tot die tijd geen lek-screenshots op deze site. Wolverine mocht wél: die is uit.',
     author: 'Kay van Elsen',
     publishedAt: '2026-08-21',
     tags: ['Industry', 'Opinion'],

@@ -1,28 +1,20 @@
-import type { DatedRelease } from '@/content/gamespotDated'
-import { gamespotDated2026 } from '@/content/gamespotDated'
+import { datedReleases, type DatedRelease } from '@/content/datedReleases'
 import { SITE_TODAY } from '@/data/site'
 import { formatDate } from '@/lib/utils'
 import type { GameEntry, RelatedRef } from '@/types/content'
 
 const slugOverrides: Record<string, string> = {
-  'Marvel’s Wolverine': 'wolverine-marvel',
-  'Moonlighter 2': 'moonlighter-2',
-  'Fire Emblem: Fortune’s Weave': 'fire-emblem-fortunes-weave',
-  'Control Resonant': 'control-resonant',
-  'Silent Hill: Townfall': 'silent-hill-townfall',
-  'Minecraft Dungeons 2': 'minecraft-dungeons-2',
+  "Fire Emblem: Fortune's Weave": 'fire-emblem-fortunes-weave',
+  'Minecraft Dungeons II': 'minecraft-dungeons-2',
   'Ace Combat 8: Wings of Theve': 'ace-combat-8',
   'Gears of War: E-Day': 'gears-of-war-e-day',
-  'Final Fantasy Resonance': 'final-fantasy-resonance',
   'Nintendo Switch Sports Resort': 'nintendo-switch-sports-resort',
+  'Final Fantasy Resonance': 'final-fantasy-resonance',
   'Call of Duty: Modern Warfare 4': 'call-of-duty-modern-warfare-4',
-  'Phantom Blade Zero': 'phantom-blade-zero',
+  'Phantom Blade 0': 'phantom-blade-zero',
   'The Legend of Zelda: Ocarina of Time': 'zelda-ocarina-of-time-switch-2',
-  'Grand Theft Auto 6': 'grand-theft-auto-vi',
-  'Dragon Quest Monsters: The Withered World': 'dragon-quest-monsters-withered-world',
-  'Monster Hunter Wilds': 'monster-hunter-wilds-switch-2',
+  'Grand Theft Auto VI': 'grand-theft-auto-vi',
   'Professor Layton and the New World of Steam': 'professor-layton-new-world-of-steam',
-  'Path of Exile 2': 'path-of-exile-2',
 }
 
 const relatedBySlug: Record<string, RelatedRef[]> = {
@@ -76,44 +68,54 @@ function coverLabel(title: string) {
 
 function genreFor(title: string) {
   const t = title.toLowerCase()
-  if (t.includes('silent hill') || t.includes('fleming')) return 'Horror'
-  if (t.includes('fire emblem') || t.includes('dawn of war') || t.includes('endless legend')) return 'Strategy'
+  if (t.includes('silent hill') || t.includes('hellraiser') || t.includes('until dawn') || t.includes('metro 2039')) {
+    return 'Horror'
+  }
+  if (
+    t.includes('fire emblem') ||
+    t.includes('dawn of war') ||
+    t.includes('tropico') ||
+    t.includes('planet zoo')
+  ) {
+    return 'Strategy'
+  }
   if (
     t.includes('final fantasy') ||
     t.includes('trails') ||
-    t.includes('dragon quest') ||
-    t.includes('path of exile') ||
-    t.includes('witcher') ||
-    t.includes('tales of eternia')
+    t.includes('persona') ||
+    t.includes('fable') ||
+    t.includes('exodus')
   ) {
     return 'RPG'
   }
-  if (t.includes('call of duty') || t.includes('gears of war') || t.includes('sniper dan')) return 'Shooter'
-  if (t.includes('switch sports') || t.includes('horse club')) return 'Sport'
-  if (t.includes('hot wheels') || t.includes('galactic racer') || t.includes('forza')) return 'Racing'
-  if (t.includes('layton')) return 'Puzzle'
-  if (t.includes('zelda') || t.includes('ocarina')) return 'Adventure'
-  if (t.includes('moonlighter')) return 'Indie'
   if (
-    t.includes('wolverine') ||
-    t.includes('control resonant') ||
-    t.includes('phantom blade') ||
-    t.includes('ace combat') ||
-    t.includes('onimusha') ||
-    t.includes('grand theft') ||
-    t.includes('minecraft dungeons') ||
-    t.includes('monster hunter')
+    t.includes('call of duty') ||
+    t.includes('gears of war') ||
+    t.includes('boltgun') ||
+    t.includes('ace combat')
   ) {
-    return 'Action'
+    return 'Shooter'
   }
-  return 'Other'
+  if (t.includes('switch sports')) return 'Sport'
+  if (t.includes('galactic racer') || t.includes('forza')) return 'Racing'
+  if (t.includes('layton') || t.includes('we were here')) return 'Puzzle'
+  if (t.includes('zelda') || t.includes('ocarina') || t.includes('tomb raider')) return 'Adventure'
+  if (
+    t.includes('moonlighter') ||
+    t.includes('graveyard keeper') ||
+    t.includes('trine') ||
+    t.includes('pony island') ||
+    t.includes('ananta')
+  ) {
+    return 'Indie'
+  }
+  return 'Action'
 }
 
 function formatPlatforms(platforms: string[]) {
   return platforms
     .map((item) => {
       if (item === 'Xbox') return 'Xbox Series'
-      if (item === 'PC') return 'PC'
       return item
     })
     .join(', ')
@@ -121,14 +123,11 @@ function formatPlatforms(platforms: string[]) {
 
 function fromDated(row: DatedRelease): GameEntry {
   const slug = slugify(row.title)
-  const early = Boolean(row.early)
   const status = row.date <= SITE_TODAY ? 'released' : 'upcoming'
-  const summary = early
-    ? `${formatDate(row.date)}. ${formatPlatforms(row.platforms)}. Early access, as on the dated list.`
-    : `${formatDate(row.date)}. ${formatPlatforms(row.platforms)}.`
+  const summary = `${formatDate(row.date)}. ${formatPlatforms(row.platforms)}.`
   return {
     slug,
-    title: row.title === 'Grand Theft Auto 6' ? 'Grand Theft Auto VI' : row.title,
+    title: row.title,
     developer: '',
     publisher: '',
     platforms: row.platforms,
@@ -137,16 +136,52 @@ function fromDated(row: DatedRelease): GameEntry {
     status,
     summary,
     coverLabel: coverLabel(row.title),
-    coverImage: `/covers/${slug}.jpg`,
+    coverImage: row.coverImage,
     related: relatedBySlug[slug] ?? [],
     seo: {
-      title: `${row.title === 'Grand Theft Auto 6' ? 'Grand Theft Auto VI' : row.title} calendar`,
+      title: `${row.title} on the calendar`,
       description: summary,
     },
   }
 }
 
 const libraryGames: GameEntry[] = [
+  {
+    slug: 'wolverine-marvel',
+    title: 'Marvel’s Wolverine',
+    developer: 'Insomniac',
+    publisher: 'Sony',
+    platforms: ['PS5'],
+    genre: 'Action',
+    releaseDate: '2026-09-15',
+    status: 'released',
+    summary: '15 September 2026. PS5. Review: 7.7.',
+    coverLabel: 'WOLV',
+    coverImage: '/covers/wolverine-marvel.jpg',
+    related: relatedBySlug['wolverine-marvel'],
+    seo: {
+      title: 'Marvel’s Wolverine coverage',
+      description: 'Release 15 September 2026 on PS5 and ASAPxGaming review 7.7.',
+    },
+  },
+  {
+    slug: 'moonlighter-2',
+    title: 'Moonlighter 2',
+    developer: 'Digital Sun',
+    publisher: 'Digital Sun',
+    platforms: ['PC', 'PS5', 'Xbox', 'Switch 2'],
+    genre: 'Indie',
+    releaseDate: '2026-09-02',
+    status: 'released',
+    summary: '2 September 2026. PC, PS5, Xbox Series, Switch 2. Review: 8.2.',
+    coverLabel: 'MOON',
+    coverImage: '/covers/moonlighter-2.jpg',
+    related: relatedBySlug['moonlighter-2'],
+    seo: {
+      title: 'Moonlighter 2 coverage',
+      description: 'Release 2 September 2026 and ASAPxGaming review 8.2.',
+    },
+  },
   {
     slug: 'resident-evil-requiem',
     title: 'Resident Evil Requiem',
@@ -221,29 +256,7 @@ const libraryGames: GameEntry[] = [
   },
 ]
 
-function mergeMoonlighterReview(game: GameEntry): GameEntry {
-  if (game.slug !== 'moonlighter-2' && game.slug !== 'wolverine-marvel') return game
-  if (game.slug === 'moonlighter-2') {
-    return {
-      ...game,
-      developer: 'Digital Sun',
-      publisher: 'Digital Sun',
-      summary: `${game.summary} Review: 8.2.`,
-    }
-  }
-  return {
-    ...game,
-    developer: 'Insomniac',
-    publisher: 'Sony',
-    coverLabel: 'WOLV',
-    summary: `${game.summary} Review: 7.7.`,
-  }
-}
-
-const datedGames = gamespotDated2026.map(fromDated).map(mergeMoonlighterReview)
+const datedGames = datedReleases.map(fromDated)
 const datedSlugs = new Set(datedGames.map((game) => game.slug))
 
-export const games: GameEntry[] = [
-  ...libraryGames.filter((game) => !datedSlugs.has(game.slug)),
-  ...datedGames,
-]
+export const games: GameEntry[] = [...libraryGames.filter((game) => !datedSlugs.has(game.slug)), ...datedGames]
