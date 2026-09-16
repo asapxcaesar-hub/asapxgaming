@@ -1,10 +1,8 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import Link from 'next/link'
 import { CoverImage } from '@/components/CoverImage'
 import { EmptyState } from '@/components/EmptyState'
-import { reviews } from '@/content/reviews'
 import { calendarGames, filterGames } from '@/lib/content'
 import { formatDate, formatMonth } from '@/lib/utils'
 
@@ -97,9 +95,7 @@ export function ReleaseCalendar() {
             <section key={key}>
               <h2 className="font-display text-3xl capitalize">{formatMonth(key)}</h2>
               <ul className="mt-3 divide-y divide-line border border-line">
-                {list.map((game) => {
-                  const review = reviews.find((item) => item.gameSlug === game.slug)
-                  return (
+                {list.map((game) => (
                     <li key={game.slug} className="flex gap-3 bg-elevated p-3 md:p-4">
                       <CoverImage
                         src={game.coverImage}
@@ -109,25 +105,11 @@ export function ReleaseCalendar() {
                       />
                       <div className="min-w-0 flex-1">
                         <p className="text-sm text-accent">{formatDate(game.releaseDate)}</p>
-                        {review ? (
-                          <Link href={`/reviews/${review.slug}/`} className="font-semibold hover:text-accent">
-                            {game.title}
-                          </Link>
-                        ) : (
-                          <p className="font-semibold">{game.title}</p>
-                        )}
-                        <p className="text-sm text-muted">
-                          {game.genre} · {game.platforms.join(', ')} · {game.status === 'upcoming' ? 'Upcoming' : 'Out'}
-                        </p>
-                        {review ? (
-                          <Link href={`/reviews/${review.slug}/`} className="mt-1 inline-block text-sm text-accent">
-                            Review
-                          </Link>
-                        ) : null}
+                        <p className="font-semibold">{game.title}</p>
+                        <p className="text-sm text-muted">{game.platforms.join(', ')}</p>
                       </div>
                     </li>
-                  )
-                })}
+                  ))}
               </ul>
             </section>
           )
