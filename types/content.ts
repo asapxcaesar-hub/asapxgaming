@@ -29,6 +29,8 @@ export type NewsArticle = {
   tags: string[]
   coverLabel: string
   coverImage: string
+  sourceUrl?: string
+  sourceId?: string
   gameSlug?: string
   related: RelatedRef[]
   seo: SeoFields

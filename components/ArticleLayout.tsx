@@ -15,6 +15,7 @@ export function ArticleLayout({
   coverLabel,
   coverSrc,
   path,
+  sourceUrl,
   related,
   children,
 }: {
@@ -27,6 +28,7 @@ export function ArticleLayout({
   coverLabel: string
   coverSrc?: string
   path: string
+  sourceUrl?: string
   related: { href: string; title: string; kind: string; label: string; image?: string }[]
   children: ReactNode
 }) {
@@ -38,6 +40,15 @@ export function ArticleLayout({
       <p className="mt-4 text-lg text-muted">{excerpt}</p>
       <p className="mt-3 text-sm text-muted">
         {author} · {formatDate(date)}
+        {sourceUrl ? (
+          <>
+            {' '}
+            ·{' '}
+            <a href={sourceUrl} className="underline decoration-line underline-offset-4 hover:text-ink">
+              Source on id.nl/games
+            </a>
+          </>
+        ) : null}
       </p>
       <div className="mt-6 overflow-hidden rounded-sm border border-line">
         <CoverImage src={coverSrc} alt={title} label={coverLabel} />

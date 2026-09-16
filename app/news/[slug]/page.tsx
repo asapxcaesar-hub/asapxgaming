@@ -37,6 +37,7 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ sl
           datePublished: item.publishedAt,
           dateModified: item.updatedAt,
           author: item.author,
+          isBasedOn: item.sourceUrl,
         })}
       />
       <ArticleLayout
@@ -53,6 +54,7 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ sl
         coverLabel={item.coverLabel}
         coverSrc={item.coverImage}
         path={`/news/${item.slug}/`}
+        sourceUrl={item.sourceUrl}
         related={resolveRelated(item.related)}
       >
         {item.body.map((paragraph) => (

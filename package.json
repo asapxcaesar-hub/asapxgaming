@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start --hostname 0.0.0.0 --port 4629",
     "lint": "eslint",
-    "ingest": "node scripts/ingest-idnl.mjs"
+    "typecheck": "tsc --noEmit",
+    "ingest": "node scripts/ingest-idnl.mjs",
+    "test:ingest": "node --test scripts/ingest-idnl.test.mjs"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",

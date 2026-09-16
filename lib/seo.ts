@@ -46,6 +46,7 @@ export function articleJsonLd(opts: {
   datePublished: string
   dateModified?: string
   author: string
+  isBasedOn?: string
 }) {
   return {
     '@context': 'https://schema.org',
@@ -58,6 +59,7 @@ export function articleJsonLd(opts: {
     publisher: { '@type': 'Organization', name: site.name, url: site.url },
     mainEntityOfPage: absUrl(opts.path),
     inLanguage: 'en-GB',
+    ...(opts.isBasedOn ? { isBasedOn: opts.isBasedOn } : {}),
   }
 }
 

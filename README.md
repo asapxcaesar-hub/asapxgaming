@@ -68,11 +68,11 @@ Do **not** look for the repo on Origin / Cursor git hosting for this webhook. Gi
 
 Then continue with secrets, a test ping, DatoCMS, and Wasmer below.
 
-**Instant** = id.nl tells GitHub when you hit Publish. GitHub translates, commits, Wasmer rebuilds. That is the path to use.
+**Instant** = id.nl tells GitHub when you hit Publish. GitHub writes an **original English** piece from the Dutch facts (not a clone), commits, Wasmer rebuilds. That is the path to use.
 
-**Backup** = the same GitHub Action also checks the RSS feed every 20 minutes, in case a webhook is missed.
+**Backup** = the same GitHub Action also checks [id.nl/games](https://id.nl/games) and then `https://id.nl/api/rss`, **keeping only Games-desk URLs** (`/nintendo/`, `/playstation/`, `/xbox/`, `/spelcomputer-games/`). The RSS file is the whole site (Tech, TV, laptops, Smart Living). Those never go live.
 
-Giveaways (`we-geven-*`) and podcast landings are skipped. Without `OPENAI_API_KEY`, Dutch stubs land in `content/inbox/` and **do not go live**.
+Giveaways (`we-geven-*`) and podcast landings are skipped. Dedupe is the original id.nl URL, a stable Dato id, and the slug. Without `OPENAI_API_KEY`, Dutch stubs land in `content/inbox/` and **do not go live**. The Action prints a warning.
 
 The Action file is `.github/workflows/ingest-idnl.yml`. It only runs on **GitHub**. Connect Wasmer to that same GitHub repo (not only Origin).
 
@@ -88,7 +88,7 @@ Use `asapxcaesar-hub/asapxgaming` as `OWNER/REPO`. Use `main` as `branch` once t
 ### 1. GitHub: secrets and Actions
 
 1. Open the GitHub repo → **Settings → Secrets and variables → Actions**.
-2. **New repository secret** `OPENAI_API_KEY` = your OpenAI key. Without this, nothing goes live.
+2. **New repository secret** `OPENAI_API_KEY` = your OpenAI key. This is the only place the key should live. Without it, nothing goes live and the Action warns.
 3. Optional secrets:
    - `INGEST_GITHUB_TOKEN` = the same PAT, if the default `GITHUB_TOKEN` cannot push (protected branch, or a non-default branch)
    - `IDNL_COOKIE` = a logged-in `Cookie` header from id.nl, only needed if RSS/page fetches hit the Vercel bot wall
@@ -121,7 +121,11 @@ curl -sS -X POST \
       "body": [
         "Eerste volledige Nederlandse alinea.",
         "Tweede volledige Nederlandse alinea."
-      ]
+      ],
+      "metadata": {
+        "id": "dato-record-id",
+        "tags": ["Nintendo"]
+      }
     }
   }'
 ```
@@ -155,6 +159,7 @@ Delete the test article from `content/ingested.json` after you are happy.
 | `category` | `Nintendo`, `PlayStation`, `Xbox` or `PC` |
 | `branch` | Wasmer deploy branch (`main`) |
 | `body` | Array of **full** Dutch paragraphs, not only the lede |
+| `metadata` | Optional object: Dato record `id`, tags, cover (counts as one GitHub payload key) |
 
 Dato field API names differ per project. In the webhook template, use your real field keys (often `{{title}}`, `{{slug}}`, `{{content}}`). If Dato stores body as HTML, that is fine: ingest strips tags. If you cannot send `body`, at least send `url`; ingest will try to fetch the live page.
 
@@ -164,11 +169,16 @@ GitHub limits `client_payload` to **10 top-level keys**. Do not dump the whole D
 
 ### 4. Wasmer
 
-Wasmer must watch the **same GitHub repo and branch** the Action pushes to (`branch` in the payload, default repo default branch). After the ingest commit, Wasmer rebuilds `out/` and the English piece is on `/news/`.
+Wasmer must watch **github.com/asapxcaesar-hub/asapxgaming**, production branch **`main`** (the same branch the Action pushes).
+
+1. Sign in at [wasmer.io](https://wasmer.io) with GitHub.
+2. New app from that repo. Branch: `main`.
+3. Build: `npm ci` && `npm run build`. Publish folder: **`out`**.
+4. After ingest commits `content/ingested.json`, Wasmer rebuilds and the piece is on `/news/`.
 
 ### 5. Backup poll and local run
 
-The workflow also runs every 20 minutes against `https://id.nl/api/rss` (Games URLs only). You can start it by hand: GitHub → Actions → **Ingest id.nl games** → **Run workflow**.
+The workflow also runs every 20 minutes: it tries [https://id.nl/games](https://id.nl/games), then filters `https://id.nl/api/rss` to that same Games desk. You can start it by hand: GitHub → Actions → **Ingest id.nl games** → **Run workflow**.
 
 On your machine:
 
@@ -188,7 +198,7 @@ Game covers, heroes and cards use stills stored locally in `public/covers/`. Eve
 
 **Calendar.** Site “today” is 16 September 2026. The list starts there and only scrolls forward. Closed months disappear. Filters run on dated rows only. Tiny niche titles are out. Undated is ignored. Calendar stills match the public dated listing, cached in `public/covers/`.
 
-**News.** Full English translations of current id.nl Games articles. New posts should arrive through ingest, not by inventing copy.
+**News.** English coverage of current [id.nl/games](https://id.nl/games) articles. New posts arrive through ingest as original English rewrites. The original id.nl URL is stored as `sourceUrl`.
 
 **Reviews.** 2026 titles that matter, no 2025 leftover.
 
@@ -211,7 +221,7 @@ Centralised in `data/site.ts` → `site.socials` (YouTube, Twitch, TikTok: @asap
 Do this **after** the GitHub repo exists (Create repo pill, then confirm `https://github.com/OWNER/REPO`).
 
 1. Sign in at [wasmer.io](https://wasmer.io) with GitHub.
-2. Create an app from **that** GitHub repo. Production branch: `main` (or the branch GitHub shows as default after you create the repo).
+2. Create an app from **github.com/asapxcaesar-hub/asapxgaming**. Production branch: `main`.
 3. Build if asked: `npm ci` + `npm run build`, publish folder **`out`**.
 4. Repo config already in this project: `wasmer.toml` (mount `out` → `/public`), `app.yaml`, `Staticfile` (`root: out`), `settings/config.toml`.
 
