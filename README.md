@@ -44,7 +44,20 @@ Add an object, reuse `slug` in `related`. No copy-paste in components.
 
 ## Automatic ingest from id.nl
 
-ASAPxGaming is a **static export**. The live site only serves files in `out/`. A visitor never talks to id.nl. A new Games article appears on ASAPxGaming only after this repo gets a commit and Wasmer rebuilds.
+ASAPxGaming is a **static export**. The live site only serves files in `out/`. A visitor never talks to id.nl. A new Games article appears on ASAPxGaming only after **a GitHub repository** gets a commit and Wasmer rebuilds.
+
+If you open github.com and there is no ASAPxGaming / genesis repo: that is expected. This project started in Cursor. It is **not** on GitHub until you create the repo.
+
+### Start here (no GitHub repo yet)
+
+1. Get a free account at [github.com](https://github.com) and sign in. Your username is the first half of `OWNER/REPO` later (example: if GitHub shows `asapxcaesar-hub`, that is `OWNER`).
+2. In this Cursor project, click the **Create repo** pill. That publishes this code to **your** GitHub account. After it finishes, github.com shows a real repository. The address looks like `https://github.com/OWNER/REPO`.
+3. Open that URL. You should see folders such as `app`, `content`, `.github`. Under **Actions** you should see a workflow named **Ingest id.nl games**. If Actions is empty, wait a minute and refresh; the workflow file only exists after the repo is created and this branch is on GitHub.
+4. Remember `OWNER/REPO` from the URL. Every later step uses that, not a name I invent for you.
+
+Do **not** look for the repo on Origin / Cursor git hosting for this webhook. GitHub Actions only run on github.com. Wasmer should also connect to that same github.com repo.
+
+Then continue with secrets, a test ping, DatoCMS, and Wasmer below.
 
 **Instant** = id.nl tells GitHub when you hit Publish. GitHub translates, commits, Wasmer rebuilds. That is the path to use.
 
@@ -186,10 +199,12 @@ Centralised in `data/site.ts` → `site.socials` (YouTube, Twitch, TikTok: @asap
 
 ## Wasmer.io (free, from GitHub)
 
-1. Push to GitHub (`asapxcaesar-hub/genesis` if that is the live remote).
-2. Wasmer account, app linked to the repo, production branch `main`.
+Do this **after** the GitHub repo exists (Create repo pill, then confirm `https://github.com/OWNER/REPO`).
+
+1. Sign in at [wasmer.io](https://wasmer.io) with GitHub.
+2. Create an app from **that** GitHub repo. Production branch: `main` (or the branch GitHub shows as default after you create the repo).
 3. Build if asked: `npm ci` + `npm run build`, publish folder **`out`**.
-4. Repo config: `wasmer.toml` (mount `out` → `/public`), `app.yaml`, `Staticfile` (`root: out`), `settings/config.toml` (SPA fallback for unknown paths).
+4. Repo config already in this project: `wasmer.toml` (mount `out` → `/public`), `app.yaml`, `Staticfile` (`root: out`), `settings/config.toml`.
 
 CLI:
 
