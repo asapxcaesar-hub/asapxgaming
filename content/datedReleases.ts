@@ -58,7 +58,7 @@ export const datedReleases: DatedRelease[] = [
   {
     title: "Gears of War: E-Day",
     date: "2026-10-06",
-    platforms: ["PS5", "Xbox", "PC"],
+    platforms: ["Xbox", "PC"],
     coverImage: "/covers/gears-of-war-e-day.jpg",
   },
   {

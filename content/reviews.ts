@@ -92,8 +92,7 @@ export const reviews: GameReview[] = [
     ],
     scores: { gameplay: 8.5, story: 7.4, graphics: 8.1, audio: 8.0, performance: 8.3 },
     related: [
-      { collection: 'news', slug: 'moonlighter-2-is-uit' },
-      { collection: 'news', slug: 'steam-september-picks' },
+      { collection: 'reviews', slug: 'pragmata' },
     ],
     seo: {
       title: 'Moonlighter 2 sells loot better than drama',
@@ -286,7 +285,6 @@ export const reviews: GameReview[] = [
     ],
     scores: { gameplay: 8.6, story: 8.0, graphics: 8.8, audio: 8.3, performance: 8.4 },
     related: [
-      { collection: 'news', slug: 'steam-september-picks' },
       { collection: 'reviews', slug: 'resident-evil-requiem' },
     ],
     seo: {
@@ -352,7 +350,6 @@ export const reviews: GameReview[] = [
     scores: { gameplay: 8.6, story: 8.8, graphics: 9.0, audio: 8.9, performance: 8.5 },
     related: [
       { collection: 'reviews', slug: 'pragmata' },
-      { collection: 'news', slug: 'steam-september-picks' },
     ],
     seo: {
       title: 'Requiem lets Raccoon bite again until the action pushes too hard',

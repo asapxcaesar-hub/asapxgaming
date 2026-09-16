@@ -48,7 +48,7 @@ Game covers, heroes and cards use stills stored locally in `public/covers/`. Eve
 
 **Calendar.** Site “today” is 16 September 2026. The list starts there and only scrolls forward. Closed months disappear. Filters run on dated rows only. Tiny niche titles are out. Undated is ignored. Calendar stills match the public dated listing, cached in `public/covers/`.
 
-**News and reviews.** September 2026 news, 2026 reviews. Article stills are cached in `public/covers/articles/` (first image from a `{game} IGN` search). Calendar art is never swapped onto those cards.
+**News.** Topics follow what public Dutch games coverage is actually writing about that week. Sentences are original English, checked against publisher dates and platforms. We do not translate other outlets. Unclear facts are left out.
 
 **News.** September 2026 only, biggest games or indie that matters. Features and hardware are not in the feed.
 
