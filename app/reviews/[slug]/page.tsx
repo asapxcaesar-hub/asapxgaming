@@ -93,11 +93,10 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
             </li>
           ))}
         </ul>
-        <Block title="Take" paragraphs={item.take} />
+        <Block title="Intro" paragraphs={item.take} />
         <Block title="Gameplay" paragraphs={item.gameplay} />
         <Block title="Story" paragraphs={item.story} />
-        <Block title="Graphics" paragraphs={item.graphics} />
-        <Block title="Audio" paragraphs={item.audio} />
+        <Block title="Presentation" paragraphs={[...item.graphics, ...item.audio]} />
         <Block title="Performance" paragraphs={item.performance} />
         <Block title="Verdict" paragraphs={item.conclusion} />
         <div className="grid gap-4 sm:grid-cols-2">

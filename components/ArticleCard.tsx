@@ -22,9 +22,14 @@ export function ArticleCard({
   featured?: boolean
 }) {
   return (
-    <article className={featured ? 'grid gap-4 md:grid-cols-2 md:gap-8' : 'grid gap-3'}>
+    <article className="grid gap-3">
       <Link href={href} className="block overflow-hidden rounded-sm border border-line">
-        <CoverImage src={coverSrc} alt={title} label={coverLabel} large={featured} />
+        <CoverImage
+          src={coverSrc}
+          alt={title}
+          label={coverLabel}
+          className={featured ? 'h-36 min-h-0 max-h-36 md:h-44 md:max-h-44' : 'h-32 min-h-32'}
+        />
       </Link>
       <div className="flex flex-col gap-2">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">{kicker}</p>

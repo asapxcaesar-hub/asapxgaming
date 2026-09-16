@@ -3,7 +3,7 @@ import type { NewsArticle } from '@/types/content'
 export const news: NewsArticle[] = [
   {
     slug: 'wolverine-is-uit',
-    title: 'Wolverine is out and 7.7 is this desk’s ceiling',
+    title: 'Wolverine is out and 7.7 is the ceiling',
     excerpt:
       'Today 15 September 2026, PlayStation 5 only. Combat lifts. Linearity drops. That is the whole story.',
     author: 'Kay van Elsen',
@@ -14,9 +14,8 @@ export const news: NewsArticle[] = [
     gameSlug: 'wolverine-marvel',
     related: [{ collection: 'reviews', slug: 'wolverine-marvel' }],
     seo: {
-      title: 'Wolverine is out and 7.7 is this desk’s ceiling',
-      description:
-        'Launch 15 September 2026 on PS5. Official date, review 7.7 from this desk.',
+      title: 'Wolverine is out and 7.7 is the ceiling',
+      description: 'Launch 15 September 2026 on PS5. Official date, review 7.7.',
     },
     body: [
       'Marvel’s Wolverine from Insomniac is playable today on PlayStation 5. EU store price sits near eighty euro for the standard edition, the figure Sony posted with preorders in June. No PC. No Xbox. No early weekend. Those are publisher facts, not a forum dump.',
@@ -44,7 +43,7 @@ export const news: NewsArticle[] = [
     body: [
       '007 First Light has been out since 27 May 2026 on PlayStation 5, Xbox Series and PC. The Switch 2 version was meant to follow this summer. Today IO Interactive says that port is March 2027, with an exact day later. Reason: performance they will not sell yet.',
       'That is dull news and therefore believable. A CEO promises polish, not magic. If you want Bond on a Nintendo couch, plan 2027. If you want him now, play the version that has been out for months.',
-      'Our review (8.6) covered the May build: stealth that clicks, a young Bond who does not grin like merch, and a third act that explains too much. That text does not change because a port slides.',
+      'The review (8.6) covered the May build: stealth that clicks, a young Bond who does not grin like merch, and a third act that explains too much. That text does not change because a port slides.',
     ],
   },
   {
@@ -57,6 +56,7 @@ export const news: NewsArticle[] = [
     category: 'Industry',
     tags: ['Industry', 'Calendar'],
     coverLabel: 'OKT',
+    gameSlug: 'ace-combat-8',
     related: [{ collection: 'news', slug: 'gta-vi-blijft-19-november' }],
     seo: {
       title: 'October has dates, not an undated bin',
@@ -73,7 +73,7 @@ export const news: NewsArticle[] = [
     slug: 'fire-emblem-overmorgen',
     title: 'Fire Emblem gets 17 September on Switch 2',
     excerpt:
-      'Fortune’s Weave is dated, not parked in an undated column. No review until the build is on the desk.',
+      'Fortune’s Weave is dated, not parked in an undated column. No review until a build is in hand.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-12',
     category: 'Nintendo',
@@ -87,8 +87,8 @@ export const news: NewsArticle[] = [
         'Fire Emblem Fortune’s Weave: dated release 17 September 2026 on Switch 2.',
     },
     body: [
-      'Intelligent Systems and Nintendo put Fire Emblem: Fortune’s Weave on 17 September 2026, Switch 2 only. That is the date we put on the calendar. No undated. No “sometime this autumn”.',
-      'Fire Emblem lives on grid, class, and whether the writers dare to let a unit fall. Until we have a build, the news is the day. Hype without a save file is marketing.',
+      'Intelligent Systems and Nintendo put Fire Emblem: Fortune’s Weave on 17 September 2026, Switch 2 only. That is the date on the calendar. No undated. No “sometime this autumn”.',
+      'Fire Emblem lives on grid, class, and whether the writers dare to let a unit fall. Until a build exists, the news is the day. Hype without a save file is marketing.',
       'Right after on the same calendar: Control Resonant and Silent Hill: Townfall on 24 September. September is full without dragging 2025 back.',
     ],
   },
@@ -96,7 +96,7 @@ export const news: NewsArticle[] = [
     slug: 'steam-september-picks',
     title: 'On PC you already play Requiem, Pragmata and Bond',
     excerpt:
-      'The 2026 desk games that already shipped: Requiem 8.7, Pragmata 8.5, First Light 8.6. Moonlighter 2 is the indie of this month.',
+      'The 2026 games that already shipped: Requiem 8.7, Pragmata 8.5, First Light 8.6. Moonlighter 2 is the indie of this month.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-11',
     category: 'PC',
@@ -110,7 +110,7 @@ export const news: NewsArticle[] = [
         'ASAPxGaming: Resident Evil Requiem, Pragmata and 007 First Light are out on PC. Moonlighter 2 is the indie of September.',
     },
     body: [
-      'Wolverine tonight is a PS5 job. On PC sit the 2026 titles this desk already played and scored. Not a sale pitch. What you can start without waiting for November.',
+      'Wolverine tonight is a PS5 job. On PC sit the 2026 titles already played and scored here. Not a sale pitch. What you can start without waiting for November.',
       'Resident Evil Requiem (8.7, 27 February) if you want survival horror that breathes. Pragmata (8.5, 17 April) if Hugh and Diana on the moon have not had you yet. 007 First Light (8.6, 27 May) if stealth says more than a cover shooter. Moonlighter 2 (8.2, 2 September) is the trending indie, not a 2025 leftover.',
       'Handheld: check that your machine pulls the build. Do not buy a discount you cannot finish on a train. The reviews are open.',
     ],
@@ -135,7 +135,7 @@ export const news: NewsArticle[] = [
     body: [
       'Wolverine is the cover of 15 September. The rest of the month is not a pause. On 24 September two big names get a day: Silent Hill: Townfall (PS5, PC) and Control Resonant (PS5, Xbox Series, PC).',
       'That is the news. The day sits on the calendar. The undated column does not.',
-      'Reviews land when we finish, not when another bureau’s embargo lifts. Until then: play Logan with 7.7 in the back of your head, or wait until 24 September without leak theatre.',
+      'Reviews land when they are finished, not when someone else’s embargo lifts. Until then: play Logan with 7.7 in the back of your head, or wait until 24 September without leak theatre.',
     ],
   },
   {
@@ -158,7 +158,7 @@ export const news: NewsArticle[] = [
     body: [
       'Forza Horizon 6 has been out since 19 May 2026 on Xbox Series and PC, with Game Pass attached if you already pay for it. Playground Games repeats in September that the PlayStation 5 version follows later in 2026. No day. The year, from their own mouth, not a Discord crop.',
       'Guesses that it becomes 2027 are not news until the studio says so. A PlayStation Store wishlist is the only useful move if you do not own Xbox.',
-      'Our 8.9 covered the May build in Japan: festival rhythm, roads that read, online that is still a lobby. We do not rewrite that text for a port that is not here.',
+      'The 8.9 covered the May build in Japan: festival rhythm, roads that read, online that is still a lobby. That text is not rewritten for a port that is not here.',
     ],
   },
   {
@@ -176,19 +176,19 @@ export const news: NewsArticle[] = [
     seo: {
       title: 'GTA VI stays 19 November, the waiting room is the product',
       description:
-        'Official GTA VI date (PS5, Xbox Series) and why ASAPxGaming will not fill the waiting room with leaks.',
+        'Official GTA VI date on PS5 and Xbox Series, and why ASAPxGaming will not fill the waiting room with leaks.',
     },
     body: [
-      'Grand Theft Auto VI has a date that comes from Rockstar: 19 November 2026, PlayStation 5 and Xbox Series. That is news. Fan renders, inside source screenshots and a Discord crop of a dashboard are not. This desk publishes the first. The second is traffic.',
+      'Grand Theft Auto VI has a date that comes from Rockstar: 19 November 2026, PlayStation 5 and Xbox Series. That is news. Fan renders, inside source screenshots and a Discord crop of a dashboard are not. ASAPxGaming publishes the first. The second is traffic.',
       'The waiting room is a season now. GTA Online keeps running while the calendar ticks. That is the context of every when question, not a leak. Preorders and price land when the publisher puts them down. Until then the advice is dull: play something that shipped.',
-      'If Rockstar drops gameplay itself, official, with their logo on it, we are there. Not earlier, and not with somebody’s JPG from a forum dump.',
+      'If Rockstar drops gameplay itself, official, with their logo on it, that is the story. Not earlier, and not with somebody’s JPG from a forum dump.',
     ],
   },
   {
     slug: 'moonlighter-2-is-uit',
     title: 'Moonlighter 2 is the indie that actually shipped this week',
     excerpt:
-      '2 September 2026, Digital Sun. Shop by day, dungeon by night. 8.2 from this desk, no patriotism discount.',
+      '2 September 2026, Digital Sun. Shop by day, dungeon by night. Review 8.2, no patriotism discount.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-03',
     category: 'Indie',
@@ -202,7 +202,7 @@ export const news: NewsArticle[] = [
     },
     body: [
       'Between AAA dates sits a shop. Moonlighter 2 from Digital Sun has been playable since 2 September on PS5, Xbox Series, Switch 2 and PC. By day you sell loot. By night you drop down. That is the loop the first Moonlighter already sold, now bigger and tighter in the shop UI.',
-      'Trending indie here means people start it, not that a publisher bought a quote. Our 8.2 is a yes with a footnote on the late grind. Read the review if you are torn between this and yet another survival craft sale.',
+      'Trending indie here means people start it, not that a publisher bought a quote. The 8.2 is a yes with a footnote on the late grind. Read the review if you are torn between this and yet another survival craft sale.',
       'Do not stick a local flag on it. It is Spanish work. Do not treat the demo as an excuse to skip the full release: the full release is here. That is rarer than a keynote.',
     ],
   },
@@ -224,8 +224,8 @@ export const news: NewsArticle[] = [
         'The Legend of Zelda Ocarina of Time is dated 5 November 2026 for Switch 2.',
     },
     body: [
-      'The Legend of Zelda: Ocarina of Time sits on 5 November 2026 for Switch 2 as a dated row, not as undated. Nintendo sells memory. We put the day.',
-      'Port, cleanup, or a new store name: we write that when the store page says it. Until then 5 November is the news, not somebody’s emulation comparison.',
+      'The Legend of Zelda: Ocarina of Time sits on 5 November 2026 for Switch 2 as a dated row, not as undated. Nintendo sells memory. The calendar puts the day.',
+      'Port, cleanup, or a new store name: that is written when the store page says it. Until then 5 November is the news, not somebody’s emulation comparison.',
       'Between now and November: Fire Emblem on 17 September, Sports Resort on 22 October, and GTA VI on 19 November. The calendar runs forward. Closed months stay closed.',
     ],
   },

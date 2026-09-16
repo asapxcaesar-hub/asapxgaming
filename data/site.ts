@@ -4,9 +4,9 @@ export const SITE_MONTH = SITE_TODAY.slice(0, 7)
 
 export const site = {
   name: 'ASAPxGaming',
-  tagline: 'Independent gaming desk. Personal verdict.',
+  tagline: 'Independent games coverage. Personal verdict.',
   description:
-    'ASAPxGaming is Kay van Elsen’s creator desk: news, reviews, and releases, without a news factory.',
+    'ASAPxGaming is Kay van Elsen’s site for news, reviews, and releases, without a news factory.',
   locale: 'en_US',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://asaspxgaming.wasmer.app',
   creator: {
@@ -14,7 +14,7 @@ export const site = {
     handle: 'asapxcaesar',
     role: 'Founder',
     email: 'asapxcaesar@gmail.com',
-    bio: 'Kay van Elsen plays, streams, and writes as asapxcaesar. ASAPxGaming is the desk: no news factory, a verdict you can replay.',
+    bio: 'Kay van Elsen writes as asapxcaesar. ASAPxGaming is news, reviews, and a verdict you can replay.',
   },
   accent: '#2EE6A6',
   socials: {

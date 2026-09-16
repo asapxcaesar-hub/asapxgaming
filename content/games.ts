@@ -25,16 +25,6 @@ const slugOverrides: Record<string, string> = {
   'Path of Exile 2': 'path-of-exile-2',
 }
 
-const coverBySlug: Record<string, string> = {
-  'wolverine-marvel': '/covers/wolverine-marvel.jpg',
-  'grand-theft-auto-vi': '/covers/grand-theft-auto-vi.jpg',
-  pragmata: '/covers/pragmata.jpg',
-  'resident-evil-requiem': '/covers/resident-evil-requiem.jpg',
-  'forza-horizon-6': '/covers/forza-horizon-6.jpg',
-  '007-first-light': '/covers/007-first-light.jpg',
-  'moonlighter-2': '/covers/moonlighter-2.jpg',
-}
-
 const relatedBySlug: Record<string, RelatedRef[]> = {
   'wolverine-marvel': [
     { collection: 'reviews', slug: 'wolverine-marvel' },
@@ -147,7 +137,7 @@ function fromDated(row: DatedRelease): GameEntry {
     status,
     summary,
     coverLabel: coverLabel(row.title),
-    coverImage: coverBySlug[slug],
+    coverImage: `/covers/${slug}.jpg`,
     related: relatedBySlug[slug] ?? [],
     seo: {
       title: `${row.title === 'Grand Theft Auto 6' ? 'Grand Theft Auto VI' : row.title} calendar`,
@@ -168,7 +158,7 @@ const libraryGames: GameEntry[] = [
     status: 'released',
     summary: '27 February 2026. PC, PS5, Xbox Series, Switch 2. Review: 8.7.',
     coverLabel: 'REQ',
-    coverImage: coverBySlug['resident-evil-requiem'],
+    coverImage: '/covers/resident-evil-requiem.jpg',
     related: relatedBySlug['resident-evil-requiem'],
     seo: {
       title: 'Resident Evil Requiem coverage',
@@ -186,7 +176,7 @@ const libraryGames: GameEntry[] = [
     status: 'released',
     summary: '17 April 2026. PC, PS5, Xbox Series, Switch. Review: 8.5.',
     coverLabel: 'PRAG',
-    coverImage: coverBySlug.pragmata,
+    coverImage: '/covers/pragmata.jpg',
     related: relatedBySlug.pragmata,
     seo: {
       title: 'Pragmata coverage',
@@ -204,7 +194,7 @@ const libraryGames: GameEntry[] = [
     status: 'released',
     summary: '19 May 2026. PC and Xbox Series. Review: 8.9.',
     coverLabel: 'FH6',
-    coverImage: coverBySlug['forza-horizon-6'],
+    coverImage: '/covers/forza-horizon-6.jpg',
     related: relatedBySlug['forza-horizon-6'],
     seo: {
       title: 'Forza Horizon 6 coverage',
@@ -222,7 +212,7 @@ const libraryGames: GameEntry[] = [
     status: 'released',
     summary: '27 May 2026. PC, PS5, Xbox Series. Review: 8.6.',
     coverLabel: '007',
-    coverImage: coverBySlug['007-first-light'],
+    coverImage: '/covers/007-first-light.jpg',
     related: relatedBySlug['007-first-light'],
     seo: {
       title: '007 First Light coverage',

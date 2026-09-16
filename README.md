@@ -1,6 +1,6 @@
 # ASAPxGaming
 
-Independent gaming desk (news, reviews, releases) from Kay van Elsen (@asapxcaesar). Next.js 16 App Router, TypeScript, Tailwind, **static export**, hostable on the free tier of [Wasmer Edge](https://wasmer.io) from GitHub.
+Independent games coverage (news, reviews, releases) from Kay van Elsen (@asapxcaesar). Next.js 16 App Router, TypeScript, Tailwind, **static export**, hostable on the free tier of [Wasmer Edge](https://wasmer.io) from GitHub.
 
 No accounts, no database, no CMS server. Content lives in TypeScript modules (CMS-ready: same fields, different loader later).
 
@@ -34,7 +34,7 @@ The first slice was a Vite SPA. This build uses **Next.js `output: 'export'`** b
 | `content/features.ts` | Old longreads; only via redirect hubs |
 | `content/hardware.ts` | Old hardware pieces; only via redirect hubs |
 | `content/games.ts` | Releases (dated, from the current month) + cover paths |
-| `content/videos.ts` | Watch/Follow cards (link to socials) |
+| `content/videos.ts` | Optional social cards (not shown on the homepage) |
 | `types/content.ts` | Shapes |
 | `lib/content.ts` | Lookups, filters, search |
 
@@ -44,9 +44,9 @@ Add an object, reuse `slug` in `related`. No copy-paste in components.
 
 ## Images
 
-Game covers, heroes and cards use stills from a `{game name} ign` search, stored locally in `public/covers/`. Titles without a still keep a label placeholder.
+Game covers, heroes and cards use stills stored locally in `public/covers/`. Every news piece, review, and calendar row points at a still for that title.
 
-**Calendar.** Site “today” is 16 September 2026. The list starts at September 2026 and only scrolls forward. Closed months disappear. Filters run on that leftover set. Source: GameSpot 2026 upcoming schedule, dated rows only. Undated is ignored.
+**Calendar.** Site “today” is 16 September 2026. The list starts at September 2026 and only scrolls forward. Closed months disappear. Filters run on that leftover set. Source: dated 2026 public schedule rows only. Undated is ignored.
 
 **News.** September 2026 only, biggest games or indie that matters. Features and hardware are not in the feed.
 
@@ -56,7 +56,7 @@ Game covers, heroes and cards use stills from a `{game name} ign` search, stored
 
 ## Branding
 
-Dark palette (CSS variables in `styles/theme.css`): `#08090C`, `#111318`, `#181B22`, `#FFFFFF`, `#9CA3AF`, one accent `#2EE6A6`. No second brand colour, no PU.nl layout or logo.
+Dark palette (CSS variables in `styles/theme.css`): `#08090C`, `#111318`, `#181B22`, `#FFFFFF`, `#9CA3AF`, one accent `#2EE6A6`. No second brand colour.
 
 ## Socials
 

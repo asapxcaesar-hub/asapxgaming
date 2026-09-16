@@ -4,7 +4,7 @@ import { site } from '@/data/site'
 export const videos: VideoClip[] = [
   {
     id: 'yt-wolverine-launch',
-    title: 'Desk: Wolverine launch, first hour without hype voice',
+    title: 'Wolverine launch, first hour without hype voice',
     platform: 'YouTube',
     href: site.socials.youtube,
     coverLabel: 'YT',

@@ -40,7 +40,7 @@ export function NewsArchive() {
       {shown.length === 0 ? (
         <EmptyState
           title="No stories"
-          detail="This filter has no pieces. Pick All or another desk."
+          detail="This filter has no pieces. Pick All or another filter."
           action={{
             label: 'Show all',
             onClick: () => {

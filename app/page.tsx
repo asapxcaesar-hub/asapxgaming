@@ -2,9 +2,6 @@ import Link from 'next/link'
 import { ArticleCard } from '@/components/ArticleCard'
 import { ReviewCard } from '@/components/ReviewCard'
 import { CoverImage } from '@/components/CoverImage'
-import { Button } from '@/components/ui/button'
-import { videos } from '@/content/videos'
-import { site } from '@/data/site'
 import { allNews, byDate, coverForGame, reviews, reviewsForGame, upcomingGames } from '@/lib/content'
 
 export default function HomePage() {
@@ -28,9 +25,6 @@ export default function HomePage() {
           coverSrc={coverForGame(featured.gameSlug)}
           featured
         />
-        <p className="mt-6 max-w-2xl text-sm text-muted">
-          {site.creator.bio}
-        </p>
       </section>
 
       <section>
@@ -92,7 +86,7 @@ export default function HomePage() {
             const review = reviewsForGame(game.slug)[0]
             return (
               <li key={game.slug} className="border border-line bg-elevated p-4">
-                <CoverImage src={game.coverImage} alt={game.title} label={game.coverLabel} className="mb-3 min-h-36" />
+                <CoverImage src={game.coverImage} alt={game.title} label={game.coverLabel} className="mb-3 h-28 min-h-28" />
                 <p className="text-xs text-accent">{game.releaseDate}</p>
                 {review ? (
                   <Link href={`/reviews/${review.slug}/`} className="mt-2 block font-semibold hover:text-accent">
@@ -106,39 +100,6 @@ export default function HomePage() {
             )
           })}
         </ul>
-      </section>
-
-      <section className="border border-line bg-elevated p-6 md:p-8">
-        <h2 className="font-display text-4xl">Watch / follow</h2>
-        <p className="mt-2 max-w-2xl text-sm text-muted">
-          Streams and shorts live on {site.creator.handle}’s channels.
-        </p>
-        <div className="mt-5 grid gap-4 md:grid-cols-3">
-          {videos.map((clip) => (
-            <a key={clip.id} href={clip.href} target="_blank" rel="noreferrer" className="grid gap-2 hover:text-accent">
-              <CoverImage alt={clip.title} label={clip.coverLabel} />
-              <p className="text-xs uppercase tracking-[0.16em] text-accent">{clip.platform}</p>
-              <p className="font-semibold">{clip.title}</p>
-            </a>
-          ))}
-        </div>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <Button asChild>
-            <a href={site.socials.youtube} target="_blank" rel="noreferrer">
-              YouTube
-            </a>
-          </Button>
-          <Button asChild variant="outline">
-            <a href={site.socials.twitch} target="_blank" rel="noreferrer">
-              Twitch
-            </a>
-          </Button>
-          <Button asChild variant="outline">
-            <a href={site.socials.tiktok} target="_blank" rel="noreferrer">
-              TikTok
-            </a>
-          </Button>
-        </div>
       </section>
     </div>
   )

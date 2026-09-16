@@ -13,7 +13,7 @@ export default function ContactPage() {
     <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
       <div>
         <p className="text-xs uppercase tracking-[0.2em] text-accent">Contact</p>
-        <h1 className="mt-2 font-display text-5xl">Write the desk</h1>
+        <h1 className="mt-2 font-display text-5xl">Get in touch</h1>
         <p className="mt-3 text-muted">
           Review keys, collabs or a plain question. This form is layout: in the static demo no
           backend mail goes out. Mail{' '}

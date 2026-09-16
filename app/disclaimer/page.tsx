@@ -13,7 +13,7 @@ export default function DisclaimerPage() {
       <h1 className="font-display text-5xl">Disclaimer</h1>
       <p>
         Reviews and news on ASAPxGaming are editorial takes from {site.creator.name}, not purchase
-        advice with a guarantee. Scores are this desk’s verdict.
+        advice with a guarantee. Scores are Kay van Elsen’s verdict.
       </p>
       <p>
         Game and brand names stay with their owners. Coverage is not a partnership unless we write

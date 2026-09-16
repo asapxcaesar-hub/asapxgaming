@@ -71,7 +71,7 @@ export function SearchPanel() {
       ) : hits.length === 0 ? (
         <EmptyState
           title="Nothing found"
-          detail={`No hits for “${query.trim()}”. Try a game title or a desk.`}
+          detail={`No hits for “${query.trim()}”. Try a game title or a platform.`}
         />
       ) : (
         <ul className="grid gap-4">

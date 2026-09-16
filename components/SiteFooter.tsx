@@ -52,7 +52,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-line">
         <p className="mx-auto max-w-[1440px] px-4 py-4 text-xs text-muted md:px-6">
-          © 2026 {site.name}. Independent creator desk. No gambling, no leak JPGs.
+          © 2026 {site.name}. Independent games site. No gambling, no leak JPGs.
         </p>
       </div>
     </footer>

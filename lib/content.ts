@@ -44,7 +44,7 @@ export function reviewsForGame(gameSlug: string) {
 
 export function coverForGame(slug?: string) {
   if (!slug) return undefined
-  return getGame(slug)?.coverImage
+  return getGame(slug)?.coverImage ?? `/covers/${slug}.jpg`
 }
 
 export type SearchHit = {
