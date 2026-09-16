@@ -34,7 +34,7 @@ export function getGame(slug: string) {
 
 export function filterNews(category: NewsFilter) {
   const list = allNews()
-  if (category === 'Alles') return list
+  if (category === 'All') return list
   return list.filter((item) => item.category === category)
 }
 
@@ -63,9 +63,9 @@ export function searchAll(query: string): SearchHit[] {
   for (const item of allNews()) {
     if (matches(needle, item.title, item.excerpt, item.tags.join(' '))) {
       hits.push({
-        href: `/nieuws/${item.slug}/`,
+        href: `/news/${item.slug}/`,
         title: item.title,
-        kind: 'Nieuws',
+        kind: 'News',
         excerpt: item.excerpt,
       })
     }
@@ -106,9 +106,9 @@ export function resolveRelated(refs: RelatedRef[]) {
         const item = getNews(ref.slug)
         return item
           ? {
-              href: `/nieuws/${item.slug}/`,
+              href: `/news/${item.slug}/`,
               title: item.title,
-              kind: 'Nieuws',
+              kind: 'News',
               label: item.coverLabel,
               image: coverForGame(item.gameSlug),
             }
@@ -137,10 +137,10 @@ export function upcomingGames() {
 export function filterGames(opts: { platform?: string; genre?: string; month?: string }) {
   return calendarGames().filter((game) => {
     const platformOk =
-      !opts.platform || opts.platform === 'Alle' || game.platforms.includes(opts.platform)
-    const genreOk = !opts.genre || opts.genre === 'Alle' || game.genre === opts.genre
+      !opts.platform || opts.platform === 'All' || game.platforms.includes(opts.platform)
+    const genreOk = !opts.genre || opts.genre === 'All' || game.genre === opts.genre
     const monthOk =
-      !opts.month || opts.month === 'Alle' || game.releaseDate.slice(0, 7) === opts.month
+      !opts.month || opts.month === 'All' || game.releaseDate.slice(0, 7) === opts.month
     return platformOk && genreOk && monthOk
   })
 }

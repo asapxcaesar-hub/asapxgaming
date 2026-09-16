@@ -19,7 +19,7 @@ const display = Syne({
 
 export const metadata: Metadata = {
   ...buildMetadata({
-    title: `${site.name} — nieuws, reviews, releases`,
+    title: `${site.name}: news, reviews, releases`,
     description: site.description,
     path: '/',
   }),
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="nl" className={`${body.variable} ${display.variable}`}>
+    <html lang="en" className={`${body.variable} ${display.variable}`}>
       <body className="flex min-h-svh flex-col overflow-x-hidden font-sans antialiased">
         <SiteHeader />
         <main className="mx-auto w-full max-w-[1440px] flex-1 px-4 py-8 md:px-6 md:py-10">{children}</main>

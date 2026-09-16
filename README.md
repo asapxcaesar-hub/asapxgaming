@@ -1,10 +1,10 @@
 # ASAPxGaming
 
-Onafhankelijk Nederlands gamingplatform (nieuws, reviews, releases) van Kay van Elsen (@asapxcaesar). Next.js 16 App Router, TypeScript, Tailwind, **static export** — hostbaar op de gratis tier van [Wasmer Edge](https://wasmer.io) vanaf GitHub.
+Independent gaming desk (news, reviews, releases) from Kay van Elsen (@asapxcaesar). Next.js 16 App Router, TypeScript, Tailwind, **static export**, hostable on the free tier of [Wasmer Edge](https://wasmer.io) from GitHub.
 
-Geen accounts, geen database, geen CMS-server. Content ligt in TypeScript-modules (CMS-klaar: zelfde velden, andere loader later).
+No accounts, no database, no CMS server. Content lives in TypeScript modules (CMS-ready: same fields, different loader later).
 
-## Starten
+## Run it
 
 Node 22+.
 
@@ -13,65 +13,65 @@ npm install
 npm run dev
 ```
 
-Dev-server: [http://127.0.0.1:4629](http://127.0.0.1:4629)
+Dev server: [http://127.0.0.1:4629](http://127.0.0.1:4629)
 
 ```bash
-npm run build   # schrijft naar out/
+npm run build   # writes to out/
 npm run lint
 ```
 
-## Stackkeuze
+## Stack
 
-De eerste slice was Vite SPA. Deze build migreert naar **Next.js `output: 'export'`** omdat de spec per pagina SEO eist (canonical, Open Graph, Twitter, Article/Review JSON-LD, sitemap, robots) en HTML per route. Wasmer blijft een static file server (`out/` i.p.v. `dist/`).
+The first slice was a Vite SPA. This build uses **Next.js `output: 'export'`** because the spec needs per-page SEO (canonical, Open Graph, Twitter, Article/Review JSON-LD, sitemap, robots) and HTML per route. Wasmer stays a static file server (`out/` instead of `dist/`).
 
-## Content beheren
+## Content
 
-| Map | Wat |
+| Path | What |
 | --- | --- |
-| `data/site.ts` | Merk, tagline, creator, **alle social-URL’s**, navigatie |
-| `content/news.ts` | Kort nieuws |
-| `content/reviews.ts` | Game reviews (scores + secties) |
-| `content/features.ts` | Oude longreads; alleen via doorverwijzende hubs |
-| `content/hardware.ts` | Oude hardwarestukken; alleen via doorverwijzende hubs |
-| `content/games.ts` | Releases (gedateerd, vanaf de huidige maand) + coverpaden |
-| `content/videos.ts` | Watch/Follow-kaarten (linken naar socials) |
-| `types/content.ts` | Vormen |
-| `lib/content.ts` | Lookups, filters, zoeken |
+| `data/site.ts` | Brand, tagline, creator, **all social URLs**, navigation |
+| `content/news.ts` | Short news |
+| `content/reviews.ts` | Game reviews (scores + sections) |
+| `content/features.ts` | Old longreads; only via redirect hubs |
+| `content/hardware.ts` | Old hardware pieces; only via redirect hubs |
+| `content/games.ts` | Releases (dated, from the current month) + cover paths |
+| `content/videos.ts` | Watch/Follow cards (link to socials) |
+| `types/content.ts` | Shapes |
+| `lib/content.ts` | Lookups, filters, search |
 
-Voeg een object toe, hergebruik `slug` in `related`. Geen copy-paste in components.
+Add an object, reuse `slug` in `related`. No copy-paste in components.
 
-**Geen scrape-pipeline.** Nieuws en reviews zijn originele Nederlandse stukken in deze modules, gebaseerd op publieke feiten (data, platforms, wat de game doet). We vertalen of herpubliceren geen artikelen van derden.
+**No scrape pipeline.** News and reviews are original English pieces in these modules, based on public facts (dates, platforms, what the game does). We do not translate or republish third-party articles.
 
-## Beelden
+## Images
 
-Gamecovers, heroes en kaarten gebruiken stills uit een `{game name} ign` zoekopdracht, lokaal in `public/covers/`. Titels zonder still houden een label placeholder.
+Game covers, heroes and cards use stills from a `{game name} ign` search, stored locally in `public/covers/`. Titles without a still keep a label placeholder.
 
-**Kalender.** Site “vandaag” is 15 september 2026. De lijst start bij september 2026 en scrollt alleen vooruit. Gesloten maanden verdwijnen. Filters werken op die restset. Bron: GameSpot 2026 upcoming schedule, alleen regels met een dag. Undated negeren we.
+**Calendar.** Site “today” is 16 September 2026. The list starts at September 2026 and only scrolls forward. Closed months disappear. Filters run on that leftover set. Source: GameSpot 2026 upcoming schedule, dated rows only. Undated is ignored.
 
-**Nieuws.** Alleen september 2026, grootste games of indie die ertoe doet. Features en hardware zitten niet in de feed.
+**News.** September 2026 only, biggest games or indie that matters. Features and hardware are not in the feed.
 
-**Reviews.** 2026 titels die ertoe doen, geen 2025 staart.
+**Reviews.** 2026 titles that matter, no 2025 leftover.
 
-**Copy.** In nieuws en reviews (titel, excerpt, body, kaarten, SEO titel) geen koppelteken, geen en dash, geen em dash. Titels zijn puntig en kloppen met het stuk.
+**Copy.** In news and reviews (title, excerpt, body, cards, SEO title) no hyphen, no en dash, no em dash. Titles are punchy and match the piece.
 
 ## Branding
 
-Donker palet (CSS variables in `styles/theme.css`): `#08090C`, `#111318`, `#181B22`, `#FFFFFF`, `#9CA3AF`, één accent `#2EE6A6`. Geen tweede merkkleur, geen PU.nl-layout of logo.
+Dark palette (CSS variables in `styles/theme.css`): `#08090C`, `#111318`, `#181B22`, `#FFFFFF`, `#9CA3AF`, one accent `#2EE6A6`. No second brand colour, no PU.nl layout or logo.
 
 ## Socials
 
-Gecentraliseerd in `data/site.ts` → `site.socials` (YouTube, Twitch, TikTok: @asapxcaesar). Contact: `asapxcaesar@gmail.com`. Header, footer en Watch/Follow lezen alleen daaruit.
+Centralised in `data/site.ts` → `site.socials` (YouTube, Twitch, TikTok: @asapxcaesar). Contact: `asapxcaesar@gmail.com`. Header, footer and Watch/Follow read only from there.
 
 ## SEO
 
-`lib/seo.ts` + `generateMetadata` per route. `app/sitemap.ts` en `app/robots.ts` gaan mee in de export. Zet `NEXT_PUBLIC_SITE_URL` vóór de build op je echte Wasmer-URL (default: `https://asaspxgaming.wasmer.app`).
+`lib/seo.ts` plus `generateMetadata` per route. `app/sitemap.ts` and `app/robots.ts` ship in the export. Set `NEXT_PUBLIC_SITE_URL` before build to your real Wasmer URL (default: `https://asaspxgaming.wasmer.app`).
 
-## Wasmer.io (gratis, vanaf GitHub)
+## Wasmer.io (free, from GitHub)
 
-1. Push naar GitHub.
-2. Wasmer-account, app koppelen aan de repo, production branch `main`.
-3. Build indien gevraagd: `npm ci` + `npm run build`, publicatiemap **`out`**.
-4. Repo-config: `wasmer.toml` (mount `out` → `/public`), `app.yaml`, `Staticfile` (`root: out`), `settings/config.toml` (SPA-fallback voor onbekende paden).
+1. Push to GitHub (`asapxcaesar-hub/genesis` if that is the live remote).
+2. Wasmer account, app linked to the repo, production branch `main`.
+3. Build if asked: `npm ci` + `npm run build`, publish folder **`out`**.
+4. Repo config: `wasmer.toml` (mount `out` → `/public`), `app.yaml`, `Staticfile` (`root: out`), `settings/config.toml` (SPA fallback for unknown paths).
 
 CLI:
 
@@ -80,12 +80,12 @@ npm run build
 wasmer deploy
 ```
 
-Zet `owner` in `app.yaml` op je Wasmer-namespace na de eerste login.
+Set `owner` in `app.yaml` to your Wasmer namespace after first login.
 
 Docs: [static site](https://docs.wasmer.io/edge/guides/static-site/), [React/static](https://docs.wasmer.io/edge/guides/react-static-site/), [Git](https://docs.wasmer.io/edge/git/).
 
 ## Routes
 
-Eerste-klas: `/`, `/nieuws`, `/nieuws/[slug]`, `/reviews`, `/reviews/[slug]`, `/releases`, `/contact`, `/zoeken`, `/privacy`, `/disclaimer`, `/cookiebeleid`.
+First class: `/`, `/news`, `/news/[slug]`, `/reviews`, `/reviews/[slug]`, `/releases`, `/contact`, `/search`, `/privacy`, `/disclaimer`, `/cookies`.
 
-Oude hubs (`/games`, `/features`, `/hardware`, `/over-asapxgaming` en hun slugs) blijven bestaan als doorverwijzing naar nieuws, reviews of de kalender.
+Old Dutch paths (`/nieuws`, `/zoeken`, `/cookiebeleid`) and old hubs (`/games`, `/features`, `/hardware`, `/over-asapxgaming` and their slugs) stay as client redirects to news, reviews, search, cookies or the calendar.

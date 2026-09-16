@@ -50,28 +50,28 @@ export function SearchPanel() {
     <div className="grid gap-6">
       <form onSubmit={onSubmit} className="flex flex-col gap-2 sm:flex-row" role="search">
         <label className="sr-only" htmlFor="search-q">
-          Zoekterm
+          Search
         </label>
         <input
           id="search-q"
           value={query}
           onChange={(event) => persist(event.target.value)}
-          placeholder="Zoek nieuws, reviews, games, hardware…"
+          placeholder="Search news, reviews, releases…"
           className="h-12 flex-1 border border-line bg-elevated px-3"
         />
         <button type="submit" className="h-12 bg-accent px-5 font-semibold text-accent-ink">
-          Zoeken
+          Search
         </button>
       </form>
       {!query.trim() ? (
         <EmptyState
-          title="Typ een term"
-          detail="Bijvoorbeeld Silksong, handheld, Wolverine of PlayStation."
+          title="Type a term"
+          detail="Try Wolverine, handheld, Bond or PlayStation."
         />
       ) : hits.length === 0 ? (
         <EmptyState
-          title="Niets gevonden"
-          detail={`Geen treffers voor “${query.trim()}”. Probeer een gametitel of rubriek.`}
+          title="Nothing found"
+          detail={`No hits for “${query.trim()}”. Try a game title or a desk.`}
         />
       ) : (
         <ul className="grid gap-4">

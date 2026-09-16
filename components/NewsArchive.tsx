@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils'
 const PAGE = 4
 
 export function NewsArchive() {
-  const [filter, setFilter] = useState<NewsFilter>('Alles')
+  const [filter, setFilter] = useState<NewsFilter>('All')
   const [visible, setVisible] = useState(PAGE)
   const items = useMemo(() => filterNews(filter), [filter])
   const shown = items.slice(0, visible)
@@ -39,12 +39,12 @@ export function NewsArchive() {
       </div>
       {shown.length === 0 ? (
         <EmptyState
-          title="Geen berichten"
-          detail="Deze filter heeft geen stukken. Kies Alles of een andere rubriek."
+          title="No stories"
+          detail="This filter has no pieces. Pick All or another desk."
           action={{
-            label: 'Toon alles',
+            label: 'Show all',
             onClick: () => {
-              setFilter('Alles')
+              setFilter('All')
               setVisible(PAGE)
             },
           }}
@@ -54,14 +54,14 @@ export function NewsArchive() {
           {shown.map((item, index) => (
             <ArticleCard
               key={item.slug}
-              href={`/nieuws/${item.slug}/`}
+              href={`/news/${item.slug}/`}
               kicker={item.category}
               title={item.title}
               excerpt={item.excerpt}
               date={item.publishedAt}
               coverLabel={item.coverLabel}
               coverSrc={coverForGame(item.gameSlug)}
-              featured={index === 0 && filter === 'Alles'}
+              featured={index === 0 && filter === 'All'}
             />
           ))}
         </div>
@@ -72,7 +72,7 @@ export function NewsArchive() {
           variant="outline"
           onClick={() => setVisible((value) => value + PAGE)}
         >
-          Meer laden
+          Load more
         </Button>
       ) : null}
     </div>

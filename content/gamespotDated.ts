@@ -1,4 +1,4 @@
-/** Gedateerde 2026 titels uit de GameSpot upcoming schedule. Geen undated. Geen artikelproza. */
+/** Dated 2026 titles from the GameSpot upcoming schedule. No undated. No article prose. */
 export type DatedRelease = {
   title: string
   date: string

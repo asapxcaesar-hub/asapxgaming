@@ -27,7 +27,7 @@ export function SiteHeader() {
       window.dispatchEvent(new Event('asap-search'))
     }
     setOpen(false)
-    router.push('/zoeken/')
+    router.push('/search/')
   }
 
   return (
@@ -37,7 +37,7 @@ export function SiteHeader() {
           ASAP<span className="text-accent">x</span>Gaming
         </Link>
 
-        <nav className="ml-4 hidden min-w-0 flex-1 items-center gap-1 overflow-x-auto lg:flex" aria-label="Hoofdmenu">
+        <nav className="ml-4 hidden min-w-0 flex-1 items-center gap-1 overflow-x-auto lg:flex" aria-label="Main">
           {nav.map((item) => {
             const active = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href)
             return (
@@ -57,7 +57,7 @@ export function SiteHeader() {
 
         <form onSubmit={onSearch} className="ml-auto hidden items-center md:flex" role="search">
           <label className="sr-only" htmlFor="desk-search">
-            Zoeken
+            Search
           </label>
           <div className="flex items-center border border-line bg-elevated">
             <Search className="ml-2 size-4 text-muted" aria-hidden="true" />
@@ -65,7 +65,7 @@ export function SiteHeader() {
               id="desk-search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Zoeken"
+              placeholder="Search"
               className="h-9 w-36 bg-transparent px-2 text-sm outline-none lg:w-48"
             />
           </div>
@@ -80,9 +80,9 @@ export function SiteHeader() {
         </div>
 
         <Link
-          href="/zoeken/"
+          href="/search/"
           className="ml-auto inline-flex size-10 items-center justify-center border border-line md:hidden"
-          aria-label="Zoeken"
+          aria-label="Search"
         >
           <Search className="size-4" />
         </Link>
@@ -105,17 +105,17 @@ export function SiteHeader() {
         >
           <form onSubmit={onSearch} className="mb-3 md:hidden" role="search">
             <label className="sr-only" htmlFor="mob-search">
-              Zoeken
+              Search
             </label>
             <input
               id="mob-search"
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Zoeken op ASAPxGaming"
+              placeholder="Search ASAPxGaming"
               className="h-10 w-full border border-line bg-bg px-3 text-sm"
             />
           </form>
-          <nav className="grid gap-1" aria-label="Mobiel menu">
+          <nav className="grid gap-1" aria-label="Mobile menu">
             {nav.map((item) => (
               <Link
                 key={item.href}

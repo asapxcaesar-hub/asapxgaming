@@ -29,6 +29,10 @@ const coverBySlug: Record<string, string> = {
   'wolverine-marvel': '/covers/wolverine-marvel.jpg',
   'grand-theft-auto-vi': '/covers/grand-theft-auto-vi.jpg',
   pragmata: '/covers/pragmata.jpg',
+  'resident-evil-requiem': '/covers/resident-evil-requiem.jpg',
+  'forza-horizon-6': '/covers/forza-horizon-6.jpg',
+  '007-first-light': '/covers/007-first-light.jpg',
+  'moonlighter-2': '/covers/moonlighter-2.jpg',
 }
 
 const relatedBySlug: Record<string, RelatedRef[]> = {
@@ -97,8 +101,8 @@ function genreFor(title: string) {
   if (t.includes('call of duty') || t.includes('gears of war') || t.includes('sniper dan')) return 'Shooter'
   if (t.includes('switch sports') || t.includes('horse club')) return 'Sport'
   if (t.includes('hot wheels') || t.includes('galactic racer') || t.includes('forza')) return 'Racing'
-  if (t.includes('layton')) return 'Puzzel'
-  if (t.includes('zelda') || t.includes('ocarina')) return 'Avontuur'
+  if (t.includes('layton')) return 'Puzzle'
+  if (t.includes('zelda') || t.includes('ocarina')) return 'Adventure'
   if (t.includes('moonlighter')) return 'Indie'
   if (
     t.includes('wolverine') ||
@@ -112,14 +116,14 @@ function genreFor(title: string) {
   ) {
     return 'Action'
   }
-  return 'Overig'
+  return 'Other'
 }
 
-function dutchPlatforms(platforms: string[]) {
+function formatPlatforms(platforms: string[]) {
   return platforms
     .map((item) => {
       if (item === 'Xbox') return 'Xbox Series'
-      if (item === 'PC') return 'pc'
+      if (item === 'PC') return 'PC'
       return item
     })
     .join(', ')
@@ -130,8 +134,8 @@ function fromDated(row: DatedRelease): GameEntry {
   const early = Boolean(row.early)
   const status = row.date <= SITE_TODAY ? 'released' : 'upcoming'
   const summary = early
-    ? `${formatDate(row.date)}. ${dutchPlatforms(row.platforms)}. Early access, zoals op de gedateerde lijst.`
-    : `${formatDate(row.date)}. ${dutchPlatforms(row.platforms)}.`
+    ? `${formatDate(row.date)}. ${formatPlatforms(row.platforms)}. Early access, as on the dated list.`
+    : `${formatDate(row.date)}. ${formatPlatforms(row.platforms)}.`
   return {
     slug,
     title: row.title === 'Grand Theft Auto 6' ? 'Grand Theft Auto VI' : row.title,
@@ -146,7 +150,7 @@ function fromDated(row: DatedRelease): GameEntry {
     coverImage: coverBySlug[slug],
     related: relatedBySlug[slug] ?? [],
     seo: {
-      title: `${row.title === 'Grand Theft Auto 6' ? 'Grand Theft Auto VI' : row.title} kalender`,
+      title: `${row.title === 'Grand Theft Auto 6' ? 'Grand Theft Auto VI' : row.title} calendar`,
       description: summary,
     },
   }
@@ -162,12 +166,13 @@ const libraryGames: GameEntry[] = [
     genre: 'Horror',
     releaseDate: '2026-02-27',
     status: 'released',
-    summary: '27 februari 2026. pc, PS5, Xbox Series, Switch 2. Review: 8.7.',
+    summary: '27 February 2026. PC, PS5, Xbox Series, Switch 2. Review: 8.7.',
     coverLabel: 'REQ',
+    coverImage: coverBySlug['resident-evil-requiem'],
     related: relatedBySlug['resident-evil-requiem'],
     seo: {
       title: 'Resident Evil Requiem coverage',
-      description: 'Release 27 februari 2026 en ASAPxGaming review 8.7.',
+      description: 'Release 27 February 2026 and ASAPxGaming review 8.7.',
     },
   },
   {
@@ -179,13 +184,13 @@ const libraryGames: GameEntry[] = [
     genre: 'Action',
     releaseDate: '2026-04-17',
     status: 'released',
-    summary: '17 april 2026. pc, PS5, Xbox Series, Switch. Review: 8.5.',
+    summary: '17 April 2026. PC, PS5, Xbox Series, Switch. Review: 8.5.',
     coverLabel: 'PRAG',
     coverImage: coverBySlug.pragmata,
     related: relatedBySlug.pragmata,
     seo: {
       title: 'Pragmata coverage',
-      description: 'Release 17 april 2026 en ASAPxGaming review 8.5.',
+      description: 'Release 17 April 2026 and ASAPxGaming review 8.5.',
     },
   },
   {
@@ -197,12 +202,13 @@ const libraryGames: GameEntry[] = [
     genre: 'Racing',
     releaseDate: '2026-05-19',
     status: 'released',
-    summary: '19 mei 2026. pc en Xbox Series. Review: 8.9.',
+    summary: '19 May 2026. PC and Xbox Series. Review: 8.9.',
     coverLabel: 'FH6',
+    coverImage: coverBySlug['forza-horizon-6'],
     related: relatedBySlug['forza-horizon-6'],
     seo: {
       title: 'Forza Horizon 6 coverage',
-      description: 'Release 19 mei 2026 Xbox en pc, ASAPxGaming review 8.9.',
+      description: 'Release 19 May 2026 Xbox and PC, ASAPxGaming review 8.9.',
     },
   },
   {
@@ -214,12 +220,13 @@ const libraryGames: GameEntry[] = [
     genre: 'Action',
     releaseDate: '2026-05-27',
     status: 'released',
-    summary: '27 mei 2026. pc, PS5, Xbox Series. Review: 8.6.',
+    summary: '27 May 2026. PC, PS5, Xbox Series. Review: 8.6.',
     coverLabel: '007',
+    coverImage: coverBySlug['007-first-light'],
     related: relatedBySlug['007-first-light'],
     seo: {
       title: '007 First Light coverage',
-      description: 'Release 27 mei 2026, ASAPxGaming review 8.6.',
+      description: 'Release 27 May 2026, ASAPxGaming review 8.6.',
     },
   },
 ]

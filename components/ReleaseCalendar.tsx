@@ -9,17 +9,17 @@ import { calendarGames, filterGames } from '@/lib/content'
 import { formatDate, formatMonth } from '@/lib/utils'
 
 const catalog = calendarGames()
-const platforms = ['Alle', ...Array.from(new Set(catalog.flatMap((game) => game.platforms)))]
-const genres = ['Alle', ...Array.from(new Set(catalog.map((game) => game.genre)))]
+const platforms = ['All', ...Array.from(new Set(catalog.flatMap((game) => game.platforms)))]
+const genres = ['All', ...Array.from(new Set(catalog.map((game) => game.genre)))]
 const months = [
-  'Alle',
+  'All',
   ...Array.from(new Set(catalog.map((game) => game.releaseDate.slice(0, 7)))).sort(),
 ]
 
 export function ReleaseCalendar() {
-  const [platform, setPlatform] = useState('Alle')
-  const [genre, setGenre] = useState('Alle')
-  const [month, setMonth] = useState('Alle')
+  const [platform, setPlatform] = useState('All')
+  const [genre, setGenre] = useState('All')
+  const [month, setMonth] = useState('All')
   const filtered = useMemo(
     () =>
       filterGames({ platform, genre, month }).sort((a, b) => a.releaseDate.localeCompare(b.releaseDate)),
@@ -63,7 +63,7 @@ export function ReleaseCalendar() {
           </select>
         </label>
         <label className="grid gap-1 text-xs uppercase tracking-wider text-muted">
-          Maand
+          Month
           <select
             className="h-10 border border-line bg-elevated px-2 text-sm text-ink"
             value={month}
@@ -71,7 +71,7 @@ export function ReleaseCalendar() {
           >
             {months.map((item) => (
               <option key={item} value={item}>
-                {item === 'Alle' ? 'Alle' : formatMonth(item)}
+                {item === 'All' ? 'All' : formatMonth(item)}
               </option>
             ))}
           </select>
@@ -79,14 +79,14 @@ export function ReleaseCalendar() {
       </div>
       {filtered.length === 0 ? (
         <EmptyState
-          title="Geen releases"
-          detail="Deze combo van platform, genre en maand is leeg in de open maanden."
+          title="No releases"
+          detail="This mix of platform, genre and month is empty in the open months."
           action={{
             label: 'Reset filters',
             onClick: () => {
-              setPlatform('Alle')
-              setGenre('Alle')
-              setMonth('Alle')
+              setPlatform('All')
+              setGenre('All')
+              setMonth('All')
             },
           }}
         />
@@ -118,7 +118,7 @@ export function ReleaseCalendar() {
                             <p className="font-semibold">{game.title}</p>
                           )}
                           <p className="text-sm text-muted">
-                            {game.genre} · {game.platforms.join(', ')} · {game.status === 'upcoming' ? 'Verwacht' : 'Uit'}
+                            {game.genre} · {game.platforms.join(', ')} · {game.status === 'upcoming' ? 'Upcoming' : 'Out'}
                           </p>
                         </div>
                       </div>
@@ -127,7 +127,7 @@ export function ReleaseCalendar() {
                           Review
                         </Link>
                       ) : (
-                        <span className="text-sm text-muted">Op de kalender</span>
+                        <span className="text-sm text-muted">On the calendar</span>
                       )}
                     </li>
                   )

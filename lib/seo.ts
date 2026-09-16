@@ -57,7 +57,7 @@ export function articleJsonLd(opts: {
     author: { '@type': 'Person', name: opts.author },
     publisher: { '@type': 'Organization', name: site.name, url: site.url },
     mainEntityOfPage: absUrl(opts.path),
-    inLanguage: 'nl-NL',
+    inLanguage: 'en-GB',
   }
 }
 

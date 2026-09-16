@@ -19,11 +19,11 @@ export function ShareLinks({ path, title }: { path: string; title: string }) {
     <div className="flex flex-wrap gap-2">
       <Button asChild variant="outline" size="sm">
         <a href={tweet} target="_blank" rel="noreferrer">
-          Deel op X
+          Share on X
         </a>
       </Button>
       <Button type="button" variant="outline" size="sm" onClick={copy}>
-        {copied ? 'Link gekopieerd' : 'Kopieer link'}
+        {copied ? 'Link copied' : 'Copy link'}
       </Button>
     </div>
   )

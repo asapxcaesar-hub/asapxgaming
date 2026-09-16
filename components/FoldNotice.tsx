@@ -19,9 +19,9 @@ export function FoldNotice({
 
   return (
     <div className="mx-auto max-w-lg py-16 text-center">
-      <p className="text-sm text-muted">Deze hub is ondergebracht bij {title}.</p>
+      <p className="text-sm text-muted">This hub now lives at {title}.</p>
       <Link href={to} className="mt-4 inline-block text-accent">
-        Door naar {title} →
+        Continue to {title} →
       </Link>
     </div>
   )

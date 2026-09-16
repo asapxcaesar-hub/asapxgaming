@@ -44,7 +44,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
 
   const scoreRows = [
     ['Gameplay', item.scores.gameplay],
-    ['Verhaal', item.scores.story],
+    ['Story', item.scores.story],
     ['Graphics', item.scores.graphics],
     ['Audio', item.scores.audio],
     ['Performance', item.scores.performance],
@@ -59,7 +59,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
           datePublished: item.publishedAt,
           author: item.author,
           score: item.score,
-          body: item.conclusie.join(' '),
+          body: item.conclusion.join(' '),
         })}
       />
       <ArticleLayout
@@ -82,7 +82,7 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
           <ScoreBadge score={item.score} />
           <div>
             <p className="font-display text-3xl text-accent">{item.verdict}</p>
-            <p className="text-sm text-muted">Op een schaal van 1 tot 10</p>
+            <p className="text-sm text-muted">Scored from 1 to 10</p>
           </div>
         </div>
         <ul className="grid gap-2 sm:grid-cols-5">
@@ -93,13 +93,13 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
             </li>
           ))}
         </ul>
-        <Block title="Oordeel" paragraphs={item.oordeel} />
+        <Block title="Take" paragraphs={item.take} />
         <Block title="Gameplay" paragraphs={item.gameplay} />
-        <Block title="Verhaal" paragraphs={item.verhaal} />
+        <Block title="Story" paragraphs={item.story} />
         <Block title="Graphics" paragraphs={item.graphics} />
         <Block title="Audio" paragraphs={item.audio} />
         <Block title="Performance" paragraphs={item.performance} />
-        <Block title="Eindconclusie" paragraphs={item.conclusie} />
+        <Block title="Verdict" paragraphs={item.conclusion} />
         <div className="grid gap-4 sm:grid-cols-2">
           <div>
             <p className="text-xs uppercase tracking-wider text-muted">Plus</p>

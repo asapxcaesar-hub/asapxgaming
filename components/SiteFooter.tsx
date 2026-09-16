@@ -19,7 +19,7 @@ export function SiteFooter() {
           <p className="mt-2 max-w-sm text-xs text-muted">{site.creator.bio}</p>
         </div>
         <nav aria-label="Footer">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">Navigatie</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">Navigate</p>
           <ul className="mt-3 grid gap-2 text-sm">
             {nav.map((item) => (
               <li key={item.href}>
@@ -31,7 +31,7 @@ export function SiteFooter() {
           </ul>
         </nav>
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">Volgen & legal</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">Follow and legal</p>
           <ul className="mt-3 grid gap-2 text-sm">
             {Object.entries(site.socials).map(([key, href]) => (
               <li key={key}>
@@ -52,7 +52,7 @@ export function SiteFooter() {
       </div>
       <div className="border-t border-line">
         <p className="mx-auto max-w-[1440px] px-4 py-4 text-xs text-muted md:px-6">
-          © 2026 {site.name}. Onafhankelijk creator-platform. Geen kansspelen, geen lek-JPG’s.
+          © 2026 {site.name}. Independent creator desk. No gambling, no leak JPGs.
         </p>
       </div>
     </footer>

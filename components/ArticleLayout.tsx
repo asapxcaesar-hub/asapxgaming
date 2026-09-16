@@ -47,7 +47,7 @@ export function ArticleLayout({
         <ShareLinks path={path} title={title} />
       </div>
       <section className="mt-12">
-        <h2 className="font-display text-3xl">Gerelateerd</h2>
+        <h2 className="font-display text-3xl">Related</h2>
         <div className="mt-4">
           <RelatedGrid items={related} />
         </div>

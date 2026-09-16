@@ -6,7 +6,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function formatDate(iso: string) {
-  return new Intl.DateTimeFormat('nl-NL', {
+  return new Intl.DateTimeFormat('en-GB', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
@@ -15,7 +15,7 @@ export function formatDate(iso: string) {
 
 export function formatMonth(isoMonth: string) {
   const [year, month] = isoMonth.split('-').map(Number)
-  return new Intl.DateTimeFormat('nl-NL', { month: 'long', year: 'numeric' }).format(
+  return new Intl.DateTimeFormat('en-GB', { month: 'long', year: 'numeric' }).format(
     new Date(year, month - 1, 1),
   )
 }

@@ -8,5 +8,5 @@ export function generateStaticParams() {
 }
 
 export default function HardwareRedirectPage() {
-  return <FoldNotice to="/nieuws/" title="het nieuwsarchief" />
+  return <FoldNotice to="/news/" title="the news archive" />
 }

@@ -8,7 +8,7 @@ export function RelatedGrid({
 }) {
   if (items.length === 0) {
     return (
-      <p className="text-sm text-muted">Geen gerelateerde stukken in deze set.</p>
+      <p className="text-sm text-muted">No related pieces in this set.</p>
     )
   }
   return (

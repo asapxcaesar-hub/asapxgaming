@@ -17,7 +17,7 @@ export default async function GameRedirectPage({ params }: { params: Promise<{ s
   return (
     <FoldNotice
       to={review ? `/reviews/${review.slug}/` : '/releases/'}
-      title={review ? 'de review' : 'de releasekalender'}
+      title={review ? 'the review' : 'the release calendar'}
     />
   )
 }

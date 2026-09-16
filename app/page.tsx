@@ -19,7 +19,7 @@ export default function HomePage() {
       <section>
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Featured story</p>
         <ArticleCard
-          href={`/nieuws/${featured.slug}/`}
+          href={`/news/${featured.slug}/`}
           kicker={featured.category}
           title={featured.title}
           excerpt={featured.excerpt}
@@ -35,16 +35,16 @@ export default function HomePage() {
 
       <section>
         <div className="mb-4 flex items-end justify-between">
-          <h2 className="font-display text-4xl">Laatste nieuws</h2>
-          <Link href="/nieuws/" className="text-sm text-accent">
-            Archief
+          <h2 className="font-display text-4xl">Latest news</h2>
+          <Link href="/news/" className="text-sm text-accent">
+            Archive
           </Link>
         </div>
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {latestNews.map((item) => (
             <ArticleCard
               key={item.slug}
-              href={`/nieuws/${item.slug}/`}
+              href={`/news/${item.slug}/`}
               kicker={item.category}
               title={item.title}
               excerpt={item.excerpt}
@@ -60,7 +60,7 @@ export default function HomePage() {
         <div className="mb-4 flex items-end justify-between">
           <h2 className="font-display text-4xl">Reviews</h2>
           <Link href="/reviews/" className="text-sm text-accent">
-            Alle scores
+            All scores
           </Link>
         </div>
         <div className="grid gap-3">
@@ -84,7 +84,7 @@ export default function HomePage() {
         <div className="mb-4 flex items-end justify-between">
           <h2 className="font-display text-4xl">Coming soon</h2>
           <Link href="/releases/" className="text-sm text-accent">
-            Kalender
+            Calendar
           </Link>
         </div>
         <ul className="grid gap-3 md:grid-cols-3">
@@ -111,7 +111,7 @@ export default function HomePage() {
       <section className="border border-line bg-elevated p-6 md:p-8">
         <h2 className="font-display text-4xl">Watch / follow</h2>
         <p className="mt-2 max-w-2xl text-sm text-muted">
-          Streams en shorts staan op de kanalen van {site.creator.handle}.
+          Streams and shorts live on {site.creator.handle}’s channels.
         </p>
         <div className="mt-5 grid gap-4 md:grid-cols-3">
           {videos.map((clip) => (

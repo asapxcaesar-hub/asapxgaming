@@ -4,7 +4,7 @@ import { buildMetadata } from '@/lib/seo'
 
 export const metadata = buildMetadata({
   title: 'Reviews',
-  description: 'Game reviews van ASAPxGaming met cijfer, verdict en uitsplitsing per onderdeel.',
+  description: 'Game reviews from ASAPxGaming with a score, verdict and a split per pillar.',
   path: '/reviews/',
 })
 
@@ -13,9 +13,9 @@ export default function ReviewsPage() {
     <div className="grid gap-6">
       <header>
         <p className="text-xs uppercase tracking-[0.2em] text-accent">Reviews</p>
-        <h1 className="mt-2 font-display text-5xl">Het oordeel</h1>
+        <h1 className="mt-2 font-display text-5xl">The take</h1>
         <p className="mt-3 max-w-2xl text-muted">
-          Cijfers tot 10. Must play betekent: plan je week eromheen. Hit is feest, geen bijbel.
+          Scores out of 10. Must play means: plan your week around it. Hit is a party, not scripture.
         </p>
       </header>
       <div className="grid gap-3">

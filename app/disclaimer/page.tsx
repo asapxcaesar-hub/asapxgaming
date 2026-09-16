@@ -3,7 +3,7 @@ import { buildMetadata } from '@/lib/seo'
 
 export const metadata = buildMetadata({
   title: 'Disclaimer',
-  description: 'Disclaimer van ASAPxGaming over oordelen, keys en merken.',
+  description: 'ASAPxGaming disclaimer on verdicts, keys and trademarks.',
   path: '/disclaimer/',
 })
 
@@ -12,20 +12,20 @@ export default function DisclaimerPage() {
     <div className="mx-auto grid max-w-3xl gap-4">
       <h1 className="font-display text-5xl">Disclaimer</h1>
       <p>
-        Reviews en nieuws op ASAPxGaming zijn redactionele oordelen van {site.creator.name}, geen koopadvies
-        met garantie. Scores zijn het oordeel van deze desk.
+        Reviews and news on ASAPxGaming are editorial takes from {site.creator.name}, not purchase
+        advice with a guarantee. Scores are this desk’s verdict.
       </p>
       <p>
-        Game- en merknamen blijven van hun rechthebbenden. Coverage betekent geen partnership, tenzij
-        we dat expliciet schrijven.
+        Game and brand names stay with their owners. Coverage is not a partnership unless we write
+        that out loud.
       </p>
       <p>
-        Review keys of reise gratis hardware benoemen we in het stuk als dat speelt. Deze demo-set
-        bevat geen verborgen affiliate-laag.
+        Review keys or free hardware get named in the piece when that applies. This demo set has no
+        hidden affiliate layer.
       </p>
       <p>
-        Feiten kunnen veranderen na publicatie. We corrigeren aantoonbare fouten; we herschrijven geen
-        history om een publisher te pleasen.
+        Facts can change after publication. We correct proven errors. We do not rewrite history to
+        please a publisher.
       </p>
     </div>
   )

@@ -4,9 +4,9 @@ export const reviews: GameReview[] = [
   {
     slug: 'wolverine-marvel',
     gameSlug: 'wolverine-marvel',
-    title: 'Wolverine snijdt hard en loopt te vaak rechtuit',
+    title: 'Wolverine cuts hard and walks straight too often',
     excerpt:
-      'Insomniac’s Logan is vanaf 15 september 2026 op PS5. Combat en stemwerk tillen. Vijandenvariatie en verhaal zakken onder de Spider Man lat. 7.7.',
+      'Insomniac’s Logan is out 15 September 2026 on PS5. Combat and voice work lift. Enemy variety and story drop under the Spider Man bar. 7.7.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-15',
     platforms: ['PS5'],
@@ -15,13 +15,13 @@ export const reviews: GameReview[] = [
     verdict: 'Hit',
     coverLabel: 'WOLV',
     plus: [
-      'Klauwgevechten die vies mogen zijn',
-      'Logan die als Logan klinkt, geen merch grijns',
-      'Focus op één mutant, geen open wereld checklist',
+      'Claw fights that are allowed to be ugly',
+      'Logan who sounds like Logan, not a merch grin',
+      'Focus on one mutant, no open world checklist',
     ],
     minus: [
-      'Lineair tot het een gang wordt',
-      'Vijanden die te snel hun truc herhalen',
+      'Linear until it becomes a hallway',
+      'Enemies who repeat their trick too fast',
     ],
     scores: { gameplay: 8.0, story: 7.2, graphics: 8.3, audio: 8.1, performance: 7.8 },
     related: [
@@ -29,40 +29,40 @@ export const reviews: GameReview[] = [
       { collection: 'news', slug: 'gta-vi-blijft-19-november' },
     ],
     seo: {
-      title: 'Wolverine snijdt hard en loopt te vaak rechtuit',
+      title: 'Wolverine cuts hard and walks straight too often',
       description:
-        'ASAPxGaming over Marvel’s Wolverine (PS5, 15 sept 2026): klauwen, lineariteit en een 7.7 van deze desk.',
+        'ASAPxGaming on Marvel’s Wolverine (PS5, 15 September 2026): claws, linearity and a 7.7 from this desk.',
     },
-    oordeel: [
-      'Marvel’s Wolverine is vandaag, 15 september 2026, uit op PlayStation 5. Insomniac, bekend van de Spider Man games, levert een M rated klauwverhaal: regeneratie, woede, een zoektocht naar wie Logan was. Dat is publiek, uit de State of Play trailers en de store pagina. Geen lek JPG nodig.',
-      'De gevechten zijn het product. De wereld is een gang met cutscenes. Dat is een bewuste focus: één mutant, geen sandbox checklist. Het is ook waarom de avond eerder ophoudt dan Insomniacs webswing games.',
+    take: [
+      'Marvel’s Wolverine is out today, 15 September 2026, on PlayStation 5. Insomniac, known for the Spider Man games, delivers an M rated claw story: regen, rage, a hunt for who Logan was. That is public, from State of Play trailers and the store page. No leak JPG required.',
+      'The fights are the product. The world is a hallway with cutscenes. That is a deliberate focus: one mutant, no sandbox checklist. It is also why the night ends earlier than Insomniac’s webswing games.',
     ],
     gameplay: [
-      'Klauwen, rage, healing: de lus is bevredigend als de camera het bijhoudt. Je voelt gewicht. Je voelt ook herhaling: dezelfde soldaat types, dezelfde “snij de zaal leeg” cadans. Open wereld Insomniac dit is niet. Dat scheelt checklist bloat. Het scheelt ook adem.',
-      'Bazen en named mutants tillen. Trash mobs zakken. Wie hier een Spider Man 2 sandbox verwacht, krijgt een corridor brawler in een duurdere jas.',
+      'Claws, rage, healing: the loop pays off when the camera keeps up. You feel weight. You also feel repetition: the same soldier types, the same “empty the room” cadence. This is not open world Insomniac. That cuts checklist bloat. It also cuts air.',
+      'Bosses and named mutants lift. Trash mobs drop. If you came for a Spider Man 2 sandbox, you get a corridor brawler in a dearer coat.',
     ],
-    verhaal: [
-      'Liam McIntyre als Logan is de stem die de merch grijns weghoudt. Jean Grey in de marketing is een belofte. De plot undersellt zijn eigen premisse als hij te lang uitlegt wat de trailer al zei. Spoiler arm: het is een origin achtige zoektocht, geen ensemble Avengers tour. Dat mag strakker.',
+    story: [
+      'Liam McIntyre as Logan is the voice that keeps the merch grin away. Jean Grey in the marketing is a promise. The plot undersells its own premise when it explains what the trailer already said. Spoiler light: it is an origin style hunt, not an ensemble Avengers tour. That could be tighter.',
     ],
     graphics: [
-      'PS5 haalt het Insomniac glansje: poriën, regen, bloed dat mag. Het is geen technische revolutie na Spider Man 2. Het is wel een Logan die eruitziet als een R rated poster, geen Saturday morning.',
+      'PS5 gets the Insomniac sheen: pores, rain, blood that is allowed. It is not a technical revolution after Spider Man 2. It is a Logan who looks like an R rated poster, not Saturday morning.',
     ],
     audio: [
-      'Snikt, impact, een score die durft te brommen. Stemcast houdt stand. De mix laat rage audio niet de dialoog wegdrukken. Meestal.',
+      'Snickt, impact, a score that dares to rumble. The cast holds. The mix usually keeps rage audio from burying dialogue.',
     ],
     performance: [
-      'Op de PS5 build van launchweek: speelbaar, een dip in de drukste slachtpartijen. Geen crash in onze run. Pro mode is een schuif, geen redding van de lineariteit.',
+      'On the launch week PS5 build: playable, a dip in the busiest slaughter. No crash in our run. Pro mode is a slider, not a rescue from the linearity.',
     ],
-    conclusie: [
-      '7.7: hit als je Logan wilt slachten, geen must play naast GTA VI in november. Insomniac mag vies zijn. Ze mogen ook een tweede vijand kit ontwerpen.',
+    conclusion: [
+      '7.7: a hit if you want to carve Logan, not a must play beside GTA VI in November. Insomniac is allowed to be ugly. They are also allowed to design a second enemy kit.',
     ],
   },
   {
     slug: 'moonlighter-2',
     gameSlug: 'moonlighter-2',
-    title: 'Moonlighter 2 verkoopt loot beter dan drama',
+    title: 'Moonlighter 2 sells loot better than drama',
     excerpt:
-      'Digital Sun levert op 2 september 2026 weer een winkel met een dungeon eronder. De shop klikt. De late loop vraagt geduld. 8.2.',
+      'Digital Sun ships another shop with a dungeon under it on 2 September 2026. The till clicks. The late loop asks for patience. 8.2.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-04',
     platforms: ['PC', 'PS5', 'Xbox', 'Switch 2'],
@@ -71,13 +71,13 @@ export const reviews: GameReview[] = [
     verdict: 'Hit',
     coverLabel: 'MOON',
     plus: [
-      'Winkelbeheer dat verslavend blijft',
-      'Dungeons met een eigen grap, geen kopieerwerk',
-      'UI die prijzen laat voelen, niet alleen tellen',
+      'Shop management that stays sticky',
+      'Dungeons with their own gag, not copy work',
+      'UI that makes prices feel, not just count',
     ],
     minus: [
-      'Late grind die de grap herhaalt',
-      'Verhaal dat de kassa volgt, niet leidt',
+      'Late grind that repeats the gag',
+      'A story that follows the till, not the other way round',
     ],
     scores: { gameplay: 8.5, story: 7.4, graphics: 8.1, audio: 8.0, performance: 8.3 },
     related: [
@@ -85,55 +85,54 @@ export const reviews: GameReview[] = [
       { collection: 'news', slug: 'steam-september-picks' },
     ],
     seo: {
-      title: 'Moonlighter 2 verkoopt loot beter dan drama',
-      description:
-        'ASAPxGaming over Moonlighter 2: shop, dungeons en een 8.2 van deze desk.',
+      title: 'Moonlighter 2 sells loot better than drama',
+      description: 'ASAPxGaming on Moonlighter 2: shop, dungeons and an 8.2 from this desk.',
     },
-    oordeel: [
-      'Moonlighter 2 is de sequel die de lus niet verraadt. Overdag sta je achter de toonbank. s Nachts daal je af, kom je terug met spul, en bepaal je of de stad te duur of te goedkoop koopt. Digital Sun schaalt dat op zonder de winkel tot idle klikker te maken.',
-      'Het is trending omdat hij uit is en speelbaar blijft, niet omdat een keynote hem “het indie moment” noemde. 8.2: ja, met een voetnoot bij de laatste uren.',
+    take: [
+      'Moonlighter 2 is the sequel that does not betray the loop. By day you stand behind the counter. By night you drop down, come back with stuff, and decide whether the town buys too dear or too cheap. Digital Sun scales that up without turning the shop into an idle clicker.',
+      'It is trending because it shipped and stays playable, not because a keynote called it “the indie moment”. 8.2: yes, with a footnote on the last hours.',
     ],
     gameplay: [
-      'De shop is het gevecht dat blijft hangen: voorraad, etalage, of je een zeldzaam zwaard durft te laten liggen tot de juiste klant. In de dungeon is het een actie RPG met room reads, geen Soulslike straf. Vroeg voelt elke run als winst voor de kassa.',
-      'Laat wordt het een productieketen. Nieuwe biomen tillen. De economy vraagt herhaling die de grap uitrekt. Wie stopt als de stad draait, houdt de beste versie over.',
+      'The shop is the fight that sticks: stock, window, whether you dare leave a rare sword until the right customer. In the dungeon it is an action RPG with room reads, not a Souls punishment. Early on every run feels like a win for the till.',
+      'Late it becomes a production line. New biomes lift. The economy asks for repetition that stretches the gag. If you stop once the town runs, you keep the best version.',
     ],
-    verhaal: [
-      'Er is een plot over gildes, nacht en wat de stad verdient. Het is aardig. Het is niet waarom je een derde run start. Personages mogen mopperen achter de balie. Dat is genoeg toon, te weinig inzet.',
+    story: [
+      'There is a plot about guilds, night, and what the town deserves. It is pleasant. It is not why you start a third run. Characters are allowed to grumble behind the counter. That is enough tone, not enough stakes.',
     ],
     graphics: [
-      'Kleur, icoontjes, een stad die groeit als je winst maakt. Dat is de screenshot. Geen raytracing flex, wel leesbare loot in een volle zak.',
+      'Colour, icons, a town that grows when you make profit. That is the screenshot. No ray tracing flex. Readable loot in a full bag.',
     ],
     audio: [
-      'Een loop die de winkel rustig houdt en de dungeon een tik harder zet. Effecten op verkoop zijn verslavender dan de muziek zelf. Dat mag, het is een kassaspel.',
+      'A loop that keeps the shop calm and the dungeon a notch louder. Sale effects are stickier than the music. That is fine. It is a till game.',
     ],
     performance: [
-      'Op pc en Switch 2 in onze run: stabiel in de shop, een hiccup in de drukste nacht floors, geen save loterij. Dat is het minimum voor een run die je tussendoor start.',
+      'On PC and Switch 2 in our run: stable in the shop, a hiccup on the busiest night floors, no save lottery. That is the minimum for a run you start between other things.',
     ],
-    conclusie: [
-      '8.2: koop hem als de eerste Moonlighter klikte, of als je een indie wilt die deze week écht uit is. Skip de late grind. De winkel is het product.',
+    conclusion: [
+      '8.2: buy it if the first Moonlighter clicked, or if you want an indie that actually shipped this week. Skip the late grind. The shop is the product.',
     ],
   },
   {
     slug: '007-first-light',
     gameSlug: '007-first-light',
-    title: 'Deze Bond sluipen wint tot de plot gaat uitleggen',
+    title: 'This Bond wins at sneaking until the plot starts explaining',
     excerpt:
-      'IO Interactive’s origin van 27 mei 2026. Stealth en Patrick Gibson tillen. De derde akt praat te veel. Switch 2 is nu 2027. 8.6.',
+      'IO Interactive’s origin from 27 May 2026. Stealth and Patrick Gibson lift. The third act talks too much. Switch 2 is now 2027. 8.6.',
     author: 'Kay van Elsen',
     publishedAt: '2026-06-03',
     platforms: ['PC', 'PS5', 'Xbox'],
     genre: 'Action',
     score: 8.6,
-    verdict: 'Koop hem',
+    verdict: 'Buy it',
     coverLabel: '007',
     plus: [
-      'Stealth die als Hitman voelt, met een gezicht',
-      'Patrick Gibson als jonge Bond, geen merch grijns',
-      'Levels die een plan belonen, geen checklist',
+      'Stealth that feels like Hitman, with a face',
+      'Patrick Gibson as young Bond, not a merch grin',
+      'Levels that reward a plan, not a checklist',
     ],
     minus: [
-      'Derde akt die de premisse naschrijft',
-      'Switch 2 die je nog een jaar laat wachten',
+      'A third act that rewrites the premise out loud',
+      'Switch 2 that makes you wait another year',
     ],
     scores: { gameplay: 8.8, story: 8.2, graphics: 8.5, audio: 8.6, performance: 8.4 },
     related: [
@@ -141,40 +140,39 @@ export const reviews: GameReview[] = [
       { collection: 'reviews', slug: 'pragmata' },
     ],
     seo: {
-      title: 'Deze Bond sluipen wint tot de plot gaat uitleggen',
-      description:
-        'ASAPxGaming over 007 First Light: stealth, origin en een 8.6 van deze desk.',
+      title: 'This Bond wins at sneaking until the plot starts explaining',
+      description: 'ASAPxGaming on 007 First Light: stealth, origin and an 8.6 from this desk.',
     },
-    oordeel: [
-      '007 First Light is sinds 27 mei 2026 uit op PlayStation 5, Xbox Series en pc. IO Interactive, het huis achter Hitman, maakt een jonge James Bond die zijn 00 status nog moet verdienen in een MI6 programma. Amazon MGM zit op de licentie. De game is van IOI. Dat onderscheid houdt de toon volwassen.',
-      'De infiltratie wint. De origin praat in de laatste uren te graag na wat de briefing al zei. Switch 2 zou later in 2026 volgen. Op 15 september 2026 schuift IOI die port naar maart 2027. Onze score gaat over de mei platforms, niet over een belofte.',
+    take: [
+      '007 First Light has been out since 27 May 2026 on PlayStation 5, Xbox Series and PC. IO Interactive, the house behind Hitman, makes a young James Bond who still has to earn 00 status in an MI6 programme. Amazon MGM sits on the licence. The game is IOI’s. That split keeps the tone adult.',
+      'Infiltration wins. The origin talks too eagerly in the last hours about what the briefing already said. Switch 2 was meant to follow later in 2026. On 15 September 2026 IOI slides that port to March 2027. Our score is about the May platforms, not a promise.',
     ],
     gameplay: [
-      'Disguise, routes, een pistool als laatste zin: de lus is Hitman met een gezicht dat mag praten. Social stealth in training en in het veld klikt. Combat kan, maar wint zelden van een plan. Dat is de juiste hiërarchie voor Bond.',
-      'Setpieces tillen als de ruimte ademt. Ze zakken als de camera een cutscene van je afpakt. De beste avonden zijn de avonden waarop je zelf een raam kiest.',
+      'Disguise, routes, a pistol as a last sentence: the loop is Hitman with a face that is allowed to talk. Social stealth in training and in the field clicks. Combat can work, but it rarely beats a plan. That is the right hierarchy for Bond.',
+      'Set pieces lift when the space breathes. They drop when the camera steals a cutscene from you. The best nights are the nights you pick a window yourself.',
     ],
-    verhaal: [
-      'Een heruitgevonden origin, geen filmrecap. Bond mag fouten maken zonder dat de merch afdeling het gladstrijkt. Patrick Gibson draagt de stiltes. De derde akt legt uit wat je al speelde. Spoiler arm: hij verdient de status, en de tekst zegt het te vaak hardop.',
+    story: [
+      'A reinvented origin, not a film recap. Bond is allowed to fail without the merch desk smoothing it. Patrick Gibson carries the silences. The third act explains what you already played. Spoiler light: he earns the status, and the script says it too often out loud.',
     ],
     graphics: [
-      'Glacier in smoking: materialen, regen, een Londen en veld die leesbaar blijven in stealth. Geen raytracing flex als verkoopargument. Wel een gezicht dat close ups overleeft.',
+      'Glacier in a tuxedo: materials, rain, a London and a field that stay readable in stealth. No ray tracing flex as a sales pitch. A face that survives close ups.',
     ],
     audio: [
-      'The Flight op de score, wapens die droog klinken, een mix die fluisteren in een gang laat werken. Stemwerk houdt stand in EN met NL ondertiteling.',
+      'The Flight on the score, guns that sound dry, a mix that lets a whisper work in a hallway. Voice work holds in English.',
     ],
     performance: [
-      'PS5 en pc in onze run: speelbaar, een dip in de drukste crowd scènes. Geen crash loterij. Dat is het niveau dat Switch 2 nog moet halen voordat maart 2027 een feest is.',
+      'PS5 and PC in our run: playable, a dip in the busiest crowd scenes. No crash lottery. That is the bar Switch 2 still has to clear before March 2027 is a party.',
     ],
-    conclusie: [
-      '8.6: koop hem op een platform dat uit is. Wacht niet op Nintendo als stealth je deze zomer nog iets zegt. IOI mag Bond. Ze mogen de laatste akt ook laten zwijgen.',
+    conclusion: [
+      '8.6: buy it on a platform that shipped. Do not wait for Nintendo if stealth still means something this year. IOI is allowed to do Bond. They are also allowed to let the last act shut up.',
     ],
   },
   {
     slug: 'forza-horizon-6',
     gameSlug: 'forza-horizon-6',
-    title: 'Forza 6 maakt van Japan een festival, geen brochure',
+    title: 'Forza 6 turns Japan into a festival, not a brochure',
     excerpt:
-      'Playground, 19 mei 2026 op Xbox en pc. Wegen en radio tillen. De PS5 dag ontbreekt nog. 8.9.',
+      'Playground, 19 May 2026 on Xbox and PC. Roads and radio lift. The PS5 day is still missing. 8.9.',
     author: 'Kay van Elsen',
     publishedAt: '2026-05-26',
     platforms: ['PC', 'Xbox'],
@@ -183,13 +181,13 @@ export const reviews: GameReview[] = [
     verdict: 'Must play',
     coverLabel: 'FH6',
     plus: [
-      'Japan dat als route voelt, niet als ansichtkaart',
-      'Festivalritme dat je in de auto houdt',
-      'Game Pass dat de drempel serieus verlaagt',
+      'Japan that feels like a route, not a postcard',
+      'Festival rhythm that keeps you in the car',
+      'Game Pass that actually lowers the door',
     ],
     minus: [
-      'Online dat nog steeds een lobby is, geen magie',
-      'PS5 zonder dag, alleen het jaartal 2026',
+      'Online that is still a lobby, not magic',
+      'PS5 with no day, only the year 2026',
     ],
     scores: { gameplay: 9.0, story: 7.8, graphics: 9.1, audio: 8.8, performance: 8.6 },
     related: [
@@ -197,55 +195,54 @@ export const reviews: GameReview[] = [
       { collection: 'reviews', slug: '007-first-light' },
     ],
     seo: {
-      title: 'Forza 6 maakt van Japan een festival, geen brochure',
-      description:
-        'ASAPxGaming over Forza Horizon 6: Japan, festivalritme en een 8.9 van deze desk.',
+      title: 'Forza 6 turns Japan into a festival, not a brochure',
+      description: 'ASAPxGaming on Forza Horizon 6: Japan, festival rhythm and an 8.9 from this desk.',
     },
-    oordeel: [
-      'Forza Horizon 6 is sinds 19 mei 2026 uit op Xbox Series en pc. Premium was vier dagen eerder binnen. Playground Games zet het festival in een gestileerd Japan, met Tokyo als zwaartepunt. Game Pass Ultimate en PC Game Pass zetten de standaardeditie in het abonnement. Dat is distributie, geen cijfer.',
-      'De wegen winnen. De brochure momenten (Fuji in een trailer, een neon steeg) zijn het dessert, niet het menu. Must play als je Horizon als rit wilt, niet als fotomodus met een stuur.',
+    take: [
+      'Forza Horizon 6 has been out since 19 May 2026 on Xbox Series and PC. Premium landed four days earlier. Playground Games puts the festival in a stylised Japan, with Tokyo as the weight. Game Pass Ultimate and PC Game Pass put the standard edition in the subscription. That is distribution, not a score.',
+      'The roads win. Brochure moments (Fuji in a trailer, a neon alley) are dessert, not the menu. Must play if you want Horizon as a drive, not a photo mode with a wheel.',
     ],
     gameplay: [
-      'Horizon blijft: zie een weg, neem de weg, verdien de volgende auto zonder dat een skill tree je gijzelt. Drift, straat, vuil: de disciplines ademen. Japan is smaller dan Mexico in Horizon 5, en dat is een plus. Je leest bochten in plaats van een woestijn te overleven.',
-      'Het festival vraagt te vaak een event pin. Dat is de oude zonde. Skip de pin, rijd de kust, de game blijft aardig. Online is een lobby met ghosts, geen tweede product.',
+      'Horizon stays: see a road, take the road, earn the next car without a skill tree holding you hostage. Drift, street, dirt: the disciplines breathe. Japan is tighter than Mexico in Horizon 5, and that is a plus. You read corners instead of surviving a desert.',
+      'The festival still asks for an event pin too often. That is the old sin. Skip the pin, drive the coast, the game stays kind. Online is a lobby with ghosts, not a second product.',
     ],
-    verhaal: [
-      'Er is een festivalplot die je mag negeren. Presentatoren doen hun best. Japan zit in de radio en de borden, niet in een cutscene over “cultuur”. Dat is de juiste volgorde.',
+    story: [
+      'There is a festival plot you are allowed to ignore. Presenters try. Japan lives in the radio and the signs, not in a cutscene about “culture”. That is the right order.',
     ],
     graphics: [
-      'ForzaTech in regen, in tunnel, in een stad die leesbaar blijft bij 200 plus. Dat is waarom je een groot scherm pakt. Geen screenshot wedstrijd, wel een horizon die klopt.',
+      'ForzaTech in rain, in a tunnel, in a city that stays readable at 200 plus. That is why you take a big screen. Not a screenshot contest. A horizon that holds.',
     ],
     audio: [
-      'Motoren eerst, licensed radio als tweede huid. De mix laat een station zwijgen als een canyon dat vraagt. Dat is zeldzaam in een festivalgame.',
+      'Engines first, licensed radio as a second skin. The mix lets a station go quiet when a canyon asks. That is rare in a festival game.',
     ],
     performance: [
-      'Series X en pc in onze run: feest in de open, een dip in de drukste Tokyo crowd. Cloud via Game Pass is noodverband, geen recensie platform. PS5 is aangekondigd voor later in 2026, zonder dag. Die build beoordelen we als hij er is.',
+      'Series X and PC in our run: a party in the open, a dip in the busiest Tokyo crowd. Cloud via Game Pass is a bandage, not a review platform. PS5 is announced for later in 2026, with no day. We score that build when it exists.',
     ],
-    conclusie: [
-      '8.9: must play op Xbox of pc. Koop geen gerucht over PlayStation. Koop de rit die uit is.',
+    conclusion: [
+      '8.9: must play on Xbox or PC. Do not buy a rumour about PlayStation. Buy the drive that shipped.',
     ],
   },
   {
     slug: 'pragmata',
     gameSlug: 'pragmata',
-    title: 'Pragmata is slim schieten tot de gangen te smal worden',
+    title: 'Pragmata is smart shooting until the halls get too tight',
     excerpt:
-      'Capcoms maan IP (17 april 2026) koppelt vuur aan live hacken. Hugh en Diana tillen de toon. De late akt gijzelt het tempo.',
+      'Capcom’s moon IP (17 April 2026) ties fire to live hacks. Hugh and Diana lift the tone. The late act holds the pace hostage.',
     author: 'Kay van Elsen',
     publishedAt: '2026-04-24',
     platforms: ['PC', 'PS5', 'Xbox', 'Switch'],
     genre: 'Action',
     score: 8.5,
-    verdict: 'Koop hem',
+    verdict: 'Buy it',
     coverLabel: 'PRAG',
     plus: [
-      'Vuur en hack in één adem, geen menupauze',
-      'Diana als partner, geen mascotte lawaai',
-      'RE Engine die de maan laat glanzen',
+      'Fire and hack in one breath, no menu pause',
+      'Diana as a partner, not mascot noise',
+      'RE Engine that lets the moon shine',
     ],
     minus: [
-      'Tweede helft die je in arena’s opsluit',
-      'Verhaal dat de actie volgt, niet leidt',
+      'A second half that locks you in arenas',
+      'A story that follows the action, not the other way round',
     ],
     scores: { gameplay: 8.6, story: 8.0, graphics: 8.8, audio: 8.3, performance: 8.4 },
     related: [
@@ -253,40 +250,39 @@ export const reviews: GameReview[] = [
       { collection: 'reviews', slug: 'resident-evil-requiem' },
     ],
     seo: {
-      title: 'Pragmata is slim schieten tot de gangen te smal worden',
-      description:
-        'ASAPxGaming over Pragmata: Hugh, Diana, hack schieten en een 8.5 van deze desk.',
+      title: 'Pragmata is smart shooting until the halls get too tight',
+      description: 'ASAPxGaming on Pragmata: Hugh, Diana, hack shooting and an 8.5 from this desk.',
     },
-    oordeel: [
-      'Hugh Williams en de android Diana willen van een vijandige maanbasis af, weg van de AI IDUS. Dat is de pitch die jaren schoof (eerst 2022, toen stilte, toen 17 april 2026). Capcom heeft een nieuwe IP die voelt als een third person shooter met een extra laag: je schiet én je hackt in realtime, zonder de gevechtslus te pauzeren tot een puzzelmenu.',
-      'De relatie Hugh en Diana draagt de toon, de kit klikt, en de late uren zijn te vaak een gang waar je mag blijven staan tot de golf klaar is.',
+    take: [
+      'Hugh Williams and the android Diana want off a hostile moon base, away from the AI IDUS. That is the pitch that slid for years (first 2022, then silence, then 17 April 2026). Capcom has a new IP that feels like a third person shooter with an extra layer: you shoot and you hack in realtime, without pausing the fight loop for a puzzle menu.',
+      'The Hugh and Diana bond carries the tone, the kit clicks, and the late hours are too often a hall where you are allowed to stand until the wave is done.',
     ],
     gameplay: [
-      'De truc is splitsing van aandacht: vijand in beeld, hacklaag tegelijk. Dat is spannend als de ruimte ademt. Het is huiswerk als de leveldesigner de deuren op slot gooit. Vroege zones winnen. De tweede helft herhaalt de truc tot je de maan zat bent.',
-      'Wie Dead Space achtige spanning zoekt, krijgt die in de goede kamers. Wie een open maanbasis verwacht, krijgt een corridorshow. Dat mag. Zeg het op de doos.',
+      'The trick is split attention: enemy in frame, hack layer at the same time. That is tense when the space breathes. It is homework when the level designer locks the doors. Early zones win. The second half repeats the trick until you are tired of the moon.',
+      'If you want Dead Space style tension, you get it in the good rooms. If you expected an open moon base, you get a corridor show. That is allowed. Say it on the box.',
     ],
-    verhaal: [
-      'Diana is het hart: nieuwsgierig, nuttig, zelden een piepmascotte. Hugh is de volwassene die minder groeit dan de actie om hem heen. De AI thema’s zijn actueel zonder een TED talk te worden. De plot tilt niet. De twee personages wel.',
+    story: [
+      'Diana is the heart: curious, useful, rarely a squeak mascot. Hugh is the adult who grows less than the action around him. The AI themes stay current without turning into a TED talk. The plot does not lift. The two characters do.',
     ],
     graphics: [
-      'RE Engine op de maan: stof, metaal, aarde als stip. Dat is de reden om hem op een groot scherm te zetten. Switch houdt stand als handheld compromis, geen 4K flex.',
+      'RE Engine on the moon: dust, metal, Earth as a dot. That is why you put it on a big screen. Switch holds as a handheld compromise, not a 4K flex.',
     ],
     audio: [
-      'De score durft stil te zijn. Stemwerk in EN en JP met NL subs hangt van je taalkeuze af. De mix laat Diana verstaanbaar in het vuur. Dat is het minimum, hier gehaald.',
+      'The score dares to be quiet. Voice work in English and Japanese hangs on your language pick. The mix keeps Diana readable in the fire. That is the minimum, met here.',
     ],
     performance: [
-      'PS5 build waarop we klaarden: speelbaar, zwaar in de drukste hackarena’s. Pc schuift mooi versus stil zoals Capcom pc dat doet. Geen crash loterij in onze run.',
+      'PS5 build we finished: playable, heavy in the busiest hack arenas. PC slides pretty versus still the way Capcom PC does. No crash lottery in our run.',
     ],
-    conclusie: [
-      '8.5: koop hem voor de kit en het duo, niet voor een meestervertelling. Capcom mag nieuwe IP. Ze mogen de tweede helft ook laten ademen.',
+    conclusion: [
+      '8.5: buy it for the kit and the duo, not for a master story. Capcom is allowed new IP. They are also allowed to let the second half breathe.',
     ],
   },
   {
     slug: 'resident-evil-requiem',
     gameSlug: 'resident-evil-requiem',
-    title: 'Requiem laat Raccoon weer bijten, tot de actie te hard duwt',
+    title: 'Requiem lets Raccoon bite again until the action pushes too hard',
     excerpt:
-      'Capcom, 27 februari 2026. Grace Ashcroft en Leon S. Kennedy, eerste en derde persoon wisselbaar. Sfeer tillen. De late actie zakken. 8.7.',
+      'Capcom, 27 February 2026. Grace Ashcroft and Leon S. Kennedy, first and third person on a switch. Mood lifts. Late action drops. 8.7.',
     author: 'Kay van Elsen',
     publishedAt: '2026-03-06',
     platforms: ['PC', 'PS5', 'Xbox', 'Switch 2'],
@@ -295,13 +291,13 @@ export const reviews: GameReview[] = [
     verdict: 'Must play',
     coverLabel: 'REQ',
     plus: [
-      'Sfeer die Village in de schaduw zet',
-      'Grace die geen bijfiguur blijft',
-      'Camera wissel die je zelf kiest, geen gimmick',
+      'Mood that puts Village in the shade',
+      'Grace who does not stay a side character',
+      'A camera swap you pick yourself, not a gimmick',
     ],
     minus: [
-      'Tweede helft die te graag een shooter wordt',
-      'Leon die soms de show terugeist',
+      'A second half that wants to be a shooter',
+      'Leon who sometimes steals the show back',
     ],
     scores: { gameplay: 8.6, story: 8.8, graphics: 9.0, audio: 8.9, performance: 8.5 },
     related: [
@@ -309,32 +305,32 @@ export const reviews: GameReview[] = [
       { collection: 'news', slug: 'steam-september-picks' },
     ],
     seo: {
-      title: 'Requiem laat Raccoon weer bijten, tot de actie te hard duwt',
+      title: 'Requiem lets Raccoon bite again until the action pushes too hard',
       description:
-        'ASAPxGaming over Resident Evil Requiem: Grace, Leon, Raccoon City en een 8.7 van deze desk.',
+        'ASAPxGaming on Resident Evil Requiem: Grace, Leon, Raccoon City and an 8.7 from this desk.',
     },
-    oordeel: [
-      'Resident Evil Requiem is sinds 27 februari 2026 uit op PlayStation 5, Xbox Series, Switch 2 en pc. Dertig jaar na het incident in Raccoon City onderzoekt FBI analist Grace Ashcroft sterfgevallen rond de plek waar haar moeder stierf. Leon S. Kennedy wordt naar hetzelfde hotel gestuurd. Je wisselt vrij tussen eerste persoon en derde persoon. Dat is Capcom op de doos, geen lek.',
-      'De eerste uren zijn het beste survival horror dat dit huis in jaren durfde. Daarna duwt de actie te hard. 8.7: must play, met een voetnoot bij de laatste akt.',
+    take: [
+      'Resident Evil Requiem has been out since 27 February 2026 on PlayStation 5, Xbox Series, Switch 2 and PC. Thirty years after the Raccoon City incident, FBI analyst Grace Ashcroft looks into deaths around the place her mother died. Leon S. Kennedy is sent to the same hotel. You swap freely between first person and third person. That is Capcom on the box, not a leak.',
+      'The first hours are the best survival horror this house has dared in years. Then the action pushes too hard. 8.7: must play, with a footnote on the last act.',
     ],
     gameplay: [
-      'Resources tellen weer. Een klik in een gang is een zin. De camera wissel is geen menu truc: eerste persoon voor de kamer, derde persoon als je moet rennen. Dat werkt tot de game je een arsenaal in de hand duwt en de spanning inschikt.',
-      'Puzzels zijn eerlijk als de ruimte ze uitlegt. Ze zijn huiswerk als een document de code voorleest. Bazen tillen als je ammo hebt geteld. Ze zakken als het een arena met golven wordt.',
+      'Resources count again. A click in a hallway is a sentence. The camera swap is not a menu trick: first person for the room, third person when you have to run. That works until the game puts an arsenal in your hands and folds the tension.',
+      'Puzzles are honest when the space explains them. They are homework when a document reads the code. Bosses lift when you counted ammo. They drop when it becomes an arena with waves.',
     ],
-    verhaal: [
-      'Grace is de vondst: analytisch, bang, geen quip machine. Leon mag geschiedenis meedragen zonder een cameo parade. Spoiler arm: het hotel en de stad eromheen herschikken wat je dacht dat Raccoon nog was. De late dump van lore is de oude RE zonde.',
+    story: [
+      'Grace is the find: analytical, scared, not a quip machine. Leon is allowed to carry history without a cameo parade. Spoiler light: the hotel and the city around it rearrange what you thought Raccoon still was. The late lore dump is the old RE sin.',
     ],
     graphics: [
-      'RE Engine in stof, neon en een politiebureau dat je herkent zonder een museumtour. Switch 2 is het handheld compromis. PS5 is het scherm dat je wilt.',
+      'RE Engine in dust, neon, and a police station you recognise without a museum tour. Switch 2 is the handheld compromise. PS5 is the screen you want.',
     ],
     audio: [
-      'Voetstappen, adem, een score die durft te zwijgen. Stemwerk houdt Grace verstaanbaar als het misgaat. Dat is de helft van horror, hier gehaald.',
+      'Footsteps, breath, a score that dares to go quiet. Voice work keeps Grace readable when it goes wrong. That is half of horror, met here.',
     ],
     performance: [
-      'PS5 en pc in onze run: speelbaar, een dip in de drukste crowd, geen crash. Switch 2 houdt 30 ish in de zware kamers. Speelbaar, geen showcase.',
+      'PS5 and PC in our run: playable, a dip in the busiest crowd, no crash. Switch 2 holds around 30 in the heavy rooms. Playable, not a showcase.',
     ],
-    conclusie: [
-      '8.7: must play als je Village te veel actie vond. Stop eerder als de shooter de sfeer opeet. Het hotel is het product, niet de slotvuurzee.',
+    conclusion: [
+      '8.7: must play if you found Village too much action. Stop earlier if the shooter eats the mood. The hotel is the product, not the closing firestorm.',
     ],
   },
 ]

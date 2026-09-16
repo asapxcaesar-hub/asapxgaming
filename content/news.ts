@@ -3,9 +3,9 @@ import type { NewsArticle } from '@/types/content'
 export const news: NewsArticle[] = [
   {
     slug: 'wolverine-is-uit',
-    title: 'Wolverine is uit en 7.7 is het plafond van deze desk',
+    title: 'Wolverine is out and 7.7 is this desk’s ceiling',
     excerpt:
-      'Vandaag 15 september 2026, alleen PlayStation 5. Combat tillen, lineariteit zakken. Dat is het hele nieuws.',
+      'Today 15 September 2026, PlayStation 5 only. Combat lifts. Linearity drops. That is the whole story.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-15',
     category: 'PlayStation',
@@ -14,21 +14,21 @@ export const news: NewsArticle[] = [
     gameSlug: 'wolverine-marvel',
     related: [{ collection: 'reviews', slug: 'wolverine-marvel' }],
     seo: {
-      title: 'Wolverine is uit en 7.7 is het plafond van deze desk',
+      title: 'Wolverine is out and 7.7 is this desk’s ceiling',
       description:
-        'Launch 15 september 2026 op PS5. Officiële datum, review 7.7 van deze desk.',
+        'Launch 15 September 2026 on PS5. Official date, review 7.7 from this desk.',
     },
     body: [
-      'Marvel’s Wolverine van Insomniac is vanaf vandaag speelbaar op PlayStation 5. Prijs in de EU store: in de buurt van tachtig euro voor de standaardeditie, zoals Sony in juni bij het reserveren zette. Geen pc, geen Xbox, geen weekendje vroeg. Dat zijn feiten van de uitgever, geen forumdump.',
-      'Klauwen en stemwerk tillen. Vijandenvariatie en een plot die zijn eigen premisse undersellt, zakken. De volledige uitsplitsing staat in de review. 7.7, Hit.',
-      'Volgende grote datum op deze kalender: Grand Theft Auto VI op 19 november, PS5 en Xbox Series, volgens Rockstar zelf. Tot die tijd speel je iets dat uit is, of je slacht Logan met de kanttekeningen erbij.',
+      'Marvel’s Wolverine from Insomniac is playable today on PlayStation 5. EU store price sits near eighty euro for the standard edition, the figure Sony posted with preorders in June. No PC. No Xbox. No early weekend. Those are publisher facts, not a forum dump.',
+      'Claws and voice work lift. Enemy variety and a plot that undersells its own premise drop. The full split lives in the review. 7.7, Hit.',
+      'Next big date on this calendar: Grand Theft Auto VI on 19 November, PS5 and Xbox Series, according to Rockstar. Until then you play something that shipped, or you carve Logan with the footnotes attached.',
     ],
   },
   {
     slug: 'bond-switch-verschuift',
-    title: 'Bond op Switch 2 schuift naar maart 2027',
+    title: 'Bond on Switch 2 slides to March 2027',
     excerpt:
-      'IO Interactive zegt het zelf: extra tijd voor performance. First Light blijft 8.6 op PS5, Xbox en pc. Nintendo wacht.',
+      'IO Interactive says it out loud: extra time for performance. First Light stays 8.6 on PS5, Xbox and PC. Nintendo waits.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-15',
     category: 'Nintendo',
@@ -37,43 +37,43 @@ export const news: NewsArticle[] = [
     gameSlug: '007-first-light',
     related: [{ collection: 'reviews', slug: '007-first-light' }],
     seo: {
-      title: 'Bond op Switch 2 schuift naar maart 2027',
+      title: 'Bond on Switch 2 slides to March 2027',
       description:
-        'IO Interactive verschuift 007 First Light op Switch 2 naar maart 2027. De rest van de platforms is uit sinds 27 mei.',
+        'IO Interactive moves 007 First Light on Switch 2 to March 2027. The other platforms shipped 27 May.',
     },
     body: [
-      '007 First Light is sinds 27 mei 2026 uit op PlayStation 5, Xbox Series en pc. De Switch 2 versie zou deze zomer volgen. Vandaag zegt IO Interactive dat die port maart 2027 wordt, met een exacte dag later. Reden: performance die ze nog niet durven te verkopen.',
-      'Dat is saai nieuws en daarom geloofwaardig. Een CEO belooft geen magie, hij belooft polish. Wie Bond op de bank van Nintendo wil, plant 2027. Wie hem nu wilt, speelt de versie die al maanden uit is.',
-      'Onze review (8.6) ging over die mei build: stealth die klikt, een jonge Bond die niet als merch grijnst, en een derde akt die te graag uitlegt. Die tekst verandert niet omdat een port schuift.',
+      '007 First Light has been out since 27 May 2026 on PlayStation 5, Xbox Series and PC. The Switch 2 version was meant to follow this summer. Today IO Interactive says that port is March 2027, with an exact day later. Reason: performance they will not sell yet.',
+      'That is dull news and therefore believable. A CEO promises polish, not magic. If you want Bond on a Nintendo couch, plan 2027. If you want him now, play the version that has been out for months.',
+      'Our review (8.6) covered the May build: stealth that clicks, a young Bond who does not grin like merch, and a third act that explains too much. That text does not change because a port slides.',
     ],
   },
   {
     slug: 'oktober-is-dichtbij',
-    title: 'Oktober heeft datums, geen undated bak',
+    title: 'October has dates, not an undated bin',
     excerpt:
-      'Ace Combat 8 op 2 oktober, Gears E Day op 6, Resonance en Sports Resort op 22, Modern Warfare 4 op 23, Phantom Blade Zero op 29.',
+      'Ace Combat 8 on 2 October, Gears E Day on 6, Resonance and Sports Resort on 22, Modern Warfare 4 on 23, Phantom Blade Zero on 29.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-14',
     category: 'Industry',
-    tags: ['Industry', 'Kalender'],
+    tags: ['Industry', 'Calendar'],
     coverLabel: 'OKT',
     related: [{ collection: 'news', slug: 'gta-vi-blijft-19-november' }],
     seo: {
-      title: 'Oktober heeft datums, geen undated bak',
+      title: 'October has dates, not an undated bin',
       description:
-        'Gedateerde oktoberreleases 2026: Ace Combat 8, Gears E Day, Final Fantasy Resonance, Switch Sports Resort, Modern Warfare 4, Phantom Blade Zero.',
+        'Dated October 2026 releases: Ace Combat 8, Gears E Day, Final Fantasy Resonance, Switch Sports Resort, Modern Warfare 4, Phantom Blade Zero.',
     },
     body: [
-      'De releasekalender op deze site start bij september 2026 en loopt alleen vooruit. Oktober is de volgende muur, geen geruchtenmap. Ace Combat 8: Wings of Theve staat op 2 oktober (PS5, Xbox Series, pc). Gears of War: E Day op 6 oktober (Xbox Series, pc).',
-      'Op 22 oktober deelt Square Enix Final Fantasy Resonance breed, en Nintendo zet Switch Sports Resort op Switch 2. Een dag later Call of Duty: Modern Warfare 4, inclusief Switch 2. Phantom Blade Zero sluit de maand op 29 oktober, PS5 en pc.',
-      'Undated titels laten we staan waar ze horen: nergens. Filters op de kalender werken op deze restset. Speel wat uit is, of zet een herinnering. Geen lek JPG als bewijs.',
+      'The release calendar on this site starts at September 2026 and only moves forward. October is the next wall, not a rumour folder. Ace Combat 8: Wings of Theve sits on 2 October (PS5, Xbox Series, PC). Gears of War: E Day on 6 October (Xbox Series, PC).',
+      'On 22 October Square Enix ships Final Fantasy Resonance wide, and Nintendo puts Switch Sports Resort on Switch 2. A day later Call of Duty: Modern Warfare 4, including Switch 2. Phantom Blade Zero closes the month on 29 October, PS5 and PC.',
+      'Undated titles stay where they belong: nowhere. Calendar filters run on this leftover set. Play what shipped, or set a reminder. No leak JPG as proof.',
     ],
   },
   {
     slug: 'fire-emblem-overmorgen',
-    title: 'Fire Emblem krijgt 17 september op Switch 2',
+    title: 'Fire Emblem gets 17 September on Switch 2',
     excerpt:
-      'Fortune’s Weave staat gedateerd, niet in de undated kolom. Geen review tot de build op tafel ligt.',
+      'Fortune’s Weave is dated, not parked in an undated column. No review until the build is on the desk.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-12',
     category: 'Nintendo',
@@ -82,44 +82,44 @@ export const news: NewsArticle[] = [
     gameSlug: 'fire-emblem-fortunes-weave',
     related: [{ collection: 'news', slug: 'ocarina-krijgt-een-dag' }],
     seo: {
-      title: 'Fire Emblem krijgt 17 september op Switch 2',
+      title: 'Fire Emblem gets 17 September on Switch 2',
       description:
-        'Fire Emblem Fortune’s Weave: gedateerde release 17 september 2026 op Switch 2.',
+        'Fire Emblem Fortune’s Weave: dated release 17 September 2026 on Switch 2.',
     },
     body: [
-      'Intelligent Systems en Nintendo zetten Fire Emblem: Fortune’s Weave op 17 september 2026, alleen Switch 2. Dat is de datum die we op de kalender zetten. Geen undated, geen “ergens dit najaar”.',
-      'Fire Emblem leeft van grid, class en of de schrijvers een eenheid durven te laten vallen. Tot we een build hebben, is het nieuws de dag. Hype zonder savefile is marketing.',
-      'Direct erna op dezelfde kalender: Control Resonant en Silent Hill: Townfall op 24 september. September is vol zonder dat we 2025 terug hoeven te halen.',
+      'Intelligent Systems and Nintendo put Fire Emblem: Fortune’s Weave on 17 September 2026, Switch 2 only. That is the date we put on the calendar. No undated. No “sometime this autumn”.',
+      'Fire Emblem lives on grid, class, and whether the writers dare to let a unit fall. Until we have a build, the news is the day. Hype without a save file is marketing.',
+      'Right after on the same calendar: Control Resonant and Silent Hill: Townfall on 24 September. September is full without dragging 2025 back.',
     ],
   },
   {
     slug: 'steam-september-picks',
-    title: 'Steam in september: drie ja’s, twee harde nee’s',
+    title: 'On PC you already play Requiem, Pragmata and Bond',
     excerpt:
-      'Geen wishlist dump. Wel wat Kay deze week in de bibliotheek duwde, en welke bak je laat staan, ook met min vijfenzeventig procent.',
+      'The 2026 desk games that already shipped: Requiem 8.7, Pragmata 8.5, First Light 8.6. Moonlighter 2 is the indie of this month.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-11',
     category: 'PC',
-    tags: ['PC', 'Deals', 'Steam'],
-    coverLabel: 'SALE',
+    tags: ['PC', 'Review'],
+    coverLabel: 'PC',
     gameSlug: 'pragmata',
     related: [{ collection: 'reviews', slug: 'pragmata' }],
     seo: {
-      title: 'Steam in september: drie ja’s, twee harde nee’s',
+      title: 'On PC you already play Requiem, Pragmata and Bond',
       description:
-        'ASAPxGaming koopadvies voor Steam in september 2026: Pragmata, Requiem, First Light, Moonlighter 2.',
+        'ASAPxGaming: Resident Evil Requiem, Pragmata and 007 First Light are out on PC. Moonlighter 2 is the indie of September.',
     },
     body: [
-      'Steam heeft altijd wel ergens een seasonal etalage. Deze week is het weer een muur van min symbolen op titels die je in het voorjaar al had. Deze desk filtert op wat je nu kunt starten zonder een wiki tab, en op wat een handheld port nog steeds als thermische grap behandelt.',
-      'Drie ja’s, kort: Resident Evil Requiem (8.7) als je survival horror wilt die ademt. Pragmata (8.5, uit april) als je Capcoms maan IP nog niet speelde. 007 First Light (8.6) als stealth je meer zegt dan een cover shooter. Moonlighter 2 (8.2) is de indie die deze maand écht uit is, geen backlog van 2025.',
-      'Twee nee’s: de zoveelste open wereld survival craft in de aanbieding, en AAA ports die op Deck of Ally “playable” staan zolang je medium, dertig fps en een ventilator accepteert. Check de verified lijst. Koop geen korting die je in de trein niet kunt uitspelen.',
+      'Wolverine tonight is a PS5 job. On PC sit the 2026 titles this desk already played and scored. Not a sale pitch. What you can start without waiting for November.',
+      'Resident Evil Requiem (8.7, 27 February) if you want survival horror that breathes. Pragmata (8.5, 17 April) if Hugh and Diana on the moon have not had you yet. 007 First Light (8.6, 27 May) if stealth says more than a cover shooter. Moonlighter 2 (8.2, 2 September) is the trending indie, not a 2025 leftover.',
+      'Handheld: check that your machine pulls the build. Do not buy a discount you cannot finish on a train. The reviews are open.',
     ],
   },
   {
     slug: 'september-na-wolverine',
-    title: 'Na Logan: Townfall, Resonant en Dungeons 2',
+    title: 'Townfall and Resonant get 24 September',
     excerpt:
-      '24 september Silent Hill Townfall en Control Resonant. 29 september Minecraft Dungeons 2. Datums, geen undated.',
+      'Silent Hill Townfall and Control Resonant have a day. No undated. No review until the build is here.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-10',
     category: 'Industry',
@@ -128,21 +128,21 @@ export const news: NewsArticle[] = [
     gameSlug: 'silent-hill-townfall',
     related: [{ collection: 'news', slug: 'wolverine-is-uit' }],
     seo: {
-      title: 'Na Logan: Townfall, Resonant en Dungeons 2',
+      title: 'Townfall and Resonant get 24 September',
       description:
-        'Gedateerde septemberreleases na Wolverine: Silent Hill Townfall, Control Resonant, Minecraft Dungeons 2.',
+        'Silent Hill Townfall and Control Resonant: dated release 24 September 2026.',
     },
     body: [
-      'Wolverine is de cover van 15 september. De rest van de maand is geen pauze. Op 24 september staan twee namen die jaren als gerucht leefden en nu een dag hebben: Silent Hill: Townfall (PS5, pc) en Control Resonant (PS5, Xbox Series, pc).',
-      'Op 29 september volgt Minecraft Dungeons 2, breed op de huidige machines plus Switch 2. Dat is een andere kopersgroep, dezelfde regel: de dag staat op de kalender, de undated kolom niet.',
-      'Reviews komen als we klaar zijn, niet als een embargo dat van een ander bureau komt. Tot die tijd: speel Logan met 7.7 in je achterhoofd, of wacht tot 24 september zonder lektheater.',
+      'Wolverine is the cover of 15 September. The rest of the month is not a pause. On 24 September two big names get a day: Silent Hill: Townfall (PS5, PC) and Control Resonant (PS5, Xbox Series, PC).',
+      'That is the news. The day sits on the calendar. The undated column does not.',
+      'Reviews land when we finish, not when another bureau’s embargo lifts. Until then: play Logan with 7.7 in the back of your head, or wait until 24 September without leak theatre.',
     ],
   },
   {
     slug: 'forza-ps5-blijft-2026',
-    title: 'Playground herhaalt: Forza 6 op PS5 blijft 2026',
+    title: 'Playground repeats: Forza 6 on PS5 stays 2026',
     excerpt:
-      'Xbox en pc hebben Japan sinds 19 mei. De PlayStation versie heeft nog geen dag, wél hetzelfde jaartal van de studio.',
+      'Xbox and PC have had Japan since 19 May. The PlayStation version still has no day, only the same year from the studio.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-09',
     category: 'Xbox',
@@ -151,21 +151,21 @@ export const news: NewsArticle[] = [
     gameSlug: 'forza-horizon-6',
     related: [{ collection: 'reviews', slug: 'forza-horizon-6' }],
     seo: {
-      title: 'Playground herhaalt: Forza 6 op PS5 blijft 2026',
+      title: 'Playground repeats: Forza 6 on PS5 stays 2026',
       description:
-        'Forza Horizon 6 is uit op Xbox en pc. Playground Games houdt de PS5 versie in 2026, zonder exacte dag.',
+        'Forza Horizon 6 is out on Xbox and PC. Playground Games keeps the PS5 version in 2026, without an exact day.',
     },
     body: [
-      'Forza Horizon 6 is sinds 19 mei 2026 uit op Xbox Series en pc, met Game Pass erbij als je dat al betaalt. Playground Games herhaalt in september dat de PlayStation 5 versie later in 2026 volgt. Geen dag. Wél het jaartal, uit hun eigen mond, geen Discord crop.',
-      'Speculatie dat hij 2027 wordt, is geen nieuws tot de studio het zegt. Wishlist op de PlayStation Store is het enige nuttige wat je nu kunt doen als je geen Xbox hebt.',
-      'Onze 8.9 ging over de mei build in Japan: festivalritme, wegen die kloppen, online dat nog steeds een lobby is. Die tekst herschrijven we niet voor een port die er nog niet is.',
+      'Forza Horizon 6 has been out since 19 May 2026 on Xbox Series and PC, with Game Pass attached if you already pay for it. Playground Games repeats in September that the PlayStation 5 version follows later in 2026. No day. The year, from their own mouth, not a Discord crop.',
+      'Guesses that it becomes 2027 are not news until the studio says so. A PlayStation Store wishlist is the only useful move if you do not own Xbox.',
+      'Our 8.9 covered the May build in Japan: festival rhythm, roads that read, online that is still a lobby. We do not rewrite that text for a port that is not here.',
     ],
   },
   {
     slug: 'gta-vi-blijft-19-november',
-    title: 'GTA VI blijft 19 november, de wachtkamer is het product',
+    title: 'GTA VI stays 19 November, the waiting room is the product',
     excerpt:
-      'Rockstar zet de dag zelf: 19 november 2026, PS5 en Xbox Series. Lek JPG’s behandelen we nog steeds niet als nieuws.',
+      'Rockstar sets the day itself: 19 November 2026, PS5 and Xbox Series. Leak JPGs still do not count as news.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-08',
     category: 'Industry',
@@ -174,43 +174,21 @@ export const news: NewsArticle[] = [
     gameSlug: 'grand-theft-auto-vi',
     related: [{ collection: 'news', slug: 'wolverine-is-uit' }],
     seo: {
-      title: 'GTA VI blijft 19 november, de wachtkamer is het product',
+      title: 'GTA VI stays 19 November, the waiting room is the product',
       description:
-        'Officiële GTA VI datum (PS5, Xbox Series) en waarom ASAPxGaming de wachtkamer niet vult met leaks.',
+        'Official GTA VI date (PS5, Xbox Series) and why ASAPxGaming will not fill the waiting room with leaks.',
     },
     body: [
-      'Grand Theft Auto VI heeft een datum die van Rockstar zelf komt: 19 november 2026, PlayStation 5 en Xbox Series. Dat is nieuws. Fan renders, inside source screenshots en een Discord crop van een dashboard zijn dat niet. Deze desk publiceert het eerste. Het tweede is traffic.',
-      'De wachtkamer is inmiddels een seizoen. GTA Online blijft draaien terwijl de kalender tikt. Dat is de context van elke wanneer vraag, niet een lek. Reserveren en prijs volgen wanneer de uitgever ze zelf neerzet. Tot die tijd is het advies saai: speel iets dat uit is.',
-      'Als Rockstar zelf gameplay drop, officieel, met hun logo erop, zijn we er. Niet eerder, en niet met iemands JPG uit een forumdump.',
-    ],
-  },
-  {
-    slug: 'benelux-lan-herfst',
-    title: 'Eén LAN in de herfst wint van tien VODs',
-    excerpt:
-      'De living room scene is niet dood. Ze zat achter latency. Waar je naartoe kunt zonder een festival LED als bewijs.',
-    author: 'Kay van Elsen',
-    publishedAt: '2026-09-05',
-    category: 'Industry',
-    tags: ['Esports', 'NL', 'Industry'],
-    coverLabel: 'LAN',
-    related: [{ collection: 'news', slug: 'moonlighter-2-is-uit' }],
-    seo: {
-      title: 'Eén LAN in de herfst wint van tien VODs',
-      description:
-        'ASAPxGaming over offline brackets in Nederland en België deze herfst: Smash, fighters, lokale cups.',
-    },
-    body: [
-      'Online brackets zijn schoon. Offline brackets liegen minder over netcode, tilt, en of iemand écht durft te dashen. In de Benelux is de herfst het seizoen waarin sporthallen, campuszalen en een enkele conventie weer een setup rij durven neerzetten. Van mixcups tot Smash en fighting brackets die geen persbericht nodig hebben.',
-      'Mijn filter is saai en bruikbaar: kijk of er een TO is die je kent, of de setup tijd realistisch is, en of de buy in naar de spelers gaat in plaats van naar een LED wand. Grote hallen zijn prima als je de crowd wilt. De betere set speel je vaak in een zaal waar de caster naast de setup staat.',
-      'Kaarten: vroeg. De laatste edities die ik bijhield, waren vol terwijl Discord nog “wie gaat er?” zat te spammen. Eén weekend is genoeg. Daarna mag je weer 1080p chatten.',
+      'Grand Theft Auto VI has a date that comes from Rockstar: 19 November 2026, PlayStation 5 and Xbox Series. That is news. Fan renders, inside source screenshots and a Discord crop of a dashboard are not. This desk publishes the first. The second is traffic.',
+      'The waiting room is a season now. GTA Online keeps running while the calendar ticks. That is the context of every when question, not a leak. Preorders and price land when the publisher puts them down. Until then the advice is dull: play something that shipped.',
+      'If Rockstar drops gameplay itself, official, with their logo on it, we are there. Not earlier, and not with somebody’s JPG from a forum dump.',
     ],
   },
   {
     slug: 'moonlighter-2-is-uit',
-    title: 'Moonlighter 2 is de indie die deze week wél uit is',
+    title: 'Moonlighter 2 is the indie that actually shipped this week',
     excerpt:
-      '2 september 2026, Digital Sun. Winkel overdag, dungeon s nachts. 8.2 van deze desk, geen patriotisme korting.',
+      '2 September 2026, Digital Sun. Shop by day, dungeon by night. 8.2 from this desk, no patriotism discount.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-03',
     category: 'Indie',
@@ -219,21 +197,20 @@ export const news: NewsArticle[] = [
     gameSlug: 'moonlighter-2',
     related: [{ collection: 'reviews', slug: 'moonlighter-2' }],
     seo: {
-      title: 'Moonlighter 2 is de indie die deze week wél uit is',
-      description:
-        'Moonlighter 2 is uit op 2 september 2026. ASAPxGaming review 8.2.',
+      title: 'Moonlighter 2 is the indie that actually shipped this week',
+      description: 'Moonlighter 2 shipped on 2 September 2026. ASAPxGaming review 8.2.',
     },
     body: [
-      'Tussen AAA datums staat een winkel. Moonlighter 2 van Digital Sun is sinds 2 september speelbaar op PS5, Xbox Series, Switch 2 en pc. Overdag verkoop je loot. s Nachts daal je af. Dat is de lus die de eerste Moonlighter al verkocht, nu groter en strakker in de shop UI.',
-      'Trending indie betekent hier: mensen starten hem, niet dat een publisher een quote kocht. Onze 8.2 is een ja met voetnoot bij de late grind. Lees de review als je twijfelt tussen deze en nóg een survival craft sale.',
-      'Geen Nederlandse vlag erop plakken, het is Spaans werk. Speel de demo niet als excuus om de full release te skippen: de full release is er. Dat is zeldzamer dan een keynote.',
+      'Between AAA dates sits a shop. Moonlighter 2 from Digital Sun has been playable since 2 September on PS5, Xbox Series, Switch 2 and PC. By day you sell loot. By night you drop down. That is the loop the first Moonlighter already sold, now bigger and tighter in the shop UI.',
+      'Trending indie here means people start it, not that a publisher bought a quote. Our 8.2 is a yes with a footnote on the late grind. Read the review if you are torn between this and yet another survival craft sale.',
+      'Do not stick a local flag on it. It is Spanish work. Do not treat the demo as an excuse to skip the full release: the full release is here. That is rarer than a keynote.',
     ],
   },
   {
     slug: 'ocarina-krijgt-een-dag',
-    title: 'Ocarina of Time krijgt 5 november op Switch 2',
+    title: 'Ocarina of Time gets 5 November on Switch 2',
     excerpt:
-      'Nintendo zet een dag op een dertig jaar oude kaart. Geen undated, geen remake theater tot ze het zelf zo noemen.',
+      'Nintendo puts a day on a thirty year old map. No undated. No remake theatre until they name it themselves.',
     author: 'Kay van Elsen',
     publishedAt: '2026-09-01',
     category: 'Nintendo',
@@ -242,14 +219,14 @@ export const news: NewsArticle[] = [
     gameSlug: 'zelda-ocarina-of-time-switch-2',
     related: [{ collection: 'news', slug: 'fire-emblem-overmorgen' }],
     seo: {
-      title: 'Ocarina of Time krijgt 5 november op Switch 2',
+      title: 'Ocarina of Time gets 5 November on Switch 2',
       description:
-        'The Legend of Zelda Ocarina of Time staat gedateerd op 5 november 2026 voor Switch 2.',
+        'The Legend of Zelda Ocarina of Time is dated 5 November 2026 for Switch 2.',
     },
     body: [
-      'The Legend of Zelda: Ocarina of Time staat op 5 november 2026 voor Switch 2, als gedateerde regel, niet als undated. Nintendo verkoopt geheugen. Wij zetten de dag.',
-      'Of het een port, een opschoning of iets met een nieuwe naam in de store is, schrijven we als de store pagina het zegt. Tot die tijd is 5 november het nieuws, niet iemands emulatievergelijking.',
-      'Tussen nu en november: Fire Emblem op 17 september, Sports Resort op 22 oktober, en GTA VI op 19 november. De kalender loopt vooruit. Gesloten maanden blijven dicht.',
+      'The Legend of Zelda: Ocarina of Time sits on 5 November 2026 for Switch 2 as a dated row, not as undated. Nintendo sells memory. We put the day.',
+      'Port, cleanup, or a new store name: we write that when the store page says it. Until then 5 November is the news, not somebody’s emulation comparison.',
+      'Between now and November: Fire Emblem on 17 September, Sports Resort on 22 October, and GTA VI on 19 November. The calendar runs forward. Closed months stay closed.',
     ],
   },
 ]

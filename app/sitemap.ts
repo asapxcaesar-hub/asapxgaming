@@ -9,21 +9,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url.replace(/\/$/, '')
   const staticRoutes = [
     '',
-    '/nieuws/',
+    '/news/',
     '/reviews/',
     '/releases/',
     '/contact/',
-    '/zoeken/',
+    '/search/',
     '/privacy/',
     '/disclaimer/',
-    '/cookiebeleid/',
+    '/cookies/',
   ]
   const entries: MetadataRoute.Sitemap = staticRoutes.map((path) => ({
     url: `${base}${path || '/'}`,
     changeFrequency: 'weekly',
     priority: path === '' ? 1 : 0.7,
   }))
-  for (const item of allNews()) entries.push({ url: `${base}/nieuws/${item.slug}/` })
+  for (const item of allNews()) entries.push({ url: `${base}/news/${item.slug}/` })
   for (const item of reviews) entries.push({ url: `${base}/reviews/${item.slug}/` })
   return entries
 }

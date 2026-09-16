@@ -1,5 +1,5 @@
 export type NewsFilter =
-  | 'Alles'
+  | 'All'
   | 'PlayStation'
   | 'Xbox'
   | 'Nintendo'
@@ -25,7 +25,7 @@ export type NewsArticle = {
   author: string
   publishedAt: string
   updatedAt?: string
-  category: Exclude<NewsFilter, 'Alles'>
+  category: Exclude<NewsFilter, 'All'>
   tags: string[]
   coverLabel: string
   gameSlug?: string
@@ -56,13 +56,13 @@ export type GameReview = {
   plus: string[]
   minus: string[]
   scores: ReviewScores
-  oordeel: string[]
+  take: string[]
   gameplay: string[]
-  verhaal: string[]
+  story: string[]
   graphics: string[]
   audio: string[]
   performance: string[]
-  conclusie: string[]
+  conclusion: string[]
   related: RelatedRef[]
   seo: SeoFields
 }

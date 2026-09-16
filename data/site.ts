@@ -1,20 +1,20 @@
 /** Editorial "today" for the static site: current month of the release list. */
-export const SITE_TODAY = '2026-09-15'
+export const SITE_TODAY = '2026-09-16'
 export const SITE_MONTH = SITE_TODAY.slice(0, 7)
 
 export const site = {
   name: 'ASAPxGaming',
-  tagline: 'Onafhankelijk gamingplatform. Persoonlijk oordeel.',
+  tagline: 'Independent gaming desk. Personal verdict.',
   description:
-    'ASAPxGaming is het Nederlandse creator-platform van Kay van Elsen: nieuws, reviews en releases — zonder redactiefabriek.',
-  locale: 'nl_NL',
+    'ASAPxGaming is Kay van Elsen’s creator desk: news, reviews, and releases, without a news factory.',
+  locale: 'en_US',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://asaspxgaming.wasmer.app',
   creator: {
     name: 'Kay van Elsen',
     handle: 'asapxcaesar',
-    role: 'Oprichter',
+    role: 'Founder',
     email: 'asapxcaesar@gmail.com',
-    bio: 'Kay van Elsen speelt, streamt en schrijft als asapxcaesar. ASAPxGaming is de desk: geen nieuwsfabriek, wel een oordeel dat je kunt naspelen.',
+    bio: 'Kay van Elsen plays, streams, and writes as asapxcaesar. ASAPxGaming is the desk: no news factory, a verdict you can replay.',
   },
   accent: '#2EE6A6',
   socials: {
@@ -26,21 +26,21 @@ export const site = {
 
 export const nav = [
   { href: '/', label: 'Home' },
-  { href: '/nieuws/', label: 'Nieuws' },
+  { href: '/news/', label: 'News' },
   { href: '/reviews/', label: 'Reviews' },
   { href: '/releases/', label: 'Releases' },
 ] as const
 
 export const footerNav = [
   { href: '/contact/', label: 'Contact' },
-  { href: '/zoeken/', label: 'Zoeken' },
+  { href: '/search/', label: 'Search' },
   { href: '/privacy/', label: 'Privacy' },
   { href: '/disclaimer/', label: 'Disclaimer' },
-  { href: '/cookiebeleid/', label: 'Cookiebeleid' },
+  { href: '/cookies/', label: 'Cookies' },
 ] as const
 
 export const newsFilters = [
-  'Alles',
+  'All',
   'PlayStation',
   'Xbox',
   'Nintendo',
