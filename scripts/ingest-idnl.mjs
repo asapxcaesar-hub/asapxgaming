@@ -13,13 +13,13 @@
  * content/inbox/ and do not go live.
  */
 
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 const ingestedPath = join(root, 'content/ingested.json')
-const batchAPath = join(root, 'content/news/batch-a.ts')
+const newsDir = join(root, 'content/news')
 const inboxDir = join(root, 'content/inbox')
 const payloadPath = process.env.IDNL_PAYLOAD_FILE || ''
 
@@ -36,8 +36,14 @@ function loadJson(path, fallback) {
 
 function existingSlugs() {
   const ingested = loadJson(ingestedPath, [])
-  const batch = existsSync(batchAPath) ? readFileSync(batchAPath, 'utf8') : ''
-  const fromBatch = [...batch.matchAll(/slug:\s*'([^']+)'/g)].map((m) => m[1])
+  const fromBatch = []
+  if (existsSync(newsDir)) {
+    for (const name of readdirSync(newsDir)) {
+      if (!name.endsWith('.ts')) continue
+      const batch = readFileSync(join(newsDir, name), 'utf8')
+      fromBatch.push(...[...batch.matchAll(/slug:\s*'([^']+)'/g)].map((m) => m[1]))
+    }
+  }
   return new Set([...ingested.map((a) => a.slug), ...fromBatch])
 }
 
