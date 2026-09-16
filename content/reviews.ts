@@ -26,7 +26,8 @@ export const reviews: GameReview[] = [
     ],
     scores: { gameplay: 8.0, story: 7.2, graphics: 8.3, audio: 8.1, performance: 7.8 },
     related: [
-      { collection: 'news', slug: 'grote-artiesten-teasen-gta-6-soundtrack-alle-namen-op-een-rij' },
+      { collection: 'news', slug: 'review-wolverine-is-een-fantastisch-gemaakte-game-maar-geen-fantastische-game' },
+      { collection: 'news', slug: 'interview-insomniac-games-over-wolverine-reviews-openwereldgames-en-de-grote-lek' },
     ],
     seo: {
       title: 'Wolverine cuts hard and walks straight too often',

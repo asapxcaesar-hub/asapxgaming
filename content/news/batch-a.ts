@@ -15,7 +15,9 @@ export const newsBatchA: NewsArticle[] = [
     coverLabel: 'FE',
     coverImage: '/covers/articles/fire-emblem-fortunes-weave.png',
     gameSlug: 'fire-emblem-fortunes-weave',
-    related: [{ collection: 'news', slug: '007-first-light-op-nintendo-switch-2-laat-nog-wat-langer-op-zich-wachten' }],
+    related: [
+      { collection: 'news', slug: 'nintendo-direct-van-september-2026-de-trailers-en-aankondigingen-op-een-rij' },
+    ],
     seo: {
       title: 'Review: Fire Emblem Fortune’s Weave is finally for everyone',
       description:

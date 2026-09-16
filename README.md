@@ -40,21 +40,27 @@ The first slice was a Vite SPA. This build uses **Next.js `output: 'export'`** b
 
 Add an object, reuse `slug` in `related`. No copy-paste in components.
 
-**News** is the English edition of KayvE’s Games desk on [id.nl/games](https://id.nl/games). Manual pieces live in `content/news/batch-a.ts`. New posts land in `content/ingested.json` via `npm run ingest`. Giveaways and podcast landing pages are skipped.
+**News** is the English edition of KayvE’s Games desk on [id.nl/games](https://id.nl/games). Manual pieces live in `content/news/batch-*.ts`. New posts land in `content/ingested.json` via `npm run ingest`. Giveaways and podcast landing pages are skipped.
 
 ## Automatic ingest from id.nl
 
-ASAPxGaming is a **static export**. A new id.nl article cannot appear on the live site until this repo gets a commit and Wasmer rebuilds. Instant means: id.nl tells GitHub the moment you publish, GitHub translates and commits, Wasmer rebuilds.
+ASAPxGaming is a **static export**. A visitor cannot pull a new id.nl article at request time. Instant means: id.nl tells GitHub the moment you publish, GitHub translates and commits, Wasmer rebuilds from git.
 
 ### Instant (use this)
 
-id.nl already runs on DatoCMS. Add a webhook on **record publish** for Games:
+id.nl already runs on DatoCMS. Add a webhook on **record publish** for Games articles only.
 
-1. GitHub repo Settings → Secrets: `OPENAI_API_KEY` (full English body), plus a fine-grained PAT if the default `GITHUB_TOKEN` cannot push your default branch.
-2. DatoCMS → webhooks → URL `https://api.github.com/repos/<owner>/<repo>/dispatches`
-3. Header `Authorization: Bearer <PAT with contents:write>`
-4. Header `Accept: application/vnd.github+json`
-5. JSON body:
+1. GitHub repo **Settings → Secrets and variables → Actions**
+   - `OPENAI_API_KEY`: required for a full English body to go live
+   - `INGEST_GITHUB_TOKEN`: a PAT with `contents:write` (needed if `GITHUB_TOKEN` cannot push, or if you ingest into a non-default branch)
+   - optional: `IDNL_COOKIE`, `IDNL_RSS_URL`, `OPENAI_MODEL`
+2. GitHub **Settings → Actions → General**: allow GitHub Actions to create and approve pull requests is not required; do allow Actions to push to the deploy branch.
+3. DatoCMS → **Settings → Webhooks** → new webhook on **record publish** (Games model):
+   - URL `https://api.github.com/repos/<owner>/<repo>/dispatches`
+   - Header `Authorization: Bearer <PAT with repo scope>`
+   - Header `Accept: application/vnd.github+json`
+   - Header `X-GitHub-Api-Version: 2022-11-28`
+   - JSON body (send the **full Dutch article**, not only the title):
 
 ```json
 {
@@ -66,18 +72,21 @@ id.nl already runs on DatoCMS. Add a webhook on **record publish** for Games:
     "summary": "Dutch lede",
     "publishedAt": "2026-09-15",
     "category": "Nintendo",
+    "branch": "main",
     "body": ["Full Dutch paragraph 1", "paragraph 2"]
   }
 }
 ```
 
-That fires `.github/workflows/ingest-idnl.yml` (`repository_dispatch` / `idnl-publish`). The script writes English into `content/ingested.json` and pushes. Wasmer then rebuilds from git.
+`branch` should be the branch Wasmer deploys (`main` once you merge, or the preview branch until then). Giveaways (`we-geven-*`) and podcast landings are skipped.
+
+That fires `.github/workflows/ingest-idnl.yml` (`repository_dispatch` / `idnl-publish`). The script fetches missing body text from the live URL when needed, writes English into `content/ingested.json`, and pushes. Wasmer then rebuilds from git. Point Wasmer at the same branch you ingest into.
 
 Without `OPENAI_API_KEY` the Dutch source is stored in `content/inbox/` and **does not go live**.
 
 ### Polling (backup)
 
-The same workflow also runs every 20 minutes against `https://id.nl/api/rss` (Games category only). Public fetches often hit the Vercel bot wall. If RSS fails, set secret `IDNL_COOKIE` to a browser cookie from id.nl, or set `IDNL_RSS_URL` to an internal feed that skips the wall.
+The same workflow also runs every **20 minutes** against `https://id.nl/api/rss` (Games URLs only). Public fetches often hit the Vercel bot wall. If RSS fails, set secret `IDNL_COOKIE` to a logged-in browser cookie from id.nl, or set `IDNL_RSS_URL` to an internal feed that skips the wall.
 
 Locally:
 

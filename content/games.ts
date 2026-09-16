@@ -18,7 +18,11 @@ const slugOverrides: Record<string, string> = {
 }
 
 const relatedBySlug: Record<string, RelatedRef[]> = {
-  'wolverine-marvel': [{ collection: 'reviews', slug: 'wolverine-marvel' }],
+  'wolverine-marvel': [
+    { collection: 'reviews', slug: 'wolverine-marvel' },
+    { collection: 'news', slug: 'review-wolverine-is-een-fantastisch-gemaakte-game-maar-geen-fantastische-game' },
+    { collection: 'news', slug: 'interview-insomniac-games-over-wolverine-reviews-openwereldgames-en-de-grote-lek' },
+  ],
   'moonlighter-2': [{ collection: 'reviews', slug: 'moonlighter-2' }],
   'fire-emblem-fortunes-weave': [
     { collection: 'news', slug: 'review-fire-emblem-fortunes-weave-is-eindelijk-voor-iedereen' },
@@ -28,11 +32,16 @@ const relatedBySlug: Record<string, RelatedRef[]> = {
   'minecraft-dungeons-2': [],
   'ace-combat-8': [],
   'gears-of-war-e-day': [],
-  'final-fantasy-resonance': [],
+  'final-fantasy-resonance': [
+    { collection: 'news', slug: 'gespeeld-final-fantasy-resonance-voelt-als-een-warm-dekentje' },
+  ],
   'nintendo-switch-sports-resort': [],
   'call-of-duty-modern-warfare-4': [],
   'phantom-blade-zero': [],
-  'zelda-ocarina-of-time-switch-2': [],
+  'zelda-ocarina-of-time-switch-2': [
+    { collection: 'news', slug: 'the-legend-of-zelda-ocarina-of-time-remake-komt-op-5-november-naar-switch-2' },
+    { collection: 'news', slug: 'nintendo-direct-van-september-2026-de-trailers-en-aankondigingen-op-een-rij' },
+  ],
   'grand-theft-auto-vi': [
     { collection: 'news', slug: 'grote-artiesten-teasen-gta-6-soundtrack-alle-namen-op-een-rij' },
     { collection: 'news', slug: 'de-eerste-gta-6-stemacteur-is-officieel-bekendgemaakt' },
