@@ -52,8 +52,17 @@ If you open github.com and there is no ASAPxGaming / genesis repo: that is expec
 
 1. Get a free account at [github.com](https://github.com) and sign in. Your username is the first half of `OWNER/REPO` later (example: if GitHub shows `asapxcaesar-hub`, that is `OWNER`).
 2. In this Cursor project, click the **Create repo** pill. That publishes this code to **your** GitHub account. After it finishes, github.com shows a real repository. The address looks like `https://github.com/OWNER/REPO`.
-3. Open that URL. You should see folders such as `app`, `content`, `.github`. Under **Actions** you should see a workflow named **Ingest id.nl games**. If Actions is empty, wait a minute and refresh; the workflow file only exists after the repo is created and this branch is on GitHub.
-4. Remember `OWNER/REPO` from the URL. Every later step uses that, not a name I invent for you.
+3. Open [github.com/asapxcaesar-hub/asapxgaming](https://github.com/asapxcaesar-hub/asapxgaming). You should see folders such as `app`, `content`, `.github`. Under **Actions** you should see **Ingest id.nl games**.
+4. If GitHub opens `/actions/new` (“Get started with GitHub Actions”), the GitHub repo is still **empty**. A blank repo on github.com is not this site. Push this project onto `main`:
+
+```bash
+git remote add github https://github.com/asapxcaesar-hub/asapxgaming.git
+git push -u github HEAD:main
+```
+
+Sign in when Git asks. Then open [Actions](https://github.com/asapxcaesar-hub/asapxgaming/actions) again. Do not pick a workflow template.
+
+5. `OWNER/REPO` is `asapxcaesar-hub/asapxgaming`. Every webhook URL uses that.
 
 Do **not** look for the repo on Origin / Cursor git hosting for this webhook. GitHub Actions only run on github.com. Wasmer should also connect to that same github.com repo.
 
@@ -69,12 +78,12 @@ The Action file is `.github/workflows/ingest-idnl.yml`. It only runs on **GitHub
 
 ### 0. What you need
 
-- The GitHub repo Wasmer deploys from (example: `asapxcaesar-hub/genesis`)
+- The GitHub repo Wasmer deploys from: `asapxcaesar-hub/asapxgaming`
 - An OpenAI API key
 - A GitHub personal access token (classic `repo` scope, or fine-grained with Contents write on that repo)
 - DatoCMS admin on id.nl
 
-Replace `OWNER/REPO` below with your GitHub repo. Use `main` as `branch` once that is the Wasmer production branch.
+Use `asapxcaesar-hub/asapxgaming` as `OWNER/REPO`. Use `main` as `branch` once that is the Wasmer production branch.
 
 ### 1. GitHub: secrets and Actions
 
@@ -98,7 +107,7 @@ curl -sS -X POST \
   -H "Authorization: Bearer $GITHUB_TOKEN" \
   -H "Accept: application/vnd.github+json" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
-  https://api.github.com/repos/OWNER/REPO/dispatches \
+  https://api.github.com/repos/asapxcaesar-hub/asapxgaming/dispatches \
   -d '{
     "event_type": "idnl-publish",
     "client_payload": {
@@ -127,7 +136,7 @@ Delete the test article from `content/ingested.json` after you are happy.
 
 1. id.nl DatoCMS → **Project settings → Webhooks → Create a new webhook**.
 2. Name: `ASAPxGaming ingest`.
-3. URL (POST): `https://api.github.com/repos/OWNER/REPO/dispatches`
+3. URL (POST): `https://api.github.com/repos/asapxcaesar-hub/asapxgaming/dispatches`
 4. Headers:
    - `Authorization` = `Bearer PASTE_THE_PAT_HERE`
    - `Accept` = `application/vnd.github+json`
