@@ -123,9 +123,7 @@ export function ReleaseCalendar() {
                           <Link href={`/reviews/${review.slug}/`} className="mt-1 inline-block text-sm text-accent">
                             Review
                           </Link>
-                        ) : (
-                          <span className="mt-1 inline-block text-sm text-muted">Dated release</span>
-                        )}
+                        ) : null}
                       </div>
                     </li>
                   )
